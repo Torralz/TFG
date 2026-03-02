@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "C:/Users/Mario/OneDrive/Documentos/Universidad/TFG/pruebaWroom/build/CMakeFiles/bootloader"
+			"file" : "/home/mario/TFG/pruebaWroom/build/CMakeFiles/bootloader"
 		},
 		{
-			"file" : "C:/Users/Mario/OneDrive/Documentos/Universidad/TFG/pruebaWroom/build/CMakeFiles/bootloader.rule"
+			"file" : "/home/mario/TFG/pruebaWroom/build/CMakeFiles/bootloader.rule"
 		},
 		{
-			"file" : "C:/Users/Mario/OneDrive/Documentos/Universidad/TFG/pruebaWroom/build/CMakeFiles/bootloader-complete.rule"
+			"file" : "/home/mario/TFG/pruebaWroom/build/CMakeFiles/bootloader-complete.rule"
 		},
 		{
-			"file" : "C:/Users/Mario/OneDrive/Documentos/Universidad/TFG/pruebaWroom/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+			"file" : "/home/mario/TFG/pruebaWroom/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
 		},
 		{
-			"file" : "C:/Users/Mario/OneDrive/Documentos/Universidad/TFG/pruebaWroom/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+			"file" : "/home/mario/TFG/pruebaWroom/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
 		},
 		{
-			"file" : "C:/Users/Mario/OneDrive/Documentos/Universidad/TFG/pruebaWroom/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+			"file" : "/home/mario/TFG/pruebaWroom/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
 		},
 		{
-			"file" : "C:/Users/Mario/OneDrive/Documentos/Universidad/TFG/pruebaWroom/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+			"file" : "/home/mario/TFG/pruebaWroom/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
 		},
 		{
-			"file" : "C:/Users/Mario/OneDrive/Documentos/Universidad/TFG/pruebaWroom/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+			"file" : "/home/mario/TFG/pruebaWroom/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
 		},
 		{
-			"file" : "C:/Users/Mario/OneDrive/Documentos/Universidad/TFG/pruebaWroom/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+			"file" : "/home/mario/TFG/pruebaWroom/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
 		},
 		{
-			"file" : "C:/Users/Mario/OneDrive/Documentos/Universidad/TFG/pruebaWroom/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+			"file" : "/home/mario/TFG/pruebaWroom/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
 		}
 	],
 	"target" : 
