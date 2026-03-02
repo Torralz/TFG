@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "pruebaWroom",
-    "project_version":    "7910a0b-dirty",
+    "project_version":    "2649f24-dirty",
     "project_path":       "/home/mario/TFG/pruebaWroom",
     "idf_path":           "/home/mario/esp/esp-idf",
     "build_dir":          "/home/mario/TFG/pruebaWroom/build",

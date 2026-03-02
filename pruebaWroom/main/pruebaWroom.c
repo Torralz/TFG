@@ -33,7 +33,7 @@
 #define BUTTON_2_GPIO   25
 
 // ─────────────────────────────────────────────
-// UUIDs estándar Bluetooth SIG — HID
+// UUIDs BLE SIG — HID
 // ─────────────────────────────────────────────
 #define BLE_SVC_HID_UUID16              0x1812
 #define BLE_SVC_HID_CHR_PROTOCOL_MODE   0x2A4E
@@ -41,7 +41,6 @@
 #define BLE_SVC_HID_CHR_REPORT          0x2A4D
 #define BLE_SVC_HID_CHR_HID_INFORMATION 0x2A4A
 #define BLE_SVC_HID_CHR_CONTROL_POINT   0x2A4C
-#define BLE_DSC_HID_REPORT_REFERENCE    0x2908
 
 static const char *TAG         = "KB_HID";
 static const char *device_name = "Teclado Unimano";
@@ -65,7 +64,7 @@ static const uint8_t hid_report_map[] = {
       0x81, 0x02,  //   Input: Data, Variable, Absolute
       0x95, 0x01,  //   Report Count: 1
       0x75, 0x08,  //   Report Size: 8 bits
-      0x81, 0x01,  //   Input: Constant (byte reservado)
+      0x81, 0x01,  //   Input: Constant
       0x95, 0x06,  //   Report Count: 6
       0x75, 0x08,  //   Report Size: 8 bits
       0x15, 0x00,  //   Logical Min: 0
@@ -77,7 +76,7 @@ static const uint8_t hid_report_map[] = {
     0xC0,          // End Collection
 };
 
-// HID Information: [bcdHID=0x0111, CountryCode=0x21 (España), Flags=0x02]
+// HID Information: bcdHID=1.11, país=España, flags=normalmente conectado
 static const uint8_t hid_information[] = { 0x11, 0x01, 0x21, 0x02 };
 
 // ─────────────────────────────────────────────
@@ -140,15 +139,6 @@ static int hid_report_access(uint16_t ch, uint16_t ah,
            ? 0 : BLE_ATT_ERR_INSUFFICIENT_RES;
 }
 
-static int hid_report_ref_access(uint16_t ch, uint16_t ah,
-                                   struct ble_gatt_access_ctxt *ctxt, void *arg)
-{
-    static const uint8_t report_ref[] = { 0x01, 0x01 };
-    if (ctxt->op != BLE_GATT_ACCESS_OP_READ_DSC) return BLE_ATT_ERR_UNLIKELY;
-    return os_mbuf_append(ctxt->om, report_ref, sizeof(report_ref)) == 0
-           ? 0 : BLE_ATT_ERR_INSUFFICIENT_RES;
-}
-
 static int hid_information_access(uint16_t ch, uint16_t ah,
                                     struct ble_gatt_access_ctxt *ctxt, void *arg)
 {
@@ -164,7 +154,9 @@ static int hid_ctrl_point_access(uint16_t ch, uint16_t ah,
 }
 
 // ─────────────────────────────────────────────
-// Tabla GATT: servicio HID
+// Tabla GATT — HID Service
+// NOTIFY_ENC: NimBLE devuelve ATT_ERR_INSUFFICIENT_ENCRYPTION (0x0F)
+// al CCCD write sin cifrado → Android inicia pairing automáticamente
 // ─────────────────────────────────────────────
 static const struct ble_gatt_svc_def hid_svcs[] = {
     {
@@ -182,18 +174,12 @@ static const struct ble_gatt_svc_def hid_svcs[] = {
                 .flags     = BLE_GATT_CHR_F_READ,
             },
             {
-                .uuid        = BLE_UUID16_DECLARE(BLE_SVC_HID_CHR_REPORT),
-                .access_cb   = hid_report_access,
-                .val_handle  = &hid_report_handle,
-                .flags       = BLE_GATT_CHR_F_READ | BLE_GATT_CHR_F_NOTIFY,
-                .descriptors = (struct ble_gatt_dsc_def[]) {
-                    {
-                        .uuid      = BLE_UUID16_DECLARE(BLE_DSC_HID_REPORT_REFERENCE),
-                        .access_cb = hid_report_ref_access,
-                        .att_flags = BLE_ATT_F_READ,
-                    },
-                    { 0 }
-                },
+                // NOTIFY_ENC fuerza cifrado antes de suscribirse al CCCD
+                // Sin descriptores manuales — NimBLE añade el CCCD automáticamente
+                .uuid       = BLE_UUID16_DECLARE(BLE_SVC_HID_CHR_REPORT),
+                .access_cb  = hid_report_access,
+                .val_handle = &hid_report_handle,
+                .flags      = BLE_GATT_CHR_F_READ | BLE_GATT_CHR_F_NOTIFY,
             },
             {
                 .uuid      = BLE_UUID16_DECLARE(BLE_SVC_HID_CHR_HID_INFORMATION),
@@ -212,7 +198,7 @@ static const struct ble_gatt_svc_def hid_svcs[] = {
 };
 
 // ─────────────────────────────────────────────
-// Enviar pulsación de tecla HID (key-down + key-up)
+// Enviar pulsación HID (key-down + key-up)
 // ─────────────────────────────────────────────
 static void send_key_press(uint8_t keycode)
 {
@@ -241,7 +227,7 @@ static void send_key_press(uint8_t keycode)
 }
 
 // ─────────────────────────────────────────────
-// Inicializar servidor GATT
+// GATT init
 // ─────────────────────────────────────────────
 static int gatt_svr_init(void)
 {
@@ -293,11 +279,11 @@ static void keyboard_advertise(void)
 
     rc = ble_gap_adv_start(own_addr_type, NULL, BLE_HS_FOREVER,
                            &adv_params, keyboard_gap_event, NULL);
-    if (rc != 0) { ESP_LOGE(TAG, "Error iniciando advertising: %d", rc); }
+    if (rc != 0) { ESP_LOGE(TAG, "Error advertising: %d", rc); }
 }
 
 // ─────────────────────────────────────────────
-// Callback GAP — VERSIÓN CORREGIDA
+// Callback GAP
 // ─────────────────────────────────────────────
 static int keyboard_gap_event(struct ble_gap_event *event, void *arg)
 {
@@ -308,11 +294,13 @@ static int keyboard_gap_event(struct ble_gap_event *event, void *arg)
                  event->connect.status == 0 ? "establecida" : "fallida",
                  event->connect.status);
         if (event->connect.status == 0) {
-            conn_handle = event->connect.conn_handle;
-            // Iniciar cifrado inmediatamente — Android lo exige para HID
+            conn_handle  = event->connect.conn_handle;
+            notify_state = false;
+            // Iniciar seguridad desde ESP32: Android responde con Just Works
+            // El bond se completa antes de que Android intente el CCCD write
             int rc = ble_gap_security_initiate(conn_handle);
             if (rc != 0) {
-                ESP_LOGW(TAG, "Security initiate: %d (normal si ya está vinculado)", rc);
+                ESP_LOGW(TAG, "security_initiate: %d (normal si ya vinculado)", rc);
             }
         } else {
             conn_handle = BLE_HS_CONN_HANDLE_NONE;
@@ -331,16 +319,12 @@ static int keyboard_gap_event(struct ble_gap_event *event, void *arg)
         keyboard_advertise();
         break;
 
-    // ── NUEVO: aceptar la actualización de parámetros que pide Android ──
     case BLE_GAP_EVENT_CONN_UPDATE_REQ:
-        // Devolver 0 = aceptar los parámetros propuestos por el peer
-        // Sin esto Android hace timeout (~2s) y desconecta con razón 520
-        ESP_LOGI(TAG, "Solicitud actualización parámetros de conexión: aceptada");
+        ESP_LOGI(TAG, "Solicitud actualización parámetros: aceptada");
         return 0;
 
     case BLE_GAP_EVENT_CONN_UPDATE:
-        ESP_LOGI(TAG, "Parámetros de conexión actualizados: status=%d",
-                 event->conn_update.status);
+        ESP_LOGI(TAG, "Parámetros actualizados: status=%d", event->conn_update.status);
         break;
 
     case BLE_GAP_EVENT_SUBSCRIBE:
@@ -351,8 +335,15 @@ static int keyboard_gap_event(struct ble_gap_event *event, void *arg)
         }
         break;
 
+    case BLE_GAP_EVENT_REPEAT_PAIRING: {
+        struct ble_gap_conn_desc desc;
+        ble_gap_conn_find(event->repeat_pairing.conn_handle, &desc);
+        ble_store_util_delete_peer(&desc.peer_id_addr);
+        return BLE_GAP_REPEAT_PAIRING_RETRY;
+    }
+
     case BLE_GAP_EVENT_ENC_CHANGE:
-        ESP_LOGI(TAG, "Cifrado establecido: status=%d", event->enc_change.status);
+        ESP_LOGI(TAG, "Cifrado: status=%d", event->enc_change.status);
         break;
 
     case BLE_GAP_EVENT_MTU:
@@ -364,7 +355,7 @@ static int keyboard_gap_event(struct ble_gap_event *event, void *arg)
 }
 
 // ─────────────────────────────────────────────
-// Callbacks del host NimBLE
+// Callbacks NimBLE host
 // ─────────────────────────────────────────────
 static void keyboard_on_reset(int reason)
 {
@@ -377,7 +368,7 @@ static void keyboard_on_sync(void)
     assert(rc == 0);
 
     rc = ble_hs_id_infer_auto(0, &own_addr_type);
-    if (rc != 0) { ESP_LOGE(TAG, "Error tipo de dirección: %d", rc); return; }
+    if (rc != 0) { ESP_LOGE(TAG, "Error tipo dir: %d", rc); return; }
 
     uint8_t addr[6] = {0};
     ble_hs_id_copy_addr(own_addr_type, addr, NULL);
@@ -387,9 +378,6 @@ static void keyboard_on_sync(void)
     keyboard_advertise();
 }
 
-// ─────────────────────────────────────────────
-// Tarea FreeRTOS del host NimBLE
-// ─────────────────────────────────────────────
 void ble_host_task(void *param)
 {
     ESP_LOGI(TAG, "BLE Host Task iniciada");
@@ -407,16 +395,14 @@ static int leer_joystick(void)
     adc_oneshot_read(adc1_handle, ADC_CHANNEL_7, &y);
 
     if (abs(x - 1995) < 300 && abs(y - 1882) < 300) return 9;
-
-    if (abs(x - 1995) < 300 && abs(y -    0) < 300) return 0;  // Norte
-    if (abs(x - 4095) < 300 && abs(y -    0) < 300) return 1;  // NE
-    if (abs(x - 4095) < 300 && abs(y - 1882) < 300) return 2;  // Este
-    if (abs(x - 4095) < 300 && abs(y - 4095) < 300) return 3;  // SE
-    if (abs(x - 1995) < 300 && abs(y - 4095) < 300) return 4;  // Sur
-    if (abs(x -    0) < 300 && abs(y - 4095) < 300) return 5;  // SO
-    if (abs(x -    0) < 300 && abs(y - 1882) < 300) return 6;  // Oeste
-    if (abs(x -    0) < 300 && abs(y -    0) < 300) return 7;  // NO
-
+    if (abs(x - 1995) < 300 && abs(y -    0) < 300) return 0;
+    if (abs(x - 4095) < 300 && abs(y -    0) < 300) return 1;
+    if (abs(x - 4095) < 300 && abs(y - 1882) < 300) return 2;
+    if (abs(x - 4095) < 300 && abs(y - 4095) < 300) return 3;
+    if (abs(x - 1995) < 300 && abs(y - 4095) < 300) return 4;
+    if (abs(x -    0) < 300 && abs(y - 4095) < 300) return 5;
+    if (abs(x -    0) < 300 && abs(y - 1882) < 300) return 6;
+    if (abs(x -    0) < 300 && abs(y -    0) < 300) return 7;
     return 9;
 }
 
@@ -437,10 +423,7 @@ void app_main(void)
     adc_oneshot_unit_init_cfg_t init_cfg = { .unit_id = ADC_UNIT_1 };
     ESP_ERROR_CHECK(adc_oneshot_new_unit(&init_cfg, &adc1_handle));
 
-    adc_oneshot_chan_cfg_t chan_cfg = {
-        .bitwidth = ADC_BITWIDTH_12,
-        .atten    = ADC_ATTEN_DB_12,
-    };
+    adc_oneshot_chan_cfg_t chan_cfg = { .bitwidth = ADC_BITWIDTH_12, .atten = ADC_ATTEN_DB_12 };
     ESP_ERROR_CHECK(adc_oneshot_config_channel(adc1_handle, ADC_CHANNEL_6, &chan_cfg));
     ESP_ERROR_CHECK(adc_oneshot_config_channel(adc1_handle, ADC_CHANNEL_7, &chan_cfg));
 
@@ -465,22 +448,22 @@ void app_main(void)
     ble_hs_cfg.sync_cb         = keyboard_on_sync;
     ble_hs_cfg.store_status_cb = ble_store_util_status_rr;
 
-    // ── 6. Seguridad (bonding Just Works) ───────────────────
+    // ── 6. Seguridad: Legacy Pairing Just Works ──────────────
     ble_hs_cfg.sm_io_cap         = BLE_SM_IO_CAP_NO_IO;
     ble_hs_cfg.sm_bonding        = 1;
     ble_hs_cfg.sm_mitm           = 0;
-    ble_hs_cfg.sm_sc             = 1;
+    ble_hs_cfg.sm_sc             = 0;   // Legacy — más compatible con Android
     ble_hs_cfg.sm_our_key_dist   = BLE_SM_PAIR_KEY_DIST_ENC | BLE_SM_PAIR_KEY_DIST_ID;
     ble_hs_cfg.sm_their_key_dist = BLE_SM_PAIR_KEY_DIST_ENC | BLE_SM_PAIR_KEY_DIST_ID;
 
-    // ── 7. Registrar servicio HID ───────────────────────────
+    // ── 7. Registrar servicios GATT ─────────────────────────
     int rc = gatt_svr_init();
     assert(rc == 0);
 
     rc = ble_svc_gap_device_name_set(device_name);
     assert(rc == 0);
 
-    // ── 8. Arrancar tarea del host NimBLE ───────────────────
+    // ── 8. Arrancar tarea NimBLE ────────────────────────────
     nimble_port_freertos_init(ble_host_task);
 
     // ── 9. Bucle principal ──────────────────────────────────
@@ -489,12 +472,8 @@ void app_main(void)
     while (1) {
         int b1 = gpio_get_level(BUTTON_1_GPIO);
         int b2 = gpio_get_level(BUTTON_2_GPIO);
-
-        int capa = (b1 == 1)
-                     ? ((b2 == 1) ? 0 : 1)
-                     : ((b2 == 1) ? 2 : 3);
-
-        int dir = leer_joystick();
+        int capa = (b1 == 1) ? ((b2 == 1) ? 0 : 1) : ((b2 == 1) ? 2 : 3);
+        int dir  = leer_joystick();
 
         if (dir != 9) {
             uint8_t keycode = diccionario[capa][dir];

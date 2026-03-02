@@ -1,0 +1,660 @@
+Command: /home/mario/.espressif/python_env/idf5.5_py3.14_env/bin/python /home/mario/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/mario/TFG/pruebaWroom/build/pruebaWroom.elf /home/mario/TFG/pruebaWroom/build/bootloader/bootloader.elf -m '/home/mario/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/home/mario/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimBLE: 
+[0m
+mI (891) NimB19 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6280
+load:0x40078000,len:15864
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar  2 2026 21:47:51[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=19d2ch (105772) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=00029d54 vaddr=3ffbdb60 size=04e3ch ( 20028) load[0m
+[0;32mI (130) esp_image: segment 2: paddr=0002eb98 vaddr=40080000 size=01480h (  5248) load[0m
+[0;32mI (132) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=51fb4h (335796) map[0m
+[0;32mI (251) esp_image: segment 4: paddr=00081fdc vaddr=40081480 size=16834h ( 92212) load[0m
+[0;32mI (287) esp_image: segment 5: paddr=00098818 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (299) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (299) boot: Disabling RNG early entropy source...[0m
+[0;32mI (309) cpu_start: Multicore app[0m
+[0;32mI (318) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (318) cpu_start: Pro cpu start user code[0m
+[0;32mI (318) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (323) app_init: Application information:[0m
+[0;32mI (327) app_init: Project name:     pruebaWroom[0m
+[0;32mI (333) app_init: App version:      2649f24-dirty[0m
+[0;32mI (338) app_init: Compile time:     Mar  2 2026 21:47:42[0m
+[0;32mI (344) app_init: ELF file SHA256:  b86495134...[0m
+[0;32mI (349) app_init: ESP-IDF:          v5.5.3[0m
+[0;32mI (354) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (359) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (364) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (369) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (376) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (382) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (388) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (394) heap_init: At 3FFC42C8 len 0001BD38 (111 KiB): DRAM[0m
+[0;32mI (400) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (407) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (413) heap_init: At 40097CB4 len 0000834C (32 KiB): IRAM[0m
+[0;33mW (421) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (433) spi_flash: detected chip: generic[0m
+[0;32mI (438) spi_flash: flash io: dio[0m
+[0;33mW (442) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (456) coexist: coex firmware version: 093e3d2[0m
+[0;32mI (461) main_task: Started on CPU0[0m
+[0;32mI (471) main_task: Calling app_main()[0m
+[0;32mI (481) BTDM_INIT: BT controller compile version [045a658][0m
+[0;32mI (481) BTDM_INIT: Using main XTAL as clock source[0m
+[0;32mI (481) BTDM_INIT: Bluetooth MAC: d4:e9:f4:bc:b7:26[0m
+[0;32mI (491) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (571) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (831) KB_HID: BLE Host Task iniciada[0m
+[0;32mI (881) KB_HID: BLE MAC: d4:e9:f4:bc:b7:26[0m
+[0;32mI (881) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (881) NimBLE: disc_mode=2[0m
+[0;32mI (881) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=0 adv_itvl_max=0[0m
+[0;32mI (891) NimBLE: 
+[0m
+[0;32mI (25791) KB_HID: Conexión establecida; status=0[0m
+[0;32mI (26011) KB_HID: Solicitud actualización parámetros: aceptada[0m
+[0;32mI (26461) KB_HID: Parámetros actualizados: status=0[0m
+[0;32mI (26641) KB_HID: Solicitud actualización parámetros: aceptada[0m
+[0;32mI (26731) KB_HID: Parámetros actualizados: status=0[0m
+[0;32mI (43431) KB_HID: Cifrado: status=0[0m
+[0;32mI (49051) KB_HID: Desconexión; razón=520[0m
+[0;32mI (49051) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (49051) NimBLE: disc_mode=2[0m
+[0;32mI (49051) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=0 adv_itvl_max=0[0m
+[0;32mI (49061) NimBLE: 
+[0m
+�����������������������������������������������������������������n establecida; status=0[0m
+[0;32mI (82181) KB_HID: Cifrado: status=0[0m
+[0;32mI (82271) KB_HID: Solicitud actualización parámetros: aceptada[0m
+[0;32mI (82721) KB_HID: Parámetros actualizados: status=0[0m
+����������������������������������������������������������������e=0x16 (capa=0 dir=3)[0m
+[0;33mW (133431) KB_HID: OS no suscrito aún[0m
+����������������������������������������������������������������e=0x04 (capa=0 dir=1)[0m
+[0;33mW (146831) KB_HID: OS no suscrito aún[0m
+[0;32mI (148331) KB_HID: Keycode=0x08 (capa=0 dir=0)[0m
+[0;33mW (148331) KB_HID: OS no suscrito aún[0m
+[0;32mI (149631) KB_HID: Keycode=0x07 (capa=0 dir=7)[0m
+[0;33mW (149631) KB_HID: OS no suscrito aún[0m
+����������������������������������������������������������������tud actualización parámetros: aceptada[0m
+[0;32mI (283751) KB_HID: Parámetros actualizados: status=0[0m
+[0;32mI (284721) KB_HID: Desconexión; razón=531[0m
+[0;32mI (284731) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (284731) NimBLE: disc_mode=2[0m
+[0;32mI (284731) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=0 adv_itvl_max=0[0m
+[0;32mI (284741) NimBLE: 
+[0m
+[0;32mI (308071) KB_HID: Conexión establecida; status=0[0m
+[0;32mI (313461) KB_HID: Cifrado: status=7[0m
+[0;32mI (313461) KB_HID: Desconexión; razón=520[0m
+[0;32mI (313471) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (313471) NimBLE: disc_mode=2[0m
+[0;32mI (313471) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=0 adv_itvl_max=0[0m
+[0;32mI (313481) NimBLE: 
+[0m
+[0;32mI (333041) KB_HID: Conexión establecida; status=0[0m
+[0;32mI (333261) KB_HID: Solicitud actualización parámetros: aceptada[0m
+[0;32mI (333711) KB_HID: Parámetros actualizados: status=0[0m
+[0;32mI (340381) KB_HID: Cifrado: status=7[0m
+[0;32mI (340381) KB_HID: Desconexión; razón=520[0m
+[0;32mI (340391) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (340391) NimBLE: disc_mode=2[0m
+[0;32mI (340391) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=0 adv_itvl_max=0[0m
+[0;32mI (340401) NimBLE: 
+[0m
+[0;32mI (356891) KB_HID: Conexión establecida; status=0[0m
+[0;32mI (362281) KB_HID: Cifrado: status=7[0m
+[0;32mI (362281) KB_HID: Desconexión; razón=520[0m
+[0;32mI (362291) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (362291) NimBLE: disc_mode=2[0m
+[0;32mI (362291) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=0 adv_itvl_max=0[0m
+[0;32mI (362301) NimBLE: 
+[0m
+[0;32mI (381821) KB_HID: Conexión establecida; status=0[0m
+[0;32mI (382181) KB_HID: Solicitud actualización parámetros: aceptada[0m
+[0;32mI (387171) KB_HID: Cifrado: status=7[0m
+[0;32mI (387171) KB_HID: Desconexión; razón=520[0m
+[0;32mI (387181) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (387181) NimBLE: disc_mode=2[0m
+[0;32mI (387181) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=0 adv_itvl_max=0[0m
+[0;32mI (387191) NimBLE: 
+[0m
+������������������������������������������������������������������n establecida; status=0[0m
+[0;32mI (424701) KB_HID: Solicitud actualización parámetros: aceptada[0m
+[0;32mI (425151) KB_HID: Parámetros actualizados: status=0[0m
+����������������������������������������������������������������o: status=7[0m
+[0;32mI (432051) KB_HID: Desconexión; razón=520[0m
+[0;32mI (432061) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (432061) NimBLE: disc_mode=2[0m
+[0;32mI (432061) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=0 adv_itvl_max=0[0m
+[0;32mI (432071) NimBLE: 
+[0m
+������������������������������������������������������������������n establecida; status=0[0m
+[0;32mI (469521) KB_HID: Solicitud actualización parámetros: aceptada[0m
+[0;32mI (469971) KB_HID: Parámetros actualizados: status=0[0m
+[0;32mI (476701) KB_HID: Cifrado: status=7[0m
+[0;32mI (476701) KB_HID: Desconexión; razón=520[0m
+[0;32mI (476711) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (476711) NimBLE: disc_mode=2[0m
+[0;32mI (476711) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=0 adv_itvl_max=0[0m
+[0;32mI (476721) NimBLE: 
+[0m
