@@ -1,0 +1,1781 @@
+Command: /home/mario/.espressif/python_env/idf5.5_py3.14_env/bin/python /home/mario/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/mario/TFG/Copia de pruebaWroom/build/pruebaWroom.elf /home/mario/TFG/Copia de pruebaWroom/build/bootloader/bootloader.elf -m '/home/mario/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/home/mario/esp/esp-idf/tools/idf.py'
+[0;32mI (107) esp_image: segment 3: paddr=00030020 vaddr=42000020 sizeESP-ROM:esp32c3-api1-20210207[0m
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4200621c
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.3 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr  5 2026 01:27:04[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (25) boot: efuse block revision: v1.3[0m
+[0;32mI (28) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (44) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (53) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (66) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (76) esp_image: segment 0: paddr=00010020 vaddr=3c070020 size=13a9ch ( 80540) map[0m
+[0;32mI (96) esp_image: segment 1: paddr=00023ac4 vaddr=3fc93a00 size=0275ch ( 10076) load[0m
+[0;32mI (98) esp_image: segment 2: paddr=00026228 vaddr=40380000 size=09df0h ( 40432) load[0m
+[0;32mI (107) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=61468h (398440) map[0m
+[0;32mI (169) esp_image: segment 4: paddr=00091490 vaddr=40389df0 size=09a94h ( 39572) load[0m
+[0;32mI (177) esp_image: segment 5: paddr=0009af2c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (182) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (183) boot: Disabling RNG early entropy source...[0m
+[0;32mI (194) cpu_start: Unicore app[0m
+[0;32mI (202) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (203) cpu_start: Pro cpu start user code[0m
+[0;32mI (203) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (205) app_init: Application information:[0m
+[0;32mI (208) app_init: Project name:     pruebaWroom[0m
+[0;32mI (213) app_init: App version:      cfec840-dirty[0m
+[0;32mI (217) app_init: Compile time:     Apr  5 2026 01:26:57[0m
+[0;32mI (222) app_init: ELF file SHA256:  de84578c9...[0m
+[0;32mI (226) app_init: ESP-IDF:          v5.5.3[0m
+[0;32mI (230) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (234) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (238) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (242) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (248) heap_init: At 3FC975B0 len 00028A50 (162 KiB): RAM[0m
+[0;32mI (253) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (259) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (265) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (272) spi_flash: detected chip: generic[0m
+[0;32mI (275) spi_flash: flash io: dio[0m
+[0;33mW (277) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (290) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (296) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (311) main_task: Started on CPU0[0m
+[0;32mI (311) main_task: Calling app_main()[0m
+[0;32mI (321) BLE_INIT: BT controller compile version [1bb2f50][0m
+[0;32mI (321) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (321) BLE_INIT: Feature Config, ADV:1, BLE_50:1, DTM:1, SCAN:1, CCA:0, SMP:1, CONNECT:1[0m
+[0;32mI (331) BLE_INIT: Bluetooth MAC: 80:f1:b2:64:90:02[0m
+[0;32mI (331) phy_init: phy_version 1232,d493f299,Aug 25 2025,19:01:20[0m
+[0;32mI (381) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (381) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (381) NimBLE: disc_mode=2[0m
+[0;32mI (381) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=0 adv_itvl_max=0[0m
+[0;32mI (391) NimBLE: [0m
+
+[0;32mI (391) KBD_APP: Keyboard Initialized and Advertising...[0m
+[0;32mI (2581) KBD_APP: Key Pulse: 0x07 (L:0 D:7)[0m
+[0;33mW (2581) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (3601) KBD_APP: Key Pulse: 0x0C (L:0 D:6)[0m
+[0;33mW (3601) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (18481) NIMBLE_HOGP: Connection status=0[0m
+[0;32mI (22081) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (22081) NIMBLE_HOGP: Encryption status=0[0m
+[0;32mI (24041) NIMBLE_HOGP: HID Notify: Enabled[0m
+[0;32mI (30711) KBD_APP: Key Pulse: 0x08 (L:0 D:0)[0m
+[0;32mI (30711) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (30711) NimBLE: att_handle=20[0m
+
+[0;32mI (30741) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (30741) NimBLE: att_handle=20[0m
+
+[0;32mI (32841) KBD_APP: Key Pulse: 0x07 (L:0 D:7)[0m
+[0;32mI (32841) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (32841) NimBLE: att_handle=20[0m
+
+[0;32mI (32871) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (32871) NimBLE: att_handle=20[0m
+
+[0;32mI (34131) KBD_APP: Key Pulse: 0x12 (L:0 D:2)[0m
+[0;32mI (34131) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (34131) NimBLE: att_handle=20[0m
+
+[0;32mI (34161) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (34161) NimBLE: att_handle=20[0m
+
+[0;32mI (36301) KBD_APP: Key Pulse: 0x12 (L:0 D:2)[0m
+[0;32mI (36301) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (36301) NimBLE: att_handle=20[0m
+
+[0;32mI (36331) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (36331) NimBLE: att_handle=20[0m
+
+[0;32mI (36851) KBD_APP: Key Pulse: 0x12 (L:0 D:2)[0m
+[0;32mI (36851) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (36851) NimBLE: att_handle=20[0m
+
+[0;32mI (36881) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (36881) NimBLE: att_handle=20[0m
+
+[0;32mI (37341) KBD_APP: Key Pulse: 0x12 (L:0 D:2)[0m
+[0;32mI (37341) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (37341) NimBLE: att_handle=20[0m
+
+[0;32mI (37371) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (37371) NimBLE: att_handle=20[0m
+
+[0;32mI (37791) KBD_APP: Key Pulse: 0x12 (L:0 D:2)[0m
+[0;32mI (37791) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (37791) NimBLE: att_handle=20[0m
+
+[0;32mI (37821) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (37821) NimBLE: att_handle=20[0m
+
+[0;32mI (39281) KBD_APP: Key Pulse: 0x15 (L:0 D:4)[0m
+[0;32mI (39281) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (39281) NimBLE: att_handle=20[0m
+
+[0;32mI (39311) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (39311) NimBLE: att_handle=20[0m
+
+[0;32mI (40751) KBD_APP: Key Pulse: 0x15 (L:0 D:4)[0m
+[0;32mI (40751) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (40751) NimBLE: att_handle=20[0m
+
+[0;32mI (40781) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (40781) NimBLE: att_handle=20[0m
+
+[0;32mI (42401) KBD_APP: Key Pulse: 0x11 (L:0 D:5)[0m
+[0;32mI (42401) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (42401) NimBLE: att_handle=20[0m
+
+[0;32mI (42431) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (42431) NimBLE: att_handle=20[0m
+
+[0;32mI (43271) KBD_APP: Key Pulse: 0x0C (L:0 D:6)[0m
+[0;32mI (43271) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (43271) NimBLE: att_handle=20[0m
+
+[0;32mI (43301) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (43301) NimBLE: att_handle=20[0m
+
+[0;32mI (44121) KBD_APP: Key Pulse: 0x07 (L:0 D:7)[0m
+[0;32mI (44121) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (44121) NimBLE: att_handle=20[0m
+
+[0;32mI (44151) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (44151) NimBLE: att_handle=20[0m
+
+[0;32mI (44751) KBD_APP: Key Pulse: 0x08 (L:0 D:0)[0m
+[0;32mI (44751) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (44751) NimBLE: att_handle=20[0m
+
+[0;32mI (44781) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (44781) NimBLE: att_handle=20[0m
+
+[0;32mI (45561) KBD_APP: Key Pulse: 0x08 (L:0 D:0)[0m
+[0;32mI (45561) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (45561) NimBLE: att_handle=20[0m
+
+[0;32mI (45591) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (45591) NimBLE: att_handle=20[0m
+
+[0;32mI (53131) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (53131) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53131) NimBLE: att_handle=20[0m
+
+[0;32mI (53161) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53161) NimBLE: att_handle=20[0m
+
+[0;32mI (53201) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (53201) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53201) NimBLE: att_handle=20[0m
+
+[0;32mI (53231) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53231) NimBLE: att_handle=20[0m
+
+[0;32mI (53271) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (53271) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53271) NimBLE: att_handle=20[0m
+
+[0;32mI (53301) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53301) NimBLE: att_handle=20[0m
+
+[0;32mI (53341) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (53341) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53341) NimBLE: att_handle=20[0m
+
+[0;32mI (53371) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53371) NimBLE: att_handle=20[0m
+
+[0;32mI (53411) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (53411) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53411) NimBLE: att_handle=20[0m
+
+[0;32mI (53441) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53441) NimBLE: att_handle=20[0m
+
+[0;32mI (53481) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (53481) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53481) NimBLE: att_handle=20[0m
+
+[0;32mI (53511) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53511) NimBLE: att_handle=20[0m
+
+[0;32mI (53551) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (53551) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53551) NimBLE: att_handle=20[0m
+
+[0;32mI (53581) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53581) NimBLE: att_handle=20[0m
+
+[0;32mI (53621) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (53621) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53621) NimBLE: att_handle=20[0m
+
+[0;32mI (53651) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53651) NimBLE: att_handle=20[0m
+
+[0;32mI (53691) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (53691) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53691) NimBLE: att_handle=20[0m
+
+[0;32mI (53721) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53721) NimBLE: att_handle=20[0m
+
+[0;32mI (53761) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (53761) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53761) NimBLE: att_handle=20[0m
+
+[0;32mI (53791) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53791) NimBLE: att_handle=20[0m
+
+[0;32mI (53831) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (53831) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53831) NimBLE: att_handle=20[0m
+
+[0;32mI (53861) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53861) NimBLE: att_handle=20[0m
+
+[0;32mI (53901) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (53901) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53901) NimBLE: att_handle=20[0m
+
+[0;32mI (53931) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (53931) NimBLE: att_handle=20[0m
+
+[0;32mI (55571) KBD_APP: Key Pulse: 0x2C (L:3 D:5)[0m
+[0;32mI (55571) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (55571) NimBLE: att_handle=20[0m
+
+[0;32mI (55601) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (55601) NimBLE: att_handle=20[0m
+
+[0;32mI (55641) KBD_APP: Key Pulse: 0x2C (L:3 D:5)[0m
+[0;32mI (55641) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (55641) NimBLE: att_handle=20[0m
+
+[0;32mI (55671) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (55671) NimBLE: att_handle=20[0m
+
+[0;32mI (55971) KBD_APP: Key Pulse: 0x2C (L:3 D:6)[0m
+[0;32mI (55971) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (55971) NimBLE: att_handle=20[0m
+
+[0;32mI (56001) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (56001) NimBLE: att_handle=20[0m
+
+[0;32mI (56041) KBD_APP: Key Pulse: 0x2C (L:3 D:6)[0m
+[0;32mI (56041) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (56041) NimBLE: att_handle=20[0m
+
+[0;32mI (56071) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (56071) NimBLE: att_handle=20[0m
+
+[0;32mI (56111) KBD_APP: Key Pulse: 0x2C (L:3 D:6)[0m
+[0;32mI (56111) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (56111) NimBLE: att_handle=20[0m
+
+[0;32mI (56141) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (56141) NimBLE: att_handle=20[0m
+
+[0;32mI (56461) KBD_APP: Key Pulse: 0x1B (L:3 D:0)[0m
+[0;32mI (56461) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (56461) NimBLE: att_handle=20[0m
+
+[0;32mI (56491) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (56491) NimBLE: att_handle=20[0m
+
+[0;32mI (57171) KBD_APP: Key Pulse: 0x07 (L:0 D:7)[0m
+[0;32mI (57171) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (57171) NimBLE: att_handle=20[0m
+
+[0;32mI (57201) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (57201) NimBLE: att_handle=20[0m
+
+[0;32mI (57541) KBD_APP: Key Pulse: 0x04 (L:0 D:1)[0m
+[0;32mI (57541) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (57541) NimBLE: att_handle=20[0m
+
+[0;32mI (57571) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (57571) NimBLE: att_handle=20[0m
+
+[0;32mI (57951) KBD_APP: Key Pulse: 0x04 (L:0 D:1)[0m
+[0;32mI (57951) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (57951) NimBLE: att_handle=20[0m
+
+[0;32mI (57981) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (57981) NimBLE: att_handle=20[0m
+
+[0;32mI (58441) KBD_APP: Key Pulse: 0x0C (L:0 D:6)[0m
+[0;32mI (58441) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (58441) NimBLE: att_handle=20[0m
+
+[0;32mI (58471) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (58471) NimBLE: att_handle=20[0m
+
+[0;32mI (58751) KBD_APP: Key Pulse: 0x07 (L:0 D:7)[0m
+[0;32mI (58751) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (58751) NimBLE: att_handle=20[0m
+
+[0;32mI (58781) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (58781) NimBLE: att_handle=20[0m
+
+[0;32mI (59521) KBD_APP: Key Pulse: 0x04 (L:0 D:1)[0m
+[0;32mI (59521) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (59521) NimBLE: att_handle=20[0m
+
+[0;32mI (59551) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (59551) NimBLE: att_handle=20[0m
+
+[0;32mI (60331) KBD_APP: Key Pulse: 0x15 (L:0 D:4)[0m
+[0;32mI (60331) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (60331) NimBLE: att_handle=20[0m
+
+[0;32mI (60361) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (60361) NimBLE: att_handle=20[0m
+
+[0;32mI (60521) KBD_APP: Key Pulse: 0x15 (L:0 D:4)[0m
+[0;32mI (60521) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (60521) NimBLE: att_handle=20[0m
+
+[0;32mI (60551) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (60551) NimBLE: att_handle=20[0m
+
+[0;32mI (60611) KBD_APP: Key Pulse: 0x11 (L:0 D:5)[0m
+[0;32mI (60611) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (60611) NimBLE: att_handle=20[0m
+
+[0;32mI (60641) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (60641) NimBLE: att_handle=20[0m
+
+[0;32mI (61281) KBD_APP: Key Pulse: 0x0C (L:0 D:6)[0m
+[0;32mI (61281) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (61281) NimBLE: att_handle=20[0m
+
+[0;32mI (61311) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (61311) NimBLE: att_handle=20[0m
+
+[0;32mI (61771) KBD_APP: Key Pulse: 0x0C (L:0 D:6)[0m
+[0;32mI (61771) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (61771) NimBLE: att_handle=20[0m
+
+[0;32mI (61801) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (61801) NimBLE: att_handle=20[0m
+
+[0;32mI (63241) KBD_APP: Key Pulse: 0x07 (L:0 D:7)[0m
+[0;32mI (63241) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (63241) NimBLE: att_handle=20[0m
+
+[0;32mI (63271) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (63271) NimBLE: att_handle=20[0m
+
+[0;32mI (63571) KBD_APP: Key Pulse: 0x0C (L:0 D:6)[0m
+[0;32mI (63571) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (63571) NimBLE: att_handle=20[0m
+
+[0;32mI (63601) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (63601) NimBLE: att_handle=20[0m
+
+[0;32mI (64261) KBD_APP: Key Pulse: 0x08 (L:0 D:0)[0m
+[0;32mI (64261) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (64261) NimBLE: att_handle=20[0m
+
+[0;32mI (64291) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (64291) NimBLE: att_handle=20[0m
+
+[0;32mI (64671) KBD_APP: Key Pulse: 0x08 (L:0 D:0)[0m
+[0;32mI (64671) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (64671) NimBLE: att_handle=20[0m
+
+[0;32mI (64701) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (64701) NimBLE: att_handle=20[0m
+
+[0;32mI (65941) KBD_APP: Key Pulse: 0x0D (L:2 D:6)[0m
+[0;32mI (65941) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (65941) NimBLE: att_handle=20[0m
+
+[0;32mI (65971) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (65971) NimBLE: att_handle=20[0m
+
+[0;32mI (66471) KBD_APP: Key Pulse: 0x19 (L:2 D:0)[0m
+[0;32mI (66471) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (66471) NimBLE: att_handle=20[0m
+
+[0;32mI (66501) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (66501) NimBLE: att_handle=20[0m
+
+[0;32mI (66641) KBD_APP: Key Pulse: 0x19 (L:2 D:0)[0m
+[0;32mI (66641) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (66641) NimBLE: att_handle=20[0m
+
+[0;32mI (66671) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (66671) NimBLE: att_handle=20[0m
+
+[0;32mI (66891) KBD_APP: Key Pulse: 0x33 (L:2 D:7)[0m
+[0;32mI (66891) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (66891) NimBLE: att_handle=20[0m
+
+[0;32mI (66921) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (66921) NimBLE: att_handle=20[0m
+
+[0;32mI (67121) KBD_APP: Key Pulse: 0x14 (L:2 D:2)[0m
+[0;32mI (67121) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (67121) NimBLE: att_handle=20[0m
+
+[0;32mI (67151) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (67151) NimBLE: att_handle=20[0m
+
+[0;32mI (67631) KBD_APP: Key Pulse: 0x09 (L:2 D:4)[0m
+[0;32mI (67631) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (67631) NimBLE: att_handle=20[0m
+
+[0;32mI (67661) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (67661) NimBLE: att_handle=20[0m
+
+[0;32mI (70461) KBD_APP: Key Pulse: 0x14 (L:2 D:2)[0m
+[0;32mI (70461) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (70461) NimBLE: att_handle=20[0m
+
+[0;32mI (70491) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (70491) NimBLE: att_handle=20[0m
+
+[0;32mI (70871) KBD_APP: Key Pulse: 0x0B (L:2 D:3)[0m
+[0;32mI (70871) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (70871) NimBLE: att_handle=20[0m
+
+[0;32mI (70901) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (70901) NimBLE: att_handle=20[0m
+
+[0;32mI (71281) KBD_APP: Key Pulse: 0x33 (L:2 D:7)[0m
+[0;32mI (71281) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (71281) NimBLE: att_handle=20[0m
+
+[0;32mI (71311) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (71311) NimBLE: att_handle=20[0m
+
+[0;32mI (71591) KBD_APP: Key Pulse: 0x14 (L:2 D:2)[0m
+[0;32mI (71591) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (71591) NimBLE: att_handle=20[0m
+
+[0;32mI (71621) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (71621) NimBLE: att_handle=20[0m
+
+[0;32mI (71981) KBD_APP: Key Pulse: 0x19 (L:2 D:0)[0m
+[0;32mI (71981) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (71981) NimBLE: att_handle=20[0m
+
+[0;32mI (72011) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (72011) NimBLE: att_handle=20[0m
+
+[0;32mI (72751) KBD_APP: Key Pulse: 0x0B (L:2 D:3)[0m
+[0;32mI (72751) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (72751) NimBLE: att_handle=20[0m
+
+[0;32mI (72781) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (72781) NimBLE: att_handle=20[0m
+
+[0;32mI (73061) KBD_APP: Key Pulse: 0x09 (L:2 D:4)[0m
+[0;32mI (73061) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (73061) NimBLE: att_handle=20[0m
+
+[0;32mI (73091) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (73091) NimBLE: att_handle=20[0m
+
+[0;32mI (73171) KBD_APP: Key Pulse: 0x1D (L:2 D:5)[0m
+[0;32mI (73171) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (73171) NimBLE: att_handle=20[0m
+
+[0;32mI (73201) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (73201) NimBLE: att_handle=20[0m
+
+[0;32mI (73481) KBD_APP: Key Pulse: 0x0D (L:2 D:6)[0m
+[0;32mI (73481) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (73481) NimBLE: att_handle=20[0m
+
+[0;32mI (73511) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (73511) NimBLE: att_handle=20[0m
+
+[0;32mI (73631) KBD_APP: Key Pulse: 0x33 (L:2 D:7)[0m
+[0;32mI (73631) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (73631) NimBLE: att_handle=20[0m
+
+[0;32mI (73661) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (73661) NimBLE: att_handle=20[0m
+
+[0;32mI (73741) KBD_APP: Key Pulse: 0x19 (L:2 D:0)[0m
+[0;32mI (73741) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (73741) NimBLE: att_handle=20[0m
+
+[0;32mI (73771) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (73771) NimBLE: att_handle=20[0m
+
+[0;32mI (73831) KBD_APP: Key Pulse: 0x1C (L:2 D:1)[0m
+[0;32mI (73831) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (73831) NimBLE: att_handle=20[0m
+
+[0;32mI (73861) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (73861) NimBLE: att_handle=20[0m
+
+[0;32mI (73961) KBD_APP: Key Pulse: 0x14 (L:2 D:2)[0m
+[0;32mI (73961) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (73961) NimBLE: att_handle=20[0m
+
+[0;32mI (73991) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (73991) NimBLE: att_handle=20[0m
+
+[0;32mI (74031) KBD_APP: Key Pulse: 0x0B (L:2 D:3)[0m
+[0;32mI (74031) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (74031) NimBLE: att_handle=20[0m
+
+[0;32mI (74061) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (74061) NimBLE: att_handle=20[0m
+
+[0;32mI (74201) KBD_APP: Key Pulse: 0x09 (L:2 D:4)[0m
+[0;32mI (74201) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (74201) NimBLE: att_handle=20[0m
+
+[0;32mI (74231) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (74231) NimBLE: att_handle=20[0m
+
+[0;32mI (74271) KBD_APP: Key Pulse: 0x1D (L:2 D:5)[0m
+[0;32mI (74271) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (74271) NimBLE: att_handle=20[0m
+
+[0;32mI (74301) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (74301) NimBLE: att_handle=20[0m
+
+[0;32mI (74401) KBD_APP: Key Pulse: 0x0D (L:2 D:6)[0m
+[0;32mI (74401) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (74401) NimBLE: att_handle=20[0m
+
+[0;32mI (74431) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (74431) NimBLE: att_handle=20[0m
+
+[0;32mI (74531) KBD_APP: Key Pulse: 0x33 (L:2 D:7)[0m
+[0;32mI (74531) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (74531) NimBLE: att_handle=20[0m
+
+[0;32mI (74561) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (74561) NimBLE: att_handle=20[0m
+
+[0;32mI (75241) KBD_APP: Key Pulse: 0x05 (L:1 D:6)[0m
+[0;32mI (75241) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (75241) NimBLE: att_handle=20[0m
+
+[0;32mI (75271) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (75271) NimBLE: att_handle=20[0m
+
+[0;32mI (75431) KBD_APP: Key Pulse: 0x0A (L:1 D:7)[0m
+[0;32mI (75431) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (75431) NimBLE: att_handle=20[0m
+
+[0;32mI (75461) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (75461) NimBLE: att_handle=20[0m
+
+[0;32mI (75541) KBD_APP: Key Pulse: 0x06 (L:1 D:1)[0m
+[0;32mI (75541) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (75541) NimBLE: att_handle=20[0m
+
+[0;32mI (75571) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (75571) NimBLE: att_handle=20[0m
+
+[0;32mI (75631) KBD_APP: Key Pulse: 0x17 (L:1 D:2)[0m
+[0;32mI (75631) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (75631) NimBLE: att_handle=20[0m
+
+[0;32mI (75661) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (75661) NimBLE: att_handle=20[0m
+
+[0;32mI (75701) KBD_APP: Key Pulse: 0x18 (L:1 D:3)[0m
+[0;32mI (75701) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (75701) NimBLE: att_handle=20[0m
+
+[0;32mI (75731) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (75731) NimBLE: att_handle=20[0m
+
+[0;32mI (75811) KBD_APP: Key Pulse: 0x10 (L:1 D:4)[0m
+[0;32mI (75811) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (75811) NimBLE: att_handle=20[0m
+
+[0;32mI (75841) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (75841) NimBLE: att_handle=20[0m
+
+[0;32mI (75881) KBD_APP: Key Pulse: 0x13 (L:1 D:5)[0m
+[0;32mI (75881) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (75881) NimBLE: att_handle=20[0m
+
+[0;32mI (75911) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (75911) NimBLE: att_handle=20[0m
+
+[0;32mI (75991) KBD_APP: Key Pulse: 0x05 (L:1 D:6)[0m
+[0;32mI (75991) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (75991) NimBLE: att_handle=20[0m
+
+[0;32mI (76021) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (76021) NimBLE: att_handle=20[0m
+
+[0;32mI (76141) KBD_APP: Key Pulse: 0x0F (L:1 D:0)[0m
+[0;32mI (76141) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (76141) NimBLE: att_handle=20[0m
+
+[0;32mI (76171) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (76171) NimBLE: att_handle=20[0m
+
+[0;32mI (76251) KBD_APP: Key Pulse: 0x17 (L:1 D:2)[0m
+[0;32mI (76251) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (76251) NimBLE: att_handle=20[0m
+
+[0;32mI (76281) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (76281) NimBLE: att_handle=20[0m
+
+[0;32mI (76381) KBD_APP: Key Pulse: 0x18 (L:1 D:3)[0m
+[0;32mI (76381) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (76381) NimBLE: att_handle=20[0m
+
+[0;32mI (76411) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (76411) NimBLE: att_handle=20[0m
+
+[0;32mI (76911) KBD_APP: Key Pulse: 0x0C (L:0 D:6)[0m
+[0;32mI (76911) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (76911) NimBLE: att_handle=20[0m
+
+[0;32mI (76941) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (76941) NimBLE: att_handle=20[0m
+
+[0;32mI (77001) KBD_APP: Key Pulse: 0x07 (L:0 D:7)[0m
+[0;32mI (77001) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (77001) NimBLE: att_handle=20[0m
+
+[0;32mI (77031) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (77031) NimBLE: att_handle=20[0m
+
+[0;32mI (77131) KBD_APP: Key Pulse: 0x04 (L:0 D:1)[0m
+[0;32mI (77131) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (77131) NimBLE: att_handle=20[0m
+
+[0;32mI (77161) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (77161) NimBLE: att_handle=20[0m
+
+[0;32mI (77201) KBD_APP: Key Pulse: 0x12 (L:0 D:2)[0m
+[0;32mI (77201) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (77201) NimBLE: att_handle=20[0m
+
+[0;32mI (77231) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (77231) NimBLE: att_handle=20[0m
+
+[0;32mI (77271) KBD_APP: Key Pulse: 0x16 (L:0 D:3)[0m
+[0;32mI (77271) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (77271) NimBLE: att_handle=20[0m
+
+[0;32mI (77301) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (77301) NimBLE: att_handle=20[0m
+
+[0;32mI (77341) KBD_APP: Key Pulse: 0x15 (L:0 D:4)[0m
+[0;32mI (77341) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (77341) NimBLE: att_handle=20[0m
+
+[0;32mI (77371) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (77371) NimBLE: att_handle=20[0m
+
+[0;32mI (77451) KBD_APP: Key Pulse: 0x11 (L:0 D:5)[0m
+[0;32mI (77451) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (77451) NimBLE: att_handle=20[0m
+
+[0;32mI (77481) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (77481) NimBLE: att_handle=20[0m
+
+[0;32mI (78241) KBD_APP: Key Pulse: 0x12 (L:0 D:2)[0m
+[0;32mI (78241) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (78241) NimBLE: att_handle=20[0m
+
+[0;32mI (78271) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (78271) NimBLE: att_handle=20[0m
+
+[0;32mI (78451) KBD_APP: Key Pulse: 0x11 (L:0 D:5)[0m
+[0;32mI (78451) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (78451) NimBLE: att_handle=20[0m
+
+[0;32mI (78481) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (78481) NimBLE: att_handle=20[0m
+
+[0;32mI (78721) KBD_APP: Key Pulse: 0x07 (L:0 D:7)[0m
+[0;32mI (78721) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (78721) NimBLE: att_handle=20[0m
+
+[0;32mI (78751) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (78751) NimBLE: att_handle=20[0m
+
+[0;32mI (78931) KBD_APP: Key Pulse: 0x12 (L:0 D:2)[0m
+[0;32mI (78931) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (78931) NimBLE: att_handle=20[0m
+
+[0;32mI (78961) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (78961) NimBLE: att_handle=20[0m
+
+[0;32mI (79161) KBD_APP: Key Pulse: 0x11 (L:0 D:5)[0m
+[0;32mI (79161) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (79161) NimBLE: att_handle=20[0m
+
+[0;32mI (79191) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (79191) NimBLE: att_handle=20[0m
+
+[0;32mI (79371) KBD_APP: Key Pulse: 0x0C (L:0 D:6)[0m
+[0;32mI (79371) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (79371) NimBLE: att_handle=20[0m
+
+[0;32mI (79401) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (79401) NimBLE: att_handle=20[0m
+
+[0;32mI (79601) KBD_APP: Key Pulse: 0x12 (L:0 D:2)[0m
+[0;32mI (79601) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (79601) NimBLE: att_handle=20[0m
+
+[0;32mI (79631) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (79631) NimBLE: att_handle=20[0m
+
+[0;32mI (79851) KBD_APP: Key Pulse: 0x0C (L:0 D:6)[0m
+[0;32mI (79851) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (79851) NimBLE: att_handle=20[0m
+
+[0;32mI (79881) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (79881) NimBLE: att_handle=20[0m
+
+[0;32mI (80301) KBD_APP: Key Pulse: 0x16 (L:0 D:3)[0m
+[0;32mI (80301) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (80301) NimBLE: att_handle=20[0m
+
+[0;32mI (80331) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (80331) NimBLE: att_handle=20[0m
+
+[0;32mI (81031) KBD_APP: Key Pulse: 0x12 (L:0 D:2)[0m
+[0;32mI (81031) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (81031) NimBLE: att_handle=20[0m
+
+[0;32mI (81061) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (81061) NimBLE: att_handle=20[0m
+
+[0;32mI (81261) KBD_APP: Key Pulse: 0x11 (L:0 D:5)[0m
+[0;32mI (81261) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (81261) NimBLE: att_handle=20[0m
+
+[0;32mI (81291) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (81291) NimBLE: att_handle=20[0m
+
+[0;32mI (81431) KBD_APP: Key Pulse: 0x12 (L:0 D:2)[0m
+[0;32mI (81431) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (81431) NimBLE: att_handle=20[0m
+
+[0;32mI (81461) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (81461) NimBLE: att_handle=20[0m
+
+[0;32mI (81601) KBD_APP: Key Pulse: 0x07 (L:0 D:7)[0m
+[0;32mI (81601) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (81601) NimBLE: att_handle=20[0m
+
+[0;32mI (81631) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (81631) NimBLE: att_handle=20[0m
+
+[0;32mI (81731) KBD_APP: Key Pulse: 0x08 (L:0 D:0)[0m
+[0;32mI (81731) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (81731) NimBLE: att_handle=20[0m
+
+[0;32mI (81761) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (81761) NimBLE: att_handle=20[0m
+
+[0;32mI (81981) KBD_APP: Key Pulse: 0x15 (L:0 D:4)[0m
+[0;32mI (81981) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (81981) NimBLE: att_handle=20[0m
+
+[0;32mI (82011) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (82011) NimBLE: att_handle=20[0m
+
+[0;32mI (82051) KBD_APP: Key Pulse: 0x11 (L:0 D:5)[0m
+[0;32mI (82051) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (82051) NimBLE: att_handle=20[0m
+
+[0;32mI (82081) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (82081) NimBLE: att_handle=20[0m
+
+[0;32mI (82181) KBD_APP: Key Pulse: 0x0C (L:0 D:6)[0m
+[0;32mI (82181) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (82181) NimBLE: att_handle=20[0m
+
+[0;32mI (82211) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (82211) NimBLE: att_handle=20[0m
+
+[0;32mI (117491) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (117491) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (117491) NimBLE: att_handle=20[0m
+
+[0;32mI (117521) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (117521) NimBLE: att_handle=20[0m
+
+[0;32mI (117561) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (117561) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (117561) NimBLE: att_handle=20[0m
+
+[0;32mI (117591) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (117591) NimBLE: att_handle=20[0m
+
+[0;32mI (117631) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (117631) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (117631) NimBLE: att_handle=20[0m
+
+[0;32mI (117661) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (117661) NimBLE: att_handle=20[0m
+
+[0;32mI (119841) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (119841) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (119841) NimBLE: att_handle=20[0m
+
+[0;32mI (119871) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (119871) NimBLE: att_handle=20[0m
+
+[0;32mI (119911) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (119911) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (119911) NimBLE: att_handle=20[0m
+
+[0;32mI (119941) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (119941) NimBLE: att_handle=20[0m
+
+[0;32mI (119981) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (119981) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (119981) NimBLE: att_handle=20[0m
+
+[0;32mI (120011) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120011) NimBLE: att_handle=20[0m
+
+[0;32mI (120051) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (120051) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120051) NimBLE: att_handle=20[0m
+
+[0;32mI (120081) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120081) NimBLE: att_handle=20[0m
+
+[0;32mI (120121) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (120121) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120121) NimBLE: att_handle=20[0m
+
+[0;32mI (120151) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120151) NimBLE: att_handle=20[0m
+
+[0;32mI (120191) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (120191) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120191) NimBLE: att_handle=20[0m
+
+[0;32mI (120221) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120221) NimBLE: att_handle=20[0m
+
+[0;32mI (120261) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (120261) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120261) NimBLE: att_handle=20[0m
+
+[0;32mI (120291) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120291) NimBLE: att_handle=20[0m
+
+[0;32mI (120331) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (120331) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120331) NimBLE: att_handle=20[0m
+
+[0;32mI (120361) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120361) NimBLE: att_handle=20[0m
+
+[0;32mI (120401) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (120401) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120401) NimBLE: att_handle=20[0m
+
+[0;32mI (120431) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120431) NimBLE: att_handle=20[0m
+
+[0;32mI (120471) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (120471) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120471) NimBLE: att_handle=20[0m
+
+[0;32mI (120501) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120501) NimBLE: att_handle=20[0m
+
+[0;32mI (120541) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (120541) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120541) NimBLE: att_handle=20[0m
+
+[0;32mI (120571) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120571) NimBLE: att_handle=20[0m
+
+[0;32mI (120611) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (120611) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120611) NimBLE: att_handle=20[0m
+
+[0;32mI (120641) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120641) NimBLE: att_handle=20[0m
+
+[0;32mI (120681) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (120681) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120681) NimBLE: att_handle=20[0m
+
+[0;32mI (120711) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120711) NimBLE: att_handle=20[0m
+
+[0;32mI (120751) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (120751) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120751) NimBLE: att_handle=20[0m
+
+[0;32mI (120781) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120781) NimBLE: att_handle=20[0m
+
+[0;32mI (120821) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (120821) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120821) NimBLE: att_handle=20[0m
+
+[0;32mI (120851) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120851) NimBLE: att_handle=20[0m
+
+[0;32mI (120891) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (120891) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120891) NimBLE: att_handle=20[0m
+
+[0;32mI (120921) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120921) NimBLE: att_handle=20[0m
+
+[0;32mI (120961) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (120961) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120961) NimBLE: att_handle=20[0m
+
+[0;32mI (120991) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (120991) NimBLE: att_handle=20[0m
+
+[0;32mI (121031) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (121031) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (121031) NimBLE: att_handle=20[0m
+
+[0;32mI (121061) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (121061) NimBLE: att_handle=20[0m
+
+[0;32mI (121101) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (121101) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (121101) NimBLE: att_handle=20[0m
+
+[0;32mI (121131) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (121131) NimBLE: att_handle=20[0m
+
+[0;32mI (121171) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (121171) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (121171) NimBLE: att_handle=20[0m
+
+[0;32mI (121201) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (121201) NimBLE: att_handle=20[0m
+
+[0;32mI (121241) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (121241) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (121241) NimBLE: att_handle=20[0m
+
+[0;32mI (121271) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (121271) NimBLE: att_handle=20[0m
+
+[0;32mI (121531) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (121531) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (121531) NimBLE: att_handle=20[0m
+
+[0;32mI (121561) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (121561) NimBLE: att_handle=20[0m
+
+[0;32mI (121601) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (121601) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (121601) NimBLE: att_handle=20[0m
+
+[0;32mI (121631) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (121631) NimBLE: att_handle=20[0m
+
+[0;32mI (121671) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (121671) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (121671) NimBLE: att_handle=20[0m
+
+[0;32mI (121701) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (121701) NimBLE: att_handle=20[0m
+
+[0;32mI (175201) KBD_APP: Key Pulse: 0x0F (L:1 D:0)[0m
+[0;32mI (175201) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (175201) NimBLE: att_handle=20[0m
+
+[0;32mI (175231) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (175231) NimBLE: att_handle=20[0m
+
+[0;32mI (175971) KBD_APP: Key Pulse: 0x0F (L:1 D:0)[0m
+[0;32mI (175971) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (175971) NimBLE: att_handle=20[0m
+
+[0;32mI (176001) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (176001) NimBLE: att_handle=20[0m
+
+[0;32mI (176301) KBD_APP: Key Pulse: 0x0F (L:1 D:0)[0m
+[0;32mI (176301) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (176301) NimBLE: att_handle=20[0m
+
+[0;32mI (176331) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (176331) NimBLE: att_handle=20[0m
+
+[0;32mI (176611) KBD_APP: Key Pulse: 0x0F (L:1 D:0)[0m
+[0;32mI (176611) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (176611) NimBLE: att_handle=20[0m
+
+[0;32mI (176641) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (176641) NimBLE: att_handle=20[0m
+
+[0;32mI (176881) KBD_APP: Key Pulse: 0x0F (L:1 D:0)[0m
+[0;32mI (176881) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (176881) NimBLE: att_handle=20[0m
+
+[0;32mI (176911) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (176911) NimBLE: att_handle=20[0m
+
+[0;32mI (177271) KBD_APP: Key Pulse: 0x0F (L:1 D:0)[0m
+[0;32mI (177271) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (177271) NimBLE: att_handle=20[0m
+
+[0;32mI (177301) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (177301) NimBLE: att_handle=20[0m
+
+[0;32mI (177581) KBD_APP: Key Pulse: 0x0F (L:1 D:0)[0m
+[0;32mI (177581) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (177581) NimBLE: att_handle=20[0m
+
+[0;32mI (177611) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (177611) NimBLE: att_handle=20[0m
+
+[0;32mI (177891) KBD_APP: Key Pulse: 0x0F (L:1 D:0)[0m
+[0;32mI (177891) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (177891) NimBLE: att_handle=20[0m
+
+[0;32mI (177921) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (177921) NimBLE: att_handle=20[0m
+
+[0;32mI (178181) KBD_APP: Key Pulse: 0x0F (L:1 D:0)[0m
+[0;32mI (178181) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (178181) NimBLE: att_handle=20[0m
+
+[0;32mI (178211) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (178211) NimBLE: att_handle=20[0m
+
+[0;32mI (178731) KBD_APP: Key Pulse: 0x0F (L:1 D:0)[0m
+[0;32mI (178731) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (178731) NimBLE: att_handle=20[0m
+
+[0;32mI (178761) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (178761) NimBLE: att_handle=20[0m
+
+[0;32mI (179081) KBD_APP: Key Pulse: 0x0F (L:1 D:0)[0m
+[0;32mI (179081) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (179081) NimBLE: att_handle=20[0m
+
+[0;32mI (179111) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (179111) NimBLE: att_handle=20[0m
+
+[0;32mI (180931) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (180931) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (180931) NimBLE: att_handle=20[0m
+
+[0;32mI (180961) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (180961) NimBLE: att_handle=20[0m
+
+[0;32mI (181001) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (181001) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181001) NimBLE: att_handle=20[0m
+
+[0;32mI (181031) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181031) NimBLE: att_handle=20[0m
+
+[0;32mI (181071) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (181071) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181071) NimBLE: att_handle=20[0m
+
+[0;32mI (181101) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181101) NimBLE: att_handle=20[0m
+
+[0;32mI (181141) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (181141) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181141) NimBLE: att_handle=20[0m
+
+[0;32mI (181171) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181171) NimBLE: att_handle=20[0m
+
+[0;32mI (181211) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (181211) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181211) NimBLE: att_handle=20[0m
+
+[0;32mI (181241) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181241) NimBLE: att_handle=20[0m
+
+[0;32mI (181281) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (181281) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181281) NimBLE: att_handle=20[0m
+
+[0;32mI (181311) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181311) NimBLE: att_handle=20[0m
+
+[0;32mI (181351) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (181351) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181351) NimBLE: att_handle=20[0m
+
+[0;32mI (181381) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181381) NimBLE: att_handle=20[0m
+
+[0;32mI (181421) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (181421) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181421) NimBLE: att_handle=20[0m
+
+[0;32mI (181451) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181451) NimBLE: att_handle=20[0m
+
+[0;32mI (181491) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (181491) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181491) NimBLE: att_handle=20[0m
+
+[0;32mI (181521) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181521) NimBLE: att_handle=20[0m
+
+[0;32mI (181561) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (181561) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181561) NimBLE: att_handle=20[0m
+
+[0;32mI (181591) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181591) NimBLE: att_handle=20[0m
+
+[0;32mI (181631) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (181631) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181631) NimBLE: att_handle=20[0m
+
+[0;32mI (181661) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181661) NimBLE: att_handle=20[0m
+
+[0;32mI (181701) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (181701) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181701) NimBLE: att_handle=20[0m
+
+[0;32mI (181731) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181731) NimBLE: att_handle=20[0m
+
+[0;32mI (181771) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (181771) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181771) NimBLE: att_handle=20[0m
+
+[0;32mI (181801) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181801) NimBLE: att_handle=20[0m
+
+[0;32mI (181841) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (181841) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181841) NimBLE: att_handle=20[0m
+
+[0;32mI (181871) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181871) NimBLE: att_handle=20[0m
+
+[0;32mI (181911) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (181911) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181911) NimBLE: att_handle=20[0m
+
+[0;32mI (181941) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181941) NimBLE: att_handle=20[0m
+
+[0;32mI (181981) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (181981) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (181981) NimBLE: att_handle=20[0m
+
+[0;32mI (182011) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182011) NimBLE: att_handle=20[0m
+
+[0;32mI (182051) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (182051) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182051) NimBLE: att_handle=20[0m
+
+[0;32mI (182081) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182081) NimBLE: att_handle=20[0m
+
+[0;32mI (182121) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (182121) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182121) NimBLE: att_handle=20[0m
+
+[0;32mI (182151) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182151) NimBLE: att_handle=20[0m
+
+[0;32mI (182191) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (182191) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182191) NimBLE: att_handle=20[0m
+
+[0;32mI (182221) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182221) NimBLE: att_handle=20[0m
+
+[0;32mI (182261) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (182261) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182261) NimBLE: att_handle=20[0m
+
+[0;32mI (182291) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182291) NimBLE: att_handle=20[0m
+
+[0;32mI (182331) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (182331) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182331) NimBLE: att_handle=20[0m
+
+[0;32mI (182361) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182361) NimBLE: att_handle=20[0m
+
+[0;32mI (182401) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (182401) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182401) NimBLE: att_handle=20[0m
+
+[0;32mI (182431) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182431) NimBLE: att_handle=20[0m
+
+[0;32mI (182471) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (182471) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182471) NimBLE: att_handle=20[0m
+
+[0;32mI (182501) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182501) NimBLE: att_handle=20[0m
+
+[0;32mI (182541) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (182541) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182541) NimBLE: att_handle=20[0m
+
+[0;32mI (182571) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182571) NimBLE: att_handle=20[0m
+
+[0;32mI (182611) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (182611) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182611) NimBLE: att_handle=20[0m
+
+[0;32mI (182641) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182641) NimBLE: att_handle=20[0m
+
+[0;32mI (182681) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (182681) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182681) NimBLE: att_handle=20[0m
+
+[0;32mI (182711) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182711) NimBLE: att_handle=20[0m
+
+[0;32mI (182751) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (182751) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182751) NimBLE: att_handle=20[0m
+
+[0;32mI (182781) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182781) NimBLE: att_handle=20[0m
+
+[0;32mI (182821) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (182821) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182821) NimBLE: att_handle=20[0m
+
+[0;32mI (182851) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182851) NimBLE: att_handle=20[0m
+
+[0;32mI (182891) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (182891) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182891) NimBLE: att_handle=20[0m
+
+[0;32mI (182921) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182921) NimBLE: att_handle=20[0m
+
+[0;32mI (182961) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (182961) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182961) NimBLE: att_handle=20[0m
+
+[0;32mI (182991) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (182991) NimBLE: att_handle=20[0m
+
+[0;32mI (183031) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (183031) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183031) NimBLE: att_handle=20[0m
+
+[0;32mI (183061) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183061) NimBLE: att_handle=20[0m
+
+[0;32mI (183101) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (183101) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183101) NimBLE: att_handle=20[0m
+
+[0;32mI (183131) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183131) NimBLE: att_handle=20[0m
+
+[0;32mI (183171) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (183171) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183171) NimBLE: att_handle=20[0m
+
+[0;32mI (183201) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183201) NimBLE: att_handle=20[0m
+
+[0;32mI (183241) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (183241) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183241) NimBLE: att_handle=20[0m
+
+[0;32mI (183271) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183271) NimBLE: att_handle=20[0m
+
+[0;32mI (183311) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (183311) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183311) NimBLE: att_handle=20[0m
+
+[0;32mI (183341) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183341) NimBLE: att_handle=20[0m
+
+[0;32mI (183381) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (183381) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183381) NimBLE: att_handle=20[0m
+
+[0;32mI (183411) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183411) NimBLE: att_handle=20[0m
+
+[0;32mI (183451) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (183451) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183451) NimBLE: att_handle=20[0m
+
+[0;32mI (183481) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183481) NimBLE: att_handle=20[0m
+
+[0;32mI (183521) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (183521) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183521) NimBLE: att_handle=20[0m
+
+[0;32mI (183551) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183551) NimBLE: att_handle=20[0m
+
+[0;32mI (183591) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (183591) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183591) NimBLE: att_handle=20[0m
+
+[0;32mI (183621) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183621) NimBLE: att_handle=20[0m
+
+[0;32mI (183661) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (183661) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183661) NimBLE: att_handle=20[0m
+
+[0;32mI (183691) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183691) NimBLE: att_handle=20[0m
+
+[0;32mI (183731) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (183731) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183731) NimBLE: att_handle=20[0m
+
+[0;32mI (183761) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183761) NimBLE: att_handle=20[0m
+
+[0;32mI (183801) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (183801) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183801) NimBLE: att_handle=20[0m
+
+[0;32mI (183831) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183831) NimBLE: att_handle=20[0m
+
+[0;32mI (183871) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (183871) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183871) NimBLE: att_handle=20[0m
+
+[0;32mI (183901) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183901) NimBLE: att_handle=20[0m
+
+[0;32mI (183941) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (183941) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183941) NimBLE: att_handle=20[0m
+
+[0;32mI (183971) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (183971) NimBLE: att_handle=20[0m
+
+[0;32mI (184011) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (184011) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184011) NimBLE: att_handle=20[0m
+
+[0;32mI (184041) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184041) NimBLE: att_handle=20[0m
+
+[0;32mI (184081) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (184081) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184081) NimBLE: att_handle=20[0m
+
+[0;32mI (184111) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184111) NimBLE: att_handle=20[0m
+
+[0;32mI (184151) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (184151) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184151) NimBLE: att_handle=20[0m
+
+[0;32mI (184181) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184181) NimBLE: att_handle=20[0m
+
+[0;32mI (184221) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (184221) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184221) NimBLE: att_handle=20[0m
+
+[0;32mI (184251) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184251) NimBLE: att_handle=20[0m
+
+[0;32mI (184291) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (184291) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184291) NimBLE: att_handle=20[0m
+
+[0;32mI (184321) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184321) NimBLE: att_handle=20[0m
+
+[0;32mI (184361) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (184361) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184361) NimBLE: att_handle=20[0m
+
+[0;32mI (184391) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184391) NimBLE: att_handle=20[0m
+
+[0;32mI (184431) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (184431) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184431) NimBLE: att_handle=20[0m
+
+[0;32mI (184461) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184461) NimBLE: att_handle=20[0m
+
+[0;32mI (184501) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (184501) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184501) NimBLE: att_handle=20[0m
+
+[0;32mI (184531) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184531) NimBLE: att_handle=20[0m
+
+[0;32mI (184571) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (184571) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184571) NimBLE: att_handle=20[0m
+
+[0;32mI (184601) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184601) NimBLE: att_handle=20[0m
+
+[0;32mI (184641) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (184641) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184641) NimBLE: att_handle=20[0m
+
+[0;32mI (184671) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184671) NimBLE: att_handle=20[0m
+
+[0;32mI (184711) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (184711) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184711) NimBLE: att_handle=20[0m
+
+[0;32mI (184741) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184741) NimBLE: att_handle=20[0m
+
+[0;32mI (184781) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (184781) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184781) NimBLE: att_handle=20[0m
+
+[0;32mI (184811) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184811) NimBLE: att_handle=20[0m
+
+[0;32mI (184851) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (184851) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184851) NimBLE: att_handle=20[0m
+
+[0;32mI (184881) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184881) NimBLE: att_handle=20[0m
+
+[0;32mI (184921) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (184921) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184921) NimBLE: att_handle=20[0m
+
+[0;32mI (184951) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184951) NimBLE: att_handle=20[0m
+
+[0;32mI (184991) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (184991) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (184991) NimBLE: att_handle=20[0m
+
+[0;32mI (185021) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (185021) NimBLE: att_handle=20[0m
+
+[0;32mI (185061) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (185061) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (185061) NimBLE: att_handle=20[0m
+
+[0;32mI (185091) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (185091) NimBLE: att_handle=20[0m
+
+[0;32mI (185131) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (185131) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (185131) NimBLE: att_handle=20[0m
+
+[0;32mI (185161) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (185161) NimBLE: att_handle=20[0m
+
+[0;32mI (185201) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (185201) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (185201) NimBLE: att_handle=20[0m
+
+[0;32mI (185231) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (185231) NimBLE: att_handle=20[0m
+
+[0;32mI (185271) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (185271) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (185271) NimBLE: att_handle=20[0m
+
+[0;32mI (185301) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (185301) NimBLE: att_handle=20[0m
+
+[0;32mI (185341) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (185341) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (185341) NimBLE: att_handle=20[0m
+
+[0;32mI (185371) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (185371) NimBLE: att_handle=20[0m
+
+[0;32mI (185411) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (185411) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (185411) NimBLE: att_handle=20[0m
+
+[0;32mI (185441) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (185441) NimBLE: att_handle=20[0m
+
+[0;32mI (185481) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (185481) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (185481) NimBLE: att_handle=20[0m
+
+[0;32mI (185511) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (185511) NimBLE: att_handle=20[0m
+
+[0;32mI (185791) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (185791) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (185791) NimBLE: att_handle=20[0m
+
+[0;32mI (185821) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (185821) NimBLE: att_handle=20[0m
+
+[0;32mI (185861) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (185861) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (185861) NimBLE: att_handle=20[0m
+
+[0;32mI (185891) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (185891) NimBLE: att_handle=20[0m
+
+[0;32mI (185931) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (185931) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (185931) NimBLE: att_handle=20[0m
+
+[0;32mI (185961) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (185961) NimBLE: att_handle=20[0m
+
+[0;32mI (186001) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (186001) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (186001) NimBLE: att_handle=20[0m
+
+[0;32mI (186031) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (186031) NimBLE: att_handle=20[0m
+
+[0;32mI (186391) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (186391) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (186391) NimBLE: att_handle=20[0m
+
+[0;32mI (186421) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (186421) NimBLE: att_handle=20[0m
+
+[0;32mI (186461) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (186461) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (186461) NimBLE: att_handle=20[0m
+
+[0;32mI (186491) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (186491) NimBLE: att_handle=20[0m
+
+[0;32mI (186531) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (186531) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (186531) NimBLE: att_handle=20[0m
+
+[0;32mI (186561) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (186561) NimBLE: att_handle=20[0m
+
+[0;32mI (186601) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (186601) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (186601) NimBLE: att_handle=20[0m
+
+[0;32mI (186631) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (186631) NimBLE: att_handle=20[0m
+
+[0;32mI (186671) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (186671) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (186671) NimBLE: att_handle=20[0m
+
+[0;32mI (186701) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (186701) NimBLE: att_handle=20[0m
+
+[0;32mI (186741) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (186741) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (186741) NimBLE: att_handle=20[0m
+
+[0;32mI (186771) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (186771) NimBLE: att_handle=20[0m
+
+[0;32mI (186811) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (186811) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (186811) NimBLE: att_handle=20[0m
+
+[0;32mI (186841) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (186841) NimBLE: att_handle=20[0m
+
+[0;32mI (186881) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (186881) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (186881) NimBLE: att_handle=20[0m
+
+[0;32mI (186911) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (186911) NimBLE: att_handle=20[0m
+
+[0;32mI (187211) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (187211) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (187211) NimBLE: att_handle=20[0m
+
+[0;32mI (187241) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (187241) NimBLE: att_handle=20[0m
+
+[0;32mI (187281) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (187281) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (187281) NimBLE: att_handle=20[0m
+
+[0;32mI (187311) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (187311) NimBLE: att_handle=20[0m
+
+[0;32mI (187351) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (187351) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (187351) NimBLE: att_handle=20[0m
+
+[0;32mI (187381) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (187381) NimBLE: att_handle=20[0m
+
+[0;32mI (187421) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (187421) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (187421) NimBLE: att_handle=20[0m
+
+[0;32mI (187451) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (187451) NimBLE: att_handle=20[0m
+
+[0;32mI (187491) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (187491) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (187491) NimBLE: att_handle=20[0m
+
+[0;32mI (187521) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (187521) NimBLE: att_handle=20[0m
+
+[0;32mI (187561) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (187561) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (187561) NimBLE: att_handle=20[0m
+
+[0;32mI (187591) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (187591) NimBLE: att_handle=20[0m
+
+[0;32mI (187631) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (187631) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (187631) NimBLE: att_handle=20[0m
+
+[0;32mI (187661) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (187661) NimBLE: att_handle=20[0m
+
+[0;32mI (187701) KBD_APP: Key Pulse: 0x2C (L:3 D:4)[0m
+[0;32mI (187701) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (187701) NimBLE: att_handle=20[0m
+
+[0;32mI (187731) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (187731) NimBLE: att_handle=20[0m
+
+[0;32mI (197391) KBD_APP: Key Pulse: 0x0B (L:2 D:3)[0m
+[0;32mI (197391) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (197391) NimBLE: att_handle=20[0m
+
+[0;32mI (197421) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (197421) NimBLE: att_handle=20[0m
+
+[0;32mI (201241) KBD_APP: Key Pulse: 0x12 (L:0 D:2)[0m
+[0;32mI (201241) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (201241) NimBLE: att_handle=20[0m
+
+[0;32mI (201271) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (201271) NimBLE: att_handle=20[0m
+
+[0;32mI (202951) KBD_APP: Key Pulse: 0x08 (L:0 D:0)[0m
+[0;32mI (202951) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (202951) NimBLE: att_handle=20[0m
+
+[0;32mI (202981) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (202981) NimBLE: att_handle=20[0m
+
+[0;32mI (212441) KBD_APP: Key Pulse: 0x0F (L:1 D:0)[0m
+[0;32mI (212441) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (212441) NimBLE: att_handle=20[0m
+
+[0;32mI (212471) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (212471) NimBLE: att_handle=20[0m
+
+[0;32mI (216671) KBD_APP: Key Pulse: 0x04 (L:0 D:1)[0m
+[0;32mI (216671) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (216671) NimBLE: att_handle=20[0m
+
+[0;32mI (216701) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (216701) NimBLE: att_handle=20[0m
+
+[0;32mI (230961) KBD_APP: Key Pulse: 0x14 (L:2 D:2)[0m
+[0;32mI (230961) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (230961) NimBLE: att_handle=20[0m
+
+[0;32mI (230991) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (230991) NimBLE: att_handle=20[0m
+
+[0;32mI (236511) KBD_APP: Key Pulse: 0x18 (L:1 D:3)[0m
+[0;32mI (236511) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (236511) NimBLE: att_handle=20[0m
+
+[0;32mI (236541) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (236541) NimBLE: att_handle=20[0m
+
+[0;32mI (238881) KBD_APP: Key Pulse: 0x08 (L:0 D:0)[0m
+[0;32mI (238881) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (238881) NimBLE: att_handle=20[0m
+
+[0;32mI (238911) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (238911) NimBLE: att_handle=20[0m
+
+[0;32mI (242531) KBD_APP: Key Pulse: 0x2C (L:3 D:5)[0m
+[0;32mI (242531) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (242531) NimBLE: att_handle=20[0m
+
+[0;32mI (242561) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (242561) NimBLE: att_handle=20[0m
+
+[0;32mI (242601) KBD_APP: Key Pulse: 0x2C (L:3 D:5)[0m
+[0;32mI (242601) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (242601) NimBLE: att_handle=20[0m
+
+[0;32mI (242631) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (242631) NimBLE: att_handle=20[0m
+
+[0;32mI (248511) KBD_APP: Key Pulse: 0x17 (L:1 D:2)[0m
+[0;32mI (248511) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (248511) NimBLE: att_handle=20[0m
+
+[0;32mI (248541) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (248541) NimBLE: att_handle=20[0m
+
+[0;32mI (250541) KBD_APP: Key Pulse: 0x04 (L:0 D:1)[0m
+[0;32mI (250541) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (250541) NimBLE: att_handle=20[0m
+
+[0;32mI (250571) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (250571) NimBLE: att_handle=20[0m
+
+[0;32mI (256631) KBD_APP: Key Pulse: 0x0F (L:1 D:0)[0m
+[0;32mI (256631) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (256631) NimBLE: att_handle=20[0m
+
+[0;32mI (256661) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (256661) NimBLE: att_handle=20[0m
+

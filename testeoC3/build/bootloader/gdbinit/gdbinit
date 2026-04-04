@@ -1,0 +1,2 @@
+source /home/mario/TFG/testeoC3/build/bootloader/gdbinit/symbols
+source /home/mario/TFG/testeoC3/build/bootloader/gdbinit/connect
