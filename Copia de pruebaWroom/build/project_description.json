@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "pruebaWroom",
-    "project_version":    "cfec840-dirty",
+    "project_version":    "ec56367-dirty",
     "project_path":       "/home/mario/TFG/Copia de pruebaWroom",
     "idf_path":           "/home/mario/esp/esp-idf",
     "build_dir":          "/home/mario/TFG/Copia de pruebaWroom/build",

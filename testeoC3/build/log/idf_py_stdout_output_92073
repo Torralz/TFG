@@ -1,0 +1,89 @@
+Command: /home/mario/.espressif/python_env/idf5.5_py3.14_env/bin/python /home/mario/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/mario/TFG/testeoC3/build/testeoC3.elf /home/mario/TFG/testeoC3/build/bootloader/bootloader.elf -m '/home/mario/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/home/mario/esp/esp-idf/tools/idf.py'
+[0;32mI (101) esp_image: segment 3: paddr=00020020 vaddr=42000020 sizeESP-ROM:esp32c3-api1-20210207[0m
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40382a3a
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.3 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr  5 2026 11:21:58[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (25) boot: efuse block revision: v1.3[0m
+[0;32mI (28) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (44) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (53) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (66) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (76) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a698h ( 42648) map[0m
+[0;32mI (90) esp_image: segment 1: paddr=0001a6c0 vaddr=3fc8ce00 size=01ab0h (  6832) load[0m
+[0;32mI (92) esp_image: segment 2: paddr=0001c178 vaddr=40380000 size=03ea0h ( 16032) load[0m
+[0;32mI (101) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=18e68h (101992) map[0m
+[0;32mI (121) esp_image: segment 4: paddr=00038e90 vaddr=40383ea0 size=08d88h ( 36232) load[0m
+[0;32mI (128) esp_image: segment 5: paddr=00041c20 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (132) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (132) boot: Disabling RNG early entropy source...[0m
+[0;32mI (146) cpu_start: Unicore app[0m
+[0;32mI (154) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (155) cpu_start: Pro cpu start user code[0m
+[0;32mI (155) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (157) app_init: Application information:[0m
+[0;32mI (161) app_init: Project name:     testeoC3[0m
+[0;32mI (165) app_init: App version:      ec56367-dirty[0m
+[0;32mI (169) app_init: Compile time:     Apr  5 2026 14:05:21[0m
+[0;32mI (174) app_init: ELF file SHA256:  74ef76885...[0m
+[0;32mI (178) app_init: ESP-IDF:          v5.5.3[0m
+[0;32mI (182) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (186) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (190) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (200) heap_init: At 3FC8F7D0 len 00030830 (194 KiB): RAM[0m
+[0;32mI (205) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (211) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (217) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (224) spi_flash: detected chip: generic[0m
+[0;32mI (226) spi_flash: flash io: dio[0m
+[0;33mW (229) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (242) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (248) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (255) main_task: Started on CPU0[0m
+[0;32mI (255) main_task: Calling app_main()[0m
+[0;32mI (255) XIAO_MATRIX: Initializing LED strip on GPIO 10[0m
+[0;32mI (265) main_task: Returned from app_main()[0m
+[0;32mI (32585) XIAO_MATRIX: Decreasing REFRESH_RATE by 50 currently 50[0m
+[0;32mI (39385) XIAO_MATRIX: Decreasing REFRESH_RATE by 50 currently 0[0m
+[0;32mI (80985) XIAO_MATRIX: Increasing REFRESH_RATE by 50 currently 50[0m
+[0;32mI (81885) XIAO_MATRIX: Increasing REFRESH_RATE by 50 currently 100[0m
+[0;32mI (82435) XIAO_MATRIX: Increasing REFRESH_RATE by 50 currently 150[0m
+[0;32mI (83135) XIAO_MATRIX: Increasing REFRESH_RATE by 50 currently 200[0m
+[0;32mI (83785) XIAO_MATRIX: Increasing REFRESH_RATE by 50 currently 250[0m
+[0;32mI (84135) XIAO_MATRIX: Increasing REFRESH_RATE by 50 currently 44[0m
+[0;32mI (84435) XIAO_MATRIX: Increasing REFRESH_RATE by 50 currently 94[0m
+[0;32mI (87635) XIAO_MATRIX: Increasing REFRESH_RATE by 50 currently 144[0m
+[0;32mI (90985) XIAO_MATRIX: Increasing REFRESH_RATE by 50 currently 194[0m
+[0;32mI (91485) XIAO_MATRIX: Increasing REFRESH_RATE by 50 currently 244[0m
+[0;32mI (338185) XIAO_MATRIX: Increasing REFRESH_RATE by 50 currently 38[0m
+[0;32mI (338835) XIAO_MATRIX: Increasing REFRESH_RATE by 50 currently 88[0m
+[0;32mI (339535) XIAO_MATRIX: Increasing REFRESH_RATE by 50 currently 138[0m
+[0;32mI (340335) XIAO_MATRIX: Decreasing REFRESH_RATE by 50 currently 88[0m
+[0;32mI (340585) XIAO_MATRIX: Decreasing REFRESH_RATE by 50 currently 38[0m
+[0;32mI (340835) XIAO_MATRIX: Decreasing REFRESH_RATE by 50 currently 244[0m
+[0;32mI (341535) XIAO_MATRIX: Decreasing REFRESH_RATE by 50 currently 194[0m
+[0;32mI (347685) XIAO_MATRIX: Decreasing REFRESH_RATE by 50 currently 144[0m
+[0;32mI (348435) XIAO_MATRIX: Decreasing REFRESH_RATE by 50 currently 94[0m
+[0;32mI (349085) XIAO_MATRIX: Decreasing REFRESH_RATE by 50 currently 44[0m
+[0;32mI (349685) XIAO_MATRIX: Decreasing REFRESH_RATE by 50 currently 250[0m
+[0;32mI (350855) XIAO_MATRIX: Decreasing REFRESH_RATE by 50 currently 200[0m
+[0;32mI (352075) XIAO_MATRIX: Decreasing REFRESH_RATE by 50 currently 150[0m
+[0;32mI (352475) XIAO_MATRIX: Decreasing REFRESH_RATE by 50 currently 100[0m
+[0;32mI (352975) XIAO_MATRIX: Decreasing REFRESH_RATE by 50 currently 50[0m
+[0;32mI (383975) XIAO_MATRIX: Decreasing REFRESH_RATE by 50 currently 0[0m
+[0;32mI (395875) XIAO_MATRIX: Increasing REFRESH_RATE by 50 currently 50[0m

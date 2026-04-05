@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "testeoC3",
-    "project_version":    "cfec840-dirty",
+    "project_version":    "ec56367-dirty",
     "project_path":       "/home/mario/TFG/testeoC3",
     "idf_path":           "/home/mario/esp/esp-idf",
     "build_dir":          "/home/mario/TFG/testeoC3/build",

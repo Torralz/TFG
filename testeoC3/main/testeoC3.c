@@ -1,71 +1,158 @@
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-#include "esp_adc/adc_oneshot.h"
-#include "driver/gpio.h"
 #include "esp_log.h"
+#include "led_strip.h"
+#include "driver/gpio.h"
+#include "esp_adc/adc_oneshot.h"
 
-// Mapeo real para Seeed Studio XIAO ESP32-C3
-// Serigrafía A0 -> GPIO 2 (ADC1_CH2)
-// Serigrafía A1 -> GPIO 3 (ADC1_CH3)
-#define XIAO_A0_GPIO    2
-#define XIAO_A1_GPIO    3
-#define XIAO_A0_CH      ADC_CHANNEL_2
-#define XIAO_A1_CH      ADC_CHANNEL_3
+// Configuration
+#define LED_STRIP_GPIO_PIN   10  // D0 on XIAO ESP32-C3
+#define LED_STRIP_NUM_PIXELS 60
+// #define BRIGHTNESS           20  // Keep this low (0-BRIGHTNESS) to save power!
+// #define REFRESH_RATE         100
 
-// Pines para botones (ajustados según tu comentario anterior de que 4,5,6 funcionan)
-#define BTN_1_GPIO      4   // D2 / A2 en XIAO
-#define BTN_2_GPIO      5   // D3 / A3 en XIAO
-#define BTN_3_GPIO      6   // D8 en XIAO (SDA)
+#define BUTTON_1_GPIO   5               
+#define BUTTON_2_GPIO   6 
+#define JOY_X_CHANNEL   3               //en verdad es Y
 
-static const char *TAG = "XIAO_DIAG";
+uint8_t REFRESH_RATE = 100;
+uint8_t BRIGHTNESS = 20;
 
-void app_main(void) {
-    ESP_LOGI(TAG, "DIAGNÓSTICO ESPECIAL PARA XIAO ESP32-C3");
+static adc_oneshot_unit_handle_t adc1_handle;
+static const char *TAG = "XIAO_MATRIX";
+led_strip_handle_t led_strip;
 
-    // 1. Configuración del ADC
-    adc_oneshot_unit_handle_t adc1_handle;
-    adc_oneshot_unit_init_cfg_t init_cfg = {
-        .unit_id = ADC_UNIT_1,
+void init_led_strip() {
+    ESP_LOGI(TAG, "Initializing LED strip on GPIO %d", LED_STRIP_GPIO_PIN);
+
+    /* LED strip general configuration */
+    led_strip_config_t strip_config = {
+        .strip_gpio_num = LED_STRIP_GPIO_PIN,
+        .max_leds = LED_STRIP_NUM_PIXELS,
+        .led_model = LED_MODEL_WS2812,
+        .color_component_format = LED_STRIP_COLOR_COMPONENT_FMT_GRB,
+        .flags.invert_out = false,                // Standard logic
     };
+
+    /* RMT specific configuration */
+    led_strip_rmt_config_t rmt_config = {
+        .clk_src = RMT_CLK_SRC_DEFAULT,
+        .resolution_hz = 10 * 1000 * 1000, // 10MHz
+        .flags.with_dma = false,           // C3 supports DMA, but not needed for 60 LEDs
+    };
+
+    ESP_ERROR_CHECK(led_strip_new_rmt_device(&strip_config, &rmt_config, &led_strip));
+
+    gpio_config_t io_conf = {
+        .pin_bit_mask = (1ULL << BUTTON_1_GPIO) | (1ULL << BUTTON_2_GPIO),
+        .mode         = GPIO_MODE_INPUT,
+        .pull_up_en   = GPIO_PULLUP_ENABLE,
+        .pull_down_en = GPIO_PULLDOWN_DISABLE,
+        .intr_type    = GPIO_INTR_DISABLE
+    };
+    ESP_ERROR_CHECK(gpio_config(&io_conf));
+
+    adc_oneshot_unit_init_cfg_t init_cfg = { .unit_id = ADC_UNIT_1 };
     ESP_ERROR_CHECK(adc_oneshot_new_unit(&init_cfg, &adc1_handle));
 
-    adc_oneshot_chan_cfg_t chan_cfg = {
-        .bitwidth = ADC_BITWIDTH_DEFAULT,
-        .atten = ADC_ATTEN_DB_11, // Necesario para rango 0-3.3V en el XIAO
-    };
-    
-    // Configuramos los canales 2 y 3 (Pines A0 y A1)
-    ESP_ERROR_CHECK(adc_oneshot_config_channel(adc1_handle, XIAO_A0_CH, &chan_cfg));
-    ESP_ERROR_CHECK(adc_oneshot_config_channel(adc1_handle, XIAO_A1_CH, &chan_cfg));
+    adc_oneshot_chan_cfg_t chan_cfg = { .bitwidth = ADC_BITWIDTH_12, .atten = ADC_ATTEN_DB_12 };
+    ESP_ERROR_CHECK(adc_oneshot_config_channel(adc1_handle, JOY_X_CHANNEL, &chan_cfg));
+}
 
-    // 2. Configuración de Botones
-    uint64_t pin_mask = (1ULL << BTN_1_GPIO) | (1ULL << BTN_2_GPIO) | (1ULL << BTN_3_GPIO);
-    gpio_config_t io_conf = {
-        .pin_bit_mask = pin_mask,
-        .mode = GPIO_MODE_INPUT,
-        .pull_up_en = GPIO_PULLUP_ENABLE,
-        .pull_down_en = GPIO_PULLDOWN_DISABLE,
-        .intr_type = GPIO_INTR_DISABLE,
-    };
-    gpio_config(&io_conf);
-
-    ESP_LOGI(TAG, "Iniciado. Lectura de pines físicos A0 y A1 del XIAO.");
-
-    int val_a0, val_a1;
+void leds_task(){
     while (1) {
-        // Leer A0 y A1
-        adc_oneshot_read(adc1_handle, XIAO_A0_CH, &val_a0);
-        adc_oneshot_read(adc1_handle, XIAO_A1_CH, &val_a1);
+        //tengo que primero aumentar R hasta max y luego G y despues disminuir return 
+        // for (int i = 0; i < BRIGHTNESS; i++){
+        //     for (int j = 0; j < LED_STRIP_NUM_PIXELS; j++){
+        //       led_strip_set_pixel(led_strip, j, i, 0 , 0);
+        //     }
+        //     led_strip_refresh(led_strip);
+        //     vTaskDelay(pdMS_TO_TICKS(REFRESH_RATE));
+        // }
 
-        // Leer botones
-        int b4 = gpio_get_level(BTN_1_GPIO);
-        int b5 = gpio_get_level(BTN_2_GPIO);
-        int b6 = gpio_get_level(BTN_3_GPIO);
-
-        printf("XIAO A0(G2): %4d | XIAO A1(G3): %4d || BTNS -> D2:%d D3:%d D8:%d\n",
-               val_a0, val_a1, b4, b5, b6);
-
-        vTaskDelay(pdMS_TO_TICKS(150));
+        for (int i = 0; i < BRIGHTNESS; i++){
+            for (int j = 0; j < LED_STRIP_NUM_PIXELS; j++){
+              led_strip_set_pixel(led_strip, j, BRIGHTNESS, i , 0);
+            }
+            led_strip_refresh(led_strip);
+            vTaskDelay(pdMS_TO_TICKS(REFRESH_RATE));
+        }
+        
+        for (int i = BRIGHTNESS; i > 0; i--){
+            for (int j = 0; j < LED_STRIP_NUM_PIXELS; j++){
+              led_strip_set_pixel(led_strip, j, i, BRIGHTNESS , 0);
+            }
+            led_strip_refresh(led_strip);
+            vTaskDelay(pdMS_TO_TICKS(REFRESH_RATE));
+        }
+        
+        for (int i = 0; i < BRIGHTNESS; i++){
+            for (int j = 0; j < LED_STRIP_NUM_PIXELS; j++){
+              led_strip_set_pixel(led_strip, j, 0, BRIGHTNESS , i);
+            }
+            led_strip_refresh(led_strip);
+            vTaskDelay(pdMS_TO_TICKS(REFRESH_RATE));
+        }
+        
+        for (int i = BRIGHTNESS; i > 0; i--){
+            for (int j = 0; j < LED_STRIP_NUM_PIXELS; j++){
+              led_strip_set_pixel(led_strip, j, 0, i, BRIGHTNESS);
+            }
+            led_strip_refresh(led_strip);
+            vTaskDelay(pdMS_TO_TICKS(REFRESH_RATE));
+        }
+      
+        for (int i = 0; i < BRIGHTNESS; i++){
+            for (int j = 0; j < LED_STRIP_NUM_PIXELS; j++){
+              led_strip_set_pixel(led_strip, j, i, 0 , BRIGHTNESS);
+            }
+            led_strip_refresh(led_strip);
+            vTaskDelay(pdMS_TO_TICKS(REFRESH_RATE));
+        }
+        
+        for (int i = BRIGHTNESS; i > 0; i--){
+            for (int j = 0; j < LED_STRIP_NUM_PIXELS; j++){
+              led_strip_set_pixel(led_strip, j, BRIGHTNESS, 0 , i);
+            }
+            led_strip_refresh(led_strip);
+            vTaskDelay(pdMS_TO_TICKS(REFRESH_RATE));
+        }
     }
+}
+
+void button_task(){
+    while (1) {
+            if (gpio_get_level(BUTTON_1_GPIO) == 1 && gpio_get_level(BUTTON_2_GPIO) == 0 && REFRESH_RATE > 0) {
+                REFRESH_RATE -= 50;
+                vTaskDelay(pdMS_TO_TICKS(200)); // Debounce (evitar rebotes)
+                ESP_LOGI(TAG, "Decreasing REFRESH_RATE by 50 currently %u", REFRESH_RATE);
+            }
+            
+            if (gpio_get_level(BUTTON_1_GPIO) == 0 && gpio_get_level(BUTTON_2_GPIO) == 1) {
+                REFRESH_RATE += 50;
+                vTaskDelay(pdMS_TO_TICKS(200)); // Debounce (evitar rebotes)
+                ESP_LOGI(TAG, "Increasing REFRESH_RATE by 50 currently %u", REFRESH_RATE);
+            }
+            vTaskDelay(pdMS_TO_TICKS(50)); // Descansa un poco la CPU
+        }
+}
+
+void brightness_task(){
+    int x;
+    while(1){
+        if (adc_oneshot_read(adc1_handle, JOY_X_CHANNEL, &x) != ESP_OK) 
+            ESP_LOGW(TAG, "Error ADC");
+        BRIGHTNESS = (255 * x) / 4095;
+        vTaskDelay(pdMS_TO_TICKS(50)); // Descansa un poco la CPU
+  }
+}
+
+
+
+void app_main(void) {
+    init_led_strip();
+    xTaskCreate(leds_task, "LEDs", 4096, NULL, 5, NULL);
+    xTaskCreate(button_task, "Boton", 2048, NULL, 5, NULL);
+    xTaskCreate(brightness_task, "brightness", 4096, NULL, 5, NULL);
 }

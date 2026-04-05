@@ -110,7 +110,12 @@
 1135	1173	1775345225322437247	bootloader.elf	33eca71e1e7c48e5
 1173	1306	1775345225492435396	.bin_timestamp	f11b7fa53dba35e
 1173	1306	1775345225492435396	/home/mario/TFG/Copia de pruebaWroom/build/bootloader/.bin_timestamp	f11b7fa53dba35e
-1306	1363	1775345225493435385	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	8eb8351bb8101663
-1306	1363	1775345225493435385	/home/mario/TFG/Copia de pruebaWroom/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	8eb8351bb8101663
-5	63	1775345234598336252	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	8eb8351bb8101663
-5	63	1775345234598336252	/home/mario/TFG/Copia de pruebaWroom/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	8eb8351bb8101663
+7	65	1775382388424270278	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	8eb8351bb8101663
+7	65	1775382388424270278	/home/mario/TFG/Copia de pruebaWroom/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	8eb8351bb8101663
+6	72	1775391368337634955	bootloader.elf	33eca71e1e7c48e5
+72	221	1775391368551635435	.bin_timestamp	f11b7fa53dba35e
+72	221	1775391368551635435	/home/mario/TFG/Copia de pruebaWroom/build/bootloader/.bin_timestamp	f11b7fa53dba35e
+221	282	1775391368552635438	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	8eb8351bb8101663
+221	282	1775391368552635438	/home/mario/TFG/Copia de pruebaWroom/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	8eb8351bb8101663
+5	65	1775391375993652136	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	8eb8351bb8101663
+5	65	1775391375993652136	/home/mario/TFG/Copia de pruebaWroom/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	8eb8351bb8101663
