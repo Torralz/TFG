@@ -10,7 +10,7 @@
 /home/mario/TFG/unimano/build/CMakeFiles/flash.dir
 /home/mario/TFG/unimano/build/CMakeFiles/encrypted-flash.dir
 /home/mario/TFG/unimano/build/CMakeFiles/_project_elf_src.dir
-/home/mario/TFG/unimano/build/CMakeFiles/Unimano.elf.dir
+/home/mario/TFG/unimano/build/CMakeFiles/unimano.elf.dir
 /home/mario/TFG/unimano/build/CMakeFiles/size.dir
 /home/mario/TFG/unimano/build/CMakeFiles/size-files.dir
 /home/mario/TFG/unimano/build/CMakeFiles/size-components.dir

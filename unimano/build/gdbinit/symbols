@@ -27,4 +27,4 @@ set confirm off
 set confirm on
 
 # Load application symbols
-file /home/mario/TFG/unimano/build/Unimano.elf
+file /home/mario/TFG/unimano/build/unimano.elf

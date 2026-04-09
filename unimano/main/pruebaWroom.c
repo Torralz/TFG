@@ -20,7 +20,12 @@
 #define BUTTON_2_GPIO   6               // GPIO3
 
 static const char *TAG = "KBD_APP";
-
+//TODO: hola
+//fixme: 
+//FIXME: hola
+//BUG: caca
+//NOTE: notifications
+//WARN: vaya:
 static adc_oneshot_unit_handle_t adc1_handle;
 
 // HID Keycodes Dictionary (4 Layers x 8 Directions)
@@ -31,6 +36,12 @@ static const uint8_t diccionario[4][8] = {
     { 0x1B, 0x0E, 0x1A, 0x2C, 0x2C, 0x2C, 0x2C, 0x2C }, // x, k, w, space...
 };
 
+static const char diccionario_char[4][8] = {
+    { 'e', 'a', 'o', 's', 'r', 'n', 'i', 'd' }, // e, a, o, s, r, n, i, d
+    { 'l', 'c', 'u', 'm', 'p', 't', 'b', 'g' }, // l, c, u, m, p, t, b, g
+    { 'v', 'y', 'q', 'h', 'f', 'z', 'j', 'ñ' }, // v, y, q, h, f, z, j, ñ (approx)
+    { 'x', 'k', 'w', ' ', ' ', ' ', ' ', ' ' }, // x, k, w, space...
+};
 /**
  * @brief Reads the joystick and returns the direction index (0-7) or 9 for center.
  * Reverted to original user calibration values.
