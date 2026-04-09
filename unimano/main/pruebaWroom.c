@@ -20,13 +20,21 @@
 #define BUTTON_2_GPIO   6               // GPIO3
 
 static const char *TAG = "KBD_APP";
+static adc_oneshot_unit_handle_t adc1_handle;
+
+
 //TODO: hola
-//fixme: 
 //FIXME: hola
 //BUG: caca
 //NOTE: notifications
 //WARN: vaya:
-static adc_oneshot_unit_handle_t adc1_handle;
+
+//TODO: Quiero hacer las siguientes cosas en el futuro prox [10/4 - 12/04]
+//1. crear una rutina de tratamiento de interrupciones
+//2. Hacer que los botones sean tratados por la rutina de tratamiento de interrupciones
+//3. Poner la lectura del joystick en una tarea propia
+//4. Al seleccionar una letra que se enseñe por la pantalla (opcionalmente que enseñe un color identificador por capa)
+//5. Desarrollar un modo de enseñar las letras letras sin escribir nada (en otro color) 
 
 // HID Keycodes Dictionary (4 Layers x 8 Directions)
 static const uint8_t diccionario[4][8] = {
@@ -35,7 +43,7 @@ static const uint8_t diccionario[4][8] = {
     { 0x19, 0x1C, 0x14, 0x0B, 0x09, 0x1D, 0x0D, 0x33 }, // v, y, q, h, f, z, j, ñ (approx)
     { 0x1B, 0x0E, 0x1A, 0x2C, 0x2C, 0x2C, 0x2C, 0x2C }, // x, k, w, space...
 };
-
+//FIXME: La ñ da problemas de compilación, hay que arreglar
 static const char diccionario_char[4][8] = {
     { 'e', 'a', 'o', 's', 'r', 'n', 'i', 'd' }, // e, a, o, s, r, n, i, d
     { 'l', 'c', 'u', 'm', 'p', 't', 'b', 'g' }, // l, c, u, m, p, t, b, g
