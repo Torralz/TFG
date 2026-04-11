@@ -153,4 +153,6 @@
 /home/mario/TFG/unimano/build/esp-idf/spiffs/libspiffs.a
 /home/mario/TFG/unimano/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 /home/mario/TFG/unimano/build/esp-idf/json/libjson.a
+/home/mario/TFG/unimano/build/esp-idf/espressif__led_strip/libespressif__led_strip.a
 /home/mario/TFG/unimano/build/esp-idf/main/libmain.a
+/home/mario/TFG/unimano/build/esp-idf/espressif__led_strip/libespressif__led_strip.a
