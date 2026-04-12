@@ -29,8 +29,9 @@
 //NOTE: Hecho:
 //1. Desarrollar un modo de enseñar las letras letras sin escribir nada (en otro color) 
 //2. Añadir funcionalidad a las teclas vacias como enter o borrar
+//3. Añadir Modo de escribir en mayúsculas 
+//1. Hacer que las teclas que se repitan lo hagan una sola vez y si lo mantienes entonces se repita continuametne (igual todas las teclas??)
 //TODO: Quiero hacer las siguientes cosas en el futuro prox [10/4 - 12/04]
-//1. Añadir Modo de escribir en mayúsculas 
 //2. Añadir autocompletado (posiblemente solo en android?)
 //3. Usar uno de los espacios en blanco como acceso a otra capa teclado de caracteres especiales por capas
 //4. Crear una combinación de teclas que habra un menú con opciones como brillo
@@ -160,6 +161,9 @@ static void send_keyboard_pulse(uint8_t keycode) {
 static void joystick_task(void* arg) {
     uint8_t ultimo_keycode = 0;
     int debounce_counter = 0;
+    int hold_timer = 0;           // Track how many ticks (20ms each) we've held
+    const int HOLD_THRESHOLD = 100; // 100 * 20ms = 2 seconds
+    const int REPEAT_RATE = 5;    // After threshold, repeat every 5 ticks (100ms)
 
     while (1) {
         int dir = leer_joystick();
@@ -167,39 +171,46 @@ static void joystick_task(void* arg) {
         if (dir != 9) {
             uint8_t keycode = diccionario[current_layer][dir];
             
-            // Pass the caps_lock_active state to the drawing function
-            if (writeMode) {
-                draw_char_from_font(diccionario_char[current_layer][dir], 1, 1, 1, current_layer, caps_lock_active);
-            } else {
-                draw_char_from_font(diccionario_char[current_layer][dir], 1, 1, 0, current_layer, caps_lock_active);
-            }
+            // Visual display (remains constant)
+            draw_char_from_font(diccionario_char[current_layer][dir], 1, 1, writeMode ? 1 : 0, current_layer, caps_lock_active);
             
-            // Added 0x39 to the allowed repeatable keys
-            if (keycode != ultimo_keycode || keycode == 0x2C || keycode == 0x28 || keycode == 0x2A) {
+            // CASE 1: New Key Pressed
+            if (keycode != ultimo_keycode) {
                 if (++debounce_counter >= 2) { 
-                    ESP_LOGI(TAG, "Key Pulse: 0x%02X (Char:%s L:%d D:%d)", 
-                             keycode, diccionario_char[current_layer][dir], current_layer, dir);
-                    
                     if (writeMode) {
                         send_keyboard_pulse(keycode);
-                        
-                        // NEW: Toggle local state if Caps Lock was sent
-                        if (keycode == 0x39) {
-                            caps_lock_active = !caps_lock_active;
-                            ESP_LOGI(TAG, "Caps Lock Toggled locally to: %d", caps_lock_active);
-                        }
+                        if (keycode == 0x39) caps_lock_active = !caps_lock_active;
                     }
-                    
                     ultimo_keycode = keycode;
                     debounce_counter = 0;
+                    hold_timer = 0; // Reset timer for the new key
+                }
+            } 
+            // CASE 2: Same key is being held
+            else {
+                // Only repeat for specific keys (Space, Backspace, Enter)
+                if (keycode == 0x2C || keycode == 0x28 || keycode == 0x2A) {
+                    hold_timer++;
+
+                    if (hold_timer >= HOLD_THRESHOLD) {
+                        if (writeMode) {
+                            send_keyboard_pulse(keycode);
+                        }
+                        // Reset timer to (Threshold - REPEAT_RATE) so it repeats 
+                        // every REPEAT_RATE ticks (100ms) instead of waiting another 2s
+                        hold_timer = HOLD_THRESHOLD - REPEAT_RATE; 
+                    }
                 }
             }
-        } else {
+        } 
+        else {
+            // Joystick Centered: Reset everything
             ultimo_keycode = 0;
             debounce_counter = 0;
+            hold_timer = 0;
         }
 
-        vTaskDelay(pdMS_TO_TICKS(20)); // Poll at 50Hz
+        vTaskDelay(pdMS_TO_TICKS(20)); 
     }
 }
 
