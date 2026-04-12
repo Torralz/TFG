@@ -26,13 +26,14 @@
 
 //WARN: vaya: 5
 
-
-
-//TODO: Quiero hacer las siguientes cosas en el futuro prox [10/4 - 12/04]
+//NOTE: Hecho:
 //1. Desarrollar un modo de enseñar las letras letras sin escribir nada (en otro color) 
 //2. Añadir funcionalidad a las teclas vacias como enter o borrar
-//3. Añadir Modo de escribir en mayúsculas 
-//4. Añadir autocompletado (posiblemente solo en android?)
+//TODO: Quiero hacer las siguientes cosas en el futuro prox [10/4 - 12/04]
+//1. Añadir Modo de escribir en mayúsculas 
+//2. Añadir autocompletado (posiblemente solo en android?)
+//3. Usar uno de los espacios en blanco como acceso a otra capa teclado de caracteres especiales por capas
+//4. Crear una combinación de teclas que habra un menú con opciones como brillo
 
 // GPIO / ADC Configuration
 // ESP32-C3 Pins (Using valid ADC1 channels 0-4)
@@ -47,20 +48,21 @@ static adc_oneshot_unit_handle_t adc1_handle;
 
 static volatile unsigned current_layer = 0;
 static volatile bool writeMode = true;
+static volatile bool caps_lock_active = false; 
 
 // HID Keycodes Dictionary (4 Layers x 8 Directions)
 static const uint8_t diccionario[4][8] = {
     { 0x08, 0x04, 0x12, 0x16, 0x15, 0x11, 0x0C, 0x07 }, // e, a, o, s, r, n, i, d
     { 0x0F, 0x06, 0x18, 0x10, 0x13, 0x17, 0x05, 0x0A }, // l, c, u, m, p, t, b, g u(t), m(u), p(m), t(p), 
     { 0x19, 0x1C, 0x14, 0x0B, 0x09, 0x1D, 0x0D, 0x33 }, // v, y, q, h, f, z, j, ñ 
-    { 0x1B, 0x0E, 0x1A, 0x28, 0x2A, 0x2C, 0x2C, 0x2C }, // x, k, w, space...
+    { 0x1B, 0x0E, 0x1A, 0x28, 0x2A, 0x39, 0x2C, 0x2C }, // x, k, w, space...
 };
 
 static const char* diccionario_char[4][8] = {
     { "e", "a", "o", "s", "r", "n", "i", "d" }, // Verde
     { "l", "c", "u", "m", "p", "t", "b", "g" }, // Azul
     { "v", "y", "q", "h", "f", "z", "j", "ñ" }, // Rosa 
-    { "x", "k", "w", "*", "<", " ", " ", " " }, // Rojo
+    { "x", "k", "w", "*", "<", "^", " ", " " }, // Rojo
 };
 
 static QueueHandle_t gpio_evt_queue = NULL;
@@ -163,17 +165,31 @@ static void joystick_task(void* arg) {
         int dir = leer_joystick();
 
         if (dir != 9) {
-            // Read from the global layer set by the interrupt task
             uint8_t keycode = diccionario[current_layer][dir];
-            writeMode ? draw_char_from_font(diccionario_char[current_layer][dir], 1, 1, 1, current_layer): draw_char_from_font(diccionario_char[current_layer][dir], 1, 1, 0, current_layer);
             
+            // Pass the caps_lock_active state to the drawing function
+            if (writeMode) {
+                draw_char_from_font(diccionario_char[current_layer][dir], 1, 1, 1, current_layer, caps_lock_active);
+            } else {
+                draw_char_from_font(diccionario_char[current_layer][dir], 1, 1, 0, current_layer, caps_lock_active);
+            }
+            
+            // Added 0x39 to the allowed repeatable keys
             if (keycode != ultimo_keycode || keycode == 0x2C || keycode == 0x28 || keycode == 0x2A) {
                 if (++debounce_counter >= 2) { 
                     ESP_LOGI(TAG, "Key Pulse: 0x%02X (Char:%s L:%d D:%d)", 
                              keycode, diccionario_char[current_layer][dir], current_layer, dir);
+                    
                     if (writeMode) {
-                      send_keyboard_pulse(keycode);
+                        send_keyboard_pulse(keycode);
+                        
+                        // NEW: Toggle local state if Caps Lock was sent
+                        if (keycode == 0x39) {
+                            caps_lock_active = !caps_lock_active;
+                            ESP_LOGI(TAG, "Caps Lock Toggled locally to: %d", caps_lock_active);
+                        }
                     }
+                    
                     ultimo_keycode = keycode;
                     debounce_counter = 0;
                 }

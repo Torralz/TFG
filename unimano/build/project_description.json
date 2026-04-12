@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "unimano",
-    "project_version":    "6022ecc-dirty",
+    "project_version":    "b77dca5-dirty",
     "project_path":       "/home/mario/TFG/unimano",
     "idf_path":           "/home/mario/esp/esp-idf",
     "build_dir":          "/home/mario/TFG/unimano/build",
