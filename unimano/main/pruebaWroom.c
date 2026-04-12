@@ -30,11 +30,11 @@
 //1. Desarrollar un modo de enseñar las letras letras sin escribir nada (en otro color) 
 //2. Añadir funcionalidad a las teclas vacias como enter o borrar
 //3. Añadir Modo de escribir en mayúsculas 
-//1. Hacer que las teclas que se repitan lo hagan una sola vez y si lo mantienes entonces se repita continuametne (igual todas las teclas??)
+//4. Hacer que las teclas que se repitan lo hagan una sola vez y si lo mantienes entonces se repita continuametne (igual todas las teclas??)
 //TODO: Quiero hacer las siguientes cosas en el futuro prox [10/4 - 12/04]
-//2. Añadir autocompletado (posiblemente solo en android?)
-//3. Usar uno de los espacios en blanco como acceso a otra capa teclado de caracteres especiales por capas
-//4. Crear una combinación de teclas que habra un menú con opciones como brillo
+//1. Añadir autocompletado (posiblemente solo en android?)
+//2. Usar uno de los espacios en blanco como acceso a otra capa teclado de caracteres especiales por capas
+//3. Crear una combinación de teclas que habra un menú con opciones como brillo
 
 // GPIO / ADC Configuration
 // ESP32-C3 Pins (Using valid ADC1 channels 0-4)
