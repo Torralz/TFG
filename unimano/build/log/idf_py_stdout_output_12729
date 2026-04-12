@@ -1,0 +1,633 @@
+Command: /home/mario/.espressif/python_env/idf5.5_py3.14_env/bin/python /home/mario/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/mario/TFG/unimano/build/unimano.elf /home/mario/TFG/unimano/build/bootloader/bootloader.elf -m '/home/mario/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/home/mario/esp/esp-idf/tools/idf.py'
+[0;32mI (106) esp_image: segment 3: paddr=00030020 vaddr=42000020 sizeI (321) main_task: Started on CPU0[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4200287a
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.3 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr 12 2026 00:37:37[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (25) boot: efuse block revision: v1.3[0m
+[0;32mI (28) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (44) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (53) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (66) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (76) esp_image: segment 0: paddr=00010020 vaddr=3c070020 size=159d4h ( 88532) map[0m
+[0;32mI (97) esp_image: segment 1: paddr=000259fc vaddr=3fc94a00 size=02a64h ( 10852) load[0m
+[0;32mI (99) esp_image: segment 2: paddr=00028468 vaddr=40380000 size=07bb0h ( 31664) load[0m
+[0;32mI (106) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=64c50h (412752) map[0m
+[0;32mI (172) esp_image: segment 4: paddr=00094c78 vaddr=40387bb0 size=0ccf4h ( 52468) load[0m
+[0;32mI (182) esp_image: segment 5: paddr=000a1974 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (188) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (189) boot: Disabling RNG early entropy source...[0m
+[0;32mI (200) cpu_start: Unicore app[0m
+[0;32mI (208) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (208) cpu_start: Pro cpu start user code[0m
+[0;32mI (208) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (210) app_init: Application information:[0m
+[0;32mI (214) app_init: Project name:     unimano[0m
+[0;32mI (218) app_init: App version:      6022ecc-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr 12 2026 00:37:31[0m
+[0;32mI (227) app_init: ELF file SHA256:  09feec416...[0m
+[0;32mI (232) app_init: ESP-IDF:          v5.5.3[0m
+[0;32mI (236) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (239) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (243) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (247) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (254) heap_init: At 3FC988E0 len 00027720 (157 KiB): RAM[0m
+[0;32mI (259) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (265) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (271) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (277) spi_flash: detected chip: generic[0m
+[0;32mI (280) spi_flash: flash io: dio[0m
+[0;33mW (283) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (295) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (301) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (316) main_task: Started on CPU0[0m
+[0;32mI (316) main_task: Calling app_main()[0m
+[0;32mI (326) BLE_INIT: BT controller compile version [1bb2f50][0m
+[0;32mI (326) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (326) BLE_INIT: Feature Config, ADV:1, BLE_50:1, DTM:1, SCAN:1, CCA:0, SMP:1, CONNECT:1[0m
+[0;32mI (336) BLE_INIT: Bluetooth MAC: 80:f1:b2:64:90:02[0m
+[0;32mI (336) phy_init: phy_version 1232,d493f299,Aug 25 2025,19:01:20[0m
+[0;32mI (386) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (386) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (386) NimBLE: disc_mode=2[0m
+[0;32mI (386) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=0 adv_itvl_max=0[0m
+[0;32mI (396) NimBLE: [0m
+
+[0;32mI (406) XIAO_MATRIX: Initializing LED strip on GPIO 10[0m
+[0;32mI (406) KBD_APP: Keyboard Initialized and Advertising...[0m
+[0;32mI (406) main_task: Returned from app_main()[0m
+[0;32mI (1706) NIMBLE_HOGP: Connection status=0[0m
+[0;32mI (1976) NIMBLE_HOGP: Disconnect reason=531[0m
+[0;32mI (1976) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (1976) NimBLE: disc_mode=2[0m
+[0;32mI (1976) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=0 adv_itvl_max=0[0m
+[0;32mI (1986) NimBLE: [0m
+
+COMBO ACTIVATED! Writing mode: OFF
+[0;32mI (11646) KBD_APP: Key Pulse: 0x1B (Char:x L:3 D:0)[0m
+[0;32mI (13186) KBD_APP: Key Pulse: 0x0E (Char:k L:3 D:1)[0m
+[0;32mI (13566) KBD_APP: Key Pulse: 0x1B (Char:x L:3 D:0)[0m
+[0;32mI (14026) KBD_APP: Key Pulse: 0x1B (Char:x L:3 D:0)[0m
+[0;32mI (14566) KBD_APP: Key Pulse: 0x0E (Char:k L:3 D:1)[0m
+[0;32mI (15266) KBD_APP: Key Pulse: 0x1A (Char:w L:3 D:2)[0m
+[0;32mI (15506) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:3)[0m
+[0;32mI (15546) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:3)[0m
+[0;32mI (15586) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:3)[0m
+[0;32mI (15666) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:4)[0m
+[0;32mI (15706) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:4)[0m
+[0;32mI (15746) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:4)[0m
+[0;32mI (15866) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;32mI (15906) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;32mI (15946) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;32mI (15986) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;32mI (16026) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;32mI (16066) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;32mI (16146) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;32mI (16186) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;32mI (16286) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;32mI (16326) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;32mI (16366) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;32mI (16406) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;32mI (16446) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;32mI (16486) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+Interrupt triggered by GPIO 6, layer set to 1
+Interrupt triggered by GPIO 6, layer set to 0
+[0;32mI (17546) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+[0;32mI (18666) KBD_APP: Key Pulse: 0x04 (Char:a L:0 D:1)[0m
+[0;32mI (19406) KBD_APP: Key Pulse: 0x07 (Char:d L:0 D:7)[0m
+[0;32mI (19786) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+[0;32mI (19886) KBD_APP: Key Pulse: 0x04 (Char:a L:0 D:1)[0m
+[0;32mI (20206) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+[0;32mI (20406) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+[0;32mI (21526) KBD_APP: Key Pulse: 0x11 (Char:n L:0 D:5)[0m
+[0;32mI (22086) KBD_APP: Key Pulse: 0x15 (Char:r L:0 D:4)[0m
+[0;32mI (22526) KBD_APP: Key Pulse: 0x16 (Char:s L:0 D:3)[0m
+[0;32mI (22766) KBD_APP: Key Pulse: 0x15 (Char:r L:0 D:4)[0m
+[0;32mI (23366) KBD_APP: Key Pulse: 0x16 (Char:s L:0 D:3)[0m
+[0;32mI (24026) KBD_APP: Key Pulse: 0x12 (Char:o L:0 D:2)[0m
+[0;32mI (24906) KBD_APP: Key Pulse: 0x04 (Char:a L:0 D:1)[0m
+[0;32mI (25426) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+[0;32mI (26606) KBD_APP: Key Pulse: 0x04 (Char:a L:0 D:1)[0m
+[0;32mI (26906) KBD_APP: Key Pulse: 0x12 (Char:o L:0 D:2)[0m
+[0;32mI (27106) KBD_APP: Key Pulse: 0x16 (Char:s L:0 D:3)[0m
+[0;32mI (27406) KBD_APP: Key Pulse: 0x15 (Char:r L:0 D:4)[0m
+[0;32mI (27606) KBD_APP: Key Pulse: 0x11 (Char:n L:0 D:5)[0m
+[0;32mI (27986) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+[0;32mI (28966) KBD_APP: Key Pulse: 0x07 (Char:d L:0 D:7)[0m
+[0;32mI (29366) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+[0;32mI (29666) KBD_APP: Key Pulse: 0x04 (Char:a L:0 D:1)[0m
+[0;32mI (30006) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+[0;32mI (30106) KBD_APP: Key Pulse: 0x07 (Char:d L:0 D:7)[0m
+[0;32mI (30406) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+[0;32mI (31486) KBD_APP: Key Pulse: 0x11 (Char:n L:0 D:5)[0m
+[0;32mI (31666) KBD_APP: Key Pulse: 0x12 (Char:o L:0 D:2)[0m
+[0;32mI (31926) KBD_APP: Key Pulse: 0x11 (Char:n L:0 D:5)[0m
+[0;32mI (32046) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+[0;32mI (32146) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+Interrupt triggered by GPIO 6, layer set to 1
+[0;32mI (32926) KBD_APP: Key Pulse: 0x0F (Char:l L:1 D:0)[0m
+Interrupt triggered by GPIO 6, layer set to 0
+Interrupt triggered by GPIO 5, layer set to 2
+Interrupt triggered by GPIO 5, layer set to 0
+Interrupt triggered by GPIO 6, layer set to 1
+[0;32mI (35346) KBD_APP: Key Pulse: 0x0F (Char:l L:1 D:0)[0m
+[0;32mI (35746) KBD_APP: Key Pulse: 0x06 (Char:c L:1 D:1)[0m
+[0;32mI (35986) KBD_APP: Key Pulse: 0x17 (Char:u L:1 D:2)[0m
+[0;32mI (36126) KBD_APP: Key Pulse: 0x18 (Char:m L:1 D:3)[0m
+[0;32mI (36246) KBD_APP: Key Pulse: 0x10 (Char:p L:1 D:4)[0m
+[0;32mI (36366) KBD_APP: Key Pulse: 0x13 (Char:t L:1 D:5)[0m
+[0;32mI (36566) KBD_APP: Key Pulse: 0x05 (Char:b L:1 D:6)[0m
+[0;32mI (36706) KBD_APP: Key Pulse: 0x0A (Char:g L:1 D:7)[0m
+[0;32mI (37066) KBD_APP: Key Pulse: 0x0F (Char:l L:1 D:0)[0m
+[0;32mI (37486) KBD_APP: Key Pulse: 0x0A (Char:g L:1 D:7)[0m
+[0;32mI (38226) KBD_APP: Key Pulse: 0x0F (Char:l L:1 D:0)[0m
+[0;32mI (38686) KBD_APP: Key Pulse: 0x0A (Char:g L:1 D:7)[0m
+[0;32mI (38946) KBD_APP: Key Pulse: 0x05 (Char:b L:1 D:6)[0m
+[0;32mI (39146) KBD_APP: Key Pulse: 0x13 (Char:t L:1 D:5)[0m
+[0;32mI (39406) KBD_APP: Key Pulse: 0x10 (Char:p L:1 D:4)[0m
+[0;32mI (39586) KBD_APP: Key Pulse: 0x18 (Char:m L:1 D:3)[0m
+[0;32mI (39806) KBD_APP: Key Pulse: 0x17 (Char:u L:1 D:2)[0m
+[0;32mI (39906) KBD_APP: Key Pulse: 0x06 (Char:c L:1 D:1)[0m
+[0;32mI (40246) KBD_APP: Key Pulse: 0x05 (Char:b L:1 D:6)[0m
+[0;32mI (40806) KBD_APP: Key Pulse: 0x17 (Char:u L:1 D:2)[0m
+[0;32mI (41206) KBD_APP: Key Pulse: 0x13 (Char:t L:1 D:5)[0m
+[0;32mI (42946) KBD_APP: Key Pulse: 0x0F (Char:l L:1 D:0)[0m
+[0;32mI (43546) KBD_APP: Key Pulse: 0x05 (Char:b L:1 D:6)[0m
+Interrupt triggered by GPIO 6, layer set to 0
+[0;32mI (46426) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+Interrupt triggered by GPIO 5, layer set to 2
+[0;32mI (47926) KBD_APP: Key Pulse: 0x14 (Char:q L:2 D:2)[0m
+[0;32mI (48466) KBD_APP: Key Pulse: 0x1C (Char:y L:2 D:1)[0m
+[0;32mI (48686) KBD_APP: Key Pulse: 0x19 (Char:v L:2 D:0)[0m
+[0;32mI (48826) KBD_APP: Key Pulse: 0x33 (Char:ñ L:2 D:7)[0m
+[0;32mI (49126) KBD_APP: Key Pulse: 0x0D (Char:j L:2 D:6)[0m
+[0;32mI (49346) KBD_APP: Key Pulse: 0x1D (Char:z L:2 D:5)[0m
+[0;32mI (49566) KBD_APP: Key Pulse: 0x09 (Char:f L:2 D:4)[0m
+[0;32mI (49766) KBD_APP: Key Pulse: 0x14 (Char:q L:2 D:2)[0m
+Interrupt triggered by GPIO 6, layer set to 3
+[0;32mI (50426) KBD_APP: Key Pulse: 0x1A (Char:w L:3 D:2)[0m
+[0;32mI (50526) KBD_APP: Key Pulse: 0x0E (Char:k L:3 D:1)[0m
+[0;32mI (50846) KBD_APP: Key Pulse: 0x1B (Char:x L:3 D:0)[0m
+[0;32mI (50926) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;32mI (50966) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;32mI (51006) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;32mI (51046) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;32mI (51246) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;32mI (51286) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;32mI (51326) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;32mI (51366) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;32mI (51406) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;32mI (51546) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+Interrupt triggered by GPIO 6, layer set to 2
+Interrupt triggered by GPIO 5, layer set to 0
+[0;32mI (74506) KBD_APP: Key Pulse: 0x12 (Char:o L:0 D:2)[0m
+[0;32mI (76506) KBD_APP: Key Pulse: 0x04 (Char:a L:0 D:1)[0m
+[0;32mI (77626) KBD_APP: Key Pulse: 0x12 (Char:o L:0 D:2)[0m
+[0;32mI (77826) KBD_APP: Key Pulse: 0x16 (Char:s L:0 D:3)[0m
+[0;32mI (77986) KBD_APP: Key Pulse: 0x15 (Char:r L:0 D:4)[0m
+[0;32mI (78446) KBD_APP: Key Pulse: 0x11 (Char:n L:0 D:5)[0m
+[0;32mI (79686) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+[0;32mI (80146) KBD_APP: Key Pulse: 0x07 (Char:d L:0 D:7)[0m
+[0;32mI (80626) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+[0;32mI (81306) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+[0;32mI (81526) KBD_APP: Key Pulse: 0x07 (Char:d L:0 D:7)[0m
+[0;32mI (82046) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+[0;32mI (82966) KBD_APP: Key Pulse: 0x11 (Char:n L:0 D:5)[0m
+[0;32mI (83886) KBD_APP: Key Pulse: 0x15 (Char:r L:0 D:4)[0m
+[0;32mI (84126) KBD_APP: Key Pulse: 0x16 (Char:s L:0 D:3)[0m
+[0;32mI (85986) KBD_APP: Key Pulse: 0x04 (Char:a L:0 D:1)[0m
+[0;32mI (86646) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+[0;32mI (87106) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+[0;32mI (87266) KBD_APP: Key Pulse: 0x07 (Char:d L:0 D:7)[0m
+[0;32mI (87706) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+[0;32mI (87886) KBD_APP: Key Pulse: 0x04 (Char:a L:0 D:1)[0m
+[0;32mI (88346) KBD_APP: Key Pulse: 0x12 (Char:o L:0 D:2)[0m
+[0;32mI (88606) KBD_APP: Key Pulse: 0x16 (Char:s L:0 D:3)[0m
+[0;32mI (89406) KBD_APP: Key Pulse: 0x15 (Char:r L:0 D:4)[0m
+[0;32mI (89706) KBD_APP: Key Pulse: 0x11 (Char:n L:0 D:5)[0m
+[0;32mI (90226) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+[0;32mI (90666) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+[0;32mI (91426) KBD_APP: Key Pulse: 0x12 (Char:o L:0 D:2)[0m
+[0;32mI (92086) KBD_APP: Key Pulse: 0x12 (Char:o L:0 D:2)[0m
+[0;32mI (92406) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+[0;32mI (92966) KBD_APP: Key Pulse: 0x12 (Char:o L:0 D:2)[0m
+[0;32mI (93246) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+[0;32mI (93566) KBD_APP: Key Pulse: 0x12 (Char:o L:0 D:2)[0m
+[0;32mI (93806) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+[0;32mI (94006) KBD_APP: Key Pulse: 0x04 (Char:a L:0 D:1)[0m
+[0;32mI (94146) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+[0;32mI (94186) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+[0;32mI (94306) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+[0;32mI (94446) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+[0;32mI (94566) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+[0;32mI (95226) KBD_APP: Key Pulse: 0x04 (Char:a L:0 D:1)[0m
+[0;32mI (95906) KBD_APP: Key Pulse: 0x04 (Char:a L:0 D:1)[0m
+[0;32mI (96186) KBD_APP: Key Pulse: 0x12 (Char:o L:0 D:2)[0m
+[0;32mI (96486) KBD_APP: Key Pulse: 0x16 (Char:s L:0 D:3)[0m
+[0;32mI (96626) KBD_APP: Key Pulse: 0x15 (Char:r L:0 D:4)[0m
+[0;32mI (96826) KBD_APP: Key Pulse: 0x11 (Char:n L:0 D:5)[0m
+[0;32mI (97306) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+[0;32mI (97806) KBD_APP: Key Pulse: 0x07 (Char:d L:0 D:7)[0m
+[0;32mI (98186) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+[0;32mI (98846) KBD_APP: Key Pulse: 0x07 (Char:d L:0 D:7)[0m
+[0;32mI (98966) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+[0;32mI (99206) KBD_APP: Key Pulse: 0x11 (Char:n L:0 D:5)[0m
+[0;32mI (99486) KBD_APP: Key Pulse: 0x15 (Char:r L:0 D:4)[0m
+[0;32mI (99666) KBD_APP: Key Pulse: 0x16 (Char:s L:0 D:3)[0m
+[0;32mI (99906) KBD_APP: Key Pulse: 0x12 (Char:o L:0 D:2)[0m
+[0;32mI (100286) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+[0;32mI (100826) KBD_APP: Key Pulse: 0x04 (Char:a L:0 D:1)[0m
+[0;32mI (101006) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 5, layer set to 2
+Interrupt triggered by GPIO 5, layer set to 0
+Interrupt triggered by GPIO 5, layer set to 0
+Interrupt triggered by GPIO 5, layer set to 2
+Interrupt triggered by GPIO 5, layer set to 0
+Interrupt triggered by GPIO 6, layer set to 1
+Interrupt triggered by GPIO 6, layer set to 0
+Interrupt triggered by GPIO 6, layer set to 1
+Interrupt triggered by GPIO 6, layer set to 0
+Interrupt triggered by GPIO 6, layer set to 1
+Interrupt triggered by GPIO 6, layer set to 0
+Interrupt triggered by GPIO 6, layer set to 1
+Interrupt triggered by GPIO 6, layer set to 0
+Interrupt triggered by GPIO 6, layer set to 1
+Interrupt triggered by GPIO 6, layer set to 0
+Interrupt triggered by GPIO 6, layer set to 3
+Interrupt triggered by GPIO 6, layer set to 2
+Interrupt triggered by GPIO 6, layer set to 3
+Interrupt triggered by GPIO 6, layer set to 0
+Interrupt triggered by GPIO 6, layer set to 1
+Interrupt triggered by GPIO 5, layer set to 3
+Interrupt triggered by GPIO 6, layer set to 2
+Interrupt triggered by GPIO 6, layer set to 3
+Interrupt triggered by GPIO 5, layer set to 1
+Interrupt triggered by GPIO 6, layer set to 0
+Interrupt triggered by GPIO 5, layer set to 2
+Interrupt triggered by GPIO 6, layer set to 3
+Interrupt triggered by GPIO 5, layer set to 1
+Interrupt triggered by GPIO 6, layer set to 0
+COMBO ACTIVATED! Writing mode: ON
+[0;32mI (118046) KBD_APP: Key Pulse: 0x1A (Char:w L:3 D:2)[0m
+[0;33mW (118046) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (118786) KBD_APP: Key Pulse: 0x0E (Char:k L:3 D:1)[0m
+[0;33mW (118786) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (119026) KBD_APP: Key Pulse: 0x1A (Char:w L:3 D:2)[0m
+[0;33mW (119026) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (119126) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:3)[0m
+[0;33mW (119126) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (119186) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:4)[0m
+[0;33mW (119186) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (119266) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;33mW (119266) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (119306) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;33mW (119306) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (119346) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;33mW (119346) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (119386) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;33mW (119386) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (119426) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;33mW (119426) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (119526) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (119526) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (119566) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (119566) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (119606) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (119606) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (119666) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;33mW (119666) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (119746) KBD_APP: Key Pulse: 0x1B (Char:x L:3 D:0)[0m
+[0;33mW (119746) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (120086) KBD_APP: Key Pulse: 0x1B (Char:x L:3 D:0)[0m
+[0;33mW (120086) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (120706) KBD_APP: Key Pulse: 0x1B (Char:x L:3 D:0)[0m
+[0;33mW (120706) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (121746) KBD_APP: Key Pulse: 0x1B (Char:x L:3 D:0)[0m
+[0;33mW (121746) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (121926) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;33mW (121926) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (121966) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;33mW (121966) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (122006) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;33mW (122006) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (122046) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;33mW (122046) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (122086) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;33mW (122086) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (122126) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;33mW (122126) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (123106) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (123106) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (123146) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (123146) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (123186) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (123186) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (123226) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (123226) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (123266) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (123266) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (123306) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (123306) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (123346) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (123346) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (123386) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (123386) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (123426) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (123426) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (123466) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (123466) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (123666) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (123666) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (123706) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (123706) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (123746) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (123746) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (123786) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (123786) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (125706) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (125706) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (125746) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (125746) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (125786) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (125786) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (125826) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (125826) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (125866) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (125866) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (125906) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (125906) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (125946) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (125946) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (125986) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (125986) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126026) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126026) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126066) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126066) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126106) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126106) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126146) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126146) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126186) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126186) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126226) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126226) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126266) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126266) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126306) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126306) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126346) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126346) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126386) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126386) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126426) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126426) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126466) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126466) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126506) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126506) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126546) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126546) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126586) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126586) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126626) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126626) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126666) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126666) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126706) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126706) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126746) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126746) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126786) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126786) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126826) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126826) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126866) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126866) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126906) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126906) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126946) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126946) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (126986) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (126986) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (127026) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (127026) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (127066) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (127066) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (127106) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (127106) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (127146) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (127146) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (127206) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;33mW (127206) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (127246) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;33mW (127246) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (127486) KBD_APP: Key Pulse: 0x1B (Char:x L:3 D:0)[0m
+[0;33mW (127486) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (128366) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;33mW (128366) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (128406) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;33mW (128406) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (128446) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;33mW (128446) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (128586) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (128586) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (128626) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (128626) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (128666) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (128666) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (128706) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (128706) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (128746) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (128746) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (128786) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (128786) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (128826) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (128826) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (129386) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (129386) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (129446) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;33mW (129446) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (129486) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;33mW (129486) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (130106) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;33mW (130106) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (130186) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (130186) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (130226) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (130226) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (130266) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (130266) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (130306) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (130306) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (130346) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (130346) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (130386) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (130386) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (130426) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (130426) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (130466) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (130466) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (130506) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (130506) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (130626) KBD_APP: Key Pulse: 0x1B (Char:x L:3 D:0)[0m
+[0;33mW (130626) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (131266) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;33mW (131266) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (131326) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (131326) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (131366) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (131366) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (131406) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (131406) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (131446) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (131446) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (131486) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (131486) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (131526) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (131526) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (131566) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (131566) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (131606) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (131606) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (131646) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (131646) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (131686) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (131686) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (131726) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (131726) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (131766) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (131766) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (131806) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (131806) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (131926) KBD_APP: Key Pulse: 0x0E (Char:k L:3 D:1)[0m
+[0;33mW (131926) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (132886) KBD_APP: Key Pulse: 0x1B (Char:x L:3 D:0)[0m
+[0;33mW (132886) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (132926) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (132926) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (132966) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (132966) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133006) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133006) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133046) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133046) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133086) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133086) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133126) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133126) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133166) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133166) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133206) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133206) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133246) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133246) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133286) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133286) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133326) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133326) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133366) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133366) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133406) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133406) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133446) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133446) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133486) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133486) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133526) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133526) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133566) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133566) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133606) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133606) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133646) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133646) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133686) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133686) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133726) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133726) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133766) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133766) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133806) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133806) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133846) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133846) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133886) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133886) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133926) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133926) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (133966) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (133966) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (134006) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (134006) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (134046) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (134046) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (134086) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (134086) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (134126) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (134126) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (134166) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (134166) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (134206) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (134206) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (134246) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (134246) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (134286) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (134286) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (134326) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (134326) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (134366) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (134366) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (134406) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (134406) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (134446) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (134446) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (134486) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (134486) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (134526) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (134526) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (134566) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;33mW (134566) KBD_APP: Not connected or notifications not enabled[0m
+[0;32mI (134606) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m

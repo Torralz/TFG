@@ -1,6 +1,6 @@
 Command: ninja flash
 [1/5] cd /home/mario/TFG/unimano/build/esp-idf/esptool_py && /home/mario/.espressif/python_env/idf5.5_py3.14_env/bin/python /home/mario/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/mario/TFG/unimano/build/partition_table/partition-table.bin /home/mario/TFG/unimano/build/unimano.bin
-unimano.bin binary size 0x91870 bytes. Smallest app partition is 0x100000 bytes. 0x6e790 bytes (43%) free.
+unimano.bin binary size 0x919c0 bytes. Smallest app partition is 0x100000 bytes. 0x6e640 bytes (43%) free.
 [2/5] Performing build step for 'bootloader'
 [1/1] cd /home/mario/TFG/unimano/build/bootloader/esp-idf/esptool_py && /home/mario/.espressif/python_env/idf5.5_py3.14_env/bin/python /home/mario/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/mario/TFG/unimano/build/bootloader/bootloader.bin
 Bootloader binary size 0x51e0 bytes. 0x2e20 bytes (36%) free.
@@ -26,36 +26,36 @@ Flash will be erased from 0x00000000 to 0x00005fff...
 Flash will be erased from 0x00010000 to 0x000a1fff...
 Flash will be erased from 0x00008000 to 0x00008fff...
 SHA digest in image updated
-Compressed 20960 bytes to 13266...
+Compressed 20960 bytes to 13264...
 Writing at 0x00000000... (100 %)
-Wrote 20960 bytes (13266 compressed) at 0x00000000 in 0.2 seconds (effective 869.7 kbit/s)...
+Wrote 20960 bytes (13264 compressed) at 0x00000000 in 0.2 seconds (effective 880.8 kbit/s)...
 Hash of data verified.
-Compressed 596080 bytes to 326558...
+Compressed 596416 bytes to 326824...
 Writing at 0x00010000... (5 %)
-Writing at 0x0001bc77... (10 %)
-Writing at 0x000240c9... (15 %)
-Writing at 0x0002bde7... (20 %)
-Writing at 0x00032084... (25 %)
-Writing at 0x0003913e... (30 %)
-Writing at 0x00040e99... (35 %)
-Writing at 0x00047d42... (40 %)
-Writing at 0x0004f3a6... (45 %)
-Writing at 0x00055e21... (50 %)
-Writing at 0x0005cca8... (55 %)
-Writing at 0x000644ac... (60 %)
-Writing at 0x0006bbce... (65 %)
-Writing at 0x000728c1... (70 %)
-Writing at 0x0007924c... (75 %)
-Writing at 0x000800bc... (80 %)
-Writing at 0x00085e77... (85 %)
-Writing at 0x0008c33a... (90 %)
-Writing at 0x0009418f... (95 %)
-Writing at 0x0009aaf7... (100 %)
-Wrote 596080 bytes (326558 compressed) at 0x00010000 in 2.1 seconds (effective 2318.6 kbit/s)...
+Writing at 0x0001bca4... (10 %)
+Writing at 0x000240c7... (15 %)
+Writing at 0x0002bdde... (20 %)
+Writing at 0x00032079... (25 %)
+Writing at 0x0003912e... (30 %)
+Writing at 0x00040e3d... (35 %)
+Writing at 0x00047cf1... (40 %)
+Writing at 0x0004f3b8... (45 %)
+Writing at 0x00055e18... (50 %)
+Writing at 0x0005cbd2... (55 %)
+Writing at 0x000643f9... (60 %)
+Writing at 0x0006bb78... (65 %)
+Writing at 0x000728a4... (70 %)
+Writing at 0x0007925c... (75 %)
+Writing at 0x000800a6... (80 %)
+Writing at 0x00085e60... (85 %)
+Writing at 0x0008c2c8... (90 %)
+Writing at 0x0009415f... (95 %)
+Writing at 0x0009a96c... (100 %)
+Wrote 596416 bytes (326824 compressed) at 0x00010000 in 2.1 seconds (effective 2315.5 kbit/s)...
 Hash of data verified.
 Compressed 3072 bytes to 103...
 Writing at 0x00008000... (100 %)
-Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 939.8 kbit/s)...
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 919.8 kbit/s)...
 Hash of data verified.
 
 Leaving...

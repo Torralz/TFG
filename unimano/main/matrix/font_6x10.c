@@ -3088,34 +3088,75 @@ static const uint8_t fontdata_6x10[2560] = {
 // 	.pref	= 0,
 // };
 
-void draw_char_from_font(char letter, uint8_t r, uint8_t g, uint8_t b) {
-    // 1. Find where this letter starts in the array (each letter is 10 bytes)
+void draw_char_from_font(const char *letter_str, uint8_t r, uint8_t g, uint8_t b, unsigned layer) {
+    // Protección por si nos pasan un texto vacío
+    if (letter_str == NULL || letter_str[0] == '\0') return;
+
+    // Leer el primer byte (usamos unsigned para evitar valores negativos)
+    unsigned int letter = (unsigned char)letter_str[0];
+
+    // --- CONVERSIÓN DE UTF-8 A LA FUENTE LINUX (CP437) ---
+    // En UTF-8, los caracteres especiales como la 'ñ' ocupan 2 bytes.
+    // El primer byte siempre es 0xC3 (195) para el español.
+    if (letter == 0xC3) {
+        unsigned char second_byte = (unsigned char)letter_str[1];
+        
+        if (second_byte == 0xB1) {
+            // Es una 'ñ' minúscula. La forzamos a su posición real en CP437.
+            letter = 164; 
+        } 
+        else if (second_byte == 0x91) {
+            // Es una 'Ñ' mayúscula. La forzamos a su posición real en CP437.
+            letter = 165; 
+        } 
+        else {
+            // Fallback general para otros símbolos (aunque pueden no coincidir 
+            // perfectamente en CP437, evita que el programa se cuelgue)
+            letter = second_byte + 64; 
+        }
+    } 
+    else if (letter == 0xC2) {
+        letter = (unsigned char)letter_str[1]; 
+    }
+
+    // Asegurarnos de que no nos salimos del array por accidente
+    if (letter > 255) letter = 0;
+
+    // 1. Encontrar dónde empieza la letra (cada letra son 10 bytes)
     int start_index = letter * 10;
 
-    // 2. Loop through the 10 rows (Y axis)
+    // 2. Bucle para las 10 filas (Eje Y)
     for (int y = 0; y < 10; y++) {
         uint8_t row_data = fontdata_6x10[start_index + y];
         
-        // 3. Loop through the 6 columns (X axis)
+        // 3. Bucle para las 6 columnas (Eje X)
         for (int x = 0; x < 6; x++) {
             
-            // Calculate which physical LED this corresponds to
+            // Calcular qué LED físico corresponde
             int led_index = (y * 6) + x; 
             
-            // The Linux font uses the top 6 bits. 
-            // The leftmost pixel is bit 7, the rightmost is bit 2.
+            // La fuente de Linux usa los 6 bits superiores. 
+            // El pixel más a la izquierda es el bit 7, el más a la derecha el bit 2.
             int bit_position = 7 - x; 
             
-            // If the bit is a 1, turn the LED on
+            // Si el bit es un 1, encender el LED con el color indicado
             if (row_data & (1 << bit_position)) {
                 led_strip_set_pixel(led_strip, led_index, r, g, b);
             } else {
-                // If 0, turn it off (background)
+                // Si es 0, apagar (fondo)
                 led_strip_set_pixel(led_strip, led_index, 0, 0, 0); 
+            }
+            if (led_index == 0 || led_index == 6 || led_index == 12 || led_index == 18 || led_index == 24 ||led_index == 30 ||led_index == 36 ||led_index == 42 ||led_index == 48 ||led_index == 54) {
+                switch (layer) {
+                  case 0:  led_strip_set_pixel(led_strip, led_index, 0, 1, 0); break; 
+                  case 1:  led_strip_set_pixel(led_strip, led_index, 0, 0, 1); break; 
+                  case 2:  led_strip_set_pixel(led_strip, led_index, 1, 0, 1); break; 
+                  case 3:  led_strip_set_pixel(led_strip, led_index, 1, 0, 0); break; 
+                } 
             }
         }
     }
     
-    // Push the changes to the matrix
+    // Mandar los cambios a la matriz
     led_strip_refresh(led_strip);
 }

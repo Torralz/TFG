@@ -1,0 +1,298 @@
+Command: /home/mario/.espressif/python_env/idf5.5_py3.14_env/bin/python /home/mario/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/mario/TFG/unimano/build/unimano.elf /home/mario/TFG/unimano/build/bootloader/bootloader.elf -m '/home/mario/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/home/mario/esp/esp-idf/tools/idf.py'
+[0;32mI (306) sleep_gpio: Enable automatic switchiESP-ROM:esp32c3-api1-20210207[0m
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4004c0d8
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.3 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr 12 2026 00:37:37[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (25) boot: efuse block revision: v1.3[0m
+[0;32mI (28) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (44) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (53) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (66) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (76) esp_image: segment 0: paddr=00010020 vaddr=3c070020 size=159d4h ( 88532) map[0m
+[0;32mI (97) esp_image: segment 1: paddr=000259fc vaddr=3fc94a00 size=02a64h ( 10852) load[0m
+[0;32mI (99) esp_image: segment 2: paddr=00028468 vaddr=40380000 size=07bb0h ( 31664) load[0m
+[0;32mI (106) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=64c5ch (412764) map[0m
+[0;32mI (173) esp_image: segment 4: paddr=00094c84 vaddr=40387bb0 size=0ccf4h ( 52468) load[0m
+[0;32mI (182) esp_image: segment 5: paddr=000a1980 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (188) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (189) boot: Disabling RNG early entropy source...[0m
+[0;32mI (200) cpu_start: Unicore app[0m
+[0;32mI (208) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (208) cpu_start: Pro cpu start user code[0m
+[0;32mI (208) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (210) app_init: Application information:[0m
+[0;32mI (214) app_init: Project name:     unimano[0m
+[0;32mI (218) app_init: App version:      6022ecc-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr 12 2026 00:37:31[0m
+[0;32mI (227) app_init: ELF file SHA256:  b859b1b4a...[0m
+[0;32mI (232) app_init: ESP-IDF:          v5.5.3[0m
+[0;32mI (235) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (239) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (243) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (247) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (253) heap_init: At 3FC988E0 len 00027720 (157 KiB): RAM[0m
+[0;32mI (259) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (265) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (271) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (277) spi_flash: detected chip: generic[0m
+[0;32mI (280) spi_flash: flash io: dio[0m
+[0;33mW (283) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (295) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (301) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (316) main_task: Started on CPU0[0m
+[0;32mI (316) main_task: Calling app_main()[0m
+[0;32mI (326) BLE_INIT: BT controller compile version [1bb2f50][0m
+[0;32mI (326) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (326) BLE_INIT: Feature Config, ADV:1, BLE_50:1, DTM:1, SCAN:1, CCA:0, SMP:1, CONNECT:1[0m
+[0;32mI (336) BLE_INIT: Bluetooth MAC: 80:f1:b2:64:90:02[0m
+[0;32mI (336) phy_init: phy_version 1232,d493f299,Aug 25 2025,19:01:20[0m
+[0;32mI (396) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (396) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (396) NimBLE: disc_mode=2[0m
+[0;32mI (396) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=0 adv_itvl_max=0[0m
+[0;32mI (406) NimBLE: [0m
+
+[0;32mI (406) XIAO_MATRIX: Initializing LED strip on GPIO 10[0m
+[0;32mI (406) KBD_APP: Keyboard Initialized and Advertising...[0m
+[0;32mI (416) main_task: Returned from app_main()[0m
+[0;32mI (1936) NIMBLE_HOGP: Connection status=0[0m
+[0;32mI (2296) NIMBLE_HOGP: Disconnect reason=531[0m
+[0;32mI (2296) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (2296) NimBLE: disc_mode=2[0m
+[0;32mI (2296) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=0 adv_itvl_max=0[0m
+[0;32mI (2306) NimBLE: [0m
+
+[0;32mI (14046) NIMBLE_HOGP: Connection status=0[0m
+[0;32mI (16116) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (16116) NIMBLE_HOGP: Encryption status=0[0m
+[0;32mI (18056) NIMBLE_HOGP: HID Notify: Enabled[0m
+Interrupt triggered by GPIO 6, layer set to 1
+COMBO ACTIVATED! Writing mode: ON
+COMBO ACTIVATED! Writing mode: OFF
+[0;32mI (41556) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;32mI (41556) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (41556) NimBLE: att_handle=20[0m
+
+[0;32mI (41586) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (41586) NimBLE: att_handle=20[0m
+
+[0;32mI (41626) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;32mI (41626) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (41626) NimBLE: att_handle=20[0m
+
+[0;32mI (41656) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (41656) NimBLE: att_handle=20[0m
+
+[0;32mI (41696) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;32mI (41696) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (41696) NimBLE: att_handle=20[0m
+
+[0;32mI (41726) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (41726) NimBLE: att_handle=20[0m
+
+[0;32mI (41766) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;32mI (41766) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (41766) NimBLE: att_handle=20[0m
+
+[0;32mI (41796) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (41796) NimBLE: att_handle=20[0m
+
+[0;32mI (41836) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;32mI (41836) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (41836) NimBLE: att_handle=20[0m
+
+[0;32mI (41866) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (41866) NimBLE: att_handle=20[0m
+
+[0;32mI (41906) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;32mI (41906) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (41906) NimBLE: att_handle=20[0m
+
+[0;32mI (41936) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (41936) NimBLE: att_handle=20[0m
+
+[0;32mI (41976) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;32mI (41976) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (41976) NimBLE: att_handle=20[0m
+
+[0;32mI (42006) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (42006) NimBLE: att_handle=20[0m
+
+Interrupt triggered by GPIO 6, layer set to 3
+COMBO ACTIVATED! Writing mode: ON
+Interrupt triggered by GPIO 6, layer set to 1
+Interrupt triggered by GPIO 6, layer set to 0
+Interrupt triggered by GPIO 6, layer set to 1
+Interrupt triggered by GPIO 6, layer set to 0
+Interrupt triggered by GPIO 5, layer set to 2
+Interrupt triggered by GPIO 5, layer set to 0
+Interrupt triggered by GPIO 6, layer set to 3
+COMBO ACTIVATED! Writing mode: OFF
+Interrupt triggered by GPIO 6, layer set to 0
+[0;32mI (59006) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+[0;32mI (59006) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (59006) NimBLE: att_handle=20[0m
+
+[0;32mI (59036) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (59036) NimBLE: att_handle=20[0m
+
+[0;32mI (60036) KBD_APP: Key Pulse: 0x04 (Char:a L:0 D:1)[0m
+[0;32mI (60036) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (60036) NimBLE: att_handle=20[0m
+
+[0;32mI (60066) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (60066) NimBLE: att_handle=20[0m
+
+[0;32mI (60466) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+[0;32mI (60466) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (60466) NimBLE: att_handle=20[0m
+
+[0;32mI (60496) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (60496) NimBLE: att_handle=20[0m
+
+[0;32mI (60736) KBD_APP: Key Pulse: 0x11 (Char:n L:0 D:5)[0m
+[0;32mI (60736) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (60736) NimBLE: att_handle=20[0m
+
+[0;32mI (60766) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (60766) NimBLE: att_handle=20[0m
+
+[0;32mI (60946) KBD_APP: Key Pulse: 0x15 (Char:r L:0 D:4)[0m
+[0;32mI (60946) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (60946) NimBLE: att_handle=20[0m
+
+[0;32mI (60976) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (60976) NimBLE: att_handle=20[0m
+
+[0;32mI (61056) KBD_APP: Key Pulse: 0x16 (Char:s L:0 D:3)[0m
+[0;32mI (61056) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (61056) NimBLE: att_handle=20[0m
+
+[0;32mI (61086) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (61086) NimBLE: att_handle=20[0m
+
+[0;32mI (61146) KBD_APP: Key Pulse: 0x12 (Char:o L:0 D:2)[0m
+[0;32mI (61146) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (61146) NimBLE: att_handle=20[0m
+
+[0;32mI (61176) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (61176) NimBLE: att_handle=20[0m
+
+[0;32mI (61236) KBD_APP: Key Pulse: 0x12 (Char:o L:0 D:2)[0m
+[0;32mI (61236) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (61236) NimBLE: att_handle=20[0m
+
+[0;32mI (61266) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (61266) NimBLE: att_handle=20[0m
+
+Interrupt triggered by GPIO 6, layer set to 1
+[0;32mI (64126) KBD_APP: Key Pulse: 0x06 (Char:c L:1 D:1)[0m
+[0;32mI (64126) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (64126) NimBLE: att_handle=20[0m
+
+[0;32mI (64156) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (64156) NimBLE: att_handle=20[0m
+
+[0;32mI (64376) KBD_APP: Key Pulse: 0x17 (Char:u L:1 D:2)[0m
+[0;32mI (64376) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (64376) NimBLE: att_handle=20[0m
+
+[0;32mI (64406) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (64406) NimBLE: att_handle=20[0m
+
+[0;32mI (64526) KBD_APP: Key Pulse: 0x18 (Char:m L:1 D:3)[0m
+[0;32mI (64526) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (64526) NimBLE: att_handle=20[0m
+
+[0;32mI (64556) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (64556) NimBLE: att_handle=20[0m
+
+[0;32mI (64736) KBD_APP: Key Pulse: 0x10 (Char:p L:1 D:4)[0m
+[0;32mI (64736) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (64736) NimBLE: att_handle=20[0m
+
+[0;32mI (64766) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (64766) NimBLE: att_handle=20[0m
+
+[0;32mI (64866) KBD_APP: Key Pulse: 0x13 (Char:t L:1 D:5)[0m
+[0;32mI (64866) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (64866) NimBLE: att_handle=20[0m
+
+[0;32mI (64896) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (64896) NimBLE: att_handle=20[0m
+
+[0;32mI (65316) KBD_APP: Key Pulse: 0x05 (Char:b L:1 D:6)[0m
+[0;32mI (65316) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (65316) NimBLE: att_handle=20[0m
+
+[0;32mI (65346) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (65346) NimBLE: att_handle=20[0m
+
+[0;32mI (65746) KBD_APP: Key Pulse: 0x0A (Char:g L:1 D:7)[0m
+[0;32mI (65746) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (65746) NimBLE: att_handle=20[0m
+
+[0;32mI (65776) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (65776) NimBLE: att_handle=20[0m
+
+[0;32mI (65996) KBD_APP: Key Pulse: 0x0F (Char:l L:1 D:0)[0m
+[0;32mI (65996) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (65996) NimBLE: att_handle=20[0m
+
+[0;32mI (66026) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (66026) NimBLE: att_handle=20[0m
+
+[0;32mI (66206) KBD_APP: Key Pulse: 0x06 (Char:c L:1 D:1)[0m
+[0;32mI (66206) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (66206) NimBLE: att_handle=20[0m
+
+[0;32mI (66236) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (66236) NimBLE: att_handle=20[0m
+
+[0;32mI (66396) KBD_APP: Key Pulse: 0x17 (Char:u L:1 D:2)[0m
+[0;32mI (66396) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (66396) NimBLE: att_handle=20[0m
+
+[0;32mI (66426) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (66426) NimBLE: att_handle=20[0m
+
+[0;32mI (66506) KBD_APP: Key Pulse: 0x18 (Char:m L:1 D:3)[0m
+[0;32mI (66506) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (66506) NimBLE: att_handle=20[0m
+
+[0;32mI (66536) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (66536) NimBLE: att_handle=20[0m
+
+[0;32mI (66616) KBD_APP: Key Pulse: 0x10 (Char:p L:1 D:4)[0m
+[0;32mI (66616) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (66616) NimBLE: att_handle=20[0m
+
+[0;32mI (66646) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (66646) NimBLE: att_handle=20[0m
+
+[0;32mI (66706) KBD_APP: Key Pulse: 0x13 (Char:t L:1 D:5)[0m
+[0;32mI (66706) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (66706) NimBLE: att_handle=20[0m
+
+[0;32mI (66736) NimBLE: GATT procedure initiated: notify; [0m
+[0;32mI (66736) NimBLE: att_handle=20[0m
+
+Interrupt triggered by GPIO 6, layer set to 0
+COMBO ACTIVATED! Writing mode: ON

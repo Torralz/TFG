@@ -1,0 +1,276 @@
+Command: /home/mario/.espressif/python_env/idf5.5_py3.14_env/bin/python /home/mario/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/mario/TFG/unimano/build/unimano.elf /home/mario/TFG/unimano/build/bootloader/bootloader.elf -m '/home/mario/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/home/mario/esp/esp-idf/tools/idf.py'
+[0;32mI (106) esp_image: segment 3: paddr=00030020 vaddr=42000020 sizee all GPIO pins in sleep state[0m
+[0;32mI (306) sleep_gpioESP-ROM:esp32c3-api1-20210207[0m
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4004c0d4
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.3 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr 12 2026 00:37:37[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (25) boot: efuse block revision: v1.3[0m
+[0;32mI (28) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (44) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (53) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (66) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (76) esp_image: segment 0: paddr=00010020 vaddr=3c070020 size=159cch ( 88524) map[0m
+[0;32mI (97) esp_image: segment 1: paddr=000259f4 vaddr=3fc94a00 size=02a64h ( 10852) load[0m
+[0;32mI (99) esp_image: segment 2: paddr=00028460 vaddr=40380000 size=07bb8h ( 31672) load[0m
+[0;32mI (106) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=64cb4h (412852) map[0m
+[0;32mI (173) esp_image: segment 4: paddr=00094cdc vaddr=40387bb8 size=0ccech ( 52460) load[0m
+[0;32mI (182) esp_image: segment 5: paddr=000a19d0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (188) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (189) boot: Disabling RNG early entropy source...[0m
+[0;32mI (200) cpu_start: Unicore app[0m
+[0;32mI (208) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (208) cpu_start: Pro cpu start user code[0m
+[0;32mI (208) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (210) app_init: Application information:[0m
+[0;32mI (214) app_init: Project name:     unimano[0m
+[0;32mI (218) app_init: App version:      6022ecc-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr 12 2026 00:37:31[0m
+[0;32mI (227) app_init: ELF file SHA256:  1388ff2d4...[0m
+[0;32mI (232) app_init: ESP-IDF:          v5.5.3[0m
+[0;32mI (236) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (239) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (243) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (247) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (254) heap_init: At 3FC988E0 len 00027720 (157 KiB): RAM[0m
+[0;32mI (259) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (265) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (271) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (277) spi_flash: detected chip: generic[0m
+[0;32mI (280) spi_flash: flash io: dio[0m
+[0;33mW (283) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (295) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (301) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (316) main_task: Started on CPU0[0m
+[0;32mI (316) main_task: Calling app_main()[0m
+[0;32mI (326) BLE_INIT: BT controller compile version [1bb2f50][0m
+[0;32mI (326) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (326) BLE_INIT: Feature Config, ADV:1, BLE_50:1, DTM:1, SCAN:1, CCA:0, SMP:1, CONNECT:1[0m
+[0;32mI (336) BLE_INIT: Bluetooth MAC: 80:f1:b2:64:90:02[0m
+[0;32mI (336) phy_init: phy_version 1232,d493f299,Aug 25 2025,19:01:20[0m
+[0;32mI (386) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (386) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (386) NimBLE: disc_mode=2[0m
+[0;32mI (386) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=0 adv_itvl_max=0[0m
+[0;32mI (396) NimBLE: [0m
+
+[0;32mI (396) XIAO_MATRIX: Initializing LED strip on GPIO 10[0m
+[0;32mI (406) KBD_APP: Keyboard Initialized and Advertising...[0m
+[0;32mI (406) main_task: Returned from app_main()[0m
+COMBO ACTIVATED! Writing mode: b
+[0;32mI (11466) KBD_APP: Key Pulse: 0x1B (Char:x L:3 D:0)[0m
+[0;32mI (17046) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;32mI (17086) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;32mI (17126) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;32mI (17166) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;32mI (17206) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;32mI (17246) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;32mI (17386) KBD_APP: Key Pulse: 0x1B (Char:x L:3 D:0)[0m
+[0;32mI (17726) KBD_APP: Key Pulse: 0x0E (Char:k L:3 D:1)[0m
+[0;32mI (18126) KBD_APP: Key Pulse: 0x1A (Char:w L:3 D:2)[0m
+Interrupt triggered by GPIO 6, layer set to 1
+Interrupt triggered by GPIO 6, layer set to 0
+[0;32mI (21426) KBD_APP: Key Pulse: 0x12 (Char:o L:0 D:2)[0m
+[0;32mI (22166) KBD_APP: Key Pulse: 0x12 (Char:o L:0 D:2)[0m
+[0;32mI (23026) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+[0;32mI (23526) KBD_APP: Key Pulse: 0x07 (Char:d L:0 D:7)[0m
+[0;32mI (23666) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+[0;32mI (23826) KBD_APP: Key Pulse: 0x04 (Char:a L:0 D:1)[0m
+[0;32mI (23966) KBD_APP: Key Pulse: 0x12 (Char:o L:0 D:2)[0m
+[0;32mI (24066) KBD_APP: Key Pulse: 0x16 (Char:s L:0 D:3)[0m
+[0;32mI (24146) KBD_APP: Key Pulse: 0x15 (Char:r L:0 D:4)[0m
+[0;32mI (24286) KBD_APP: Key Pulse: 0x11 (Char:n L:0 D:5)[0m
+[0;32mI (24466) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+Interrupt triggered by GPIO 5, layer set to 2
+[0;32mI (25786) KBD_APP: Key Pulse: 0x0D (Char:j L:2 D:6)[0m
+[0;32mI (26066) KBD_APP: Key Pulse: 0x33 (Char:ñ L:2 D:7)[0m
+[0;32mI (26206) KBD_APP: Key Pulse: 0x19 (Char:v L:2 D:0)[0m
+[0;32mI (26306) KBD_APP: Key Pulse: 0x1C (Char:y L:2 D:1)[0m
+[0;32mI (26426) KBD_APP: Key Pulse: 0x14 (Char:q L:2 D:2)[0m
+[0;32mI (26566) KBD_APP: Key Pulse: 0x0B (Char:h L:2 D:3)[0m
+[0;32mI (26646) KBD_APP: Key Pulse: 0x09 (Char:f L:2 D:4)[0m
+[0;32mI (26766) KBD_APP: Key Pulse: 0x1D (Char:z L:2 D:5)[0m
+[0;32mI (26946) KBD_APP: Key Pulse: 0x0D (Char:j L:2 D:6)[0m
+[0;32mI (27086) KBD_APP: Key Pulse: 0x33 (Char:ñ L:2 D:7)[0m
+[0;32mI (27186) KBD_APP: Key Pulse: 0x19 (Char:v L:2 D:0)[0m
+[0;32mI (27326) KBD_APP: Key Pulse: 0x1C (Char:y L:2 D:1)[0m
+[0;32mI (27526) KBD_APP: Key Pulse: 0x14 (Char:q L:2 D:2)[0m
+[0;32mI (27666) KBD_APP: Key Pulse: 0x09 (Char:f L:2 D:4)[0m
+[0;32mI (27766) KBD_APP: Key Pulse: 0x1D (Char:z L:2 D:5)[0m
+[0;32mI (27946) KBD_APP: Key Pulse: 0x0D (Char:j L:2 D:6)[0m
+Interrupt triggered by GPIO 6, layer set to 3
+[0;32mI (30686) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;32mI (30726) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;32mI (30766) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;32mI (30806) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;32mI (30846) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;32mI (30906) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;32mI (30946) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;32mI (31026) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;32mI (31066) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;32mI (31166) KBD_APP: Key Pulse: 0x1B (Char:x L:3 D:0)[0m
+[0;32mI (31366) KBD_APP: Key Pulse: 0x1A (Char:w L:3 D:2)[0m
+[0;32mI (31446) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:3)[0m
+[0;32mI (31526) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:4)[0m
+[0;32mI (31626) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;32mI (31666) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;32mI (31706) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;32mI (31786) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;32mI (31826) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;32mI (31886) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;32mI (31966) KBD_APP: Key Pulse: 0x1B (Char:x L:3 D:0)[0m
+Interrupt triggered by GPIO 5, layer set to 0
+[0;32mI (35646) KBD_APP: Key Pulse: 0x12 (Char:o L:0 D:2)[0m
+[0;32mI (36286) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+[0;32mI (36706) KBD_APP: Key Pulse: 0x12 (Char:o L:0 D:2)[0m
+[0;32mI (37126) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+[0;32mI (37446) KBD_APP: Key Pulse: 0x15 (Char:r L:0 D:4)[0m
+[0;32mI (37666) KBD_APP: Key Pulse: 0x11 (Char:n L:0 D:5)[0m
+[0;32mI (37846) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+[0;32mI (37906) KBD_APP: Key Pulse: 0x07 (Char:d L:0 D:7)[0m
+[0;32mI (38066) KBD_APP: Key Pulse: 0x04 (Char:a L:0 D:1)[0m
+[0;32mI (38146) KBD_APP: Key Pulse: 0x12 (Char:o L:0 D:2)[0m
+COMBO ACTIVATED! Writing mode: b
+Interrupt triggered by GPIO 6, layer set to 3
+COMBO ACTIVATED! Writing mode: b
+[0;32mI (55446) KBD_APP: Key Pulse: 0x1B (Char:x L:3 D:0)[0m
+Interrupt triggered by GPIO 6, layer set to 1
+[0;32mI (58286) KBD_APP: Key Pulse: 0x0F (Char:l L:1 D:0)[0m
+Interrupt triggered by GPIO 6, layer set to 0
+[0;32mI (58446) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+[0;32mI (61686) KBD_APP: Key Pulse: 0x04 (Char:a L:0 D:1)[0m
+[0;32mI (62686) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+[0;32mI (96086) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+[0;32mI (96426) KBD_APP: Key Pulse: 0x04 (Char:a L:0 D:1)[0m
+[0;32mI (96666) KBD_APP: Key Pulse: 0x12 (Char:o L:0 D:2)[0m
+[0;32mI (97206) KBD_APP: Key Pulse: 0x15 (Char:r L:0 D:4)[0m
+[0;32mI (97526) KBD_APP: Key Pulse: 0x11 (Char:n L:0 D:5)[0m
+[0;32mI (98046) KBD_APP: Key Pulse: 0x0C (Char:i L:0 D:6)[0m
+[0;32mI (98346) KBD_APP: Key Pulse: 0x07 (Char:d L:0 D:7)[0m
+[0;32mI (98626) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+Interrupt triggered by GPIO 6, layer set to 1
+[0;32mI (99246) KBD_APP: Key Pulse: 0x05 (Char:b L:1 D:6)[0m
+[0;32mI (99366) KBD_APP: Key Pulse: 0x0A (Char:g L:1 D:7)[0m
+[0;32mI (99866) KBD_APP: Key Pulse: 0x0F (Char:l L:1 D:0)[0m
+[0;32mI (100386) KBD_APP: Key Pulse: 0x06 (Char:c L:1 D:1)[0m
+[0;32mI (100986) KBD_APP: Key Pulse: 0x17 (Char:u L:1 D:2)[0m
+[0;32mI (101406) KBD_APP: Key Pulse: 0x18 (Char:m L:1 D:3)[0m
+[0;32mI (101726) KBD_APP: Key Pulse: 0x10 (Char:p L:1 D:4)[0m
+[0;32mI (102106) KBD_APP: Key Pulse: 0x13 (Char:t L:1 D:5)[0m
+[0;32mI (102606) KBD_APP: Key Pulse: 0x05 (Char:b L:1 D:6)[0m
+[0;32mI (102986) KBD_APP: Key Pulse: 0x0A (Char:g L:1 D:7)[0m
+[0;32mI (103346) KBD_APP: Key Pulse: 0x0F (Char:l L:1 D:0)[0m
+[0;32mI (103606) KBD_APP: Key Pulse: 0x06 (Char:c L:1 D:1)[0m
+[0;32mI (105186) KBD_APP: Key Pulse: 0x0F (Char:l L:1 D:0)[0m
+[0;32mI (106066) KBD_APP: Key Pulse: 0x06 (Char:c L:1 D:1)[0m
+[0;32mI (107486) KBD_APP: Key Pulse: 0x17 (Char:u L:1 D:2)[0m
+[0;32mI (108426) KBD_APP: Key Pulse: 0x18 (Char:m L:1 D:3)[0m
+[0;32mI (109646) KBD_APP: Key Pulse: 0x10 (Char:p L:1 D:4)[0m
+[0;32mI (110626) KBD_APP: Key Pulse: 0x13 (Char:t L:1 D:5)[0m
+[0;32mI (112326) KBD_APP: Key Pulse: 0x05 (Char:b L:1 D:6)[0m
+[0;32mI (113106) KBD_APP: Key Pulse: 0x0A (Char:g L:1 D:7)[0m
+[0;32mI (113526) KBD_APP: Key Pulse: 0x0F (Char:l L:1 D:0)[0m
+Interrupt triggered by GPIO 6, layer set to 0
+Interrupt triggered by GPIO 5, layer set to 2
+[0;32mI (114686) KBD_APP: Key Pulse: 0x19 (Char:v L:2 D:0)[0m
+[0;32mI (115366) KBD_APP: Key Pulse: 0x1C (Char:y L:2 D:1)[0m
+[0;32mI (116586) KBD_APP: Key Pulse: 0x14 (Char:q L:2 D:2)[0m
+[0;32mI (117126) KBD_APP: Key Pulse: 0x0B (Char:h L:2 D:3)[0m
+[0;32mI (119926) KBD_APP: Key Pulse: 0x0B (Char:h L:2 D:3)[0m
+[0;32mI (120506) KBD_APP: Key Pulse: 0x0B (Char:h L:2 D:3)[0m
+[0;32mI (121046) KBD_APP: Key Pulse: 0x0B (Char:h L:2 D:3)[0m
+Interrupt triggered by GPIO 5, layer set to 0
+Interrupt triggered by GPIO 6, layer set to 1
+COMBO ACTIVATED! Writing mode: b
+Interrupt triggered by GPIO 5, layer set to 2
+Interrupt triggered by GPIO 5, layer set to 0
+COMBO ACTIVATED! Writing mode: b
+[0;32mI (131066) KBD_APP: Key Pulse: 0x1B (Char:x L:3 D:0)[0m
+[0;32mI (131506) KBD_APP: Key Pulse: 0x0E (Char:k L:3 D:1)[0m
+[0;32mI (131886) KBD_APP: Key Pulse: 0x1B (Char:x L:3 D:0)[0m
+Interrupt triggered by GPIO 6, layer set to 1
+Interrupt triggered by GPIO 6, layer set to 0
+[0;32mI (133466) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+[0;32mI (134086) KBD_APP: Key Pulse: 0x04 (Char:a L:0 D:1)[0m
+[0;32mI (135006) KBD_APP: Key Pulse: 0x04 (Char:a L:0 D:1)[0m
+[0;32mI (135406) KBD_APP: Key Pulse: 0x12 (Char:o L:0 D:2)[0m
+Interrupt triggered by GPIO 6, layer set to 1
+Interrupt triggered by GPIO 4, layer set to 0
+Interrupt triggered by GPIO 6, layer set to 3
+COMBO ACTIVATED! Writing mode: b
+Interrupt triggered by GPIO 6, layer set to 1
+Interrupt triggered by GPIO 6, layer set to 0
+[0;32mI (179096) NIMBLE_HOGP: Connection status=0[0m
+[0;32mI (181296) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (181296) NIMBLE_HOGP: Encryption status=0[0m
+[0;32mI (183186) NIMBLE_HOGP: HID Notify: Enabled[0m
+COMBO ACTIVATED! Writing mode: b
+[0;32mI (217936) KBD_APP: Key Pulse: 0x1A (Char:w L:3 D:2)[0m
+[0;32mI (218796) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:3)[0m
+[0;32mI (218836) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:3)[0m
+[0;32mI (218876) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:3)[0m
+[0;32mI (218916) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:3)[0m
+[0;32mI (219076) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:4)[0m
+[0;32mI (219116) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:4)[0m
+[0;32mI (219156) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:4)[0m
+[0;32mI (219196) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:4)[0m
+[0;32mI (219236) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:4)[0m
+[0;32mI (219356) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;32mI (219396) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;32mI (219436) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;32mI (219476) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;32mI (219516) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:5)[0m
+[0;32mI (219616) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;32mI (219656) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:6)[0m
+[0;32mI (219736) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;32mI (219776) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;32mI (219816) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;32mI (219856) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+[0;32mI (219896) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:7)[0m
+Interrupt triggered by GPIO 6, layer set to 1
+Interrupt triggered by GPIO 6, layer set to 0
+[0;32mI (221956) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+[0;32mI (222836) KBD_APP: Key Pulse: 0x04 (Char:a L:0 D:1)[0m
+[0;32mI (223336) KBD_APP: Key Pulse: 0x08 (Char:e L:0 D:0)[0m
+Interrupt triggered by GPIO 5, layer set to 2
+[0;32mI (224236) KBD_APP: Key Pulse: 0x0B (Char:h L:2 D:3)[0m
+Interrupt triggered by GPIO 6, layer set to 3
+[0;32mI (226636) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:3)[0m
+[0;32mI (226676) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:3)[0m
+[0;32mI (226716) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:3)[0m
+[0;32mI (226756) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:3)[0m
+[0;32mI (226796) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:3)[0m
+[0;32mI (226836) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:3)[0m
+[0;32mI (226876) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:3)[0m
+[0;32mI (226916) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:3)[0m
+[0;32mI (226956) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:3)[0m
+[0;32mI (226996) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:3)[0m
+[0;32mI (227036) KBD_APP: Key Pulse: 0x2C (Char:  L:3 D:3)[0m
+Interrupt triggered by GPIO 6, layer set to 2
+[0;32mI (227076) KBD_APP: Key Pulse: 0x0B (Char:h L:2 D:3)[0m
+Interrupt triggered by GPIO 5, layer set to 0
+[0;32mI (230216) KBD_APP: Key Pulse: 0x16 (Char:s L:0 D:3)[0m
+COMBO ACTIVATED! Writing mode: b
+Interrupt triggered by GPIO 5, layer set to 2
+Interrupt triggered by GPIO 5, layer set to 0
+Interrupt triggered by GPIO 6, layer set to 1
+Interrupt triggered by GPIO 6, layer set to 0
+Interrupt triggered by GPIO 5, layer set to 2
+Interrupt triggered by GPIO 5, layer set to 0
+COMBO ACTIVATED! Writing mode: b
