@@ -31,18 +31,21 @@
 //2. Añadir funcionalidad a las teclas vacias como enter o borrar
 //3. Añadir Modo de escribir en mayúsculas 
 //4. Hacer que las teclas que se repitan lo hagan una sola vez y si lo mantienes entonces se repita continuametne (igual todas las teclas??)
+//5. Usar uno de los espacios en blanco como acceso a otra capa teclado de caracteres especiales por capas
 //TODO: Quiero hacer las siguientes cosas en el futuro prox [10/4 - 12/04]
 //1. Añadir autocompletado (posiblemente solo en android?)
-//2. Usar uno de los espacios en blanco como acceso a otra capa teclado de caracteres especiales por capas
-//3. Crear una combinación de teclas que habra un menú con opciones como brillo
+//2. Crear una combinación de teclas que habra un menú con opciones como brillo
+//3. Hacer tema de acentos
 
 // GPIO / ADC Configuration
 // ESP32-C3 Pins (Using valid ADC1 channels 0-4)
-#define JOY_X_CHANNEL   2               // GPIO0? (Check: ADC1_CH2 is GPIO2)
-#define JOY_Y_CHANNEL   3               // GPIO1? (Check: ADC1_CH3 is GPIO3)
+#define JOY_X_CHANNEL   2               // GPIO2
+#define JOY_Y_CHANNEL   3               // GPIO3
 #define JOY_SW_GPIO     4               // GPIO4
 #define BUTTON_1_GPIO   5               // GPIO5
 #define BUTTON_2_GPIO   6               // GPIO6
+
+#define S(kc) (0x0200 | (kc))
 
 static const char *TAG = "KBD_APP";
 static adc_oneshot_unit_handle_t adc1_handle;
@@ -50,20 +53,37 @@ static adc_oneshot_unit_handle_t adc1_handle;
 static volatile unsigned current_layer = 0;
 static volatile bool writeMode = true;
 static volatile bool caps_lock_active = false; 
+static volatile int layer_offset = 0; // Puede ser 0 o 4
 
 // HID Keycodes Dictionary (4 Layers x 8 Directions)
-static const uint8_t diccionario[4][8] = {
+static const uint16_t diccionario[8][8] = {
     { 0x08, 0x04, 0x12, 0x16, 0x15, 0x11, 0x0C, 0x07 }, // e, a, o, s, r, n, i, d
-    { 0x0F, 0x06, 0x18, 0x10, 0x13, 0x17, 0x05, 0x0A }, // l, c, u, m, p, t, b, g u(t), m(u), p(m), t(p), 
+    { 0x0F, 0x06, 0x18, 0x10, 0x13, 0x17, 0x05, 0x0A }, // l, c, u, m, p, t, b, g 
     { 0x19, 0x1C, 0x14, 0x0B, 0x09, 0x1D, 0x0D, 0x33 }, // v, y, q, h, f, z, j, ñ 
-    { 0x1B, 0x0E, 0x1A, 0x28, 0x2A, 0x39, 0x2C, 0x2C }, // x, k, w, space...
+    { 0x1B, 0x0E, 0x1A, 0x28, 0x2A, 0x39, 0x2C, 0xFF }, // x, k, w, intro, delete, Caps_Lock, space, special layer 
+
+    // CAPA 4: Números 0-7 (Sin shift)
+    { 0x27, 0x1E, 0x1F, 0x20, 0x21, 0x22, 0x23, 0x24 }, // 0, 1, 2, 3, 4, 5, 6, 7
+    // CAPA 5: 8, 9, ., :, ,, ;, -, _
+    // Usamos S() para los que requieren Shift según el código que elegiste
+    { 0x25, 0x26, 0x37, S(0x33), 0x36, 0x33, 0x2D, S(0x2D) }, 
+    // CAPA 6: ¿, ?, ¡, !, ", @, (, )
+    { S(0x1E), S(0x26), 0x1E, S(0x1E), S(0x34), S(0x1F), S(0x26), S(0x27) }, 
+    // CAPA 7: =, +, *, &, <, >
+    { 0x2E, S(0x2E), S(0x25), S(0x24), 0x64, S(0x64), 0x2C, 0xFF },
 };
 
-static const char* diccionario_char[4][8] = {
+static const char* diccionario_char[8][8] = {
     { "e", "a", "o", "s", "r", "n", "i", "d" }, // Verde
     { "l", "c", "u", "m", "p", "t", "b", "g" }, // Azul
     { "v", "y", "q", "h", "f", "z", "j", "ñ" }, // Rosa 
     { "x", "k", "w", "*", "<", "^", " ", " " }, // Rojo
+                                                //
+    //SPECIAL CHARACTER LAYER
+    { "0", "1", "2", "3", "4", "5", "6", "7"},
+    { "8", "9", ".", ":", ",", ";", "-", "_"},
+    { "¿", "?", "¡", "!", "\"", "@", "(", ")"},
+    { "=", "+", "*", "&", "<", ">", " ", " "}, //me guardo dos para posibles acentos en el futuro
 };
 
 static QueueHandle_t gpio_evt_queue = NULL;
@@ -140,71 +160,83 @@ static int leer_joystick(void) {
 /**
  * @brief Sends a key press followed by a release.
  */
-static void send_keyboard_pulse(uint8_t keycode) {
+static void send_keyboard_pulse(uint8_t keycode, uint8_t modifier) {
     if (!ble_hid_is_connected()) {
-        ESP_LOGW(TAG, "Not connected or notifications not enabled");
+        ESP_LOGW(TAG, "Not connected");
         return;
     }
 
-    uint8_t keys[6] = {0};
-    keys[0] = keycode;
+    uint8_t keys[8] = {0}; // Aumentado a 8 bytes (estándar completo HID)
+    keys[0] = modifier;    // Byte 0: Modificadores (Shift, Ctrl, Alt)
+    keys[2] = keycode;     // Byte 2: Tecla presionada
     
     // Key DOWN
     ble_hid_send_report(0, keys);
-    vTaskDelay(pdMS_TO_TICKS(30)); // Minimum hold time for OS to register
+    vTaskDelay(pdMS_TO_TICKS(30));
 
-    // Key UP
-    memset(keys, 0, 6);
+    // Key UP (enviamos todo ceros)
+    memset(keys, 0, 8);
     ble_hid_send_report(0, keys);
 }
 
 static void joystick_task(void* arg) {
     uint8_t ultimo_keycode = 0;
     int debounce_counter = 0;
-    int hold_timer = 0;           // Track how many ticks (20ms each) we've held
-    const int HOLD_THRESHOLD = 100; // 100 * 20ms = 2 seconds
-    const int REPEAT_RATE = 5;    // After threshold, repeat every 5 ticks (100ms)
+    int hold_timer = 0;           
+    const int HOLD_THRESHOLD = 100; // 2 segundos
+    const int REPEAT_RATE = 5;    // 100ms
 
     while (1) {
         int dir = leer_joystick();
 
         if (dir != 9) {
-            uint8_t keycode = diccionario[current_layer][dir];
+            // 1. Calculamos la capa de lectura SIN sobreescribir la global
+            int capa_real = current_layer + layer_offset;
+
+            // 2. Leemos la matriz con la capa correcta
+            uint16_t full_code = diccionario[capa_real][dir];
+            uint8_t modifier = (full_code >> 8) & 0xFF; 
+            uint8_t keycode = full_code & 0xFF;         
             
-            // Visual display (remains constant)
-            draw_char_from_font(diccionario_char[current_layer][dir], 1, 1, writeMode ? 1 : 0, current_layer, caps_lock_active);
+            // 3. Dibujamos en la matriz
+            draw_char_from_font(diccionario_char[capa_real][dir], 1, 1, writeMode ? 1 : 0, capa_real, caps_lock_active);
             
-            // CASE 1: New Key Pressed
+            // CASE 1: Nueva tecla detectada
             if (keycode != ultimo_keycode) {
                 if (++debounce_counter >= 2) { 
-                    if (writeMode) {
-                        send_keyboard_pulse(keycode);
+                    
+                    // ACCIÓN A: Es el botón de cambiar a caracteres especiales
+                    if (keycode == 0xFF) {
+                        layer_offset = (layer_offset == 0) ? 4 : 0;
+                        ESP_LOGI(TAG, "Capa de símbolos cambiada. Offset: %d", layer_offset);
+                    }
+                    // ACCIÓN B: Es una tecla normal de escritura
+                    else if (writeMode) {
+                        send_keyboard_pulse(keycode, modifier);
                         if (keycode == 0x39) caps_lock_active = !caps_lock_active;
                     }
+                    
                     ultimo_keycode = keycode;
                     debounce_counter = 0;
-                    hold_timer = 0; // Reset timer for the new key
+                    hold_timer = 0; 
                 }
             } 
-            // CASE 2: Same key is being held
+            // CASE 2: La misma tecla se mantiene pulsada
             else {
-                // Only repeat for specific keys (Space, Backspace, Enter)
                 if (keycode == 0x2C || keycode == 0x28 || keycode == 0x2A) {
                     hold_timer++;
 
                     if (hold_timer >= HOLD_THRESHOLD) {
                         if (writeMode) {
-                            send_keyboard_pulse(keycode);
+                            send_keyboard_pulse(keycode, modifier);
                         }
-                        // Reset timer to (Threshold - REPEAT_RATE) so it repeats 
-                        // every REPEAT_RATE ticks (100ms) instead of waiting another 2s
                         hold_timer = HOLD_THRESHOLD - REPEAT_RATE; 
                     }
                 }
             }
         } 
         else {
-            // Joystick Centered: Reset everything
+            // Joystick Centrado
             ultimo_keycode = 0;
             debounce_counter = 0;
             hold_timer = 0;
@@ -213,7 +245,6 @@ static void joystick_task(void* arg) {
         vTaskDelay(pdMS_TO_TICKS(20)); 
     }
 }
-
 void app_main(void) {
     // 1. Initialize NVS (Required for Bluetooth bonding)
     esp_err_t ret = nvs_flash_init();

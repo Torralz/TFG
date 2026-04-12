@@ -1,0 +1,260 @@
+Command: /home/mario/.espressif/python_env/idf5.5_py3.14_env/bin/python /home/mario/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/mario/TFG/unimano/build/unimano.elf /home/mario/TFG/unimano/build/bootloader/bootloader.elf -m '/home/mario/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/home/mario/esp/esp-idf/tools/idf.py'
+[0;32mI (106) esp_image: segment 3: paddr=00030020 vaddr=42000020 sizePIO sleep configuration[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4200621e
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.3 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr 12 2026 00:37:37[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (25) boot: efuse block revision: v1.3[0m
+[0;32mI (28) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (44) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (53) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (66) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (76) esp_image: segment 0: paddr=00010020 vaddr=3c070020 size=15afch ( 88828) map[0m
+[0;32mI (97) esp_image: segment 1: paddr=00025b24 vaddr=3fc94a00 size=02a64h ( 10852) load[0m
+[0;32mI (99) esp_image: segment 2: paddr=00028590 vaddr=40380000 size=07a88h ( 31368) load[0m
+[0;32mI (106) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=64cc8h (412872) map[0m
+[0;32mI (173) esp_image: segment 4: paddr=00094cf0 vaddr=40387a88 size=0ce1ch ( 52764) load[0m
+[0;32mI (182) esp_image: segment 5: paddr=000a1b14 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (189) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (189) boot: Disabling RNG early entropy source...[0m
+[0;32mI (200) cpu_start: Unicore app[0m
+[0;32mI (208) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (208) cpu_start: Pro cpu start user code[0m
+[0;32mI (208) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (210) app_init: Application information:[0m
+[0;32mI (214) app_init: Project name:     unimano[0m
+[0;32mI (218) app_init: App version:      4b21af3-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr 12 2026 18:02:04[0m
+[0;32mI (227) app_init: ELF file SHA256:  a34eb355a...[0m
+[0;32mI (232) app_init: ESP-IDF:          v5.5.3[0m
+[0;32mI (236) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (239) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (243) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (247) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (254) heap_init: At 3FC988E0 len 00027720 (157 KiB): RAM[0m
+[0;32mI (259) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (265) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (271) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (277) spi_flash: detected chip: generic[0m
+[0;32mI (280) spi_flash: flash io: dio[0m
+[0;33mW (283) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (295) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (301) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (316) main_task: Started on CPU0[0m
+[0;32mI (316) main_task: Calling app_main()[0m
+[0;32mI (326) BLE_INIT: BT controller compile version [1bb2f50][0m
+[0;32mI (326) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (326) BLE_INIT: Feature Config, ADV:1, BLE_50:1, DTM:1, SCAN:1, CCA:0, SMP:1, CONNECT:1[0m
+[0;32mI (336) BLE_INIT: Bluetooth MAC: 80:f1:b2:64:90:02[0m
+[0;32mI (336) phy_init: phy_version 1232,d493f299,Aug 25 2025,19:01:20[0m
+[0;32mI (386) NimBLE: GAP procedure initiated: stop advertising.[0m
+
+[0;32mI (386) NimBLE: GAP procedure initiated: advertise; [0m
+[0;32mI (386) NimBLE: disc_mode=2[0m
+[0;32mI (386) NimBLE:  adv_channel_map=0 own_addr_type=0 adv_filter_policy=0 adv_itvl_min=0 adv_itvl_max=0[0m
+[0;32mI (396) NimBLE: [0m
+
+[0;32mI (406) XIAO_MATRIX: Initializing LED strip on GPIO 10[0m
+[0;32mI (406) KBD_APP: Keyboard Initialized and Advertising...[0m
+[0;32mI (416) main_task: Returned from app_main()[0m
+[0;33mW (6896) KBD_APP: Not connected[0m
+[0;33mW (7136) KBD_APP: Not connected[0m
+[0;33mW (7336) KBD_APP: Not connected[0m
+[0;33mW (7536) KBD_APP: Not connected[0m
+[0;33mW (7716) KBD_APP: Not connected[0m
+[0;33mW (7776) KBD_APP: Not connected[0m
+Interrupt triggered by GPIO 6, layer set to 1
+[0;33mW (10956) KBD_APP: Not connected[0m
+[0;33mW (11716) KBD_APP: Not connected[0m
+[0;33mW (12056) KBD_APP: Not connected[0m
+[0;33mW (12256) KBD_APP: Not connected[0m
+[0;33mW (12376) KBD_APP: Not connected[0m
+[0;33mW (12496) KBD_APP: Not connected[0m
+[0;33mW (12616) KBD_APP: Not connected[0m
+[0;33mW (12676) KBD_APP: Not connected[0m
+[0;33mW (12776) KBD_APP: Not connected[0m
+Interrupt triggered by GPIO 6, layer set to 0
+Interrupt triggered by GPIO 5, layer set to 2
+[0;33mW (13456) KBD_APP: Not connected[0m
+[0;33mW (13536) KBD_APP: Not connected[0m
+[0;33mW (13596) KBD_APP: Not connected[0m
+[0;33mW (13656) KBD_APP: Not connected[0m
+[0;33mW (13856) KBD_APP: Not connected[0m
+[0;33mW (14056) KBD_APP: Not connected[0m
+[0;33mW (14256) KBD_APP: Not connected[0m
+Interrupt triggered by GPIO 5, layer set to 0
+Interrupt triggered by GPIO 5, layer set to 3
+[0;33mW (16156) KBD_APP: Not connected[0m
+[0;33mW (16996) KBD_APP: Not connected[0m
+[0;33mW (19116) KBD_APP: Not connected[0m
+[0;33mW (21116) KBD_APP: Not connected[0m
+[0;32mI (21276) KBD_APP: Capa de símbolos cambiada. Offset: 4[0m
+Interrupt triggered by GPIO 5, layer set to 0
+[0;33mW (22196) KBD_APP: Not connected[0m
+[0;33mW (23296) KBD_APP: Not connected[0m
+[0;33mW (23896) KBD_APP: Not connected[0m
+[0;33mW (24076) KBD_APP: Not connected[0m
+[0;33mW (24316) KBD_APP: Not connected[0m
+[0;33mW (24776) KBD_APP: Not connected[0m
+[0;33mW (25056) KBD_APP: Not connected[0m
+[0;33mW (25276) KBD_APP: Not connected[0m
+[0;33mW (25556) KBD_APP: Not connected[0m
+[0;33mW (25876) KBD_APP: Not connected[0m
+[0;33mW (26136) KBD_APP: Not connected[0m
+[0;33mW (26336) KBD_APP: Not connected[0m
+[0;33mW (27216) KBD_APP: Not connected[0m
+[0;33mW (27676) KBD_APP: Not connected[0m
+[0;33mW (27996) KBD_APP: Not connected[0m
+[0;33mW (28176) KBD_APP: Not connected[0m
+[0;33mW (28576) KBD_APP: Not connected[0m
+[0;33mW (28836) KBD_APP: Not connected[0m
+[0;33mW (29276) KBD_APP: Not connected[0m
+[0;33mW (29716) KBD_APP: Not connected[0m
+[0;33mW (30576) KBD_APP: Not connected[0m
+[0;33mW (31896) KBD_APP: Not connected[0m
+[0;33mW (32616) KBD_APP: Not connected[0m
+Interrupt triggered by GPIO 6, layer set to 1
+[0;33mW (35016) KBD_APP: Not connected[0m
+[0;33mW (36596) KBD_APP: Not connected[0m
+[0;33mW (37496) KBD_APP: Not connected[0m
+[0;33mW (38056) KBD_APP: Not connected[0m
+[0;33mW (39016) KBD_APP: Not connected[0m
+[0;33mW (40256) KBD_APP: Not connected[0m
+[0;33mW (41176) KBD_APP: Not connected[0m
+[0;33mW (42216) KBD_APP: Not connected[0m
+[0;33mW (43636) KBD_APP: Not connected[0m
+[0;33mW (45196) KBD_APP: Not connected[0m
+[0;33mW (46776) KBD_APP: Not connected[0m
+Interrupt triggered by GPIO 6, layer set to 0
+[0;33mW (47556) KBD_APP: Not connected[0m
+Interrupt triggered by GPIO 5, layer set to 2
+[0;33mW (48616) KBD_APP: Not connected[0m
+[0;33mW (51716) KBD_APP: Not connected[0m
+[0;33mW (53396) KBD_APP: Not connected[0m
+[0;33mW (54896) KBD_APP: Not connected[0m
+[0;33mW (56236) KBD_APP: Not connected[0m
+[0;33mW (57436) KBD_APP: Not connected[0m
+[0;33mW (59636) KBD_APP: Not connected[0m
+[0;33mW (61196) KBD_APP: Not connected[0m
+Interrupt triggered by GPIO 5, layer set to 0
+[0;33mW (62836) KBD_APP: Not connected[0m
+Interrupt triggered by GPIO 6, layer set to 1
+Interrupt triggered by GPIO 5, layer set to 3
+[0;33mW (64316) KBD_APP: Not connected[0m
+[0;33mW (68996) KBD_APP: Not connected[0m
+[0;33mW (70296) KBD_APP: Not connected[0m
+[0;33mW (72016) KBD_APP: Not connected[0m
+[0;33mW (73556) KBD_APP: Not connected[0m
+[0;33mW (75216) KBD_APP: Not connected[0m
+[0;33mW (77296) KBD_APP: Not connected[0m
+[0;33mW (79376) KBD_APP: Not connected[0m
+[0;33mW (81756) KBD_APP: Not connected[0m
+[0;33mW (82256) KBD_APP: Not connected[0m
+[0;32mI (83776) KBD_APP: Capa de símbolos cambiada. Offset: 0[0m
+Interrupt triggered by GPIO 5, layer set to 0
+[0;33mW (85616) KBD_APP: Not connected[0m
+Interrupt triggered by GPIO 6, layer set to 3
+[0;33mW (90636) KBD_APP: Not connected[0m
+[0;33mW (91096) KBD_APP: Not connected[0m
+[0;33mW (91176) KBD_APP: Not connected[0m
+Interrupt triggered by GPIO 6, layer set to 2
+Interrupt triggered by GPIO 5, layer set to 0
+[0;33mW (93156) KBD_APP: Not connected[0m
+Interrupt triggered by GPIO 6, layer set to 3
+[0;33mW (94296) KBD_APP: Not connected[0m
+Interrupt triggered by GPIO 6, layer set to 0
+[0;33mW (95396) KBD_APP: Not connected[0m
+[0;33mW (95496) KBD_APP: Not connected[0m
+[0;33mW (95676) KBD_APP: Not connected[0m
+[0;33mW (95776) KBD_APP: Not connected[0m
+[0;33mW (95816) KBD_APP: Not connected[0m
+[0;33mW (95896) KBD_APP: Not connected[0m
+[0;33mW (95996) KBD_APP: Not connected[0m
+[0;33mW (96056) KBD_APP: Not connected[0m
+[0;33mW (96136) KBD_APP: Not connected[0m
+[0;33mW (96196) KBD_APP: Not connected[0m
+[0;33mW (96256) KBD_APP: Not connected[0m
+[0;33mW (96376) KBD_APP: Not connected[0m
+[0;33mW (96476) KBD_APP: Not connected[0m
+[0;33mW (96596) KBD_APP: Not connected[0m
+[0;33mW (96676) KBD_APP: Not connected[0m
+[0;33mW (96736) KBD_APP: Not connected[0m
+[0;33mW (96816) KBD_APP: Not connected[0m
+[0;33mW (97396) KBD_APP: Not connected[0m
+[0;33mW (97796) KBD_APP: Not connected[0m
+[0;33mW (97856) KBD_APP: Not connected[0m
+[0;33mW (97936) KBD_APP: Not connected[0m
+[0;33mW (98116) KBD_APP: Not connected[0m
+[0;33mW (98216) KBD_APP: Not connected[0m
+[0;33mW (98416) KBD_APP: Not connected[0m
+[0;33mW (98476) KBD_APP: Not connected[0m
+[0;33mW (98836) KBD_APP: Not connected[0m
+[0;33mW (101616) KBD_APP: Not connected[0m
+[0;33mW (101676) KBD_APP: Not connected[0m
+[0;33mW (102056) KBD_APP: Not connected[0m
+[0;33mW (102476) KBD_APP: Not connected[0m
+[0;33mW (102536) KBD_APP: Not connected[0m
+[0;33mW (102736) KBD_APP: Not connected[0m
+[0;33mW (102916) KBD_APP: Not connected[0m
+[0;33mW (103076) KBD_APP: Not connected[0m
+[0;33mW (103196) KBD_APP: Not connected[0m
+[0;33mW (103376) KBD_APP: Not connected[0m
+[0;33mW (104636) KBD_APP: Not connected[0m
+[0;33mW (105216) KBD_APP: Not connected[0m
+[0;33mW (105576) KBD_APP: Not connected[0m
+[0;33mW (105856) KBD_APP: Not connected[0m
+[0;33mW (105916) KBD_APP: Not connected[0m
+[0;33mW (106316) KBD_APP: Not connected[0m
+[0;33mW (106456) KBD_APP: Not connected[0m
+[0;33mW (106556) KBD_APP: Not connected[0m
+[0;33mW (106616) KBD_APP: Not connected[0m
+[0;33mW (106736) KBD_APP: Not connected[0m
+[0;33mW (106836) KBD_APP: Not connected[0m
+[0;33mW (106896) KBD_APP: Not connected[0m
+[0;33mW (106976) KBD_APP: Not connected[0m
+[0;33mW (107216) KBD_APP: Not connected[0m
+[0;33mW (107476) KBD_APP: Not connected[0m
+[0;33mW (107556) KBD_APP: Not connected[0m
+[0;33mW (143536) KBD_APP: Not connected[0m
+[0;33mW (143716) KBD_APP: Not connected[0m
+[0;33mW (143776) KBD_APP: Not connected[0m
+[0;33mW (143876) KBD_APP: Not connected[0m
+[0;33mW (144056) KBD_APP: Not connected[0m
+[0;33mW (144536) KBD_APP: Not connected[0m
+[0;33mW (144636) KBD_APP: Not connected[0m
+[0;33mW (144936) KBD_APP: Not connected[0m
+[0;33mW (145136) KBD_APP: Not connected[0m
+[0;33mW (145256) KBD_APP: Not connected[0m
+[0;33mW (145356) KBD_APP: Not connected[0m
+[0;33mW (145436) KBD_APP: Not connected[0m
+[0;33mW (146056) KBD_APP: Not connected[0m
+[0;33mW (146196) KBD_APP: Not connected[0m
+[0;33mW (146256) KBD_APP: Not connected[0m
+[0;33mW (146476) KBD_APP: Not connected[0m
+[0;33mW (146936) KBD_APP: Not connected[0m
+[0;33mW (147036) KBD_APP: Not connected[0m
+[0;33mW (147156) KBD_APP: Not connected[0m
+[0;33mW (147236) KBD_APP: Not connected[0m
+[0;33mW (147396) KBD_APP: Not connected[0m
+[0;33mW (147476) KBD_APP: Not connected[0m
+[0;33mW (147696) KBD_APP: Not connected[0m
+[0;33mW (147996) KBD_APP: Not connected[0m
+[0;33mW (148176) KBD_APP: Not connected[0m
+[0;33mW (148216) KBD_APP: Not connected[0m
+[0;33mW (148296) KBD_APP: Not connected[0m
+[0;33mW (148396) KBD_APP: Not connected[0m

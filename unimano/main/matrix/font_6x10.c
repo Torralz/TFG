@@ -3139,9 +3139,13 @@ void draw_char_from_font(const char *letter_str, uint8_t r, uint8_t g, uint8_t b
             if (led_index == 0 || led_index == 6 || led_index == 12 || led_index == 18 || led_index == 24 ||led_index == 30 ||led_index == 36 ||led_index == 42 ||led_index == 48 ||led_index == 54) {
                 switch (layer) {
                   case 0:  led_strip_set_pixel(led_strip, led_index, 0, 1, 0); break; 
-                  case 1:  led_strip_set_pixel(led_strip, led_index, 0, 0, 1); break; 
-                  case 2:  led_strip_set_pixel(led_strip, led_index, 1, 0, 1); break; 
-                  case 3:  led_strip_set_pixel(led_strip, led_index, 1, 0, 0); break; 
+                  case 1:  led_strip_set_pixel(led_strip, led_index, 0, 1, 1); break; 
+                  case 2:  led_strip_set_pixel(led_strip, led_index, 0, 0, 1); break; 
+                  case 3:  led_strip_set_pixel(led_strip, led_index, 1, 0, 1); break; 
+                  case 4:  led_strip_set_pixel(led_strip, led_index, 1, 0, 0); break; 
+                  case 5:  led_strip_set_pixel(led_strip, led_index, 1, 1, 0); break; 
+                  case 6:  led_strip_set_pixel(led_strip, led_index, 1, 1, 1); break; 
+                  case 7:  led_strip_set_pixel(led_strip, led_index, 0, 0, 0); break; 
                 } 
             }
         }
