@@ -16,46 +16,5 @@
   {}
 \endgroup
 
-
-\refsection{0}
-  \datalist[entry]{none/global//global/global/global}
-    \entry{mcculloch1943logical}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=1ccb147b2b2165266e6ce5900193e687}{%
-           family={McCulloch},
-           familyi={M\bibinitperiod},
-           given={Warren\bibnamedelima S},
-           giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=c5a56e799cdf785e814246c091d36e73}{%
-           family={Pitts},
-           familyi={P\bibinitperiod},
-           given={Walter},
-           giveni={W\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{816477c5724040789c6fe02e3968dc62}
-      \strng{fullhash}{816477c5724040789c6fe02e3968dc62}
-      \strng{fullhashraw}{816477c5724040789c6fe02e3968dc62}
-      \strng{bibnamehash}{816477c5724040789c6fe02e3968dc62}
-      \strng{authorbibnamehash}{816477c5724040789c6fe02e3968dc62}
-      \strng{authornamehash}{816477c5724040789c6fe02e3968dc62}
-      \strng{authorfullhash}{816477c5724040789c6fe02e3968dc62}
-      \strng{authorfullhashraw}{816477c5724040789c6fe02e3968dc62}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{The bulletin of mathematical biophysics}
-      \field{number}{4}
-      \field{title}{A logical calculus of the ideas immanent in nervous activity}
-      \field{volume}{5}
-      \field{year}{1943}
-      \field{pages}{115\bibrangedash 133}
-      \range{pages}{19}
-    \endentry
-  \enddatalist
-\endrefsection
 \endinput
 

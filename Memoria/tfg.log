@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026/Arch Linux) (preloaded format=xelatex 2026.6.14)  16 JUN 2026 11:54
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026/Arch Linux) (preloaded format=xelatex 2026.6.14)  16 JUN 2026 12:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1362,18 +1362,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--122
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [1
-
-
-])
+)
 \tf@toc=\write8
 \openout8 = `tfg.toc'.
 
-LaTeX Info: Redefining \. on input line 122.
-LaTeX Info: Redefining \% on input line 122.
-Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 122.
- [2]
+ [1
+
+
+]
 Capítulo 1.
 [1
 
@@ -1381,165 +1377,38 @@ Capítulo 1.
 ]
 LaTeX Info: Redefining \. on input line 186.
 LaTeX Info: Redefining \% on input line 186.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 186.
  [2]
-Capítulo 2.
-[3
 
-]
-LaTeX Info: Redefining \. on input line 239.
-LaTeX Info: Redefining \% on input line 239.
- [4]
-Capítulo 3.
-(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2025/11/14 1.11b listings language file
-) (/usr/share/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2025/11/14 1.11b listings language file
-) (/usr/share/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2025/11/14 1.11b listings language file
-) (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2025/11/14 1.11b listings language file
-) (/usr/share/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2025/11/14 1.11b listings language file
-) (/usr/share/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2025/11/14 1.11b listings language file
-) (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2025/11/14 1.11b listings language file
-) (/usr/share/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2025/11/14 1.11b listings language file
-) (/usr/share/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2025/11/14 1.11b listings language file
-) (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
-)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 250.
- (./report.tex) [5
+LaTeX Warning: Empty bibliography on input line 186.
 
-] (./report.tex) (./report.tex)
-LaTeX Info: Redefining \. on input line 313.
-LaTeX Info: Redefining \% on input line 313.
- [6] (./report.tex)
-LaTeX Info: Redefining \. on input line 353.
-LaTeX Info: Redefining \% on input line 353.
- [7]
-LaTeX Info: Redefining \. on input line 381.
-LaTeX Info: Redefining \% on input line 381.
- [8]
-Capítulo 4.
-[9
-
-]
-LaTeX Info: Redefining \. on input line 456.
-LaTeX Info: Redefining \% on input line 456.
- [10]
-LaTeX Info: Redefining \. on input line 502.
-LaTeX Info: Redefining \% on input line 502.
- [11] (./sources/adding-blocks.tex) (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2025/11/14 1.11b listings language file
-)
-LaTeX Info: Redefining \. on input line 516.
-LaTeX Info: Redefining \% on input line 516.
- [12] (./sources/adding-blocks.tex) (./sources/adding-blocks.tex) (./sources/adding-blocks.tex)
-LaTeX Info: Redefining \. on input line 532.
-LaTeX Info: Redefining \% on input line 532.
- [13] (./sources/snippets.py) (./sources/snippets.py)
-LaTeX Info: Redefining \. on input line 562.
-LaTeX Info: Redefining \% on input line 562.
- [14] (./sources/adding-blocks.tex) (./sources/adding-blocks.tex)
-LaTeX Info: Redefining \. on input line 575.
-LaTeX Info: Redefining \% on input line 575.
- [15]
-File: figures/vault-boy.png Graphic file (type bmp)
-<figures/vault-boy.png>
-LaTeX Info: Redefining \. on input line 599.
-LaTeX Info: Redefining \% on input line 599.
- [16]
-File: figures/vault-boy.png Graphic file (type bmp)
-<figures/vault-boy.png>
-File: figures/vault-boy.png Graphic file (type bmp)
-<figures/vault-boy.png>
-File: figures/vault-boy.png Graphic file (type bmp)
-<figures/vault-boy.png>
-LaTeX Info: Redefining \. on input line 644.
-LaTeX Info: Redefining \% on input line 644.
- [17]
-LaTeX Info: Redefining \. on input line 660.
-LaTeX Info: Redefining \% on input line 660.
- [18] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2025/11/14 1.11b listings language file
-) (/usr/share/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2025/11/14 1.11b listings language file
-) (/usr/share/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2025/11/14 1.11b listings language file
-)
-LaTeX Info: Redefining \. on input line 695.
-LaTeX Info: Redefining \% on input line 695.
- [19]
-LaTeX Info: Redefining \. on input line 716.
-LaTeX Info: Redefining \% on input line 716.
- [20]
-LaTeX Info: Redefining \. on input line 746.
-LaTeX Info: Redefining \% on input line 746.
- [21]
-LaTeX Info: Redefining \. on input line 766.
-LaTeX Info: Redefining \% on input line 766.
- [22] (/usr/share/texmf-dist/tex/latex/microtype/mt-TU-empty.cfg
-File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonstandard glyph set (RS)
-)
-LaTeX Info: Redefining \. on input line 805.
-LaTeX Info: Redefining \% on input line 805.
- [23]
-LaTeX Info: Redefining \. on input line 838.
-LaTeX Info: Redefining \% on input line 838.
- [24]
-LaTeX Info: Redefining \. on input line 863.
-LaTeX Info: Redefining \% on input line 863.
- [25]
-Capítulo 5.
-[26
-
-]
-Apéndice A.
-[27
-
-]
-Apéndice B.
-[28
-
-]
-LaTeX Info: Redefining \. on input line 944.
-LaTeX Info: Redefining \% on input line 944.
- [29]
-LaTeX Info: Redefining \. on input line 949.
-LaTeX Info: Redefining \% on input line 949.
- [30] [31
-
-
-]
 No file tfg.gls.
 
-Overfull \hbox (8.50163pt too wide) in paragraph at lines 949--949
+Overfull \hbox (8.50163pt too wide) in paragraph at lines 186--186
 []\TU/SourceSerifPro(0)/m/n/12 This document is incomplete. The external file associated with the glossary ‘main’ (which
  []
 
 
-Overfull \hbox (0.46005pt too wide) in paragraph at lines 949--949
+Overfull \hbox (0.46005pt too wide) in paragraph at lines 186--186
 []\TU/SourceSerifPro(0)/m/n/12 Add \TU/SourceCodePro(0)/m/n/12 automake \TU/SourceSerifPro(0)/m/n/12 to your package option list when you load \TU/SourceCodePro(0)/m/n/12 glossaries-extra.sty\TU/SourceSerifPro(0)/m/n/12 .
  []
 
 No file tfg.acr.
-[32
+[3
+
 
 ]
-LaTeX Info: Redefining \. on input line 949.
-LaTeX Info: Redefining \% on input line 949.
- [33]
+LaTeX Info: Redefining \. on input line 186.
+LaTeX Info: Redefining \% on input line 186.
+ [4]
 File: upm-report/images/etsisi-isotipo-white.pdf Graphic file (type pdf)
 <use upm-report/images/etsisi-isotipo-white.pdf>
  (/usr/share/texmf-dist/tex/generic/stringenc/se-utf32be.def
 File: se-utf32be.def 2019/11/29 v1.12 stringenc: UTF-32BE
 ) (/usr/share/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
-) [34
+) [5
 
 ] (./tfg.aux
 LaTeX Info: Redefining \sptext on input line 20.
@@ -1551,18 +1420,18 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `tfg.out' has not changed.
-(rerunfilecheck)             Checksum: 0F3BA56554FB0A4C3B6EA07F10D1E0D8;4337.
+(rerunfilecheck)             Checksum: AAD6F4100ADC55D218EE891ABD4B0A3C;793.
 Package logreq Info: Writing requests to 'tfg.run.xml'.
 \openout1 = `tfg.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44929 strings out of 470137
- 870762 string characters out of 5478427
- 2002299 words of memory out of 5000000
- 72904 multiletter control sequences out of 15000+600000
- 634897 words of font info for 126 fonts, out of 8000000 for 9000
+ 42732 strings out of 470137
+ 837017 string characters out of 5478427
+ 1919286 words of memory out of 5000000
+ 70780 multiletter control sequences out of 15000+600000
+ 634841 words of font info for 119 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 92i,13n,124p,2593b,32833s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 92i,12n,107p,2593b,32833s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on tfg.xdv (42 pages, 585080 bytes).
+Output written on tfg.xdv (12 pages, 111796 bytes).
