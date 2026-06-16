@@ -6,6 +6,8 @@
 #include "driver/gpio.h"
 #include "esp_adc/adc_oneshot.h"
 
+#include "font_6x10.h"
+
 // Configuration
 #define LED_STRIP_GPIO_PIN   10  // D0 on XIAO ESP32-C3
 #define LED_STRIP_NUM_PIXELS 60
@@ -60,17 +62,23 @@ void init_led_strip() {
     ESP_ERROR_CHECK(adc_oneshot_config_channel(adc1_handle, JOY_X_CHANNEL, &chan_cfg));
 }
 
+void text_test_task(){
+  draw_char_from_font('H', 20, 20, 20);
+  vTaskDelay(pdMS_TO_TICKS(1000)); // Descansa un poco la CPU
+  draw_char_from_font('O', 20, 20, 20);
+  vTaskDelay(pdMS_TO_TICKS(1000)); // Descansa un poco la CPU
+  draw_char_from_font('L', 20, 20, 20);
+  vTaskDelay(pdMS_TO_TICKS(1000)); // Descansa un poco la CPU
+  draw_char_from_font('A', 20, 20, 20);
+  vTaskDelay(pdMS_TO_TICKS(1000)); // Descansa un poco la CPU
+}
+
 void leds_task(){
+        text_test_task();
+        text_test_task();
+        text_test_task();
     while (1) {
         //tengo que primero aumentar R hasta max y luego G y despues disminuir return 
-        // for (int i = 0; i < BRIGHTNESS; i++){
-        //     for (int j = 0; j < LED_STRIP_NUM_PIXELS; j++){
-        //       led_strip_set_pixel(led_strip, j, i, 0 , 0);
-        //     }
-        //     led_strip_refresh(led_strip);
-        //     vTaskDelay(pdMS_TO_TICKS(REFRESH_RATE));
-        // }
-
         for (int i = 0; i < BRIGHTNESS; i++){
             for (int j = 0; j < LED_STRIP_NUM_PIXELS; j++){
               led_strip_set_pixel(led_strip, j, BRIGHTNESS, i , 0);
@@ -123,19 +131,25 @@ void leds_task(){
 
 void button_task(){
     while (1) {
-            if (gpio_get_level(BUTTON_1_GPIO) == 1 && gpio_get_level(BUTTON_2_GPIO) == 0 && REFRESH_RATE > 0) {
+        if (gpio_get_level(BUTTON_1_GPIO) == 1 && gpio_get_level(BUTTON_2_GPIO) == 0) {
+            // Asegúrate de que no baje de 0
+            if (REFRESH_RATE >= 50) { 
                 REFRESH_RATE -= 50;
-                vTaskDelay(pdMS_TO_TICKS(200)); // Debounce (evitar rebotes)
                 ESP_LOGI(TAG, "Decreasing REFRESH_RATE by 50 currently %u", REFRESH_RATE);
             }
-            
-            if (gpio_get_level(BUTTON_1_GPIO) == 0 && gpio_get_level(BUTTON_2_GPIO) == 1) {
+            vTaskDelay(pdMS_TO_TICKS(200)); 
+        }
+        
+        if (gpio_get_level(BUTTON_1_GPIO) == 0 && gpio_get_level(BUTTON_2_GPIO) == 1) {
+            // Evita pasarte de 255 (255 - 50 = 205)
+            if (REFRESH_RATE <= 205) { 
                 REFRESH_RATE += 50;
-                vTaskDelay(pdMS_TO_TICKS(200)); // Debounce (evitar rebotes)
                 ESP_LOGI(TAG, "Increasing REFRESH_RATE by 50 currently %u", REFRESH_RATE);
             }
-            vTaskDelay(pdMS_TO_TICKS(50)); // Descansa un poco la CPU
+            vTaskDelay(pdMS_TO_TICKS(200)); 
         }
+        vTaskDelay(pdMS_TO_TICKS(50)); 
+    }
 }
 
 void brightness_task(){
@@ -155,4 +169,5 @@ void app_main(void) {
     xTaskCreate(leds_task, "LEDs", 4096, NULL, 5, NULL);
     xTaskCreate(button_task, "Boton", 2048, NULL, 5, NULL);
     xTaskCreate(brightness_task, "brightness", 4096, NULL, 5, NULL);
+    //xTaskCreate(text_test_task, "LEDs", 4096, NULL, 5, NULL);
 }

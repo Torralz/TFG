@@ -16,16 +16,11 @@
 #include "matrix/matrix.h"
 #include "matrix/font_6x10.h"
 
-//TODO: hola
-
-//FIXME: hola
-
-//BUG: caca
-
-//NOTE: notifications
-
-//WARN: vaya: 5
-
+//TODO:
+//FIXME: 
+//BUG: 
+//NOTE:
+//WARN: 
 //NOTE: Hecho:
 //1. Desarrollar un modo de enseñar las letras letras sin escribir nada (en otro color) 
 //2. Añadir funcionalidad a las teclas vacias como enter o borrar
@@ -34,7 +29,7 @@
 //5. Usar uno de los espacios en blanco como acceso a otra capa teclado de caracteres especiales por capas
 //TODO: Quiero hacer las siguientes cosas en el futuro prox [10/4 - 12/04]
 //1. Añadir autocompletado (posiblemente solo en android?)
-//2. Crear una combinación de teclas que habra un menú con opciones como brillo
+//2. Crear una combinación de teclas que habra un menú con opciones como brillo - brillo | 
 //3. Hacer tema de acentos
 
 // GPIO / ADC Configuration
@@ -46,6 +41,7 @@
 #define BUTTON_2_GPIO   6               // GPIO6
 
 #define S(kc) (0x0200 | (kc))
+#define AL(kc) (0x4000 | (kc)) // Con AltGr (Alt Derecho + Tecla)
 
 static const char *TAG = "KBD_APP";
 static adc_oneshot_unit_handle_t adc1_handle;
@@ -61,16 +57,40 @@ static const uint16_t diccionario[8][8] = {
     { 0x0F, 0x06, 0x18, 0x10, 0x13, 0x17, 0x05, 0x0A }, // l, c, u, m, p, t, b, g 
     { 0x19, 0x1C, 0x14, 0x0B, 0x09, 0x1D, 0x0D, 0x33 }, // v, y, q, h, f, z, j, ñ 
     { 0x1B, 0x0E, 0x1A, 0x28, 0x2A, 0x39, 0x2C, 0xFF }, // x, k, w, intro, delete, Caps_Lock, space, special layer 
+//FIXME: no se son los códigos correctos
+// --- CAPAS ESPECIALES (Asumiendo OS en Español) ---
 
-    // CAPA 4: Números 0-7 (Sin shift)
+    // CAPA 4: Números 0-7 
     { 0x27, 0x1E, 0x1F, 0x20, 0x21, 0x22, 0x23, 0x24 }, // 0, 1, 2, 3, 4, 5, 6, 7
+    
     // CAPA 5: 8, 9, ., :, ,, ;, -, _
-    // Usamos S() para los que requieren Shift según el código que elegiste
-    { 0x25, 0x26, 0x37, S(0x33), 0x36, 0x33, 0x2D, S(0x2D) }, 
+    // NOTA ESPAÑOL:
+    // ':' es Shift + '.' (0x37)
+    // ';' es Shift + ',' (0x36)
+    // '_' es Shift + '-' (0x38)
+    { 0x25, 0x26, 0x37, S(0x37), 0x36, S(0x36), 0x38, S(0x38) },  
+    
     // CAPA 6: ¿, ?, ¡, !, ", @, (, )
-    { S(0x1E), S(0x26), 0x1E, S(0x1E), S(0x34), S(0x1F), S(0x26), S(0x27) }, 
+    // NOTA ESPAÑOL:
+    // '¿' es Shift + '+' (0x2E)
+    // '?' es Shift + ' ' (0x2D)
+    // '¡' es tecla dedicada (0x2E sin shift)
+    // '!' es Shift + '1' (0x1E)
+    // '"' es Shift + '2' (0x1F)
+    // '@' es AltGr + '2' (0x1F)
+    // '(' es Shift + '8' (0x25)
+    // ')' es Shift + '9' (0x26)
+    { S(0x2E), S(0x2D), 0x2E, S(0x1E), S(0x1F), AL(0x1F), S(0x25), S(0x26) }, 
+    
     // CAPA 7: =, +, *, &, <, >
-    { 0x2E, S(0x2E), S(0x25), S(0x24), 0x64, S(0x64), 0x2C, 0xFF },
+    // NOTA ESPAÑOL:
+    // '=' es Shift + '0' (0x27)
+    // '+' es tecla dedicada (0x30)
+    // '*' es Shift + '+' (0x30)
+    // '&' es Shift + '6' (0x23)
+    // '<' es tecla dedicada (0x64)
+    // '>' es Shift + '<' (0x64)
+    { S(0x27), 0x30, S(0x30), S(0x23), 0x64, S(0x64), 0x2C, 0xFF },
 };
 
 static const char* diccionario_char[8][8] = {
@@ -83,7 +103,7 @@ static const char* diccionario_char[8][8] = {
     { "0", "1", "2", "3", "4", "5", "6", "7"},
     { "8", "9", ".", ":", ",", ";", "-", "_"},
     { "¿", "?", "¡", "!", "\"", "@", "(", ")"},
-    { "=", "+", "*", "&", "<", ">", " ", " "}, //me guardo dos para posibles acentos en el futuro
+    { "=", "+", "*", "&", "<", ">", " ", " "}, //me guardo uno para posibles acentos en el futuro
 };
 
 static QueueHandle_t gpio_evt_queue = NULL;
