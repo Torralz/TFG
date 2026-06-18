@@ -2374,6 +2374,34 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1" intorder="1">aaosCarpalTunnel</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">marklin1999splitkeyboards</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">whoAssistiveTechnology</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">abilityNetKeyboardMouseAlternatives</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">abilityNetKeyboardMouseAlternatives</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">whoAssistiveTechnology</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">webSpeechApi</bcf:citekey>
+    <bcf:citekey order="7" intorder="2">microsoftVoiceAccess</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">webSpeechApi</bcf:citekey>
+    <bcf:citekey order="8" intorder="2">appleVoiceControl</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">lea2023stutter</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">aloufi2021privacyASR</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">ableNetWhatIsSwitch</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">googleSwitchAccess</bcf:citekey>
+    <bcf:citekey order="12" intorder="2">appleSwitchControlIOS</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">googleSwitchAccess</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">appleSwitchControlMac</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">oudah2020gestureRecognition</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">appleHeadPointerMac</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">appleHeadTrackingIphone</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">googleProjectGameface</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">appleHeadTrackingIphone</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">appleEyeTrackingIphone</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">appleEyeTrackingIphone</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">adcetEyeGazeTechnology</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">borgestig2015eyeGazePerformance</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">appleEyeTrackingIphone</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">rajanna2018gazeAssisted</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

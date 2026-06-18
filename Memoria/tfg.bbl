@@ -16,5 +16,692 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{aaosCarpalTunnel}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=165632bdf162c97363fd8f80e266f231}{%
+           family={{American Academy of Orthopaedic Surgeons}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{165632bdf162c97363fd8f80e266f231}
+      \strng{fullhash}{165632bdf162c97363fd8f80e266f231}
+      \strng{fullhashraw}{165632bdf162c97363fd8f80e266f231}
+      \strng{bibnamehash}{165632bdf162c97363fd8f80e266f231}
+      \strng{authorbibnamehash}{165632bdf162c97363fd8f80e266f231}
+      \strng{authornamehash}{165632bdf162c97363fd8f80e266f231}
+      \strng{authorfullhash}{165632bdf162c97363fd8f80e266f231}
+      \strng{authorfullhashraw}{165632bdf162c97363fd8f80e266f231}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Síndrome del túnel carpiano}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://orthoinfo.aaos.org/es/diseases--conditions/sindrome-del-tunel-carpiano-carpal-tunnel-syndrome
+      \endverb
+      \verb{url}
+      \verb https://orthoinfo.aaos.org/es/diseases--conditions/sindrome-del-tunel-carpiano-carpal-tunnel-syndrome
+      \endverb
+    \endentry
+    \entry{marklin1999splitkeyboards}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=f75785b6a60408fbbe97d806bc7c3553}{%
+           family={Marklin},
+           familyi={M\bibinitperiod},
+           given={Richard\bibnamedelima W.},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{f75785b6a60408fbbe97d806bc7c3553}
+      \strng{fullhash}{f75785b6a60408fbbe97d806bc7c3553}
+      \strng{fullhashraw}{f75785b6a60408fbbe97d806bc7c3553}
+      \strng{bibnamehash}{f75785b6a60408fbbe97d806bc7c3553}
+      \strng{authorbibnamehash}{f75785b6a60408fbbe97d806bc7c3553}
+      \strng{authornamehash}{f75785b6a60408fbbe97d806bc7c3553}
+      \strng{authorfullhash}{f75785b6a60408fbbe97d806bc7c3553}
+      \strng{authorfullhashraw}{f75785b6a60408fbbe97d806bc7c3553}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Wrist and forearm posture from typing on split and vertically inclined computer keyboards}
+      \field{year}{1999}
+      \verb{urlraw}
+      \verb https://pubmed.ncbi.nlm.nih.gov/10774127/
+      \endverb
+      \verb{url}
+      \verb https://pubmed.ncbi.nlm.nih.gov/10774127/
+      \endverb
+    \endentry
+    \entry{whoAssistiveTechnology}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=531217507bec092b6ec36c0f78f46736}{%
+           family={{World Health Organization}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{fullhash}{531217507bec092b6ec36c0f78f46736}
+      \strng{fullhashraw}{531217507bec092b6ec36c0f78f46736}
+      \strng{bibnamehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authorbibnamehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authornamehash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authorfullhash}{531217507bec092b6ec36c0f78f46736}
+      \strng{authorfullhashraw}{531217507bec092b6ec36c0f78f46736}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Assistive technology}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.who.int/news-room/fact-sheets/detail/assistive-technology
+      \endverb
+      \verb{url}
+      \verb https://www.who.int/news-room/fact-sheets/detail/assistive-technology
+      \endverb
+    \endentry
+    \entry{abilityNetKeyboardMouseAlternatives}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=e3ee305bf4b4310657f177d246820c01}{%
+           family={{AbilityNet}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{e3ee305bf4b4310657f177d246820c01}
+      \strng{fullhash}{e3ee305bf4b4310657f177d246820c01}
+      \strng{fullhashraw}{e3ee305bf4b4310657f177d246820c01}
+      \strng{bibnamehash}{e3ee305bf4b4310657f177d246820c01}
+      \strng{authorbibnamehash}{e3ee305bf4b4310657f177d246820c01}
+      \strng{authornamehash}{e3ee305bf4b4310657f177d246820c01}
+      \strng{authorfullhash}{e3ee305bf4b4310657f177d246820c01}
+      \strng{authorfullhashraw}{e3ee305bf4b4310657f177d246820c01}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Keyboard and mouse alternatives and adaptations}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://abilitynet.org.uk/factsheets/keyboard-and-mouse-alternatives-and-adaptations
+      \endverb
+      \verb{url}
+      \verb https://abilitynet.org.uk/factsheets/keyboard-and-mouse-alternatives-and-adaptations
+      \endverb
+    \endentry
+    \entry{webSpeechApi}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=bdea812935506778c291249971f80655}{%
+           family={{World Wide Web Consortium}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{bdea812935506778c291249971f80655}
+      \strng{fullhash}{bdea812935506778c291249971f80655}
+      \strng{fullhashraw}{bdea812935506778c291249971f80655}
+      \strng{bibnamehash}{bdea812935506778c291249971f80655}
+      \strng{authorbibnamehash}{bdea812935506778c291249971f80655}
+      \strng{authornamehash}{bdea812935506778c291249971f80655}
+      \strng{authorfullhash}{bdea812935506778c291249971f80655}
+      \strng{authorfullhashraw}{bdea812935506778c291249971f80655}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Web Speech API Specification}
+      \field{year}{2014}
+      \verb{urlraw}
+      \verb https://dvcs.w3.org/hg/speech-api/raw-file/tip/webspeechapi
+      \endverb
+      \verb{url}
+      \verb https://dvcs.w3.org/hg/speech-api/raw-file/tip/webspeechapi
+      \endverb
+    \endentry
+    \entry{microsoftVoiceAccess}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={{Microsoft}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Get started with voice access}
+      \verb{urlraw}
+      \verb https://support.microsoft.com/en-us/accessibility/windows/voice-access/get-started-with-voice-access
+      \endverb
+      \verb{url}
+      \verb https://support.microsoft.com/en-us/accessibility/windows/voice-access/get-started-with-voice-access
+      \endverb
+    \endentry
+    \entry{appleVoiceControl}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=9f6290f4436e5a2351f12e03b6433c3c}{%
+           family={{Apple}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{fullhash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{fullhashraw}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{bibnamehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authorbibnamehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authornamehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authorfullhash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authorfullhashraw}{9f6290f4436e5a2351f12e03b6433c3c}
+      \field{extraname}{1}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Use Voice Control commands to interact with your Mac}
+      \verb{urlraw}
+      \verb https://support.apple.com/en-jo/guide/mac-help/mh40719/mac
+      \endverb
+      \verb{url}
+      \verb https://support.apple.com/en-jo/guide/mac-help/mh40719/mac
+      \endverb
+    \endentry
+    \entry{lea2023stutter}{article}{}{}
+      \name{author}{9}{}{%
+        {{hash=a93733523c7a886c297c1feadfff2535}{%
+           family={Lea},
+           familyi={L\bibinitperiod},
+           given={Colin},
+           giveni={C\bibinitperiod}}}%
+        {{hash=7adb9ecb95f30efe4c77aa4530873789}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Zifang},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=1567dc8b75d655e477cb158758b26e13}{%
+           family={Tooley},
+           familyi={T\bibinitperiod},
+           given={Lauren},
+           giveni={L\bibinitperiod}}}%
+        {{hash=61288e33eb0069f185395033830373ed}{%
+           family={Narain},
+           familyi={N\bibinitperiod},
+           given={Jaya},
+           giveni={J\bibinitperiod}}}%
+        {{hash=44cd6dd8a4b1d5695043d6d114d705bd}{%
+           family={Yee},
+           familyi={Y\bibinitperiod},
+           given={Dianna},
+           giveni={D\bibinitperiod}}}%
+        {{hash=5b0a4c06c498c48dd1ccad86a6ea4819}{%
+           family={Georgiou},
+           familyi={G\bibinitperiod},
+           given={Panayiotis},
+           giveni={P\bibinitperiod}}}%
+        {{hash=37c65e2b722c7e515d1ff0a3b6860309}{%
+           family={Tran},
+           familyi={T\bibinitperiod},
+           given={Tien\bibnamedelima Dung},
+           giveni={T\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=e3c4b36c537719f8c7a76d81e1077879}{%
+           family={Bigham},
+           familyi={B\bibinitperiod},
+           given={Jeffrey\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=d04bd9d6170d17397e611dafa981f9a2}{%
+           family={Findlater},
+           familyi={F\bibinitperiod},
+           given={Leah},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{413b52440a818c6cf17822942f8a0c3b}
+      \strng{fullhash}{c46ff354043358f3cc78f79fc78979c4}
+      \strng{fullhashraw}{c46ff354043358f3cc78f79fc78979c4}
+      \strng{bibnamehash}{413b52440a818c6cf17822942f8a0c3b}
+      \strng{authorbibnamehash}{413b52440a818c6cf17822942f8a0c3b}
+      \strng{authornamehash}{413b52440a818c6cf17822942f8a0c3b}
+      \strng{authorfullhash}{c46ff354043358f3cc78f79fc78979c4}
+      \strng{authorfullhashraw}{c46ff354043358f3cc78f79fc78979c4}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{From User Perceptions to Technical Improvement: Enabling People Who Stutter to Better Use Speech Recognition}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2302.09044
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2302.09044
+      \endverb
+    \endentry
+    \entry{aloufi2021privacyASR}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=09b84af165ea74187a1e062dc1bc7d71}{%
+           family={Aloufi},
+           familyi={A\bibinitperiod},
+           given={Ranya},
+           giveni={R\bibinitperiod}}}%
+        {{hash=f59fc2039011605ac9f98abf29fd7731}{%
+           family={Haddadi},
+           familyi={H\bibinitperiod},
+           given={Hamed},
+           giveni={H\bibinitperiod}}}%
+        {{hash=dfe6db4ce7ff47b487ba93ea2af5f991}{%
+           family={Boyle},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{dfdb03af816365c98c9abef9da57d8bc}
+      \strng{fullhash}{3902f84cca46584042d142f5671ca3d6}
+      \strng{fullhashraw}{3902f84cca46584042d142f5671ca3d6}
+      \strng{bibnamehash}{3902f84cca46584042d142f5671ca3d6}
+      \strng{authorbibnamehash}{3902f84cca46584042d142f5671ca3d6}
+      \strng{authornamehash}{dfdb03af816365c98c9abef9da57d8bc}
+      \strng{authorfullhash}{3902f84cca46584042d142f5671ca3d6}
+      \strng{authorfullhashraw}{3902f84cca46584042d142f5671ca3d6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Configurable Privacy-Preserving Automatic Speech Recognition}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2104.00766
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2104.00766
+      \endverb
+    \endentry
+    \entry{ableNetWhatIsSwitch}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=31e685e360e04db558ee7d7682775226}{%
+           family={{AbleNet}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{31e685e360e04db558ee7d7682775226}
+      \strng{fullhash}{31e685e360e04db558ee7d7682775226}
+      \strng{fullhashraw}{31e685e360e04db558ee7d7682775226}
+      \strng{bibnamehash}{31e685e360e04db558ee7d7682775226}
+      \strng{authorbibnamehash}{31e685e360e04db558ee7d7682775226}
+      \strng{authornamehash}{31e685e360e04db558ee7d7682775226}
+      \strng{authorfullhash}{31e685e360e04db558ee7d7682775226}
+      \strng{authorfullhashraw}{31e685e360e04db558ee7d7682775226}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is a Switch?}
+      \verb{urlraw}
+      \verb https://support.ablenetinc.com/aac-education-and-resources/for-slps/alternative-access/what-is-a-switch/
+      \endverb
+      \verb{url}
+      \verb https://support.ablenetinc.com/aac-education-and-resources/for-slps/alternative-access/what-is-a-switch/
+      \endverb
+    \endentry
+    \entry{googleSwitchAccess}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={{Google}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Set up switch access for Android}
+      \verb{urlraw}
+      \verb https://support.google.com/accessibility/android/answer/6301490
+      \endverb
+      \verb{url}
+      \verb https://support.google.com/accessibility/android/answer/6301490
+      \endverb
+    \endentry
+    \entry{appleSwitchControlIOS}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=9f6290f4436e5a2351f12e03b6433c3c}{%
+           family={{Apple}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{fullhash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{fullhashraw}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{bibnamehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authorbibnamehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authornamehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authorfullhash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authorfullhashraw}{9f6290f4436e5a2351f12e03b6433c3c}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Use Switch Control to navigate your iPhone, iPad, or iPod touch}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://support.apple.com/en-us/119835
+      \endverb
+      \verb{url}
+      \verb https://support.apple.com/en-us/119835
+      \endverb
+    \endentry
+    \entry{appleSwitchControlMac}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=9f6290f4436e5a2351f12e03b6433c3c}{%
+           family={{Apple}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{fullhash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{fullhashraw}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{bibnamehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authorbibnamehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authornamehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authorfullhash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authorfullhashraw}{9f6290f4436e5a2351f12e03b6433c3c}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Use Switch Control on Mac}
+      \verb{urlraw}
+      \verb https://support.apple.com/guide/mac-help/use-switch-control-mh43607/mac
+      \endverb
+      \verb{url}
+      \verb https://support.apple.com/guide/mac-help/use-switch-control-mh43607/mac
+      \endverb
+    \endentry
+    \entry{oudah2020gestureRecognition}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=1bc92d8f25827089803892abce12b23d}{%
+           family={Oudah},
+           familyi={O\bibinitperiod},
+           given={Munir},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1e0d9fef3b53826a4f0169c46d152d39}{%
+           family={Al-Naji},
+           familyi={A\bibinithyphendelim N\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+        {{hash=728c1fc8e3aa701cf49c4d417265e867}{%
+           family={Chahl},
+           familyi={C\bibinitperiod},
+           given={Javaan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{3dad2a868e62a7b59ad8a4a9354a20e2}
+      \strng{fullhash}{96d7bf9744617218dabc7dd9580c139a}
+      \strng{fullhashraw}{96d7bf9744617218dabc7dd9580c139a}
+      \strng{bibnamehash}{96d7bf9744617218dabc7dd9580c139a}
+      \strng{authorbibnamehash}{96d7bf9744617218dabc7dd9580c139a}
+      \strng{authornamehash}{3dad2a868e62a7b59ad8a4a9354a20e2}
+      \strng{authorfullhash}{96d7bf9744617218dabc7dd9580c139a}
+      \strng{authorfullhashraw}{96d7bf9744617218dabc7dd9580c139a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Imaging}
+      \field{number}{8}
+      \field{title}{Hand Gesture Recognition Based on Computer Vision: A Review of Techniques}
+      \field{volume}{6}
+      \field{year}{2020}
+      \field{pages}{73}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/jimaging6080073
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2313-433X/6/8/73
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2313-433X/6/8/73
+      \endverb
+    \endentry
+    \entry{appleHeadPointerMac}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=9f6290f4436e5a2351f12e03b6433c3c}{%
+           family={{Apple}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{fullhash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{fullhashraw}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{bibnamehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authorbibnamehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authornamehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authorfullhash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authorfullhashraw}{9f6290f4436e5a2351f12e03b6433c3c}
+      \field{extraname}{4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Move the pointer using head pointer on Mac}
+      \verb{urlraw}
+      \verb https://support.apple.com/en-lk/guide/mac-help/mchlb2d4782b/mac
+      \endverb
+      \verb{url}
+      \verb https://support.apple.com/en-lk/guide/mac-help/mchlb2d4782b/mac
+      \endverb
+    \endentry
+    \entry{appleHeadTrackingIphone}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=9f6290f4436e5a2351f12e03b6433c3c}{%
+           family={{Apple}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{fullhash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{fullhashraw}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{bibnamehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authorbibnamehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authornamehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authorfullhash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authorfullhashraw}{9f6290f4436e5a2351f12e03b6433c3c}
+      \field{extraname}{5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Control iPhone with the movement of your head}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://support.apple.com/en-me/guide/iphone/iph9c3dc17cf/ios
+      \endverb
+      \verb{url}
+      \verb https://support.apple.com/en-me/guide/iphone/iph9c3dc17cf/ios
+      \endverb
+    \endentry
+    \entry{googleProjectGameface}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={{Google}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introducing Project Gameface: A hands-free, AI-powered gaming mouse}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://blog.google/innovation-and-ai/products/google-project-gameface/
+      \endverb
+      \verb{url}
+      \verb https://blog.google/innovation-and-ai/products/google-project-gameface/
+      \endverb
+    \endentry
+    \entry{appleEyeTrackingIphone}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=9f6290f4436e5a2351f12e03b6433c3c}{%
+           family={{Apple}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{fullhash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{fullhashraw}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{bibnamehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authorbibnamehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authornamehash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authorfullhash}{9f6290f4436e5a2351f12e03b6433c3c}
+      \strng{authorfullhashraw}{9f6290f4436e5a2351f12e03b6433c3c}
+      \field{extraname}{6}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Control iPhone with the movement of your eyes}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://support.apple.com/guide/iphone/control-iphone-with-the-movement-of-your-eyes-iph66057d0f6/ios
+      \endverb
+      \verb{url}
+      \verb https://support.apple.com/guide/iphone/control-iphone-with-the-movement-of-your-eyes-iph66057d0f6/ios
+      \endverb
+    \endentry
+    \entry{adcetEyeGazeTechnology}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=58807e61d0b3fdc7af96e97db2f9e0e2}{%
+           family={{Australian Disability Clearinghouse on Education and Training}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{58807e61d0b3fdc7af96e97db2f9e0e2}
+      \strng{fullhash}{58807e61d0b3fdc7af96e97db2f9e0e2}
+      \strng{fullhashraw}{58807e61d0b3fdc7af96e97db2f9e0e2}
+      \strng{bibnamehash}{58807e61d0b3fdc7af96e97db2f9e0e2}
+      \strng{authorbibnamehash}{58807e61d0b3fdc7af96e97db2f9e0e2}
+      \strng{authornamehash}{58807e61d0b3fdc7af96e97db2f9e0e2}
+      \strng{authorfullhash}{58807e61d0b3fdc7af96e97db2f9e0e2}
+      \strng{authorfullhashraw}{58807e61d0b3fdc7af96e97db2f9e0e2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Physical Impairment: Eye Gaze technology}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.adcet.edu.au/inclusive-technology/physical-disability/eye-gaze-technology
+      \endverb
+      \verb{url}
+      \verb https://www.adcet.edu.au/inclusive-technology/physical-disability/eye-gaze-technology
+      \endverb
+    \endentry
+    \entry{borgestig2015eyeGazePerformance}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=001d450bf73f63e17bb667da7c999c11}{%
+           family={Borgestig},
+           familyi={B\bibinitperiod},
+           given={Maria},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3aec526032424e0a122da2383568fe9d}{%
+           family={Sandqvist},
+           familyi={S\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9bbe62c77397f129884450a353068fe2}{%
+           family={Parsons},
+           familyi={P\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=b960169e2c3bbcb5e767c8fd9c8335f5}{%
+           family={Falkmer},
+           familyi={F\bibinitperiod},
+           given={Torbjörn},
+           giveni={T\bibinitperiod}}}%
+        {{hash=6852fa6622b5b10e2c6c9f7eed70db38}{%
+           family={Hemmingsson},
+           familyi={H\bibinitperiod},
+           given={Helena},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{a141b6e753ae27378cbd031d36ac514b}
+      \strng{fullhash}{f1d96ce9fbfa4b99a6f28d1176dc5282}
+      \strng{fullhashraw}{f1d96ce9fbfa4b99a6f28d1176dc5282}
+      \strng{bibnamehash}{f1d96ce9fbfa4b99a6f28d1176dc5282}
+      \strng{authorbibnamehash}{f1d96ce9fbfa4b99a6f28d1176dc5282}
+      \strng{authornamehash}{a141b6e753ae27378cbd031d36ac514b}
+      \strng{authorfullhash}{f1d96ce9fbfa4b99a6f28d1176dc5282}
+      \strng{authorfullhashraw}{f1d96ce9fbfa4b99a6f28d1176dc5282}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Assistive Technology}
+      \field{title}{Eye gaze performance for children with severe physical impairments using gaze-based assistive technology: A longitudinal study}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC4867850/
+      \endverb
+      \verb{url}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC4867850/
+      \endverb
+    \endentry
+    \entry{rajanna2018gazeAssisted}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=8118ab668321ef94205288b41418da99}{%
+           family={Rajanna},
+           familyi={R\bibinitperiod},
+           given={Vijay},
+           giveni={V\bibinitperiod}}}%
+        {{hash=260981a99c276f2a8c91b8bfff2e9039}{%
+           family={Hammond},
+           familyi={H\bibinitperiod},
+           given={Tracy},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{2240f8f0202607e3e597534c01cc6bcd}
+      \strng{fullhash}{2240f8f0202607e3e597534c01cc6bcd}
+      \strng{fullhashraw}{2240f8f0202607e3e597534c01cc6bcd}
+      \strng{bibnamehash}{2240f8f0202607e3e597534c01cc6bcd}
+      \strng{authorbibnamehash}{2240f8f0202607e3e597534c01cc6bcd}
+      \strng{authornamehash}{2240f8f0202607e3e597534c01cc6bcd}
+      \strng{authorfullhash}{2240f8f0202607e3e597534c01cc6bcd}
+      \strng{authorfullhashraw}{2240f8f0202607e3e597534c01cc6bcd}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A Gaze-Assisted Multimodal Approach to Rich and Accessible Human-Computer Interaction}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1803.04713
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1803.04713
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026/Arch Linux) (preloaded format=xelatex 2026.6.14)  16 JUN 2026 12:48
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026/Arch Linux) (preloaded format=xelatex 2026.6.14)  18 JUN 2026 19:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1374,41 +1374,144 @@ Capítulo 1.
 [1
 
 
-]
-LaTeX Info: Redefining \. on input line 186.
-LaTeX Info: Redefining \% on input line 186.
+] (./capitulos/02_estado_del_arte.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 186.
+(babel)             Reported on input line 1.
  [2]
+Capítulo 2.
+[3
 
-LaTeX Warning: Empty bibliography on input line 186.
+]
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+[]|[][]\TU/SourceSerifPro(0)/m/n/12 Teclados ergonómi-
+ []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+[]|[][]\TU/SourceSerifPro(0)/m/n/12 Pulsadores o swit-
+ []
+
+LaTeX Info: Redefining \. on input line 74.
+LaTeX Info: Redefining \% on input line 74.
+[4]
+LaTeX Info: Redefining \. on input line 87.
+LaTeX Info: Redefining \% on input line 87.
+ [5]
+LaTeX Info: Redefining \. on input line 103.
+LaTeX Info: Redefining \% on input line 103.
+ [6]
+LaTeX Info: Redefining \. on input line 118.
+LaTeX Info: Redefining \% on input line 118.
+ [7]
+LaTeX Info: Redefining \. on input line 134.
+LaTeX Info: Redefining \% on input line 134.
+ [8]
+LaTeX Info: Redefining \. on input line 148.
+LaTeX Info: Redefining \% on input line 148.
+ [9]
+LaTeX Info: Redefining \. on input line 166.
+LaTeX Info: Redefining \% on input line 166.
+ [10]
+LaTeX Info: Redefining \. on input line 179.
+LaTeX Info: Redefining \% on input line 179.
+ [11]
+LaTeX Info: Redefining \. on input line 196.
+LaTeX Info: Redefining \% on input line 196.
+ [12]
+LaTeX Info: Redefining \. on input line 212.
+LaTeX Info: Redefining \% on input line 212.
+ [13]
+Overfull \hbox (21.2413pt too wide) in paragraph at lines 221--221
+|[]\TU/NimbusSans(0)/m/n/24.88 Sistemas basados en seguimiento ocu-
+ []
+
+LaTeX Info: Redefining \. on input line 226.
+LaTeX Info: Redefining \% on input line 226.
+[14]
+LaTeX Info: Redefining \. on input line 241.
+LaTeX Info: Redefining \% on input line 241.
+ [15]
+LaTeX Info: Redefining \. on input line 257.
+LaTeX Info: Redefining \% on input line 257.
+ [16])
+LaTeX Info: Redefining \. on input line 187.
+LaTeX Info: Redefining \% on input line 187.
+ [17]
+LaTeX Info: Redefining \. on input line 187.
+LaTeX Info: Redefining \% on input line 187.
+ [18]
+Overfull \hbox (36.74774pt too wide) in paragraph at lines 187--187
+[]\TU/SourceSerifPro(0)/m/n/12 American Academy of Orthopaedic Surgeons. «  Síndrome del túnel carpiano. »dirección:
+ []
+
+
+Overfull \hbox (6.33571pt too wide) in paragraph at lines 187--187
+[][]$[][][][][] [] [] [] [][][][][][][][][] [] [][][][] [] [][][] [] [][] [] [][][][][][][][] [][][][] [][][][][][][][][][] [] [][][][][][][][] [][]
+ []
+
+
+Overfull \hbox (4.07635pt too wide) in paragraph at lines 187--187
+[]\TU/SourceSerifPro(0)/m/n/12 World Wide Web Consortium. «  Web Speech API Specification. »dirección: [][]$[][][][][] []
+ []
+
+
+Overfull \hbox (37.48827pt too wide) in paragraph at lines 187--187
+[]\TU/SourceSerifPro(0)/m/n/12 Microsoft. «  Get started with voice access. »dirección: [][]$[][][][][] [] [] [] [][][][][][][] [] [][][][][][][][][] []
+ []
+
+
+Overfull \hbox (11.9204pt too wide) in paragraph at lines 187--187
+[]\TU/SourceSerifPro(0)/m/n/12 Apple. «  Use Voice Control commands to interact with your Mac. »dirección: [][]$[][][][][] []
+ []
+
+
+Overfull \hbox (9.49571pt too wide) in paragraph at lines 187--187
+[][][] [] [][][] [][] [][][][][][][][][] [][] [][][] [][] [][][][][][][][][] [] [][][] [][] [][][][] [] [][][][][][][][][][][] [][] [][][][][][] []
+ []
+
+[19
+
+
+]
+Overfull \hbox (9.83739pt too wide) in paragraph at lines 187--187
+[]\TU/SourceSerifPro(0)/m/n/12 Apple. «  Use Switch Control to navigate your iPhone, iPad, or iPod touch. »dirección:
+ []
+
+
+Overfull \hbox (10.43571pt too wide) in paragraph at lines 187--187
+[][][][][][][][][] [][] [][][][][][][][][][] [] [][][][][][][][] [][] [][][][][][][][][][] [] [][][] [][] [][][][] [][] [][][][][][][][][][]$[][] 
+ []
+
+LaTeX Info: Redefining \. on input line 187.
+LaTeX Info: Redefining \% on input line 187.
+[20]
 No file tfg.gls.
 
-Overfull \hbox (8.50163pt too wide) in paragraph at lines 186--186
+Overfull \hbox (8.50163pt too wide) in paragraph at lines 187--187
 []\TU/SourceSerifPro(0)/m/n/12 This document is incomplete. The external file associated with the glossary ‘main’ (which
  []
 
 
-Overfull \hbox (0.46005pt too wide) in paragraph at lines 186--186
+Overfull \hbox (0.46005pt too wide) in paragraph at lines 187--187
 []\TU/SourceSerifPro(0)/m/n/12 Add \TU/SourceCodePro(0)/m/n/12 automake \TU/SourceSerifPro(0)/m/n/12 to your package option list when you load \TU/SourceCodePro(0)/m/n/12 glossaries-extra.sty\TU/SourceSerifPro(0)/m/n/12 .
  []
 
 No file tfg.acr.
-[3
-
+[21
 
 ]
-LaTeX Info: Redefining \. on input line 186.
-LaTeX Info: Redefining \% on input line 186.
- [4]
+LaTeX Info: Redefining \. on input line 187.
+LaTeX Info: Redefining \% on input line 187.
+ [22]
 File: upm-report/images/etsisi-isotipo-white.pdf Graphic file (type pdf)
 <use upm-report/images/etsisi-isotipo-white.pdf>
  (/usr/share/texmf-dist/tex/generic/stringenc/se-utf32be.def
 File: se-utf32be.def 2019/11/29 v1.12 stringenc: UTF-32BE
 ) (/usr/share/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
-) [5
+) [23
 
 ] (./tfg.aux
 LaTeX Info: Redefining \sptext on input line 20.
@@ -1420,18 +1523,18 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `tfg.out' has not changed.
-(rerunfilecheck)             Checksum: AAD6F4100ADC55D218EE891ABD4B0A3C;793.
+(rerunfilecheck)             Checksum: FAAEC985A47119F3D3296774F213DAD2;2795.
 Package logreq Info: Writing requests to 'tfg.run.xml'.
 \openout1 = `tfg.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42732 strings out of 470137
- 837017 string characters out of 5478427
- 1919286 words of memory out of 5000000
- 70780 multiletter control sequences out of 15000+600000
- 634841 words of font info for 119 fonts, out of 8000000 for 9000
+ 43054 strings out of 470137
+ 846160 string characters out of 5478427
+ 1937712 words of memory out of 5000000
+ 71095 multiletter control sequences out of 15000+600000
+ 634857 words of font info for 121 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  92i,12n,107p,2593b,32833s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on tfg.xdv (12 pages, 111796 bytes).
+Output written on tfg.xdv (30 pages, 513456 bytes).

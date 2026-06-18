@@ -1,0 +1,267 @@
+\chapter{Estado del arte}
+\label{ch:estado-del-arte}
+1. Qué alternativas existen.
+- Teclados ergonómicos.
+- Teclados adaptados para personas con movilidad reducida.
+- Dictado por voz. 
+- Pulsadores o switches adaptados.% NOTE
+- Interfaces basadas en gestos y Eye tracking.% NOTE
+- Sistemas empotrados usados como dispositivos HID 
+
+2. Cómo funcionan.
+3. Qué ventajas tienen.
+4. Qué limitaciones tienen.
+5. Qué hueco queda para justificar tu proyecto.
+
+
+
+
+\section{Introducción}
+\label{sec:estado-arte-introduccion}
+
+En la actualidad, el mercado de dispositivos de entrada de texto es muy amplio. Sin embargo, aunque existen muchas alternativas, el modelo de teclado más extendido alrededor del mundo sigue teniendo ciertas limitaciones.
+
+El teclado convencional moderno obliga al usuario a colocar las manos en una posición concreta y a repartir la carga de escritura de manera desigual entre todos los dedos. Esto puede generar problemas, ya que algunos dedos, como el meñique, tienen menos fuerza y destreza, aun así deben encargarse desproporcionadamente de teclas importantes. Mientras que el dedo más hábil, el pulgar solo se usa para una tecla. Además, el diseño recto del teclado suele hacer que las manos permanezcan juntas y que las muñecas adopten posiciones poco naturales durante periodos prolongados.
+
+Este tipo de uso no tiene por qué afectar a todas las personas de la misma manera, pero sí puede contribuir a situaciones de incomodidad, fatiga o molestias asociadas al uso repetitivo de la mano y la muñeca. De hecho, el síndrome del túnel carpiano está relacionado con la compresión del nervio mediano en la muñeca, y algunos factores como los movimientos repetitivos o las posiciones extremas de la mano y la muñeca pueden aumentar el riesgo de sufrir este tipo de problemas \cite{aaosCarpalTunnel}.
+
+El problema es todavía mayor para las personas que, por las características de su cuerpo o por alguna limitación de movilidad, no pueden utilizar cómodamente un teclado convencional. En estos casos, muchas veces se ven obligadas a recurrir a alternativas que pueden ser incómodas, poco prácticas o ineficientes en determinados contextos. Algunas soluciones no están pensadas realmente para personas que no tienen un cuerpo estándar, por lo que pueden acabar siendo tediosas, difíciles de usar o poco adaptadas a sus necesidades reales.
+
+Con este contexto, en este capítulo se van a explorar distintas alternativas existentes para la entrada de texto y la interacción con el ordenador. El objetivo es estudiar cómo funcionan, qué ventajas ofrecen y qué limitaciones presentan, para poder justificar después la propuesta desarrollada en este trabajo.
+
+\section{Clasificación de alternativas}
+\label{sec:clasificacion-alternativas}
+
+% Aquí va la tabla con enlaces
+\begin{table}
+    \centering
+    \caption{Alternativas analizadas en el estado del arte}
+    \label{tab:alternativas-estado-arte}
+    \begin{tabular}{p{4cm} p{8cm}}
+        \toprule
+        \textbf{Alternativa} & \textbf{Descripción general} \\
+        \midrule
+        \hyperref[sec:teclados-ergonomicos]{Teclados ergonómicos} 
+        & Modifican la forma física del teclado para mejorar la postura de manos y muñecas. \\
+
+        \hyperref[sec:teclados-adaptados]{Teclados adaptados} 
+        & Están diseñados para personas con movilidad reducida o necesidades específicas. \\
+
+        \hyperref[sec:dictado-voz]{Dictado por voz} 
+        & Permite introducir texto mediante reconocimiento de voz. \\
+
+        \hyperref[sec:pulsadores-switches]{Pulsadores o switches adaptados} 
+        & Permiten generar entradas mediante uno o varios botones físicos adaptados. \\
+
+        \hyperref[sec:interfaces-gestos]{Interfaces basadas en gestos} 
+        & Utilizan movimientos del cuerpo, manos o cabeza como método de interacción. \\
+
+        \hyperref[sec:eye-tracking]{Seguimiento ocular} 
+        & Permite controlar el sistema mediante la mirada. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+
+\section{Teclados ergonómicos}
+\label{sec:teclados-ergonomicos}
+
+Los teclados ergonómicos son una de las primeras alternativas que aparecen cuando se intenta mejorar la experiencia de escritura respecto a un teclado convencional. No eliminan el teclado como método de entrada, pero modifican su forma, inclinación o distribución para intentar que la postura de las manos, muñecas y brazos sea más natural durante el uso.
+
+\subsection{Cómo funcionan}
+
+Este tipo de teclados suelen basarse en cambiar la geometría del teclado tradicional. Algunos modelos dividen el teclado en dos zonas, una para cada mano, de manera que las muñecas no tengan que permanecer tan juntas ni giradas hacia dentro. Otros incorporan inclinación, curvatura o reposamuñecas para favorecer una posición más cómoda durante periodos prolongados de escritura.
+
+La idea principal es reducir ciertas posturas forzadas que aparecen al escribir durante mucho tiempo en un teclado recto. Por ejemplo, los teclados divididos buscan que cada mano pueda colocarse en una posición más cercana a su postura natural, reduciendo la desviación lateral de la muñeca. También existen diseños con inclinación vertical, cuyo objetivo es disminuir la rotación del antebrazo al escribir \cite{marklin1999splitkeyboards}.
+
+\subsection{Qué ventajas tienen}
+
+La principal ventaja de los teclados ergonómicos es que mantienen una forma de uso parecida a la de un teclado convencional, por lo que el usuario no tiene que aprender un sistema completamente nuevo. Esto los convierte en una alternativa bastante accesible para personas que ya saben escribir con teclado, pero que buscan una postura más cómoda o una reducción de la fatiga.
+
+Además, como se mencionó antes, su principal ventaja es que gracias a su forma más orgánica, no se tienen que forzar tanto las articulaciones para escribir, por lo cual son mucho más cómodos de utilizar que un teclado convencional.
+\subsection{Qué limitaciones tienen}
+
+A pesar de sus ventajas, los teclados ergonómicos no resuelven completamente el problema tratado en este trabajo. Aunque mejoran la postura respecto a un teclado convencional, siguen exigiendo que el usuario pueda mover varios dedos, alcanzar muchas teclas distintas y coordinar ambas manos con cierta precisión.
+
+Por tanto, pueden ser útiles para personas que sienten incomodidad con un teclado tradicional, pero no son una solución suficiente para usuarios con movilidad reducida, falta de fuerza en algunos dedos o dificultad para realizar movimientos finos. En estos casos, el problema no es solo la forma del teclado, sino la propia necesidad de utilizar muchas teclas físicas repartidas por una superficie amplia.
+
+Por este motivo, los teclados ergonómicos representan una mejora del teclado convencional, pero no una alternativa radicalmente distinta. Esta limitación es importante para este proyecto, ya que la solución propuesta busca reducir la interacción a un número mucho menor de controles físicos.
+
+
+
+\section{Teclados adaptados para personas con movilidad reducida}
+\label{sec:teclados-adaptados}
+
+Los teclados adaptados para personas con movilidad reducida son dispositivos pensados para facilitar el acceso al ordenador cuando el uso de un teclado convencional resulta difícil, incómodo o poco preciso. A diferencia de los teclados ergonómicos, que suelen centrarse en mejorar la postura de una persona que ya puede escribir con relativa normalidad, estos dispositivos tienen un enfoque más cercano a la accesibilidad. Es decir, no buscan únicamente mejorar la comodidad, sino permitir que el usuario pueda interactuar con el ordenador de una forma más ajustada a sus capacidades físicas \cite{whoAssistiveTechnology}.
+
+\subsection{Cómo funcionan}
+
+Estos teclados pueden funcionar de formas bastante distintas según el tipo de necesidad que intenten cubrir. Algunos modelos aumentan el tamaño de las teclas para que sea más fácil pulsarlas, mientras que otros reducen el número de teclas disponibles o incorporan protectores que separan unas teclas de otras para evitar pulsaciones accidentales. También existen teclados con alto contraste, distribuciones simplificadas o superficies preparadas para usuarios que no tienen un control fino de los dedos \cite{abilityNetKeyboardMouseAlternatives}.
+
+En estos casos, el objetivo no siempre es escribir más rápido. Muchas veces lo importante es que la escritura sea posible, estable y menos frustrante. Por eso, este tipo de soluciones suelen dar más importancia a la precisión y a la facilidad de pulsación que a la velocidad. Un teclado adaptado puede parecer menos eficiente desde el punto de vista de una persona que usa un teclado convencional sin dificultad, pero para determinados usuarios puede marcar la diferencia entre poder utilizar un ordenador o depender completamente de otra persona.
+
+También es habitual que estos teclados se combinen con otros elementos de apoyo, como reposamanos, soportes, carcasas, protectores de teclado o dispositivos de señalización alternativos. De esta forma, el teclado deja de ser un dispositivo genérico y pasa a formar parte de una solución más personalizada, pensada para la situación concreta del usuario \cite{abilityNetKeyboardMouseAlternatives}.
+
+\subsection{Qué ventajas tienen}
+
+Una de sus ventajas más importantes es que parten de una idea sencilla: no todas las personas pueden interactuar con el ordenador de la misma manera. En lugar de obligar al usuario a adaptarse a un teclado estándar, modifican el propio dispositivo para hacerlo más accesible. Esto encaja con el objetivo general de las tecnologías de asistencia, que buscan mejorar la autonomía, la participación y la calidad de vida de las personas que las necesitan \cite{whoAssistiveTechnology}.
+
+Otra ventaja es que mantienen una lógica parecida a la de un teclado normal. Esto puede facilitar el aprendizaje, porque el usuario no tiene que entender un sistema completamente nuevo. Si una persona ya conoce, aunque sea parcialmente, la distribución de un teclado, un teclado adaptado puede ser una mejora directa frente al teclado convencional.
+
+Además, al tratarse de dispositivos físicos, pueden utilizarse en contextos donde otras alternativas no son tan cómodas. Por ejemplo, no obligan a hablar en voz alta, no dependen de una cámara y no necesitan unas condiciones de iluminación concretas. Esto puede hacerlos útiles en espacios compartidos, aulas, oficinas o bibliotecas.
+
+\subsection{Qué limitaciones tienen}
+
+A pesar de sus ventajas, estos teclados siguen teniendo una limitación importante: continúan basándose en la idea de pulsar teclas físicas distribuidas sobre una superficie. Aunque las teclas sean más grandes, estén mejor separadas o sean más fáciles de distinguir, el usuario todavía necesita cierta movilidad, fuerza y precisión para desplazarse por el teclado.
+
+También pueden ser dispositivos grandes, poco portátiles o demasiado específicos para un perfil concreto de usuario. En accesibilidad, una solución que funciona bien para una persona no tiene por qué servir para otra, porque pequeñas diferencias en movilidad, fuerza o coordinación pueden cambiar completamente la utilidad del dispositivo.
+
+Por último, muchos teclados adaptados mejoran el acceso al teclado convencional, pero no reducen de forma radical la cantidad de acciones físicas necesarias para escribir. Esta limitación es importante en relación con este trabajo, ya que la propuesta desarrollada busca explorar una entrada más reducida, basada en un joystick y dos botones, de forma que la interacción no dependa de alcanzar muchas teclas diferentes.
+
+
+\section{Dictado por voz}
+\label{sec:dictado-voz}
+
+El dictado por voz es una de las alternativas más conocidas al uso del teclado. En lugar de introducir el texto mediante pulsaciones físicas, el usuario habla y el sistema transforma esa señal de audio en palabras escritas. Es una solución interesante porque, en principio, permite escribir sin utilizar las manos, lo que puede ser una ventaja clara para personas que no pueden usar cómodamente un teclado convencional.
+
+\subsection{Cómo funcionan}
+
+Los sistemas de dictado por voz se basan en tecnologías de reconocimiento automático del habla. De forma general, el sistema capta la voz mediante un micrófono, procesa la señal de audio y la convierte en texto. En algunos casos, además de escribir texto, estos sistemas permiten ejecutar comandos, corregir palabras, seleccionar elementos de la pantalla o controlar partes del ordenador mediante instrucciones habladas \cite{webSpeechApi,microsoftVoiceAccess}.
+
+Esta tecnología está presente en muchos sistemas actuales. Por ejemplo, algunos sistemas operativos incorporan funciones de accesibilidad que permiten dictar texto y controlar el equipo con la voz. También existen interfaces web que permiten integrar reconocimiento de voz en aplicaciones, diferenciando entre la parte de reconocimiento del habla y la parte de síntesis de voz \cite{webSpeechApi,appleVoiceControl}.
+
+Desde el punto de vista del usuario, el funcionamiento parece sencillo: se habla y aparece texto en pantalla. Sin embargo, por debajo depende de varios factores, como la calidad del micrófono, el ruido del entorno, la pronunciación, el idioma, el acento o la capacidad del sistema para interpretar correctamente pausas, signos de puntuación y correcciones.
+
+\subsection{Qué ventajas tienen}
+
+La ventaja más evidente del dictado por voz es que reduce o incluso elimina la necesidad de usar las manos para escribir. Esto lo convierte en una alternativa muy útil para personas que tienen dolor, fatiga, lesiones o dificultades de movilidad en manos, muñecas o brazos.
+
+También puede ser una forma de entrada bastante rápida cuando las condiciones son buenas. Para redactar texto largo, hablar puede resultar más natural que escribir, especialmente si el usuario no necesita introducir muchos símbolos, comandos técnicos o correcciones constantes. Además, al estar integrado en muchos dispositivos actuales, no siempre requiere comprar hardware específico.
+
+Otra ventaja importante es que no obliga al usuario a aprender una distribución nueva de teclas. La interacción se basa en el habla, que es una forma de comunicación natural para muchas personas. En ese sentido, el dictado por voz puede ser una solución muy potente cuando el entorno acompaña y cuando la persona puede hablar de forma cómoda y clara.
+
+\subsection{Qué limitaciones tienen}
+
+A pesar de sus ventajas, el dictado por voz no es una solución válida para todos los contextos. Uno de sus problemas principales es que obliga al usuario a hablar en voz alta. Esto puede ser incómodo o directamente inviable en lugares como bibliotecas, aulas, oficinas compartidas o espacios donde hay más personas trabajando alrededor. En esos casos, aunque la tecnología funcione bien, el contexto hace que no sea una alternativa práctica.
+
+También hay situaciones en las que el reconocimiento puede fallar. El ruido de fondo, una mala calidad del micrófono o una pronunciación que el sistema no reconozca bien pueden provocar errores en el texto generado. Además, algunos estudios señalan que los sistemas de reconocimiento de voz no funcionan igual de bien para todas las personas, especialmente en casos de usuarios con diferencias en el habla, como la tartamudez, donde pueden aparecer cortes, malentendidos o predicciones que no representan correctamente lo que la persona quería decir \cite{lea2023stutter}.
+
+Otro aspecto importante es la privacidad. Para dictar texto, el usuario tiene que decir en voz alta lo que quiere escribir. Esto puede ser un problema si se está trabajando con información personal, académica, médica, laboral o simplemente privada. Además, las tecnologías de asistencia basadas en voz pueden plantear preocupaciones de seguridad y privacidad cuando procesan audio del usuario o del entorno \cite{aloufi2021privacyASR}.
+
+Por todo ello, el dictado por voz es una alternativa muy útil en determinados casos, pero no resuelve completamente el problema que se trata en este trabajo. Puede evitar el uso físico del teclado, pero depende mucho del entorno, de la voz del usuario y de que sea aceptable hablar en voz alta. La solución propuesta en este proyecto busca cubrir precisamente otro tipo de situación: permitir la entrada de texto de forma silenciosa, discreta y con una interacción física reducida.
+
+
+
+\section{Pulsadores o switches adaptados}
+\label{sec:pulsadores-switches}
+
+Los pulsadores o \textit{switches} adaptados son otra alternativa importante dentro de las tecnologías de asistencia. Su idea es bastante sencilla: reducir la interacción a una o varias acciones físicas simples, como pulsar un botón, mover ligeramente una parte del cuerpo o activar un sensor. Esto puede ser útil para personas que no pueden utilizar con precisión un teclado, un ratón o una pantalla táctil.
+
+\subsection{Cómo funcionan}
+
+Un switch adaptado puede entenderse como un dispositivo que envía una señal cuando el usuario realiza una acción concreta. Esa acción puede ser pulsar con la mano, presionar con el pie, mover la cabeza, accionar la barbilla o realizar cualquier otro movimiento que la persona pueda repetir de forma cómoda y fiable \cite{ableNetWhatIsSwitch}.
+
+Normalmente, estos pulsadores no se utilizan solos, sino conectados a un sistema que interpreta la señal. Por ejemplo, pueden conectarse a un comunicador, a un ordenador, a una tableta o a una interfaz de accesibilidad. En muchos casos se usan junto con sistemas de escaneo: el sistema va resaltando elementos de la pantalla uno por uno, o por grupos, y el usuario pulsa el switch cuando aparece la opción que quiere seleccionar \cite{googleSwitchAccess,appleSwitchControlIOS}.
+
+Este funcionamiento permite controlar interfaces complejas utilizando muy pocas entradas físicas. Con un solo pulsador se puede seleccionar una opción cuando el sistema la resalta automáticamente. Con dos pulsadores, uno puede servir para avanzar entre opciones y otro para seleccionar. Este tipo de interacción es más lenta que escribir en un teclado convencional, pero puede abrir el acceso al ordenador a personas para las que otros métodos no son viables.
+
+\subsection{Qué ventajas tienen}
+
+La ventaja principal de los switches adaptados es que no exigen movimientos complejos. En lugar de tener que desplazar las manos por un teclado completo, el usuario solo necesita realizar una acción física concreta y repetible. Esto hace que puedan adaptarse a perfiles muy diferentes, ya que el pulsador puede colocarse donde la persona tenga más control: cerca de la mano, del pie, de la cabeza o de otra parte del cuerpo.
+
+También son dispositivos relativamente simples desde el punto de vista físico. Muchos switches se basan en una entrada binaria, activado o no activado, lo que facilita su integración con sistemas electrónicos y programas de accesibilidad. Esta simplicidad es una ventaja importante, porque permite construir soluciones robustas y fáciles de entender para el usuario.
+
+Otra ventaja es que los sistemas operativos actuales ya incluyen funciones de control mediante switches. Android permite conectar pulsadores externos por USB o Bluetooth y usarlos para seleccionar elementos, desplazarse o introducir texto mediante Switch Access \cite{googleSwitchAccess}. En el caso de Apple, Switch Control permite navegar por elementos de la pantalla mediante escaneo y seleccionar opciones cuando están resaltadas \cite{appleSwitchControlMac}. Esto demuestra que no se trata de una idea aislada, sino de una forma de interacción reconocida dentro de la accesibilidad digital.
+
+\subsection{Qué limitaciones tienen}
+
+La principal limitación de los switches adaptados es la velocidad. Al reducir la interacción a uno o pocos pulsadores, muchas acciones necesitan más pasos que en un teclado o ratón convencional. Si el sistema tiene que ir recorriendo opciones hasta que el usuario selecciona una, escribir una palabra o navegar por una interfaz puede convertirse en un proceso lento.
+
+También requieren una configuración bastante personalizada. No basta con elegir un pulsador cualquiera: hay que decidir dónde colocarlo, qué fuerza necesita, qué movimiento va a usar la persona y qué acción del sistema va a activar. Un switch mal colocado o demasiado duro puede acabar siendo incómodo, cansado o directamente inútil.
+
+Además, aunque los switches reducen mucho la complejidad física de la interacción, a veces trasladan parte de esa complejidad al software. El usuario puede tener que esperar al escaneo, memorizar secuencias o depender de menús intermedios para llegar a la acción que quiere realizar. Por tanto, el problema no desaparece por completo, sino que cambia de forma.
+
+En relación con este trabajo, los switches adaptados son una referencia muy importante, porque muestran que es posible controlar un sistema con pocas acciones físicas. Sin embargo, la propuesta de este TFG intenta ir un paso más allá: mantener esa idea de interacción reducida, pero combinándola con un joystick y dos botones para ofrecer más posibilidades de entrada sin volver a depender de un teclado completo.
+
+
+
+\section{Interfaces basadas en gestos}
+\label{sec:interfaces-gestos}
+
+Las interfaces basadas en gestos permiten controlar un sistema mediante movimientos del cuerpo, de las manos, de la cabeza o incluso de la cara. En lugar de pulsar teclas físicas, el usuario realiza un gesto y el sistema intenta reconocerlo para convertirlo en una acción. Esta idea resulta interesante en el contexto de la accesibilidad, porque permite plantear formas de interacción que no dependen directamente de un teclado convencional.
+
+\subsection{Cómo funcionan}
+
+Estas interfaces suelen utilizar sensores para detectar el movimiento del usuario. En algunos casos se emplean cámaras convencionales, cámaras de profundidad o sensores de movimiento. En otros, se utilizan dispositivos colocados sobre el cuerpo, como guantes, acelerómetros o sensores inerciales. A partir de esos datos, el sistema interpreta si el usuario ha realizado un gesto concreto y lo asocia a una acción determinada, como mover el cursor, seleccionar un elemento o ejecutar un comando \cite{oudah2020gestureRecognition}.
+
+Un ejemplo de este tipo de interacción son los sistemas que permiten mover el puntero con la cabeza o la cara. En macOS, por ejemplo, la función \textit{Head Pointer} permite controlar el movimiento del cursor usando la cámara del ordenador para detectar el movimiento de la cabeza o de la cara \cite{appleHeadPointerMac}. De forma similar, en iPhone existen funciones de seguimiento de cabeza que permiten mover un puntero en pantalla y realizar acciones manteniendo la posición o usando movimientos faciales concretos \cite{appleHeadTrackingIphone}.
+
+También existen proyectos orientados a accesibilidad que utilizan gestos faciales para controlar el ordenador. Un caso interesante es Project Gameface, desarrollado por Google, que plantea un ratón manos libres basado en movimientos de cabeza y gestos faciales. En este sistema, acciones como levantar las cejas o abrir la boca pueden asignarse a funciones como hacer clic, arrastrar o mover el cursor \cite{googleProjectGameface}.
+
+\subsection{Qué ventajas tienen}
+
+La principal ventaja de las interfaces basadas en gestos es que pueden reducir la dependencia de dispositivos físicos tradicionales. Para una persona que no puede utilizar bien un teclado o un ratón, poder controlar el sistema con movimientos de la cabeza, de la cara o de otra parte del cuerpo puede abrir una forma de interacción más accesible.
+
+Otra ventaja es que los gestos pueden resultar bastante naturales. Mover la cabeza hacia una dirección, levantar las cejas o realizar un movimiento concreto puede ser más intuitivo que aprender combinaciones de teclas o recorrer menús mediante escaneo. Además, al no requerir necesariamente contacto físico con el dispositivo, pueden ser útiles cuando el usuario tiene dificultad para ejercer fuerza, mantener precisión o realizar pulsaciones repetidas.
+
+También es importante que muchas de estas soluciones pueden funcionar con hardware que ya está presente en dispositivos actuales, como una cámara integrada. Esto puede reducir la necesidad de comprar periféricos específicos y facilita que este tipo de interacción pueda integrarse en ordenadores, teléfonos o tabletas.
+
+\subsection{Qué limitaciones tienen}
+
+A pesar de sus posibilidades, las interfaces basadas en gestos tienen limitaciones claras. La primera es que dependen mucho de que el sistema reconozca bien el movimiento. En los sistemas basados en cámara, factores como la iluminación, la posición del usuario, el fondo, la distancia a la cámara o la oclusión de alguna parte del cuerpo pueden afectar al resultado. De hecho, Apple recomienda que la cámara tenga una visión clara de la cara y que esta esté suficientemente iluminada para obtener mejores resultados en el seguimiento de cabeza \cite{appleHeadTrackingIphone}.
+
+Otro problema es que no todos los usuarios pueden realizar los mismos gestos. Una persona puede tener movilidad suficiente para mover la cabeza, pero no para mantener una posición estable; otra puede realizar movimientos faciales, pero cansarse rápido; y otra puede tener movimientos involuntarios que dificulten el reconocimiento. Por eso, aunque los gestos parecen una solución muy flexible, en la práctica necesitan mucha personalización.
+
+También puede aparecer fatiga. Mantener la cabeza en una posición, repetir gestos faciales o realizar movimientos amplios durante mucho tiempo puede resultar cansado. Además, si el sistema interpreta mal un gesto, el usuario puede acabar dedicando más esfuerzo a corregir errores que a realizar la tarea principal.
+
+En relación con este trabajo, las interfaces basadas en gestos muestran que es posible reducir la dependencia del teclado convencional. Sin embargo, también introducen una dependencia fuerte del entorno, de la cámara y de la capacidad del usuario para realizar gestos reconocibles de forma estable. La propuesta desarrollada en este TFG busca una alternativa más física y directa, basada en un joystick y dos botones, que mantenga una interacción reducida sin depender de reconocimiento visual continuo.
+
+
+
+\section{Sistemas basados en seguimiento ocular}
+\label{sec:eye-tracking}
+
+Los sistemas basados en seguimiento ocular, también conocidos como sistemas de \textit{eye tracking}, permiten controlar una interfaz utilizando la mirada. En este tipo de soluciones, el usuario no necesita pulsar teclas ni mover un ratón de forma directa, sino mirar a una zona de la pantalla para desplazar un puntero, seleccionar un elemento o escribir mediante un teclado virtual.
+
+\subsection{Cómo funcionan}
+
+Estos sistemas suelen utilizar una cámara o un sensor especializado para detectar la posición de los ojos y estimar hacia qué punto de la pantalla está mirando el usuario. Antes de poder utilizarlos, normalmente es necesario realizar una calibración. Durante este proceso, el usuario sigue con la mirada una serie de puntos que aparecen en la pantalla, y el sistema utiliza esa información para relacionar el movimiento ocular con coordenadas concretas de la interfaz \cite{appleEyeTrackingIphone}.
+
+Una vez calibrado, el sistema puede mover un puntero siguiendo la mirada del usuario. Para seleccionar un elemento, muchas soluciones utilizan un mecanismo conocido como \textit{dwell}. Esto consiste en mantener la mirada fija sobre una zona durante un tiempo determinado; cuando ese tiempo se cumple, el sistema interpreta que el usuario quiere hacer clic o activar esa opción \cite{appleEyeTrackingIphone}.
+
+En el ámbito de la accesibilidad, el seguimiento ocular se utiliza especialmente en personas con movilidad muy reducida. Algunos sistemas permiten emular el ratón, seleccionar elementos de Windows, utilizar teclados en pantalla o apoyarse en predicción de palabras para facilitar la escritura \cite{adcetEyeGazeTechnology}. De esta forma, la mirada se convierte en el principal canal de interacción con el ordenador.
+
+\subsection{Qué ventajas tienen}
+
+La ventaja más importante del seguimiento ocular es que puede permitir el uso de un ordenador a personas que no pueden manejar un teclado, un ratón o un pulsador de forma cómoda. En casos de movilidad muy limitada, poder controlar una interfaz únicamente con los ojos puede ser una herramienta muy valiosa para comunicarse, escribir o acceder a contenidos digitales.
+
+Otra ventaja es que no exige fuerza física ni movimientos amplios. El usuario no tiene que desplazar las manos por una superficie ni mantener pulsaciones repetidas. Esto lo diferencia de otras alternativas que, aunque reducen el número de teclas, siguen dependiendo de cierta movilidad en dedos, manos o brazos.
+
+También puede combinarse con teclados virtuales, predicción de texto y sistemas de comunicación aumentativa y alternativa. Esto hace que no sea solo una herramienta de control del cursor, sino también una posible vía de comunicación para personas con grandes limitaciones motoras \cite{borgestig2015eyeGazePerformance}.
+
+\subsection{Qué limitaciones tienen}
+
+A pesar de sus ventajas, el seguimiento ocular también tiene limitaciones importantes. La primera es que depende mucho de la calibración y de las condiciones de uso. Si cambia la posición de la cabeza, la distancia a la pantalla, la iluminación o la colocación del dispositivo, puede ser necesario recalibrar el sistema o ajustar de nuevo la postura del usuario \cite{appleEyeTrackingIphone}.
+
+Otra limitación es la precisión. Mirar a un punto concreto de la pantalla no siempre significa que el usuario quiera seleccionarlo. Este problema se suele conocer como \textit{Midas Touch}: si el sistema interpreta cualquier mirada como una intención de hacer clic, pueden producirse acciones no deseadas. Para evitarlo, muchos sistemas utilizan tiempos de permanencia, pero esto también puede hacer que la interacción sea más lenta \cite{rajanna2018gazeAssisted}.
+
+Además, el uso prolongado de la mirada como método principal de entrada puede producir cansancio. Mantener la vista fija, repetir selecciones con los ojos o escribir en un teclado virtual durante mucho tiempo puede resultar más exigente de lo que parece. Por eso, aunque estos sistemas son muy útiles en algunos casos, no siempre son cómodos para tareas largas o para usuarios que pueden utilizar otras partes del cuerpo con menos esfuerzo.
+
+En relación con este trabajo, el seguimiento ocular representa una alternativa muy avanzada y potente, pero también más compleja. Requiere cámara, calibración, buenas condiciones de uso y una interfaz pensada para reducir errores. La propuesta de este TFG busca una solución más sencilla desde el punto de vista técnico y de uso, basada en un joystick y dos botones, que pueda funcionar de forma silenciosa y sin depender de la mirada ni de una cámara.
+
+
+\section{Conclusiones del estado del arte}
+\label{sec:conclusiones-estado-arte}
+
+A lo largo de este capítulo se han analizado distintas alternativas al teclado convencional. Algunas de ellas, como los teclados ergonómicos, intentan mejorar la postura y reducir la incomodidad durante la escritura, pero siguen manteniendo la misma idea de base: el usuario debe utilizar un conjunto amplio de teclas y coordinar varios dedos para poder escribir.
+
+Otras soluciones, como los teclados adaptados y los pulsadores, se acercan más al ámbito de la accesibilidad. Estas alternativas reconocen que no todas las personas pueden interactuar con el ordenador de la misma manera, y por eso modifican el dispositivo o reducen el número de acciones físicas necesarias. Sin embargo, también presentan limitaciones. En algunos casos siguen necesitando una superficie grande de teclas; en otros, la escritura puede volverse lenta o depender demasiado de sistemas de escaneo.
+
+También existen soluciones que eliminan casi por completo el uso físico del teclado, como el dictado por voz, las interfaces basadas en gestos o el seguimiento ocular. Estas tecnologías pueden ser muy útiles en determinados contextos, pero no siempre son adecuadas para un uso cotidiano. El dictado por voz, por ejemplo, depende del entorno y obliga al usuario a hablar en voz alta. Las interfaces por gestos y los sistemas de seguimiento ocular, por su parte, suelen depender de cámaras, calibración, iluminación y reconocimiento correcto del movimiento.
+
+Por tanto, se puede observar que no existe una única solución válida para todos los usuarios. Cada alternativa resuelve una parte del problema, pero también introduce nuevas limitaciones. Esta idea es importante para el presente trabajo, ya que el objetivo no es sustituir todas las tecnologías existentes, sino explorar una opción diferente dentro del conjunto de soluciones posibles.
+
+A partir de este análisis, la propuesta desarrollada en este TFG se orienta hacia una interacción física reducida, silenciosa y sencilla, basada en un joystick y dos botones. Esta configuración busca disminuir la dependencia de un teclado completo, evitando al mismo tiempo algunas limitaciones de otras alternativas, como la necesidad de hablar en voz alta, depender de una cámara o recorrer grandes superficies de teclas.
+
+En definitiva, el estado del arte muestra que sigue siendo necesario investigar y desarrollar dispositivos de entrada más adaptables. La solución propuesta parte de esa necesidad y plantea un diseño que intenta equilibrar accesibilidad, simplicidad técnica y posibilidad de uso en contextos reales.
+

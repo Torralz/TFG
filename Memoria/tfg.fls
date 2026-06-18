@@ -421,6 +421,11 @@ INPUT ./tfg.toc
 INPUT ./tfg.toc
 INPUT tfg.toc
 OUTPUT tfg.toc
+INPUT ./capitulos/02_estado_del_arte.tex
+INPUT ./capitulos/02_estado_del_arte.tex
+INPUT ./capitulos/02_estado_del_arte.tex
+INPUT ./capitulos/02_estado_del_arte.tex
+INPUT capitulos/02_estado_del_arte.tex
 INPUT ./tfg.glo
 INPUT ./tfg.glo
 INPUT ./upm-report/images/etsisi-isotipo-white.pdf
