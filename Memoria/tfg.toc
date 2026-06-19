@@ -32,6 +32,13 @@
 \contentsline {subsection}{\numberline {2.8.2}Qué ventajas tienen}{15}{subsection.2.8.2}%
 \contentsline {subsection}{\numberline {2.8.3}Qué limitaciones tienen}{16}{subsection.2.8.3}%
 \contentsline {section}{\numberline {2.9}Conclusiones del estado del arte}{17}{section.2.9}%
+\contentsline {chapter}{\numberline {3}Análisis y requisitos}{19}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Descripción del problema}{19}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Perfil de usuario}{20}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Escenario de uso}{21}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Requisitos funcionales}{21}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Requisitos no funcionales}{22}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Restricciones del proyecto}{23}{section.3.6}%
 \contentsfinish 
-\contentsline {section}{Glosario}{21}{section*.8}%
-\contentsline {section}{Siglas}{21}{section*.9}%
+\contentsline {section}{Glosario}{26}{section*.8}%
+\contentsline {section}{Siglas}{26}{section*.9}%

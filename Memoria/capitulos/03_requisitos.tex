@@ -1,0 +1,111 @@
+\chapter{Análisis y requisitos}
+\label{ch:requisitos}
+
+Después de estudiar las distintas formas de introducir texto en un ordenador o dispositivo móvil, se puede observar que todavía existe espacio para métodos alternativos. Las soluciones actuales pueden ser muy útiles en determinados casos, pero suelen tener limitaciones relacionadas con la comodidad, la velocidad, el entorno de uso o las capacidades físicas necesarias.
+
+A partir de este análisis, se plantea aprovechar el pulgar, uno de los dedos con mayor movilidad y precisión de la mano, como elemento principal de la interacción. También se busca reducir al mínimo el número de dedos necesarios, de forma que el dispositivo pueda resultar accesible para un mayor número de personas.
+
+La propuesta se basa en un joystick y dos botones. El joystick permite desplazarse entre las distintas opciones de escritura, mientras que los botones permiten cambiar entre capas y realizar acciones adicionales. Esta idea parte de los teclados virtuales utilizados en consolas, donde el usuario se desplaza carácter a carácter, pero intenta ofrecer una forma de navegación más rápida, cómoda y con posibilidades de ampliación.
+
+El dispositivo deberá poder sostenerse en la palma de una mano y manejarse, idealmente, con el pulgar, el índice y el dedo corazón. También deberá incorporar alimentación mediante batería y una conexión inalámbrica que permita utilizarlo con distintos tipos de dispositivos.
+
+\section{Descripción del problema}
+\label{sec:descripcion-problema}
+
+El problema principal que se intenta abordar en este trabajo es que, aunque existen muchas formas diferentes de introducir texto en un dispositivo, ninguna reúne todas las ventajas deseables. Algunas soluciones son rápidas, pero requieren una movilidad elevada; otras son accesibles, pero pueden resultar lentas, incómodas o poco prácticas en determinados contextos.
+
+Esto provoca que muchos dispositivos estén dirigidos a perfiles de usuario muy concretos. Una solución puede funcionar bien para una persona y no ser adecuada para otra con una movilidad, fuerza o coordinación diferentes.
+
+En este trabajo se plantea la posibilidad de reducir esa separación mediante un dispositivo que sea cómodo, portátil y eficiente, sin estar dirigido únicamente a una demografía concreta. La intención es que pueda ser utilizado tanto por personas que manejan sin dificultad otros dispositivos como por usuarios que carecen de la movilidad necesaria para utilizar cómodamente un teclado tradicional.
+
+La propuesta no pretende ser una solución universal, ya que las capacidades de cada persona son diferentes. Su objetivo es explorar una alternativa que reduzca el número de movimientos y controles físicos necesarios para escribir.
+
+\section{Perfil de usuario}
+\label{sec:perfil-usuario}
+
+El objetivo es desarrollar un teclado que pueda ser utilizado por un espectro amplio de la sociedad, prestando especial atención a grupos que suelen estar poco representados en el diseño de dispositivos de entrada.
+
+El concepto está pensado para poder sujetarse y utilizarse con una sola mano. En su configuración principal, el usuario deberá disponer de movilidad suficiente para manejar el joystick con el pulgar y accionar dos botones con otros dos dedos, idealmente el índice y el corazón.
+
+También será necesario un periodo de aprendizaje. Al tratarse de una forma diferente de escribir, el usuario tendrá que acostumbrarse a la distribución de los caracteres y a las acciones asociadas al joystick y a los botones. Esta curva de aprendizaje es comparable, en cierta medida, a la que existe al aprender mecanografía: al principio la escritura puede ser lenta, pero la práctica debería permitir realizar las acciones de forma más natural y eficiente.
+
+Aunque el primer prototipo se diseñará para utilizarse con tres dedos, la idea de combinar un joystick y dos pulsadores podría adaptarse en el futuro a otras posiciones o partes del cuerpo.
+
+\section{Escenario de uso}
+\label{sec:escenario-uso}
+
+Uno de los principales beneficios buscados es que el dispositivo pueda utilizarse en situaciones en las que otras alternativas presentan dificultades. Por ejemplo, los sistemas de dictado por voz requieren que el usuario pueda hablar en voz alta y que el ruido del entorno no afecte al reconocimiento. Esto limita su uso en bibliotecas, aulas, oficinas compartidas o lugares en los que se necesita mantener silencio.
+
+Los teclados convencionales también ocupan una superficie considerable y suelen necesitar una mesa o un apoyo estable. Además, obligan al usuario a mantener ambas manos sobre el teclado durante la escritura.
+
+La propuesta de este trabajo busca evitar estas limitaciones mediante un dispositivo pequeño que pueda sostenerse en una sola mano. Esto permitiría utilizarlo sentado, de pie o en situaciones en las que no se dispone de una superficie de apoyo.
+
+Incluso podría utilizarse con la mano dentro de un bolsillo, por ejemplo durante un día frío, siempre que el diseño permita reconocer los controles mediante el tacto. En un aula o una reunión, el usuario podría mantener una postura más libre y escribir sin necesitar una mesa completa.
+
+La idea principal es desarrollar un teclado portátil, silencioso y fácil de transportar, que pueda utilizarse con comodidad en distintos contextos.
+
+\section{Requisitos funcionales}
+\label{sec:requisitos-funcionales}
+
+Los requisitos funcionales describen las acciones que debe ser capaz de realizar el dispositivo:
+
+\begin{itemize}
+    \item \textbf{RF-01}: El dispositivo debe poder conectarse de forma inalámbrica a un ordenador, teléfono móvil o tableta.
+
+    \item \textbf{RF-02}: El dispositivo debe ser reconocido por el sistema como un teclado.
+
+    \item \textbf{RF-03}: El joystick debe detectar ocho direcciones diferentes.
+
+    \item \textbf{RF-04}: Cada dirección del joystick debe representar un carácter o una acción diferente según la capa activa.
+
+    \item \textbf{RF-05}: Los dos botones deben permitir cambiar entre las distintas capas de caracteres.
+
+    \item \textbf{RF-06}: El teclado principal debe permitir introducir todas las letras del alfabeto.
+
+    \item \textbf{RF-07}: El sistema debe permitir alternar entre letras minúsculas y mayúsculas.
+
+    \item \textbf{RF-08}: Una de las opciones disponibles debe permitir abrir un teclado virtual secundario.
+
+    \item \textbf{RF-09}: El teclado virtual secundario debe permitir introducir números, signos de puntuación y caracteres especiales.
+
+    \item \textbf{RF-10}: El dispositivo debe ofrecer información visual sobre la capa activa y la selección realizada.
+
+    \item \textbf{RF-11}: El dispositivo debe permitir que con una combinación de botones se entre un modo de lectura para ver los caracteres pero que no escriba nada.
+\end{itemize}
+
+\section{Requisitos no funcionales}
+\label{sec:requisitos-no-funcionales}
+
+Los requisitos no funcionales definen las condiciones de calidad y uso que debe cumplir el prototipo:
+
+\begin{itemize}
+    \item \textbf{RNF-01}: El dispositivo debe tener un tamaño suficientemente reducido para poder sostenerse en la palma de una mano.
+
+    \item \textbf{RNF-02}: Debe poder manejarse con una sola mano y, en su configuración principal, con tres dedos.
+
+    \item \textbf{RNF-03}: La interacción debe ser silenciosa para permitir su uso en espacios compartidos.
+
+    \item \textbf{RNF-04}: El dispositivo debe ser ligero y fácil de transportar.
+
+    \item \textbf{RNF-05}: Los controles deben poder distinguirse con facilidad mediante el tacto.
+
+    \item \textbf{RNF-06}: El coste de los componentes debe mantenerse reducido.
+
+    \item \textbf{RNF-07}: El sistema debe responder a las acciones del usuario sin retardos que dificulten la escritura.
+
+    \item \textbf{RNF-08}: El funcionamiento básico debe poder aprenderse sin necesidad de conocimientos técnicos.
+\end{itemize}
+
+\section{Restricciones del proyecto}
+\label{sec:restricciones-proyecto}
+
+Una de las principales restricciones del proyecto es el tamaño. El objetivo de introducir todo el dispositivo en la palma de una mano limita el espacio disponible para colocar la batería, el microcontrolador, el joystick, los botones, la matriz de LED y el resto de las conexiones.
+
+Esta limitación afecta especialmente a la distribución interna de los componentes, al tamaño de la batería y a la autonomía que puede alcanzar el prototipo. También obliga a diseñar una carcasa que aproveche bien el espacio sin dejar de ser cómoda de sujetar.
+
+Para el desarrollo se utilizará un microcontrolador ESP32 debido a su tamaño, capacidad de procesamiento y conectividad Bluetooth. El dispositivo contará con un joystick, dos botones y una matriz de LED para mostrar información sobre la entrada seleccionada. La carcasa será fabricada mediante impresión 3D.
+
+La experiencia limitada en diseño e impresión 3D también supone una restricción, ya que será necesario realizar varias versiones de la carcasa hasta encontrar una forma que permita colocar correctamente los componentes y que resulte cómoda durante el uso.
+
+Por último, el proyecto se centra en desarrollar y validar un prototipo funcional. Por ello, aspectos como la fabricación industrial, la certificación del producto o la realización de pruebas clínicas con usuarios quedan fuera del alcance de esta primera versión.
+
