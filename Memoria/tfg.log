@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026/Arch Linux) (preloaded format=xelatex 2026.6.14)  19 JUN 2026 12:54
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026/Arch Linux) (preloaded format=xelatex 2026.6.14)  24 JUN 2026 17:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1456,80 +1456,124 @@ LaTeX Info: Redefining \% on input line 62.
  [21]
 LaTeX Info: Redefining \. on input line 103.
 LaTeX Info: Redefining \% on input line 103.
- [22])
-LaTeX Info: Redefining \. on input line 189.
-LaTeX Info: Redefining \% on input line 189.
+ [22]) (./capitulos/04_diseno.tex
+LaTeX Info: Redefining \. on input line 5.
+LaTeX Info: Redefining \% on input line 5.
  [23]
-Overfull \hbox (36.74774pt too wide) in paragraph at lines 189--189
+Capítulo 4.
+[24
+
+]
+LaTeX Info: Redefining \. on input line 48.
+LaTeX Info: Redefining \% on input line 48.
+ [25]
+Overfull \vbox (463.19832pt too high) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 48.
+LaTeX Info: Redefining \% on input line 48.
+ [26]
+Missing character: There is no ─ (U+2500) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ─ (U+2500) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ─ (U+2500) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ─ (U+2500) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ─ (U+2500) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ─ (U+2500) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ─ (U+2500) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ┐ (U+2510) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no │ (U+2502) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ─ (U+2500) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ─ (U+2500) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ─ (U+2500) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ─ (U+2500) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ─ (U+2500) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ─ (U+2500) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ─ (U+2500) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ─ (U+2500) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ┼ (U+253C) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ─ (U+2500) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ─ (U+2500) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ─ (U+2500) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ─ (U+2500) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ─ (U+2500) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ─ (U+2500) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no │ (U+2502) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ─ (U+2500) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ─ (U+2500) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ┘ (U+2518) in font Source Serif Pro/OT:script=latn;language=dflt;mapping=tex-text;!
+)
+LaTeX Info: Redefining \. on input line 191.
+LaTeX Info: Redefining \% on input line 191.
+ [27]
+Overfull \hbox (36.74774pt too wide) in paragraph at lines 191--191
 []\TU/SourceSerifPro(0)/m/n/12 American Academy of Orthopaedic Surgeons. «  Síndrome del túnel carpiano. »dirección:
  []
 
 
-Overfull \hbox (6.33571pt too wide) in paragraph at lines 189--189
+Overfull \hbox (6.33571pt too wide) in paragraph at lines 191--191
 [][]$[][][][][] [] [] [] [][][][][][][][][] [] [][][][] [] [][][] [] [][] [] [][][][][][][][] [][][][] [][][][][][][][][][] [] [][][][][][][][] [][]
  []
 
 
-Overfull \hbox (4.07635pt too wide) in paragraph at lines 189--189
+Overfull \hbox (4.07635pt too wide) in paragraph at lines 191--191
 []\TU/SourceSerifPro(0)/m/n/12 World Wide Web Consortium. «  Web Speech API Specification. »dirección: [][]$[][][][][] []
  []
 
 
-Overfull \hbox (37.48827pt too wide) in paragraph at lines 189--189
+Overfull \hbox (37.48827pt too wide) in paragraph at lines 191--191
 []\TU/SourceSerifPro(0)/m/n/12 Microsoft. «  Get started with voice access. »dirección: [][]$[][][][][] [] [] [] [][][][][][][] [] [][][][][][][][][] []
  []
 
 
-Overfull \hbox (11.9204pt too wide) in paragraph at lines 189--189
+Overfull \hbox (11.9204pt too wide) in paragraph at lines 191--191
 []\TU/SourceSerifPro(0)/m/n/12 Apple. «  Use Voice Control commands to interact with your Mac. »dirección: [][]$[][][][][] []
  []
 
 
-Overfull \hbox (9.49571pt too wide) in paragraph at lines 189--189
+Overfull \hbox (9.49571pt too wide) in paragraph at lines 191--191
 [][][] [] [][][] [][] [][][][][][][][][] [][] [][][] [][] [][][][][][][][][] [] [][][] [][] [][][][] [] [][][][][][][][][][][] [][] [][][][][][] []
  []
 
-[24
+[28
 
 
 ]
-Overfull \hbox (9.83739pt too wide) in paragraph at lines 189--189
+Overfull \hbox (9.83739pt too wide) in paragraph at lines 191--191
 []\TU/SourceSerifPro(0)/m/n/12 Apple. «  Use Switch Control to navigate your iPhone, iPad, or iPod touch. »dirección:
  []
 
 
-Overfull \hbox (10.43571pt too wide) in paragraph at lines 189--189
+Overfull \hbox (10.43571pt too wide) in paragraph at lines 191--191
 [][][][][][][][][] [][] [][][][][][][][][][] [] [][][][][][][][] [][] [][][][][][][][][][] [] [][][] [][] [][][][] [][] [][][][][][][][][][]$[][] 
  []
 
-LaTeX Info: Redefining \. on input line 189.
-LaTeX Info: Redefining \% on input line 189.
-[25]
+LaTeX Info: Redefining \. on input line 191.
+LaTeX Info: Redefining \% on input line 191.
+[29]
 No file tfg.gls.
 
-Overfull \hbox (8.50163pt too wide) in paragraph at lines 189--189
+Overfull \hbox (8.50163pt too wide) in paragraph at lines 191--191
 []\TU/SourceSerifPro(0)/m/n/12 This document is incomplete. The external file associated with the glossary ‘main’ (which
  []
 
 
-Overfull \hbox (0.46005pt too wide) in paragraph at lines 189--189
+Overfull \hbox (0.46005pt too wide) in paragraph at lines 191--191
 []\TU/SourceSerifPro(0)/m/n/12 Add \TU/SourceCodePro(0)/m/n/12 automake \TU/SourceSerifPro(0)/m/n/12 to your package option list when you load \TU/SourceCodePro(0)/m/n/12 glossaries-extra.sty\TU/SourceSerifPro(0)/m/n/12 .
  []
 
 No file tfg.acr.
-[26
+[30
 
 ]
-LaTeX Info: Redefining \. on input line 189.
-LaTeX Info: Redefining \% on input line 189.
- [27]
+LaTeX Info: Redefining \. on input line 191.
+LaTeX Info: Redefining \% on input line 191.
+ [31]
 File: upm-report/images/etsisi-isotipo-white.pdf Graphic file (type pdf)
 <use upm-report/images/etsisi-isotipo-white.pdf>
  (/usr/share/texmf-dist/tex/generic/stringenc/se-utf32be.def
 File: se-utf32be.def 2019/11/29 v1.12 stringenc: UTF-32BE
 ) (/usr/share/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
-) [28
+) [32
 
 ] (./tfg.aux
 LaTeX Info: Redefining \sptext on input line 20.
@@ -1541,18 +1585,18 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `tfg.out' has not changed.
-(rerunfilecheck)             Checksum: 51E4F2834620C572FD8045F1455807F2;3969.
+(rerunfilecheck)             Checksum: 4FBCA3E9FE635DA2DC8E33D96C4825F7;5221.
 Package logreq Info: Writing requests to 'tfg.run.xml'.
 \openout1 = `tfg.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43070 strings out of 470137
- 846584 string characters out of 5478427
- 1938317 words of memory out of 5000000
- 71108 multiletter control sequences out of 15000+600000
+ 43092 strings out of 470137
+ 847034 string characters out of 5478427
+ 1941010 words of memory out of 5000000
+ 71127 multiletter control sequences out of 15000+600000
  634857 words of font info for 121 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  92i,12n,107p,2593b,32833s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on tfg.xdv (36 pages, 614112 bytes).
+Output written on tfg.xdv (40 pages, 645572 bytes).

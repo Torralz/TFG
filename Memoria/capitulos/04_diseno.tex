@@ -1,0 +1,67 @@
+El capítulo de **Diseño** debe explicar **cómo has planteado la solución antes de construirla**. No entra todavía en soldaduras, código concreto o problemas de montaje; eso irá en Implementación.
+
+Yo lo estructuraría así:
+
+\chapter{Diseño de la solución}
+\label{ch:diseno}
+
+\section{Arquitectura general del sistema}
+\label{sec:arquitectura-general}
+
+\section{Diseño del sistema de escritura}
+\label{sec:sistema-escritura}
+
+\subsection{Direcciones del joystick}
+\subsection{Organización por capas}
+\subsection{Función de los botones}
+\subsection{Teclado secundario de números y caracteres especiales}
+
+\section{Diseño hardware}
+\label{sec:diseno-hardware}
+
+\subsection{Microcontrolador}
+\subsection{Joystick y botones}
+\subsection{Sistema de visualización}
+\subsection{Alimentación}
+\subsection{Comunicación Bluetooth}
+
+\section{Diseño software}
+\label{sec:diseno-software}
+
+\subsection{Lectura de entradas}
+\subsection{Gestión de capas}
+\subsection{Selección y envío de caracteres}
+\subsection{Funcionamiento como teclado Bluetooth}
+
+\section{Diseño físico y ergonómico}
+\label{sec:diseno-fisico}
+
+\subsection{Distribución de los controles}
+\subsection{Dimensiones del dispositivo}
+\subsection{Diseño de la carcasa}
+
+\section{Decisiones de diseño}
+\label{sec:decisiones-diseno}
+
+La sección más importante será **Diseño del sistema de escritura**, porque ahí explicas tu idea principal:
+
+* El joystick tiene ocho direcciones.
+* Cada dirección representa un carácter.
+* Los botones permiten cambiar de capa.
+* Las capas permiten acceder a todas las letras.
+* Una opción abre el teclado secundario.
+* El teclado secundario contiene números y caracteres especiales.
+
+En **Arquitectura general** conviene poner un diagrama parecido a este:
+
+Joystick ───────┐
+                │
+Botones ────────┼──> ESP32 ──> Bluetooth HID ──> Ordenador o móvil
+                │
+Matriz de LED ──┘
+
+La diferencia clave entre capítulos será:
+
+Diseño: qué componentes has elegido, cómo se relacionan y por qué.
+
+Implementación: cómo los has conectado, programado y montado realmente.

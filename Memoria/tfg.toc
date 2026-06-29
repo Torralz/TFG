@@ -39,6 +39,29 @@
 \contentsline {section}{\numberline {3.4}Requisitos funcionales}{21}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Requisitos no funcionales}{22}{section.3.5}%
 \contentsline {section}{\numberline {3.6}Restricciones del proyecto}{23}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Diseño de la solución}{24}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Arquitectura general del sistema}{26}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Diseño del sistema de escritura}{26}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Direcciones del joystick}{26}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Organización por capas}{26}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Función de los botones}{26}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Teclado secundario de números y caracteres especiales}{26}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Diseño hardware}{26}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Microcontrolador}{26}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Joystick y botones}{26}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Sistema de visualización}{26}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Alimentación}{26}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Comunicación Bluetooth}{26}{subsection.4.3.5}%
+\contentsline {section}{\numberline {4.4}Diseño software}{26}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Lectura de entradas}{26}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Gestión de capas}{26}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Selección y envío de caracteres}{26}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Funcionamiento como teclado Bluetooth}{26}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5}Diseño físico y ergonómico}{26}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Distribución de los controles}{26}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Dimensiones del dispositivo}{26}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Diseño de la carcasa}{26}{subsection.4.5.3}%
+\contentsline {section}{\numberline {4.6}Decisiones de diseño}{26}{section.4.6}%
 \contentsfinish 
-\contentsline {section}{Glosario}{26}{section*.8}%
-\contentsline {section}{Siglas}{26}{section*.9}%
+\contentsline {section}{Glosario}{30}{section*.8}%
+\contentsline {section}{Siglas}{30}{section*.9}%
