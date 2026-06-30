@@ -701,6 +701,140 @@
       \verb https://arxiv.org/abs/1803.04713
       \endverb
     \endentry
+    \entry{espressifADCOneshot}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=66589871a3c3f27bcbf3891133af42b1}{%
+           family={{Espressif Systems}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{fullhash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{fullhashraw}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{bibnamehash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{authorbibnamehash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{authornamehash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{authorfullhash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{authorfullhashraw}{66589871a3c3f27bcbf3891133af42b1}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Analog to Digital Converter (ADC) Oneshot Mode Driver}
+      \verb{urlraw}
+      \verb https://docs.espressif.com/projects/esp-idf/en/v5.0/esp32c3/api-reference/peripherals/adc_oneshot.html
+      \endverb
+      \verb{url}
+      \verb https://docs.espressif.com/projects/esp-idf/en/v5.0/esp32c3/api-reference/peripherals/adc_oneshot.html
+      \endverb
+    \endentry
+    \entry{xiaoESP32C3}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=e47a5c22c3c2e012514c9d5a4141b8b9}{%
+           family={{Seeed Studio}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e47a5c22c3c2e012514c9d5a4141b8b9}
+      \strng{fullhash}{e47a5c22c3c2e012514c9d5a4141b8b9}
+      \strng{fullhashraw}{e47a5c22c3c2e012514c9d5a4141b8b9}
+      \strng{bibnamehash}{e47a5c22c3c2e012514c9d5a4141b8b9}
+      \strng{authorbibnamehash}{e47a5c22c3c2e012514c9d5a4141b8b9}
+      \strng{authornamehash}{e47a5c22c3c2e012514c9d5a4141b8b9}
+      \strng{authorfullhash}{e47a5c22c3c2e012514c9d5a4141b8b9}
+      \strng{authorfullhashraw}{e47a5c22c3c2e012514c9d5a4141b8b9}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Getting Started with Seeed Studio XIAO ESP32C3}
+      \verb{urlraw}
+      \verb https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/
+      \endverb
+      \verb{url}
+      \verb https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/
+      \endverb
+    \endentry
+    \entry{seeedRGBMatrix}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=e47a5c22c3c2e012514c9d5a4141b8b9}{%
+           family={{Seeed Studio}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e47a5c22c3c2e012514c9d5a4141b8b9}
+      \strng{fullhash}{e47a5c22c3c2e012514c9d5a4141b8b9}
+      \strng{fullhashraw}{e47a5c22c3c2e012514c9d5a4141b8b9}
+      \strng{bibnamehash}{e47a5c22c3c2e012514c9d5a4141b8b9}
+      \strng{authorbibnamehash}{e47a5c22c3c2e012514c9d5a4141b8b9}
+      \strng{authornamehash}{e47a5c22c3c2e012514c9d5a4141b8b9}
+      \strng{authorfullhash}{e47a5c22c3c2e012514c9d5a4141b8b9}
+      \strng{authorfullhashraw}{e47a5c22c3c2e012514c9d5a4141b8b9}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Getting Started with 6x10 RGB MATRIX for XIAO}
+      \verb{urlraw}
+      \verb https://wiki.seeedstudio.com/rgb_matrix_for_xiao/
+      \endverb
+      \verb{url}
+      \verb https://wiki.seeedstudio.com/rgb_matrix_for_xiao/
+      \endverb
+    \endentry
+    \entry{adafruitPowerBoost1000C}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=b65705aa9f138bcc5db4617809413e90}{%
+           family={{Adafruit Industries}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{b65705aa9f138bcc5db4617809413e90}
+      \strng{fullhash}{b65705aa9f138bcc5db4617809413e90}
+      \strng{fullhashraw}{b65705aa9f138bcc5db4617809413e90}
+      \strng{bibnamehash}{b65705aa9f138bcc5db4617809413e90}
+      \strng{authorbibnamehash}{b65705aa9f138bcc5db4617809413e90}
+      \strng{authornamehash}{b65705aa9f138bcc5db4617809413e90}
+      \strng{authorfullhash}{b65705aa9f138bcc5db4617809413e90}
+      \strng{authorfullhashraw}{b65705aa9f138bcc5db4617809413e90}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Adafruit PowerBoost 1000C}
+      \verb{urlraw}
+      \verb https://learn.adafruit.com/adafruit-powerboost-1000c-load-share-usb-charge-boost/overview
+      \endverb
+      \verb{url}
+      \verb https://learn.adafruit.com/adafruit-powerboost-1000c-load-share-usb-charge-boost/overview
+      \endverb
+    \endentry
+    \entry{espressifNimBLE}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=66589871a3c3f27bcbf3891133af42b1}{%
+           family={{Espressif Systems}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{fullhash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{fullhashraw}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{bibnamehash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{authorbibnamehash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{authornamehash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{authorfullhash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{authorfullhashraw}{66589871a3c3f27bcbf3891133af42b1}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ESP32-C3 Configuration Options Reference: Bluetooth NimBLE}
+      \verb{urlraw}
+      \verb https://docs.espressif.com/projects/esp-idf/en/stable/esp32c3/api-reference/kconfig-reference.html
+      \endverb
+      \verb{url}
+      \verb https://docs.espressif.com/projects/esp-idf/en/stable/esp32c3/api-reference/kconfig-reference.html
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

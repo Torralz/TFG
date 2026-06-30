@@ -1,14 +1,14 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'tfg.blg'
-[57] biber:342> INFO - === jue jun 18, 2026, 18:57:45
-[72] Biber.pm:421> INFO - Reading 'tfg.bcf'
-[123] Biber.pm:1002> INFO - Found 21 citekeys in bib section 0
-[139] Biber.pm:4487> INFO - Processing section 0
-[147] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 0
-[147] bibtex.pm:1713> INFO - LaTeX decoding ...
-[155] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[269] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[269] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[269] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'es-ES'
-[280] bbl.pm:676> INFO - Writing 'tfg.bbl' with encoding 'UTF-8'
-[286] bbl.pm:779> INFO - Output to tfg.bbl
+[52] biber:342> INFO - === mar jun 30, 2026, 19:25:06
+[63] Biber.pm:421> INFO - Reading 'tfg.bcf'
+[110] Biber.pm:1002> INFO - Found 26 citekeys in bib section 0
+[123] Biber.pm:4487> INFO - Processing section 0
+[130] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 0
+[130] bibtex.pm:1713> INFO - LaTeX decoding ...
+[139] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[257] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[257] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[257] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'es-ES'
+[270] bbl.pm:676> INFO - Writing 'tfg.bbl' with encoding 'UTF-8'
+[277] bbl.pm:779> INFO - Output to tfg.bbl

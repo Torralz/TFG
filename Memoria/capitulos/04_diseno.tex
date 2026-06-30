@@ -1,67 +1,315 @@
-El capítulo de **Diseño** debe explicar **cómo has planteado la solución antes de construirla**. No entra todavía en soldaduras, código concreto o problemas de montaje; eso irá en Implementación.
-
-Yo lo estructuraría así:
-
 \chapter{Diseño de la solución}
 \label{ch:diseno}
+
+En este capítulo se describe el diseño planteado para el dispositivo antes de entrar en los detalles concretos de su construcción. El objetivo principal ha sido reducir un teclado completo a una interfaz formada por un joystick y dos botones, manteniendo la posibilidad de introducir letras, números, símbolos y algunas acciones habituales de escritura.
+
+La solución se ha diseñado para poder utilizarse con una sola mano. El pulgar se encarga de mover el joystick, mientras que los botones pueden accionarse con los dedos índice y corazón. Para ampliar la cantidad de caracteres disponibles sin añadir más controles físicos, el sistema se organiza mediante varias capas.
 
 \section{Arquitectura general del sistema}
 \label{sec:arquitectura-general}
 
+El sistema está formado por cinco bloques principales: los controles de entrada, el microcontrolador, el sistema de visualización, la comunicación inalámbrica y la alimentación.
+
+El joystick y los dos botones recogen las acciones realizadas por el usuario. Estas señales son procesadas por un microcontrolador XIAO ESP32C3, encargado de determinar la dirección seleccionada, identificar la capa activa y obtener el carácter correspondiente. El carácter se muestra en la matriz de LED y, cuando el dispositivo se encuentra en modo de escritura, se envía al equipo conectado mediante Bluetooth.
+
+La arquitectura general puede resumirse mediante el siguiente flujo:
+
+\begin{center}
+    Joystick y botones
+    $\longrightarrow$
+    XIAO ESP32C3
+    $\longrightarrow$
+    Bluetooth HID
+    $\longrightarrow$
+    ordenador, tableta o teléfono
+\end{center}
+
+La matriz RGB funciona como salida visual del sistema y permite mostrar el carácter seleccionado, la capa activa y distintos estados del dispositivo.
+
+\begin{table}[ht]
+    \centering
+    \caption{Bloques principales del sistema}
+    \label{tab:bloques-sistema}
+    \begin{tabularx}{\textwidth}{@{}lX@{}}
+        \toprule
+        \textbf{Bloque} & \textbf{Función} \\
+        \midrule
+        Joystick & Seleccionar una de las ocho direcciones disponibles. \\
+        Botones & Elegir la capa activa mediante sus distintas combinaciones. \\
+        XIAO ESP32C3 & Procesar las entradas, gestionar las capas y controlar el resto del sistema. \\
+        Matriz RGB & Mostrar el carácter seleccionado y ofrecer información visual al usuario. \\
+        Bluetooth HID & Enviar las pulsaciones como si procedieran de un teclado convencional. \\
+        Alimentación & Proporcionar energía al microcontrolador, los controles y la matriz. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
 \section{Diseño del sistema de escritura}
 \label{sec:sistema-escritura}
 
+La parte principal del proyecto es el sistema utilizado para convertir un número reducido de controles físicos en un conjunto completo de caracteres. Para conseguirlo, se combinan las ocho direcciones del joystick con ocho capas diferentes.
+
+Cada dirección representa un carácter o una acción. Los dos botones determinan qué capa se encuentra activa, mientras que una dirección reservada permite alternar entre el banco principal de letras y el banco secundario de números y símbolos.
+
 \subsection{Direcciones del joystick}
+\label{subsec:direcciones-joystick}
+
+El joystick proporciona dos señales analógicas, una para el eje horizontal y otra para el eje vertical. Estas señales son leídas mediante el convertidor analógico-digital, o ADC, del microcontrolador. El ADC no identifica directamente una dirección, sino que convierte el nivel de tensión de cada eje en un valor numérico que después debe ser interpretado por el programa \cite{espressifADCOneshot}.
+
+Combinando los valores de ambos ejes se distinguen nueve estados: una posición central y ocho direcciones alrededor de ella. Las direcciones utilizadas son arriba, arriba-derecha, derecha, abajo-derecha, abajo, abajo-izquierda, izquierda y arriba-izquierda.
+
+Alrededor de la posición central se define una zona muerta. Mientras los valores de ambos ejes permanezcan dentro de esta zona, el sistema considera que el joystick no está siendo accionado. Esta medida evita que pequeñas variaciones eléctricas o mecánicas provoquen la escritura accidental de caracteres.
+
+Cuando el joystick sale de la zona central, las lecturas de los dos ejes se comparan con los rangos establecidos para determinar la dirección seleccionada. La selección se considera finalizada cuando el joystick vuelve al centro, lo que permite diferenciar una acción de la siguiente.
+
 \subsection{Organización por capas}
+\label{subsec:organizacion-capas}
+
+El teclado está organizado en ocho capas. Las cuatro primeras forman el banco principal y contienen las letras del alfabeto y las acciones más habituales. Las cuatro restantes forman un banco secundario destinado a números, signos de puntuación y caracteres especiales.
+
+Cada capa contiene ocho posiciones, una por cada dirección del joystick. La distribución propuesta para el banco principal se muestra en la Tabla~\ref{tab:capas-principales}.
+
+\begin{table}[ht]
+    \centering
+    \caption{Distribución de las capas principales}
+    \label{tab:capas-principales}
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{lcccccccc}
+            \toprule
+            \textbf{Capa} &
+            \textbf{Arriba} &
+            \textbf{Sup. dcha.} &
+            \textbf{Derecha} &
+            \textbf{Inf. dcha.} &
+            \textbf{Abajo} &
+            \textbf{Inf. izq.} &
+            \textbf{Izquierda} &
+            \textbf{Sup. izq.} \\
+            \midrule
+            0 & e & a & o & s & r & n & i & d \\
+            1 & l & c & u & m & p & t & b & g \\
+            2 & v & y & q & h & f & z & j & ñ \\
+            3 & x & k & w & Intro & Borrar & Mayúsculas & Espacio & Banco secundario \\
+            \bottomrule
+        \end{tabular}%
+    }
+\end{table}
+
+Las letras más habituales se han colocado en las primeras capas, de modo que puedan alcanzarse sin mantener pulsados ambos botones al mismo tiempo. La cuarta capa contiene las letras restantes y varias acciones que no necesitan repetirse con tanta frecuencia como una letra normal.
+
+La distribución puede modificarse desde el software sin cambiar el hardware. Esto deja abierta la posibilidad de probar otras organizaciones en el futuro y comparar cuál resulta más rápida o fácil de aprender.
+
 \subsection{Función de los botones}
-\subsection{Teclado secundario de números y caracteres especiales}
+\label{subsec:funcion-botones}
+
+Los dos botones funcionan como selectores de capa. Cada botón puede encontrarse pulsado o liberado, por lo que la combinación de ambos genera cuatro estados distintos.
+
+\begin{table}[ht]
+    \centering
+    \caption{Selección de capa mediante los dos botones}
+    \label{tab:seleccion-capas}
+    \begin{tabular}{ccc}
+        \toprule
+        \textbf{Botón 1} & \textbf{Botón 2} & \textbf{Capa seleccionada} \\
+        \midrule
+        Liberado & Liberado & Capa 0 \\
+        Liberado & Pulsado  & Capa 1 \\
+        Pulsado  & Liberado & Capa 2 \\
+        Pulsado  & Pulsado  & Capa 3 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Esta forma de selección permite acceder a cuatro capas sin incorporar cuatro botones diferentes. Además, la capa activa depende directamente del estado físico de los botones, por lo que el usuario puede volver a la capa inicial simplemente liberándolos.
+
+El joystick HW-504 también incorpora un pulsador al presionarlo hacia dentro. En el diseño actual, la combinación de este pulsador con los otros dos botones se reserva para alternar entre el modo de escritura y el modo de exploración. En el modo de exploración se puede consultar la letra asociada a una dirección sin enviarla al dispositivo conectado.
+
+\subsection{Banco secundario de números y caracteres especiales}
+\label{subsec:teclado-secundario}
+
+Una de las posiciones de la cuarta capa está reservada para alternar entre el banco principal y el banco secundario. Esta acción no abre un teclado del sistema operativo, sino que cambia internamente el conjunto de capas utilizado por el dispositivo.
+
+Cuando el banco secundario está activo, las mismas combinaciones de botones seleccionan otras cuatro capas. De esta forma, el funcionamiento físico no cambia: el usuario continúa utilizando los dos botones para elegir una capa y el joystick para seleccionar una de sus ocho posiciones.
+
+\begin{table}[ht]
+    \centering
+    \caption{Distribución del banco secundario}
+    \label{tab:capas-secundarias}
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{lcccccccc}
+            \toprule
+            \textbf{Capa} &
+            \textbf{Arriba} &
+            \textbf{Sup. dcha.} &
+            \textbf{Derecha} &
+            \textbf{Inf. dcha.} &
+            \textbf{Abajo} &
+            \textbf{Inf. izq.} &
+            \textbf{Izquierda} &
+            \textbf{Sup. izq.} \\
+            \midrule
+            4 & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+            5 & 8 & 9 & . & : & , & ; & - & \_ \\
+            6 & ¿ & ? & ¡ & ! & `` & @ & ( & ) \\
+            7 & = & + & * & \& & \textless & \textgreater & Espacio & Banco principal \\
+            \bottomrule
+        \end{tabular}%
+    }
+\end{table}
+
+El acceso al banco secundario se ha colocado en la misma posición tanto para entrar como para salir. Esto evita que el usuario tenga que aprender dos acciones diferentes para cambiar entre letras y símbolos.
 
 \section{Diseño hardware}
 \label{sec:diseno-hardware}
 
 \subsection{Microcontrolador}
+\label{subsec:microcontrolador}
+
+El microcontrolador elegido es el Seeed Studio XIAO ESP32C3. Esta placa utiliza un ESP32-C3 con procesador RISC-V, conectividad Bluetooth Low Energy y varias entradas digitales y analógicas. Sus dimensiones son de aproximadamente \(21 \times 17{,}8\) mm, lo que permite integrarla en una carcasa pensada para sostenerse con una sola mano \cite{xiaoESP32C3}.
+
+La disponibilidad de entradas ADC permite leer los dos ejes analógicos del joystick, mientras que los GPIO restantes se utilizan para los botones, el pulsador del joystick y la matriz RGB. La conectividad Bluetooth integrada evita tener que añadir un módulo inalámbrico separado.
+
+Otro motivo para elegir esta placa es su compatibilidad con ESP-IDF, que permite trabajar directamente con los controladores del ADC, los GPIO, FreeRTOS y la pila Bluetooth. Esto facilita dividir el programa en módulos y controlar con mayor precisión el comportamiento del dispositivo.
+
 \subsection{Joystick y botones}
+\label{subsec:joystick-botones}
+
+El joystick HW-504 está formado por dos potenciómetros colocados de forma perpendicular. Uno mide el desplazamiento horizontal y el otro el vertical. Sus salidas se conectan a dos entradas analógicas del microcontrolador.
+
+Además de los dos ejes, el joystick incorpora un pulsador que se activa al presionar la palanca. Este pulsador se utiliza para funciones menos frecuentes, de forma que no interfiera con la escritura normal.
+
+Los dos botones externos se conectan a entradas digitales. Se ha planteado utilizar las resistencias internas de \textit{pull-up} del microcontrolador, por lo que las entradas permanecen en nivel alto cuando los botones están liberados y pasan a nivel bajo al pulsarlos.
+
+La colocación física de los botones es importante. Deben poder accionarse de forma independiente, pero también simultáneamente, ya que la cuarta capa requiere mantener pulsados ambos. También deben ofrecer suficiente respuesta táctil para que el usuario reconozca la pulsación sin necesidad de mirar el dispositivo.
+
 \subsection{Sistema de visualización}
+\label{subsec:sistema-visualizacion}
+
+Para mostrar la selección se utiliza una matriz RGB de \(6 \times 10\) diseñada para la familia XIAO. La matriz contiene 60 LED WS2812 controlables de forma individual y recibe los datos mediante una única línea conectada al pin D0 \cite{seeedRGBMatrix}.
+
+La matriz permite representar caracteres mediante una fuente de \(6 \times 10\) píxeles, aprovechando toda su superficie. Al mover el joystick se muestra la letra o símbolo correspondiente a la dirección actual.
+
+También se utilizan distintos colores para ayudar a identificar las capas. De esta forma, el usuario puede relacionar visualmente cada color con una combinación de botones. El brillo debe mantenerse limitado, tanto para evitar molestias al mirar la matriz como para reducir el consumo eléctrico.
+
+La pantalla no pretende mostrar frases completas. Su función es ofrecer una confirmación inmediata de la selección y ayudar durante el proceso de aprendizaje del teclado.
+
 \subsection{Alimentación}
+\label{subsec:alimentacion}
+
+El dispositivo está pensado para funcionar mediante una batería recargable de ion de litio o polímero de litio de una celda. El uso de una batería permite mantener el carácter portátil del prototipo y evita depender de una conexión por cable durante la escritura.
+
+La matriz RGB necesita una alimentación estable próxima a 5 V. Por este motivo, se plantea utilizar el módulo PowerBoost 1000C de Adafruit, capaz de elevar la tensión de una batería de 3,7 V hasta aproximadamente 5,2 V y de cargar la batería mientras el sistema continúa alimentado \cite{adafruitPowerBoost1000C}.
+
+La salida del módulo debe alimentar tanto la matriz como el microcontrolador, compartiendo una referencia de tierra común. La conexión a la entrada de 5 V del XIAO deberá realizarse respetando las protecciones recomendadas por el fabricante.
+
+La capacidad definitiva de la batería dependerá del espacio interior disponible y del consumo obtenido durante las pruebas. La matriz será previsiblemente el elemento con mayor influencia sobre la autonomía, por lo que el brillo y el número de LED encendidos deberán mantenerse bajo control.
+
 \subsection{Comunicación Bluetooth}
+\label{subsec:comunicacion-bluetooth}
+
+La comunicación se realiza mediante Bluetooth Low Energy utilizando la pila NimBLE disponible en ESP-IDF. El dispositivo actúa como un periférico HID, es decir, como un dispositivo de interfaz humana reconocido por el equipo receptor como un teclado.
+
+NimBLE permite implementar un servidor GATT con el servicio HID, las características necesarias para los informes de teclado y los mecanismos de emparejamiento. ESP-IDF incluye soporte configurable para servicios HID, información del dispositivo y nivel de batería dentro de esta pila \cite{espressifNimBLE}.
+
+Al anunciarse mediante Bluetooth, el prototipo utiliza el nombre \enquote{Teclado Unimano}. Una vez emparejado, el sistema receptor puede recibir pulsaciones sin necesitar una aplicación específica, siempre que sea compatible con teclados Bluetooth HID.
 
 \section{Diseño software}
 \label{sec:diseno-software}
 
+El software se ha dividido en varios bloques para separar la lectura de controles, la gestión del sistema de escritura, la visualización y la comunicación Bluetooth.
+
+Esta división evita concentrar todo el comportamiento en un único bucle y facilita modificar cada parte sin afectar directamente al resto.
+
 \subsection{Lectura de entradas}
+\label{subsec:lectura-entradas}
+
+Los dos ejes del joystick se leen mediante el controlador ADC en modo \textit{oneshot}. Este modo realiza una conversión bajo demanda cada vez que el programa necesita conocer la posición del joystick \cite{espressifADCOneshot}.
+
+A partir de las dos lecturas se determina si el joystick se encuentra centrado o dentro de una de las ocho direcciones. Para reducir errores se aplican márgenes alrededor de los valores esperados y se exige que una dirección permanezca estable durante varias lecturas antes de aceptarla.
+
+Los botones se gestionan mediante interrupciones GPIO. Cuando se produce una pulsación o liberación, la interrupción envía un evento a una cola de FreeRTOS. Una tarea separada recibe el evento, espera un breve tiempo para eliminar rebotes y lee el estado conjunto de los controles.
+
+El uso de una cola permite mantener la rutina de interrupción lo más corta posible y trasladar el procesamiento a una tarea normal.
+
 \subsection{Gestión de capas}
+\label{subsec:gestion-capas}
+
+La capa principal se representa mediante un valor entre 0 y 3. Los estados de los dos botones se interpretan como dos bits: uno de ellos representa el bit de mayor peso y el otro el de menor peso.
+
+Por otro lado, una variable de desplazamiento permite seleccionar el banco de capas. Cuando el desplazamiento vale 0 se utilizan las capas de letras; cuando vale 4 se utilizan las capas de números y símbolos.
+
+La capa real se obtiene mediante:
+
+\begin{equation}
+    C_{\text{real}} = C_{\text{botones}} + D_{\text{banco}}
+\end{equation}
+
+donde \(C_{\text{botones}}\) puede tomar valores entre 0 y 3, y \(D_{\text{banco}}\) puede valer 0 o 4. El resultado siempre se encuentra entre 0 y 7.
+
 \subsection{Selección y envío de caracteres}
+\label{subsec:seleccion-envio}
+
+Los caracteres están almacenados en una tabla de ocho filas y ocho columnas. Las filas representan las capas y las columnas representan las direcciones del joystick.
+
+Cuando se detecta una dirección, el programa calcula la capa real y consulta la posición correspondiente de la tabla. El resultado puede ser una letra, un número, un símbolo o una acción especial, como espacio, borrar, Intro, bloqueo de mayúsculas o cambio de banco.
+
+Antes de enviar el carácter se muestra su representación en la matriz RGB. Si el dispositivo está en modo de escritura, el código HID se envía mediante Bluetooth. Si está en modo de exploración, únicamente se muestra el carácter.
+
+También se ha previsto la repetición de determinadas teclas al mantener el joystick en una dirección durante un tiempo. Esta función se reserva principalmente para espacio, borrado e Intro, ya que repetir automáticamente cualquier letra podría producir errores durante el aprendizaje.
+
 \subsection{Funcionamiento como teclado Bluetooth}
+\label{subsec:funcionamiento-bluetooth}
+
+El dispositivo define un descriptor HID de teclado. Cada pulsación se transmite mediante un informe de ocho bytes formado por un byte de modificadores, un byte reservado y seis posiciones para códigos de tecla.
+
+Para simular una pulsación completa se envía primero un informe con la tecla activa y, después de un intervalo breve, otro informe vacío. El segundo informe representa la liberación de la tecla y evita que el sistema receptor interprete que permanece pulsada.
+
+Los caracteres que necesitan modificadores, como las mayúsculas o algunos símbolos, se representan combinando el código de la tecla con modificadores como \textit{Shift} o \textit{AltGr}.
+
+El sistema también gestiona el emparejamiento y conserva la información necesaria en la memoria no volátil del microcontrolador. Si se pierde la conexión, el dispositivo vuelve a anunciarse para permitir una nueva conexión.
 
 \section{Diseño físico y ergonómico}
 \label{sec:diseno-fisico}
 
 \subsection{Distribución de los controles}
+\label{subsec:distribucion-controles}
+
+La forma general está inspirada en mandos de una sola mano, como el Nunchuk de Wii. Este tipo de distribución permite rodear la carcasa con la mano y mantener el pulgar sobre un control direccional.
+
+El joystick se coloca en la parte superior, dentro del alcance natural del pulgar. Los dos botones se sitúan de forma que puedan accionarse con los dedos índice y corazón sin cambiar el agarre.
+
+La matriz debe permanecer visible mientras se utiliza el dispositivo, pero no debe obligar al usuario a girar excesivamente la muñeca. Su posición también debe evitar que quede tapada por la mano.
+
 \subsection{Dimensiones del dispositivo}
+\label{subsec:dimensiones-dispositivo}
+
+El objetivo es que la carcasa pueda sostenerse dentro de la palma de una mano. Sin embargo, las dimensiones finales no dependen únicamente de la comodidad, sino también del espacio ocupado por el joystick, la matriz, el microcontrolador, el sistema de alimentación y la batería.
+
+Por este motivo, las medidas definitivas se determinarán después de colocar todos los componentes en el modelo tridimensional y fabricar los primeros prototipos.
+
+% TODO: añadir las dimensiones finales cuando la carcasa esté terminada.
+% Dimensiones aproximadas: ancho x alto x profundidad.
+
 \subsection{Diseño de la carcasa}
+\label{subsec:diseno-carcasa}
+
+La carcasa se diseña mediante modelado 3D y se fabrica utilizando impresión 3D. Esto permite modificar rápidamente la posición de los controles y repetir el prototipo hasta encontrar una forma cómoda.
+
+Se plantea dividir la carcasa en dos piezas. La parte frontal contiene el joystick y la matriz, mientras que la parte trasera permite cerrar el dispositivo y sujetar la batería y el resto de los componentes.
+
+La unión entre ambas partes puede realizarse mediante pestañas o encajes, evitando el uso de tornillos siempre que la resistencia obtenida sea suficiente. El interior debe incluir soportes que impidan que las placas y la batería se desplacen durante el uso.
+
+También debe mantenerse accesible el conector de carga, el interruptor de encendido y, durante el desarrollo, el puerto utilizado para programar el microcontrolador.
 
 \section{Decisiones de diseño}
 \label{sec:decisiones-diseno}
 
-La sección más importante será **Diseño del sistema de escritura**, porque ahí explicas tu idea principal:
+La decisión principal ha sido utilizar un joystick y dos botones en lugar de un conjunto amplio de teclas. Esto reduce el número de controles físicos, aunque introduce la necesidad de aprender una distribución por capas.
 
-* El joystick tiene ocho direcciones.
-* Cada dirección representa un carácter.
-* Los botones permiten cambiar de capa.
-* Las capas permiten acceder a todas las letras.
-* Una opción abre el teclado secundario.
-* El teclado secundario contiene números y caracteres especiales.
+El joystick permite obtener ocho selecciones con un único dedo. Los botones multiplican estas posibilidades sin aumentar demasiado el tamaño del dispositivo. La combinación de ocho direcciones y ocho capas proporciona hasta 64 posiciones, suficientes para incluir letras, números, símbolos y acciones especiales.
 
-En **Arquitectura general** conviene poner un diagrama parecido a este:
+La matriz RGB se ha incorporado porque el sistema de capas no resulta evidente durante los primeros usos. Mostrar el carácter seleccionado ayuda al aprendizaje y permite comprobar la entrada antes de enviarla.
 
-Joystick ───────┐
-                │
-Botones ────────┼──> ESP32 ──> Bluetooth HID ──> Ordenador o móvil
-                │
-Matriz de LED ──┘
+La comunicación BLE HID se ha elegido para evitar una aplicación intermedia y permitir que el dispositivo se comporte como un teclado reconocible por distintos sistemas. El XIAO ESP32C3 reúne en una placa de pequeño tamaño las entradas analógicas, los GPIO y la conectividad necesarios para implementar esta solución.
 
-La diferencia clave entre capítulos será:
-
-Diseño: qué componentes has elegido, cómo se relacionan y por qué.
-
-Implementación: cómo los has conectado, programado y montado realmente.
+Por último, la fabricación mediante impresión 3D permite adaptar la carcasa a la forma de la mano y modificarla durante el desarrollo. Esta flexibilidad es especialmente importante en un proyecto donde la comodidad y la posición de los controles forman parte del funcionamiento del dispositivo.

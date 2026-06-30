@@ -2402,6 +2402,12 @@
     <bcf:citekey order="23" intorder="1">borgestig2015eyeGazePerformance</bcf:citekey>
     <bcf:citekey order="24" intorder="1">appleEyeTrackingIphone</bcf:citekey>
     <bcf:citekey order="25" intorder="1">rajanna2018gazeAssisted</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">espressifADCOneshot</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">xiaoESP32C3</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">seeedRGBMatrix</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">adafruitPowerBoost1000C</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">espressifNimBLE</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">espressifADCOneshot</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
