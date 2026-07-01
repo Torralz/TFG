@@ -1,0 +1,201 @@
+\chapter{Implementación}
+\label{ch:implementacion}
+
+En este capítulo se describe el proceso seguido para convertir el diseño planteado anteriormente en un prototipo funcional. La implementación se ha dividido en dos partes: por un lado, el montaje y la conexión de los componentes físicos; por otro, el desarrollo del firmware encargado de interpretar las acciones del usuario, mostrar información en la matriz y enviar las pulsaciones mediante Bluetooth.
+
+\section{Montaje del hardware}
+\label{sec:montaje-hardware}
+
+El prototipo está formado por un microcontrolador XIAO ESP32C3, un joystick HW-504, dos botones externos y una matriz RGB de \(6 \times 10\) LED. Durante la fase de desarrollo, los componentes se conectaron de forma provisional para poder comprobar su funcionamiento antes de realizar la soldadura y el montaje definitivo dentro de la carcasa.
+
+Las conexiones utilizadas en el firmware se muestran en la Tabla~\ref{tab:conexiones-hardware}.
+
+\begin{table}[ht]
+    \centering
+    \caption{Conexiones entre los componentes y el XIAO ESP32C3}
+    \label{tab:conexiones-hardware}
+    \begin{tabularx}{\textwidth}{@{}lXl@{}}
+        \toprule
+        \textbf{Componente} & \textbf{Señal} & \textbf{GPIO} \\
+        \midrule
+        Joystick & Eje horizontal & GPIO 2 \\
+        Joystick & Eje vertical & GPIO 3 \\
+        Joystick & Pulsador integrado & GPIO 4 \\
+        Botón 1 & Selección de capa & GPIO 5 \\
+        Botón 2 & Selección de capa & GPIO 6 \\
+        Matriz RGB & Línea de datos & GPIO 10 \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+Los ejes del joystick se conectan a entradas compatibles con el convertidor analógico-digital del ESP32C3. Los dos botones externos y el pulsador del joystick se conectan a entradas digitales configuradas con resistencias internas de \textit{pull-up}. Por este motivo, una entrada presenta nivel alto mientras el botón está liberado y nivel bajo cuando se pulsa.
+
+Todos los componentes deben compartir una referencia de tierra común. La matriz RGB requiere una alimentación con mayor capacidad de corriente que el resto del circuito, por lo que la distribución de alimentación deberá realizarse evitando que toda la corriente de los LED atraviese el microcontrolador.
+
+% TODO: Completar cuando se realice el montaje definitivo:
+% - Tipo y capacidad de la batería utilizada.
+% - Conexión final del PowerBoost 1000C.
+% - Interruptor de encendido.
+% - Fotografías del montaje antes y después de soldar.
+
+\section{Desarrollo del firmware}
+\label{sec:desarrollo-firmware}
+
+El firmware se ha desarrollado en lenguaje C utilizando ESP-IDF. Se ha elegido este entorno porque permite acceder directamente a los controladores del ESP32C3, como el ADC, los GPIO, la pila Bluetooth NimBLE y el sistema operativo FreeRTOS.
+
+El programa se ha dividido en varios módulos. El archivo principal contiene la lectura de entradas, la selección de caracteres y la gestión de capas. La comunicación Bluetooth se encuentra separada en un módulo dedicado, mientras que la matriz RGB y la fuente gráfica se gestionan desde otros archivos.
+
+Durante el arranque, la función principal realiza las siguientes operaciones:
+
+\begin{enumerate}
+    \item Inicializa la memoria no volátil necesaria para guardar la información de emparejamiento Bluetooth.
+    \item Configura las dos entradas ADC utilizadas por el joystick.
+    \item Configura los botones y el pulsador del joystick como entradas digitales.
+    \item Inicializa la comunicación Bluetooth HID.
+    \item Inicializa la matriz RGB.
+    \item Crea la cola utilizada para comunicar las interrupciones de los botones.
+    \item Crea las tareas de FreeRTOS encargadas de gestionar el joystick y los botones.
+    \item Activa las interrupciones asociadas a los controles digitales.
+\end{enumerate}
+
+\subsection{Lectura del joystick}
+\label{subsec:implementacion-joystick}
+
+El joystick HW-504 genera dos señales analógicas, una para cada eje. Estas señales se leen utilizando el controlador ADC en modo \textit{oneshot}, que permite solicitar una conversión cada vez que el programa necesita conocer la posición.
+
+En las pruebas realizadas se obtuvieron valores centrales aproximados de 1995 para un eje y 1882 para el otro. Los extremos se encuentran próximos a 0 y 4095, ya que el ADC está configurado con una resolución de 12 bits.
+
+A partir de estos valores, la función de lectura clasifica la posición en uno de nueve estados: las ocho direcciones posibles o la posición central. Para cada dirección se define un margen de tolerancia de 300 unidades alrededor de los valores esperados.
+
+La posición central se trata como un estado independiente. Cuando el joystick vuelve al centro, el programa considera que la selección anterior ha finalizado y queda preparado para detectar un nuevo carácter.
+
+Este mecanismo también evita que pequeñas variaciones en las lecturas analógicas produzcan pulsaciones accidentales. Además, antes de aceptar una dirección nueva se exige que permanezca estable durante varias lecturas consecutivas.
+
+La tarea encargada del joystick se ejecuta aproximadamente cada 20 milisegundos. Esta frecuencia permite detectar los movimientos con rapidez sin mantener ocupado constantemente el procesador.
+
+\subsection{Gestión de los botones y las capas}
+\label{subsec:implementacion-capas}
+
+Los dos botones externos se utilizan para seleccionar una de las cuatro capas disponibles dentro de cada banco. El estado de ambos se interpreta como un número binario de dos bits:
+
+\begin{equation}
+    C = 2B_1 + B_2
+\end{equation}
+
+donde \(B_1\) y \(B_2\) representan el estado de cada botón y \(C\) es la capa seleccionada, con un valor comprendido entre 0 y 3.
+
+La detección de los botones se realiza mediante interrupciones GPIO. Cuando se produce un cambio de estado, la rutina de interrupción introduce el número del GPIO en una cola de FreeRTOS. El procesamiento se realiza después en una tarea normal, evitando incluir operaciones complejas dentro de la interrupción.
+
+La tarea espera 50 milisegundos antes de leer los controles. Este pequeño retraso cumple dos funciones: permite detectar combinaciones en las que los dedos no pulsan exactamente al mismo tiempo y reduce los efectos del rebote mecánico de los botones.
+
+El sistema utiliza además una variable de desplazamiento para seleccionar el banco de caracteres. Un desplazamiento de 0 activa las cuatro capas de letras, mientras que un desplazamiento de 4 activa las capas de números y símbolos.
+
+La capa real se obtiene sumando ambos valores:
+
+\begin{equation}
+    C_{\text{real}} = C + D
+\end{equation}
+
+donde \(D\) puede valer 0 o 4.
+
+Una de las posiciones de la última capa contiene el valor especial \texttt{0xFF}. Al detectar este valor, el programa cambia el desplazamiento entre 0 y 4, alternando así entre los dos bancos de caracteres.
+
+También se ha implementado una combinación formada por los dos botones y el pulsador del joystick. Esta combinación permite alternar entre el modo de escritura y el modo de exploración. En el modo de exploración, los caracteres aparecen en la matriz, pero no se envían al dispositivo conectado.
+
+\subsection{Selección y repetición de caracteres}
+\label{subsec:seleccion-caracteres}
+
+La relación entre capas, direcciones y caracteres se almacena en dos matrices de ocho filas y ocho columnas. Una de ellas contiene los códigos HID que deben enviarse, mientras que la segunda contiene la representación textual utilizada por la matriz RGB.
+
+Cuando se detecta una dirección, el programa calcula la capa real y consulta ambas tablas. De esta forma obtiene tanto el código que se enviará mediante Bluetooth como el carácter que debe aparecer en la matriz.
+
+Se ha añadido un mecanismo para evitar que una misma dirección produzca varias pulsaciones por error. Cuando aparece una dirección nueva, esta debe detectarse durante varias iteraciones antes de aceptarse.
+
+En el caso de algunas teclas, como espacio, Intro y borrar, sí se permite la repetición. Si el joystick permanece en la misma dirección durante aproximadamente dos segundos, el programa comienza a repetir la pulsación cada 100 milisegundos. Este comportamiento se ha limitado a las acciones donde mantener una tecla pulsada resulta útil.
+
+El sistema también contempla teclas que necesitan modificadores. Algunos símbolos requieren enviar una combinación con \textit{Shift} o \textit{AltGr}. Para representar estas combinaciones se almacena tanto el código HID de la tecla como el modificador necesario.
+
+\subsection{Visualización en la matriz RGB}
+\label{subsec:implementacion-matriz}
+
+La matriz RGB se utiliza para mostrar el carácter seleccionado antes o durante su envío. Cada uno de sus 60 LED representa un píxel dentro de una cuadrícula de seis columnas y diez filas.
+
+Para dibujar los caracteres se ha integrado una fuente gráfica de \(6 \times 10\) píxeles. La fuente contiene 256 glifos y cada uno ocupa diez bytes, uno por cada fila de la matriz. Cada bit indica si un píxel debe estar encendido o apagado.
+
+La función de dibujo recibe el carácter que se quiere mostrar, el color, la capa activa y el estado de mayúsculas. Después calcula la posición del glifo dentro de la fuente y recorre sus diez filas y seis columnas, actualizando el estado de cada LED.
+
+También se ha añadido una conversión para tratar caracteres codificados en UTF-8 que no se encuentran directamente en el rango ASCII. Este tratamiento se utiliza especialmente para mostrar correctamente la letra \textit{ñ} y su versión mayúscula.
+
+Cuando el bloqueo de mayúsculas se encuentra activo, las letras minúsculas se convierten a su equivalente en mayúscula antes de consultar la fuente.
+
+Además del carácter, la primera columna de la matriz muestra un color relacionado con la capa activa. Esto permite reconocer visualmente en qué capa se encuentra el teclado sin necesidad de mostrar información adicional.
+
+La matriz no está pensada para enseñar frases completas. Su función consiste en mostrar un único carácter y ofrecer una confirmación inmediata de la selección realizada.
+
+\subsection{Comunicación Bluetooth HID}
+\label{subsec:implementacion-bluetooth}
+
+La comunicación inalámbrica se ha implementado mediante Bluetooth Low Energy utilizando la pila NimBLE. El dispositivo se anuncia con el nombre \enquote{Teclado Unimano} y utiliza el perfil HID para ser reconocido como un teclado.
+
+El módulo Bluetooth registra un servicio HID y define un descriptor estándar de teclado. Los informes enviados están formados por ocho bytes: un byte para modificadores, un byte reservado y seis posiciones para códigos de tecla.
+
+Para generar una pulsación completa se realizan dos envíos. El primero contiene el código de la tecla y, cuando es necesario, su modificador. Tras una espera de 30 milisegundos, se envía un segundo informe vacío para indicar que la tecla ha sido liberada.
+
+Además del servicio HID, se han incorporado los servicios de información del dispositivo y nivel de batería. En la versión actual, el nivel de batería anunciado es un valor fijo, por lo que todavía queda pendiente conectarlo a una medición real de la tensión de la batería.
+
+El emparejamiento utiliza almacenamiento no volátil, permitiendo conservar la información del dispositivo conectado después de un reinicio. Si la conexión se pierde, el teclado vuelve a anunciarse automáticamente.
+
+Una limitación de esta implementación es que algunos símbolos dependen de la distribución de teclado configurada en el sistema operativo. Las combinaciones utilizadas se han planteado para una distribución española, por lo que podrían producir resultados diferentes si el equipo receptor utiliza otra distribución.
+
+\section{Fabricación de la carcasa}
+\label{sec:fabricacion-carcasa}
+
+La carcasa se está diseñando mediante FreeCAD y será fabricada utilizando impresión 3D. El diseño debe permitir sujetar el dispositivo con una sola mano, mantener el joystick al alcance del pulgar y colocar los botones en una posición cómoda para los dedos índice y corazón.
+
+También debe reservar espacio para el XIAO ESP32C3, la matriz RGB, la batería, el sistema de alimentación y el cableado interno.
+
+% TODO: Completar después de fabricar la carcasa:
+% - Material utilizado para la impresión.
+% - Altura de capa, relleno y soportes.
+% - Dimensiones finales.
+% - Número de versiones impresas.
+% - Cambios realizados entre versiones.
+% - Fotografías o capturas del modelo de FreeCAD.
+
+\section{Integración del prototipo}
+\label{sec:integracion-prototipo}
+
+La integración final consistirá en soldar las conexiones, fijar los componentes dentro de la carcasa y comprobar que los controles pueden utilizarse sin que el cableado limite el cierre del dispositivo.
+
+La matriz deberá quedar visible desde el exterior, mientras que el puerto de carga y el interruptor de encendido deberán permanecer accesibles. La batería tendrá que fijarse de forma que no pueda moverse dentro de la carcasa.
+
+% TODO: Sustituir este texto por el proceso real cuando se complete:
+% - Orden seguido durante el montaje.
+% - Forma de fijación de cada componente.
+% - Organización de los cables.
+% - Acceso al USB-C y al interruptor.
+% - Resultado final del prototipo.
+
+\section{Problemas encontrados y soluciones}
+\label{sec:problemas-soluciones}
+
+Durante el desarrollo del firmware se encontraron varios problemas relacionados con la lectura de entradas y la representación de caracteres.
+
+El primer problema fue la inestabilidad propia de las señales analógicas del joystick. Incluso cuando se encontraba en reposo, los valores del ADC presentaban pequeñas variaciones. Para evitar que estas diferencias se interpretasen como movimientos se definió una zona central con un margen de tolerancia.
+
+También aparecieron dificultades al detectar pulsaciones simultáneas de los botones. Los dedos no accionan ambos controles exactamente en el mismo instante y, además, los botones producen rebotes eléctricos. La solución adoptada fue utilizar interrupciones, una cola de eventos y una espera de 50 milisegundos antes de leer el estado conjunto.
+
+Otro problema fue la repetición involuntaria de caracteres cuando el joystick permanecía en una dirección durante varias lecturas. Para solucionarlo se almacenó la última tecla detectada y se exigió que el joystick volviese al centro antes de aceptar de nuevo la misma letra. La repetición continua quedó habilitada únicamente para espacio, Intro y borrar.
+
+La representación de caracteres como la \textit{ñ} también necesitó un tratamiento específico. La fuente gráfica utilizada emplea una codificación distinta a UTF-8, por lo que fue necesario interpretar las secuencias de varios bytes y convertirlas al índice correspondiente dentro de la fuente.
+
+Finalmente, los símbolos que utilizan \textit{Shift} o \textit{AltGr} exigieron almacenar información adicional junto al código HID. Su comportamiento depende de la distribución de teclado del sistema receptor, por lo que todavía será necesario comprobar todos los símbolos durante la fase de pruebas.
+
+% TODO: Añadir aquí los problemas encontrados durante:
+% - La soldadura.
+% - El montaje dentro de la carcasa.
+% - La alimentación con batería.
+% - La autonomía.
+% - Las primeras pruebas de uso.
+
+

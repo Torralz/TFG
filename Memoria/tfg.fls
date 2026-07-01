@@ -436,6 +436,11 @@ INPUT ./capitulos/04_diseno.tex
 INPUT ./capitulos/04_diseno.tex
 INPUT ./capitulos/04_diseno.tex
 INPUT capitulos/04_diseno.tex
+INPUT ./capitulos/05_implementacion.tex
+INPUT ./capitulos/05_implementacion.tex
+INPUT ./capitulos/05_implementacion.tex
+INPUT ./capitulos/05_implementacion.tex
+INPUT capitulos/05_implementacion.tex
 INPUT ./tfg.glo
 INPUT ./tfg.glo
 INPUT ./upm-report/images/etsisi-isotipo-white.pdf

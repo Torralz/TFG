@@ -62,6 +62,17 @@
 \contentsline {subsection}{\numberline {4.5.2}Dimensiones del dispositivo}{33}{subsection.4.5.2}%
 \contentsline {subsection}{\numberline {4.5.3}Diseño de la carcasa}{33}{subsection.4.5.3}%
 \contentsline {section}{\numberline {4.6}Decisiones de diseño}{34}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Implementación}{35}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Montaje del hardware}{35}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Desarrollo del firmware}{36}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Lectura del joystick}{36}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Gestión de los botones y las capas}{37}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Selección y repetición de caracteres}{38}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Visualización en la matriz RGB}{39}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Comunicación Bluetooth HID}{40}{subsection.5.2.5}%
+\contentsline {section}{\numberline {5.3}Fabricación de la carcasa}{40}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Integración del prototipo}{41}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Problemas encontrados y soluciones}{41}{section.5.5}%
 \contentsfinish 
-\contentsline {section}{Glosario}{38}{section*.12}%
-\contentsline {section}{Siglas}{38}{section*.13}%
+\contentsline {section}{Glosario}{46}{section*.13}%
+\contentsline {section}{Siglas}{46}{section*.14}%
