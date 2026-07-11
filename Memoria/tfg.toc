@@ -1,78 +1,103 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Objetivos}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Motivación}{1}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Justificación}{2}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Estructura de la memoria}{2}{section.1.4}%
-\contentsline {chapter}{\numberline {2}Estado del arte}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Introducción}{3}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Clasificación de alternativas}{4}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Teclados ergonómicos}{4}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Cómo funcionan}{5}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Qué ventajas tienen}{5}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Qué limitaciones tienen}{5}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}Teclados adaptados para personas con movilidad reducida}{6}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Cómo funcionan}{6}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Qué ventajas tienen}{7}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Qué limitaciones tienen}{7}{subsection.2.4.3}%
-\contentsline {section}{\numberline {2.5}Dictado por voz}{8}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Cómo funcionan}{8}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Qué ventajas tienen}{9}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Qué limitaciones tienen}{9}{subsection.2.5.3}%
-\contentsline {section}{\numberline {2.6}Pulsadores o switches adaptados}{10}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Cómo funcionan}{10}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Qué ventajas tienen}{11}{subsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.6.3}Qué limitaciones tienen}{11}{subsection.2.6.3}%
-\contentsline {section}{\numberline {2.7}Interfaces basadas en gestos}{12}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Cómo funcionan}{12}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}Qué ventajas tienen}{13}{subsection.2.7.2}%
-\contentsline {subsection}{\numberline {2.7.3}Qué limitaciones tienen}{14}{subsection.2.7.3}%
-\contentsline {section}{\numberline {2.8}Sistemas basados en seguimiento ocular}{14}{section.2.8}%
-\contentsline {subsection}{\numberline {2.8.1}Cómo funcionan}{15}{subsection.2.8.1}%
-\contentsline {subsection}{\numberline {2.8.2}Qué ventajas tienen}{15}{subsection.2.8.2}%
-\contentsline {subsection}{\numberline {2.8.3}Qué limitaciones tienen}{16}{subsection.2.8.3}%
-\contentsline {section}{\numberline {2.9}Conclusiones del estado del arte}{17}{section.2.9}%
-\contentsline {chapter}{\numberline {3}Análisis y requisitos}{19}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Descripción del problema}{19}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Perfil de usuario}{20}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Escenario de uso}{21}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Requisitos funcionales}{21}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Requisitos no funcionales}{22}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Restricciones del proyecto}{23}{section.3.6}%
-\contentsline {chapter}{\numberline {4}Diseño de la solución}{24}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Arquitectura general del sistema}{24}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Diseño del sistema de escritura}{25}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Direcciones del joystick}{25}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Organización por capas}{26}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Función de los botones}{27}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Banco secundario de números y caracteres especiales}{27}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}Diseño hardware}{28}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Microcontrolador}{28}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Joystick y botones}{28}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Sistema de visualización}{29}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Alimentación}{29}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}Comunicación Bluetooth}{30}{subsection.4.3.5}%
-\contentsline {section}{\numberline {4.4}Diseño software}{30}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Lectura de entradas}{31}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Gestión de capas}{31}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Selección y envío de caracteres}{32}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Funcionamiento como teclado Bluetooth}{32}{subsection.4.4.4}%
-\contentsline {section}{\numberline {4.5}Diseño físico y ergonómico}{33}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Distribución de los controles}{33}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Dimensiones del dispositivo}{33}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Diseño de la carcasa}{33}{subsection.4.5.3}%
-\contentsline {section}{\numberline {4.6}Decisiones de diseño}{34}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Implementación}{35}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Montaje del hardware}{35}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Desarrollo del firmware}{36}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Lectura del joystick}{36}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Gestión de los botones y las capas}{37}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Selección y repetición de caracteres}{38}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Visualización en la matriz RGB}{39}{subsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.2.5}Comunicación Bluetooth HID}{40}{subsection.5.2.5}%
-\contentsline {section}{\numberline {5.3}Fabricación de la carcasa}{40}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Integración del prototipo}{41}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Problemas encontrados y soluciones}{41}{section.5.5}%
+\contentsline {section}{\numberline {1.1}Motivación}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Justificación}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Objetivos}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Alcance del proyecto}{3}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Estructura de la memoria}{3}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Estado del arte}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Clasificación de alternativas}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Teclados ergonómicos}{5}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Cómo funcionan}{7}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Qué ventajas tienen}{8}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Qué limitaciones tienen}{8}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Enlace con la propuesta}{8}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Teclados adaptados para personas con movilidad reducida}{9}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Cómo funcionan}{9}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Qué ventajas tienen}{10}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Qué limitaciones tienen}{11}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Enlace con la propuesta}{11}{subsection.2.3.4}%
+\contentsline {section}{\numberline {2.4}Dictado por voz}{11}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Cómo funcionan}{12}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Qué ventajas tienen}{12}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Qué limitaciones tienen}{13}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Enlace con la propuesta}{13}{subsection.2.4.4}%
+\contentsline {section}{\numberline {2.5}Pulsadores o switches adaptados}{14}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Cómo funcionan}{14}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Qué ventajas tienen}{15}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Qué limitaciones tienen}{16}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Enlace con la propuesta}{16}{subsection.2.5.4}%
+\contentsline {section}{\numberline {2.6}Interfaces basadas en gestos}{16}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Cómo funcionan}{17}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Qué ventajas tienen}{17}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Qué limitaciones tienen}{18}{subsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.6.4}Enlace con la propuesta}{19}{subsection.2.6.4}%
+\contentsline {section}{\numberline {2.7}Sistemas basados en seguimiento ocular}{19}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Cómo funcionan}{19}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Qué ventajas tienen}{20}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.3}Qué limitaciones tienen}{20}{subsection.2.7.3}%
+\contentsline {subsection}{\numberline {2.7.4}Enlace con la propuesta}{22}{subsection.2.7.4}%
+\contentsline {section}{\numberline {2.8}Sistemas empotrados como dispositivos HID}{22}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Cómo funcionan}{22}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}Qué ventajas tienen}{23}{subsection.2.8.2}%
+\contentsline {subsection}{\numberline {2.8.3}Qué limitaciones tienen}{23}{subsection.2.8.3}%
+\contentsline {subsection}{\numberline {2.8.4}Enlace con la propuesta}{24}{subsection.2.8.4}%
+\contentsline {section}{\numberline {2.9}Conclusiones del estado del arte}{24}{section.2.9}%
+\contentsline {chapter}{\numberline {3}Análisis y requisitos}{26}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Descripción del problema}{26}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Perfil de usuario}{27}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Escenario de uso}{28}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Requisitos funcionales}{28}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Requisitos no funcionales}{29}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Restricciones del proyecto}{30}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Diseño de la solución}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Arquitectura general del sistema}{31}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Diseño del sistema de escritura}{32}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Direcciones del joystick}{32}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Organización por capas}{33}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Función de los botones}{34}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Banco secundario de números y caracteres especiales}{34}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Diseño hardware}{35}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Microcontrolador}{35}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Joystick y botones}{35}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Sistema de visualización}{36}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Alimentación}{36}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Comunicación Bluetooth}{37}{subsection.4.3.5}%
+\contentsline {section}{\numberline {4.4}Diseño software}{37}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Lectura de entradas}{38}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Gestión de capas}{38}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Selección y envío de caracteres}{39}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Funcionamiento como teclado Bluetooth}{39}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5}Diseño físico y ergonómico}{40}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Distribución de los controles}{40}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Dimensiones del dispositivo}{40}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Diseño de la carcasa}{40}{subsection.4.5.3}%
+\contentsline {section}{\numberline {4.6}Decisiones de diseño}{41}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Implementación}{42}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Montaje del hardware}{42}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Desarrollo del firmware}{43}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Lectura del joystick}{43}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Gestión de los botones y las capas}{44}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Selección y repetición de caracteres}{45}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Visualización en la matriz RGB}{46}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Comunicación Bluetooth HID}{47}{subsection.5.2.5}%
+\contentsline {section}{\numberline {5.3}Fabricación de la carcasa}{47}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Integración del prototipo}{48}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Problemas encontrados y soluciones}{48}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Pruebas y resultados}{50}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Plan de pruebas}{50}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Pruebas funcionales}{50}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Pruebas de escritura}{50}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Pruebas de conexión Bluetooth}{50}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Pruebas de autonomía}{50}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Pruebas de comodidad y aprendizaje}{50}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Resultados obtenidos}{50}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Limitaciones detectadas}{50}{section.6.8}%
+\contentsline {chapter}{\numberline {7}Conclusiones y trabajo futuro}{51}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Conclusiones}{51}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Cumplimiento de los objetivos}{51}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Limitaciones del prototipo}{51}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Trabajo futuro}{51}{section.7.4}%
 \contentsfinish 
-\contentsline {section}{Glosario}{46}{section*.13}%
-\contentsline {section}{Siglas}{46}{section*.14}%
+\contentsline {section}{Glosario}{55}{section*.18}%
+\contentsline {section}{Siglas}{55}{section*.19}%

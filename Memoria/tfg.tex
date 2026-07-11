@@ -1,188 +1,223 @@
 % !TEX program = xelatex
+
 \documentclass[
     school=etsisi,
     type=pfg,
     degree=61CI,
 ]{upm-report}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% TÍTULO, AUTORES Y DIRECTORES
+% PAQUETES ADICIONALES
 %
-\title{Plantilla de proyecto de fin de estudios para la UPM}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{csquotes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TÍTULO, AUTOR Y DIRECTOR
+%
+\title{Diseño e implementación de un teclado unimano basado en joystick}
 \author{Pedro Mario Cea Torralba}
-\bibauthor{}
-\director{}
-% TODO: añadir el director
+\bibauthor{Cea Torralba, P. M.}
+\director{Alberto Díaz Álvarez}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % RESUMEN Y ABSTRACT
 %
 \abstract{spanish}{
-    El resumen de un \acrlong{pfg} o de un \acrlong{pfm} condensa en
-    tres o cuatro párrafos el contenido de la memoria. Se debería asumir
-    que el lector tiene una cierta idea de lo que se trata y también que
-    si no le enganchamos, probablemente pase de él (eso es malo).
-    
-    \textbf{Condensado no quiere decir incompleto}. Debe contener la
-    información más destacable. Lo ideal: que ocupe entre media y una
-    cara de un folio A4. Comenzará por el propósito y principales
-    objetivos de la memoria, seguirá con los aspectos más destacables
-    de la metodología empleada, y luego de los resultados obtenidos. Por
-    último se presentarán la o las conclusiones más importantes a las
-    que se ha llegado.
-    
-    Que tenga un estilo claro y conciso, sin ambigüedades de ningún tipo.
-    Además, al ser un resumen de todo el contenido, ni que decir tiene
-    que deberá ser lo último que escribamos, y deberá mantener una
-    absoluta fidelidad con el contenido de la memoria.
+    Este Trabajo de Fin de Grado presenta el diseño y desarrollo de un
+    teclado unimano basado en un joystick, dos botones y una matriz RGB. El
+    objetivo del proyecto es explorar una forma alternativa de introducción
+    de texto que pueda utilizarse con una sola mano y con un número reducido
+    de controles físicos, manteniendo la posibilidad de introducir letras,
+    números, símbolos y acciones básicas de teclado.
+
+    La propuesta parte del análisis de distintas soluciones de entrada de
+    texto, como los teclados ergonómicos, los teclados adaptados, el dictado
+    por voz, los pulsadores, las interfaces basadas en gestos y los sistemas
+    de seguimiento ocular. A partir de sus ventajas y limitaciones, se plantea
+    un dispositivo físico, portátil y silencioso, pensado para situaciones en
+    las que otras alternativas pueden no resultar cómodas o prácticas.
+
+    El prototipo utiliza un microcontrolador Seeed Studio XIAO ESP32C3, un
+    joystick analógico HW-504, dos botones, una matriz RGB de \(6 \times 10\)
+    LED y comunicación Bluetooth Low Energy. El sistema de escritura se
+    organiza mediante ocho direcciones del joystick y varias capas
+    seleccionadas con los botones. De esta forma, se amplía el número de
+    caracteres disponibles sin aumentar el número de controles físicos.
+
+    El trabajo permite comprobar la viabilidad técnica de la propuesta y deja
+    abiertas líneas de mejora relacionadas con la ergonomía, la velocidad de
+    escritura, la autonomía, el diseño físico y la validación con usuarios.
 }
+
 \keywords{spanish}{
-    Cuatro o cinco;
-    Expresiones clave;
-    Que clasifiquen;
-    Nuestro proyecto o;
-    Investigación
+    teclado unimano;
+    sistemas empotrados;
+    accesibilidad;
+    joystick;
+    Bluetooth HID
 }
 
 \abstract{english}{
-    This section must contain the summary that we have written before in
-    Spanish, but in English, as well as the keywords.
+    This Bachelor's Thesis presents the design and development of a one-handed
+    keyboard based on a joystick, two buttons and an RGB matrix. The main goal
+    of the project is to explore an alternative text input method that can be
+    used with one hand and a reduced number of physical controls, while still
+    allowing the user to enter letters, numbers, symbols and basic keyboard
+    actions.
+
+    The proposal is based on the analysis of different text input solutions,
+    such as ergonomic keyboards, adapted keyboards, voice dictation, switches,
+    gesture-based interfaces and eye-tracking systems. Considering their
+    advantages and limitations, this work proposes a physical, portable and
+    silent device intended for situations where other alternatives may not be
+    comfortable or practical.
+
+    The prototype uses a Seeed Studio XIAO ESP32C3 microcontroller, an HW-504
+    analog joystick, two buttons, a \(6 \times 10\) RGB LED matrix and Bluetooth
+    Low Energy communication. The writing system is organised through eight
+    joystick directions and several layers selected with the buttons. This
+    makes it possible to increase the number of available characters without
+    increasing the number of physical controls.
+
+    The project makes it possible to assess the technical feasibility of the
+    proposal and leaves open several future improvements related to ergonomics,
+    typing speed, battery life, physical design and user validation.
 }
+
 \keywords{english}{
-    Four or five;
-    Key Expressions;
-    Summarising;
-    Our Project or;
-    Research
+    one-handed keyboard;
+    embedded systems;
+    accessibility;
+    joystick;
+    Bluetooth HID
 }
-
-% Opcional
-\reportquotation{
-    Oigo y olvido, veo y recuerdo, hago y aprendo.
-}{Confucio}
-
-% Opcional
-\acknowledgements{
-    Agradecimientos que se quieran dar. Si no se quiere añadir
-    agradecimientos, es tan sencillo como eliminar la entrada
-    \texttt{\textbackslash acknowledgements} del fichero
-    \texttt{report.tex}.
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% GLOSARIO Y ABREVIATURAS
-%
-\newglossaryentry{arco-perdicion}{
-        name=Arco de la Perdición,
-        description={Arco único que posee poderes destructivos capaz de
-            desatar grandes catástrofes y de traer desgracias a aquellos
-            que se encuentren en su camino
-        }
-}
-\newglossaryentry{hacha-batalla}{
-        name=hacha de batalla,
-        description={Herramienta antigua utilizada en combate,
-            caracterizada por su doble función de arma y herramienta
-        }
-}
-\newglossaryentry{python}{
-    name={Python},
-    plural={Pythonacos},
-    description={El mejor lenguaje de programación}
-}
-
-\newabbreviation[
-    longplural={inteligencias artificiales}
-    ]{ia}{IA}{inteligencia artificial}
-\newabbreviation[
-    longplural={organizaciones no gubernamentales},
-    shortplural={ONG}
-    ]{ong}{ONG}{organización no gubernamental}
-\newabbreviation[
-    longplural={proyectos de fin de grado}
-    shortplural={PFG}
-    ]{pfg}{PFG}{proyecto de fin de grado}
-\newabbreviation[
-    longplural={proyectos de fin de máster}
-    shortplural={PFM}
-    ]{pfm}{PFM}{proyecto de fin de máster}
-\newabbreviation[
-    description={Del inglés \textit{role-playing game}},
-    shortplural={RPG}
-    ]{rpg}{RPG}{juego de rol}
-\newabbreviation[
-    description={S.P.E.C.I.A.L es la sigla usada para los atributos de
-        Fuerza (\textbf{S}trenght), Percepción (\textbf{P}erception),
-        Resistencia (\textbf{E}ndurance), Carisma, (\textbf{C}harisma),
-        Inteligencia, (\textbf{I}ntelligence), Agilidad,
-        (\textbf{A}gility), y Suerte (\textbf{L}uck)
-    },
-    ]{special}{SPECIAL}{\textit{Strenght, Perception, Endurance,
-        Charisma, Intelligence, Agility \& Luck}
-    }
-
 \begin{document}
 
 \chapter{Introducción}
 \label{ch:introduccion}
 
-La introducción a un trabajo de fin de estudios es el punto de entrada a
-todo el trabajo realizado y es considerada la más importante tras el
-resumen, donde se resume el trabajo entero. Hay que dejar claro
-\textbf{qué} se ha hecho y el \textbf{porqué} de su importancia. Intenta
-generar expectativa. Un gancho típico suele ser discutir sobre un dato
-relevante o controvertido o plantear una pregunta relevante en lo que se
-está trabajando.
+La escritura en ordenador y en dispositivos móviles forma parte de muchas
+actividades cotidianas: estudiar, trabajar, comunicarse, programar o tomar
+apuntes. Sin embargo, la forma más habitual de introducir texto sigue estando
+muy ligada al teclado convencional, un dispositivo que no siempre se adapta bien
+a todas las personas ni a todos los contextos de uso.
 
-\section{Objetivos}
+Un teclado tradicional puede ser muy eficiente para usuarios acostumbrados a su
+distribución, pero también exige una postura concreta, el uso coordinado de
+varios dedos y, normalmente, una superficie de apoyo. Esto puede suponer una
+barrera para personas con movilidad reducida, lesiones, fatiga o dificultades
+para utilizar ambas manos de forma cómoda. Además, algunas alternativas, como el
+dictado por voz, no son adecuadas en espacios donde es necesario mantener
+silencio.
 
-Esta sección es \textbf{obligatoria}, y determinas la \textbf{finalidad}
-del proyecto. Suele encajar en una de las siguientes categorías:
-
-\begin{itemize}
-    \item \textbf{Contraste} o validación de una hipótesis, típico de en
-        \glspl{pfm},
-    \item \textbf{Desarrollo} o diseño de algo (\textit{hardware},
-        sistemas, edificios), común en ingenierías,
-    \item \textbf{Estudio} de un tema que deduce o descubre nuevo
-        conocimiento, típico en ciencias puras y humanidades.
-\end{itemize}
-
-Nos vienen muy bien para evaluar el éxito del proyecto, porque así en
-las conclusiones podemos indicar qué objetivos se han logrado y cuáles
-no, y el porqué. Para poder decir si un objetivo se ha cumplido ha de
-ser (i) \textbf{acotado en el tiempo} ---así se puede planificar---,
-(ii) \textbf{medible} ---podemos cuantificar su éxito---, (iii)
-\textbf{específico} ---evitando así tareas irrelevantes---, (iv)
-\textbf{Alcanzable}  ---asegurando su finalización--- y (v)
-\textbf{relevante} ---es decir, relacionado con el campo de estudio---.
+A partir de esta situación surge la idea de diseñar un dispositivo de entrada de
+texto más reducido, físico, portátil y silencioso. La propuesta de este trabajo
+se basa en utilizar un joystick como elemento principal de interacción y dos
+botones para seleccionar distintas capas de caracteres. Con esta combinación se
+busca reducir el número de controles físicos necesarios sin limitar el teclado a
+un conjunto demasiado pequeño de caracteres.
 
 \section{Motivación}
-\label{s:motivacion}
+\label{sec:motivacion}
 
-Decidí decantarme por este proyecto, ya que junta un \textbf{problema real} que existe en nuestra sociedad. Hay gente que no se conforma a los teclados clásicos, ya que su cuerpo no puede escribir cómodamente con ellos. Estas personas tienen que soportar esa situación e intentar adaptarse a herramientas que tendrían que adaptarse a ellas.
+La motivación principal de este proyecto nace de unir dos aspectos que considero
+importantes. Por un lado, existe un problema real relacionado con la accesibilidad
+y la comodidad en la escritura. No todas las personas pueden utilizar un teclado
+convencional de la misma forma, y muchas veces son ellas quienes tienen que
+adaptarse a herramientas que deberían ser más flexibles.
 
-Es cierto que existen alternativas, como poder hablar y que se transcriba el texto. Sin embargo, no es una solución suficientemente buena para todos los casos. Por ejemplo, Si un estudiante está en clase tomando apuntes, mientras que el profesor está explicando, este no podría, ya que estaría interfiriendo con la clase. En estas situaciones no se puede estar hablando.
+Por otro lado, durante la carrera he ido descubriendo que me interesan especialmente los proyectos en los que la informática no se queda solo en una pantalla. Me atrae poder trabajar con dispositivos reales, componentes físicos y sistemas que producen una respuesta visible o tangible en el entorno. En ese sentido, este proyecto me permite unir la programación con el diseño de un objeto físico que se puede probar, sujetar, modificar y mejorar.
 
-Entonces, eso hace que tengas que estar usando métodos en los que no vas a poder escribir de forma tan eficiente. Incluso podrían llegar a ser métodos \textbf{ineficientes, incómodos o hasta lesivos}.
-
-Por otro lado, mi motivación para hacer este proyecto ha sido que, mientras avanzaba en la carrera, me he dado cuenta de que este aspecto de los \textbf{sistemas embarcados o empotrados} es lo que más me ha interesado y más me ha gustado.
-
-Creo que la posibilidad de juntar lo que me apasiona con el poder ayudar a otros y que puedan vivir una vida mejor es algo que encuentro realmente bonito.
+Este trabajo combina ambas ideas: desarrollar un prototipo técnico, basado en un
+microcontrolador y varios componentes electrónicos, pero orientado a una finalidad
+práctica. La intención no es crear una solución universal, sino explorar una forma
+distinta de escribir que pueda resultar útil en situaciones donde otros métodos no
+son cómodos, discretos o accesibles.
 
 \section{Justificación}
 \label{sec:justificacion}
 
-La justificación de este trabajo se basa en la necesidad de explorar alternativas de interacción que puedan adaptarse mejor a las personas que no pueden utilizar cómodamente los teclados convencionales. Aunque existen soluciones como el dictado por voz, estas no siempre son adecuadas en todos los contextos, especialmente en espacios compartidos o silenciosos.
+La justificación de este trabajo se basa en la necesidad de seguir explorando
+alternativas de interacción con el ordenador. Aunque existen teclados ergonómicos,
+teclados adaptados, sistemas de dictado por voz, pulsadores, interfaces gestuales
+y sistemas de seguimiento ocular, cada una de estas soluciones presenta ventajas y
+también limitaciones.
 
-Por ello, este proyecto busca aportar una solución desde el ámbito de los sistemas empotrados, combinando el desarrollo técnico con una finalidad práctica y social.
+La propuesta planteada en este TFG intenta cubrir un espacio intermedio. Por una
+parte, mantiene una interacción física directa, sin depender de la voz, de una
+cámara o de la mirada. Por otra, reduce el número de controles respecto a un
+teclado convencional, concentrando la entrada en un joystick y dos botones.
 
+El uso del pulgar como dedo principal también es relevante, ya que permite plantear
+una interacción basada en un movimiento direccional relativamente natural. Los dos
+botones permiten cambiar entre capas de caracteres, ampliando las posibilidades
+del dispositivo sin aumentar demasiado su tamaño.
+
+\section{Objetivos}
+\label{sec:objetivos}
+
+El objetivo principal de este Trabajo de Fin de Grado es diseñar e implementar un
+prototipo funcional de teclado unimano basado en un joystick, dos botones, una
+matriz RGB y comunicación Bluetooth.
+
+A partir de este objetivo general, se plantean los siguientes objetivos
+específicos:
+
+\begin{itemize}
+    \item Analizar distintas alternativas actuales de introducción de texto y
+    estudiar sus ventajas y limitaciones.
+
+    \item Diseñar un sistema de escritura basado en ocho direcciones de joystick
+    y varias capas de caracteres.
+
+    \item Seleccionar los componentes hardware necesarios para construir un
+    prototipo compacto y portátil.
+
+    \item Implementar el firmware encargado de leer el joystick y los botones,
+    gestionar las capas, mostrar información en la matriz RGB y enviar
+    pulsaciones mediante Bluetooth HID.
+
+    \item Diseñar una carcasa que permita sujetar el dispositivo con una sola
+    mano y colocar los controles en una posición cómoda.
+
+    \item Realizar pruebas funcionales para comprobar que el prototipo permite
+    introducir texto y ejecutar acciones básicas de teclado.
+\end{itemize}
+
+\section{Alcance del proyecto}
+\label{sec:alcance}
+
+El alcance del proyecto se centra en el diseño y desarrollo de un prototipo. El
+dispositivo está pensado para poder sujetarse con una mano y utilizarse,
+principalmente, mediante el pulgar, el índice y el dedo corazón. Por tanto, no se
+presenta como una solución válida para cualquier usuario, sino como una propuesta
+que puede resultar útil para personas con movilidad suficiente para accionar esos
+controles. No obstante, la arquitectura planteada podría adaptarse en el futuro a otras configuraciones físicas, modificando la posición de los controles o la forma de accionarlos según las necesidades de distintos usuarios.
+
+El trabajo incluye el análisis del problema, el diseño del sistema de escritura,
+la selección de componentes, el desarrollo del firmware, el diseño de la carcasa y
+la realización de pruebas funcionales. Quedan fuera del alcance aspectos como la
+fabricación industrial, la certificación del producto o una validación clínica con
+usuarios.
 
 \section{Estructura de la memoria}
+\label{sec:estructura-memoria}
 
-Esta sección permite al lector comprender la secuencia lógica de cómo se
-ha desarrollado el proyecto o la investigación. Presentará un resumen de
-los diferentes capítulos que conforman la memoria (a poder ser en un
-único párrafo, como mucho dos).
+La memoria se organiza en siete capítulos. En primer lugar, la Introducción
+presenta la motivación, la justificación, los objetivos y el alcance del proyecto.
+A continuación, el Estado del arte analiza distintas alternativas de entrada de
+texto y sus limitaciones. El capítulo de Análisis y requisitos define las
+condiciones que debe cumplir el dispositivo. Después, el capítulo de Diseño de la
+solución describe la arquitectura propuesta, el sistema de escritura por capas,
+el hardware, el software y el diseño físico. El capítulo de Implementación explica
+cómo se ha desarrollado el prototipo. Posteriormente, el capítulo de Pruebas y
+resultados recoge las comprobaciones realizadas y los resultados obtenidos. Por
+último, el capítulo de Conclusiones resume el trabajo realizado, sus limitaciones
+y posibles líneas de mejora futuras.
 
 \input{capitulos/02_estado_del_arte}
 
@@ -191,4 +226,10 @@ los diferentes capítulos que conforman la memoria (a poder ser en un
 \input{capitulos/04_diseno}
 
 \input{capitulos/05_implementacion}
+
+\input{capitulos/06_pruebas_resultados}
+
+\input{capitulos/07_conclusiones}
+
 \end{document}
+

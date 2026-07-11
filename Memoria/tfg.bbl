@@ -19,33 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
-    \entry{aaosCarpalTunnel}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=165632bdf162c97363fd8f80e266f231}{%
-           family={{American Academy of Orthopaedic Surgeons}},
-           familyi={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{165632bdf162c97363fd8f80e266f231}
-      \strng{fullhash}{165632bdf162c97363fd8f80e266f231}
-      \strng{fullhashraw}{165632bdf162c97363fd8f80e266f231}
-      \strng{bibnamehash}{165632bdf162c97363fd8f80e266f231}
-      \strng{authorbibnamehash}{165632bdf162c97363fd8f80e266f231}
-      \strng{authornamehash}{165632bdf162c97363fd8f80e266f231}
-      \strng{authorfullhash}{165632bdf162c97363fd8f80e266f231}
-      \strng{authorfullhashraw}{165632bdf162c97363fd8f80e266f231}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Síndrome del túnel carpiano}
-      \field{year}{2024}
-      \verb{urlraw}
-      \verb https://orthoinfo.aaos.org/es/diseases--conditions/sindrome-del-tunel-carpiano-carpal-tunnel-syndrome
-      \endverb
-      \verb{url}
-      \verb https://orthoinfo.aaos.org/es/diseases--conditions/sindrome-del-tunel-carpiano-carpal-tunnel-syndrome
-      \endverb
-    \endentry
     \entry{marklin1999splitkeyboards}{online}{}{}
       \name{author}{1}{}{%
         {{hash=f75785b6a60408fbbe97d806bc7c3553}{%
@@ -62,12 +35,16 @@
       \strng{authornamehash}{f75785b6a60408fbbe97d806bc7c3553}
       \strng{authorfullhash}{f75785b6a60408fbbe97d806bc7c3553}
       \strng{authorfullhashraw}{f75785b6a60408fbbe97d806bc7c3553}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Wrist and forearm posture from typing on split and vertically inclined computer keyboards}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
       \field{year}{1999}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://pubmed.ncbi.nlm.nih.gov/10774127/
       \endverb
@@ -89,8 +66,8 @@
       \strng{authornamehash}{531217507bec092b6ec36c0f78f46736}
       \strng{authorfullhash}{531217507bec092b6ec36c0f78f46736}
       \strng{authorfullhashraw}{531217507bec092b6ec36c0f78f46736}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Assistive technology}
@@ -120,8 +97,8 @@
       \strng{authornamehash}{e3ee305bf4b4310657f177d246820c01}
       \strng{authorfullhash}{e3ee305bf4b4310657f177d246820c01}
       \strng{authorfullhashraw}{e3ee305bf4b4310657f177d246820c01}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Keyboard and mouse alternatives and adaptations}
@@ -150,12 +127,16 @@
       \strng{authornamehash}{bdea812935506778c291249971f80655}
       \strng{authorfullhash}{bdea812935506778c291249971f80655}
       \strng{authorfullhashraw}{bdea812935506778c291249971f80655}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Web Speech API Specification}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
       \field{year}{2014}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://dvcs.w3.org/hg/speech-api/raw-file/tip/webspeechapi
       \endverb
@@ -177,11 +158,15 @@
       \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
       \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
       \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Get started with voice access}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://support.microsoft.com/en-us/accessibility/windows/voice-access/get-started-with-voice-access
       \endverb
@@ -204,11 +189,15 @@
       \strng{authorfullhash}{9f6290f4436e5a2351f12e03b6433c3c}
       \strng{authorfullhashraw}{9f6290f4436e5a2351f12e03b6433c3c}
       \field{extraname}{1}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Use Voice Control commands to interact with your Mac}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://support.apple.com/en-jo/guide/mac-help/mh40719/mac
       \endverb
@@ -272,12 +261,16 @@
       \strng{authornamehash}{413b52440a818c6cf17822942f8a0c3b}
       \strng{authorfullhash}{c46ff354043358f3cc78f79fc78979c4}
       \strng{authorfullhashraw}{c46ff354043358f3cc78f79fc78979c4}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{From User Perceptions to Technical Improvement: Enabling People Who Stutter to Better Use Speech Recognition}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
       \field{year}{2023}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://arxiv.org/abs/2302.09044
       \endverb
@@ -311,12 +304,16 @@
       \strng{authornamehash}{dfdb03af816365c98c9abef9da57d8bc}
       \strng{authorfullhash}{3902f84cca46584042d142f5671ca3d6}
       \strng{authorfullhashraw}{3902f84cca46584042d142f5671ca3d6}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Configurable Privacy-Preserving Automatic Speech Recognition}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
       \field{year}{2021}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://arxiv.org/abs/2104.00766
       \endverb
@@ -343,6 +340,10 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{What is a Switch?}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://support.ablenetinc.com/aac-education-and-resources/for-slps/alternative-access/what-is-a-switch/
       \endverb
@@ -370,6 +371,10 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Set up switch access for Android}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://support.google.com/accessibility/android/answer/6301490
       \endverb
@@ -397,7 +402,11 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Use Switch Control to navigate your iPhone, iPad, or iPod touch}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
       \field{year}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://support.apple.com/en-us/119835
       \endverb
@@ -425,6 +434,10 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Use Switch Control on Mac}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://support.apple.com/guide/mac-help/use-switch-control-mh43607/mac
       \endverb
@@ -465,8 +478,12 @@
       \field{journaltitle}{Journal of Imaging}
       \field{number}{8}
       \field{title}{Hand Gesture Recognition Based on Computer Vision: A Review of Techniques}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
       \field{volume}{6}
       \field{year}{2020}
+      \field{urldateera}{ce}
       \field{pages}{73}
       \range{pages}{1}
       \verb{doi}
@@ -499,6 +516,10 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Move the pointer using head pointer on Mac}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://support.apple.com/en-lk/guide/mac-help/mchlb2d4782b/mac
       \endverb
@@ -526,7 +547,11 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Control iPhone with the movement of your head}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
       \field{year}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://support.apple.com/en-me/guide/iphone/iph9c3dc17cf/ios
       \endverb
@@ -554,7 +579,11 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Introducing Project Gameface: A hands-free, AI-powered gaming mouse}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
       \field{year}{2023}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://blog.google/innovation-and-ai/products/google-project-gameface/
       \endverb
@@ -577,12 +606,16 @@
       \strng{authorfullhash}{9f6290f4436e5a2351f12e03b6433c3c}
       \strng{authorfullhashraw}{9f6290f4436e5a2351f12e03b6433c3c}
       \field{extraname}{6}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Control iPhone with the movement of your eyes}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
       \field{year}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://support.apple.com/guide/iphone/control-iphone-with-the-movement-of-your-eyes-iph66057d0f6/ios
       \endverb
@@ -609,7 +642,11 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Physical Impairment: Eye Gaze technology}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
       \field{year}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.adcet.edu.au/inclusive-technology/physical-disability/eye-gaze-technology
       \endverb
@@ -659,7 +696,11 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Assistive Technology}
       \field{title}{Eye gaze performance for children with severe physical impairments using gaze-based assistive technology: A longitudinal study}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
       \field{year}{2015}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC4867850/
       \endverb
@@ -693,7 +734,11 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{A Gaze-Assisted Multimodal Approach to Rich and Accessible Human-Computer Interaction}
+      \field{urlday}{18}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
       \field{year}{2018}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://arxiv.org/abs/1803.04713
       \endverb
@@ -701,7 +746,7 @@
       \verb https://arxiv.org/abs/1803.04713
       \endverb
     \endentry
-    \entry{espressifADCOneshot}{online}{}{}
+    \entry{espressifNimBLE}{online}{}{}
       \name{author}{1}{}{%
         {{hash=66589871a3c3f27bcbf3891133af42b1}{%
            family={{Espressif Systems}},
@@ -720,7 +765,42 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{title}{ESP32-C3 Configuration Options Reference: Bluetooth NimBLE}
+      \field{urlday}{30}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.espressif.com/projects/esp-idf/en/stable/esp32c3/api-reference/kconfig-reference.html
+      \endverb
+      \verb{url}
+      \verb https://docs.espressif.com/projects/esp-idf/en/stable/esp32c3/api-reference/kconfig-reference.html
+      \endverb
+    \endentry
+    \entry{espressifADCOneshot}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=66589871a3c3f27bcbf3891133af42b1}{%
+           family={{Espressif Systems}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{fullhash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{fullhashraw}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{bibnamehash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{authorbibnamehash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{authornamehash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{authorfullhash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{authorfullhashraw}{66589871a3c3f27bcbf3891133af42b1}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
       \field{title}{Analog to Digital Converter (ADC) Oneshot Mode Driver}
+      \field{urlday}{30}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://docs.espressif.com/projects/esp-idf/en/v5.0/esp32c3/api-reference/peripherals/adc_oneshot.html
       \endverb
@@ -748,6 +828,10 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Getting Started with Seeed Studio XIAO ESP32C3}
+      \field{urlday}{30}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/
       \endverb
@@ -775,6 +859,10 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Getting Started with 6x10 RGB MATRIX for XIAO}
+      \field{urlday}{30}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://wiki.seeedstudio.com/rgb_matrix_for_xiao/
       \endverb
@@ -801,38 +889,15 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Adafruit PowerBoost 1000C}
+      \field{urlday}{30}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://learn.adafruit.com/adafruit-powerboost-1000c-load-share-usb-charge-boost/overview
       \endverb
       \verb{url}
       \verb https://learn.adafruit.com/adafruit-powerboost-1000c-load-share-usb-charge-boost/overview
-      \endverb
-    \endentry
-    \entry{espressifNimBLE}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=66589871a3c3f27bcbf3891133af42b1}{%
-           family={{Espressif Systems}},
-           familyi={E\bibinitperiod}}}%
-      }
-      \strng{namehash}{66589871a3c3f27bcbf3891133af42b1}
-      \strng{fullhash}{66589871a3c3f27bcbf3891133af42b1}
-      \strng{fullhashraw}{66589871a3c3f27bcbf3891133af42b1}
-      \strng{bibnamehash}{66589871a3c3f27bcbf3891133af42b1}
-      \strng{authorbibnamehash}{66589871a3c3f27bcbf3891133af42b1}
-      \strng{authornamehash}{66589871a3c3f27bcbf3891133af42b1}
-      \strng{authorfullhash}{66589871a3c3f27bcbf3891133af42b1}
-      \strng{authorfullhashraw}{66589871a3c3f27bcbf3891133af42b1}
-      \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{ESP32-C3 Configuration Options Reference: Bluetooth NimBLE}
-      \verb{urlraw}
-      \verb https://docs.espressif.com/projects/esp-idf/en/stable/esp32c3/api-reference/kconfig-reference.html
-      \endverb
-      \verb{url}
-      \verb https://docs.espressif.com/projects/esp-idf/en/stable/esp32c3/api-reference/kconfig-reference.html
       \endverb
     \endentry
   \enddatalist

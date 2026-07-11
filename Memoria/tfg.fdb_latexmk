@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber tfg"] 1782840306.11222 "tfg.bcf" "tfg.bbl" "tfg" 1782933140.7088 0
-  "references.bib" 1782840304.94204 6747 410088cc0d9129e52f31468b14efc07f ""
-  "tfg.bcf" 1782933140.03698 110398 722275a02805e8fdb789b9c7cb4affc7 "xelatex"
+["biber tfg"] 1783699650.71925 "tfg.bcf" "tfg.bbl" "tfg" 1783755284.31563 0
+  "references.bib" 1783697889.63613 7360 d7be05f249acb326292f4e5cbd9dafef ""
+  "tfg.bcf" 1783755278.13537 110397 cf70f4ab01c842b3074a943291501442 "xelatex"
   (generated)
   "tfg.bbl"
   "tfg.blg"
   (rewritten before read)
-["xdvipdfmx"] 1782933140.20039 "tfg.xdv" "tfg.pdf" "tfg" 1782933140.71181 0
-  "tfg.xdv" 1782933140.03884 984416 ca3e233974e94dcc94f4cf765c468e70 "xelatex"
+["xdvipdfmx"] 1783755278.22815 "tfg.xdv" "tfg.pdf" "tfg" 1783755284.31789 0
+  "tfg.xdv" 1783755278.13741 1093376 cd3e6ebe2a9bbe1757a9e536e730ba5d "xelatex"
   (generated)
   "tfg.pdf"
   (rewritten before read)
-["xelatex"] 1782933133.59957 "tfg.tex" "tfg.xdv" "tfg" 1782933140.70893 0
+["xelatex"] 1783755274.24064 "tfg.tex" "tfg.xdv" "tfg" 1783755284.31572 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1775415801 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1775415801 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1775415801 1004 54797486969f23fa377b128694d548df ""
@@ -195,20 +195,28 @@
   "/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty" 1775415801 5006 d7e899bb5d9717c7f214e9bc0284de7b ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1775415801 43569 fd570f2fa160877d211e859f687312ba ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1781472092 4859958 8e914c9b291ea5396c2b2174a9052277 ""
-  "capitulos/02_estado_del_arte.tex" 1781802318.6475 33871 469a4acbf2b6b16fa2e1986ebae517f1 ""
+  "capitulos/02_estado_del_arte.tex" 1783755260.89687 38356 b2c1c350c9650b71c762b2f4a33b4197 ""
   "capitulos/03_requisitos.tex" 1781866365.23376 9432 b53d72d9171c4cc59b3ca7db527b7b10 ""
   "capitulos/04_diseno.tex" 1782838445.79886 22653 57160aff59d01f553a835a1f48e9e804 ""
   "capitulos/05_implementacion.tex" 1782933133.24234 15421 d26c7501b90a1bfae8365dff42dcf445 ""
+  "capitulos/06_pruebas_resultados.tex" 1782841119.66411 339 3b5d908c5ec7249e55045edfd84c0e34 ""
+  "capitulos/07_conclusiones.tex" 1782841115.96805 193 62ecc12c351b4157b8717941c65c2782 ""
+  "figures/apple-head-pointer.png" 1783754002.92999 28545 e18b3d6502ed5fd0a5f1c6e03974c98e ""
+  "figures/google-project-gameface-67366448.png" 1783754272.93667 83349 438c0068a21885c36eb7edf786526f1b ""
+  "figures/seguimiento-ocular.png" 1783754405.48231 1976595 897bdd0ab141a5f83e5039b908810302 ""
+  "figures/switches-adaptados.png" 1783718283.69159 18977 4768c34ccd26d73407f186a75b2aea7f ""
+  "figures/teclado-adaptado.png" 1783702569.98041 574455 0bba16678c384ca407db7ff95130b1ae ""
+  "figures/teclado-ergonomico.png" 1783702292.44825 144654 f00146915f10afc86849a7c5c502ef41 ""
+  "figures/teclado-hid.png" 1783754574.41626 751468 2e76a7dd572be9363996cf70c83a0851 ""
   "tfg.acr" 0 -1 0 ""
-  "tfg.aux" 1782933140.02198 22514 8e47b3ea50986d1d7db4c470fc6507bd "xelatex"
-  "tfg.bbl" 1782840306.84074 36004 5050390f3e6ed2aa18a40f1b174db4c6 "biber tfg"
-  "tfg.glo" 1782933140.03884 243 3b0d782dbcdeb3d9d97b90b9017712cd "xelatex"
+  "tfg.aux" 1783755278.12537 28647 5cdbfb3413abb95e641432adee89b3b7 "xelatex"
+  "tfg.bbl" 1783699651.57009 37217 e03d5a49dc762b50c05477d00a518a64 "biber tfg"
   "tfg.gls" 0 -1 0 ""
-  "tfg.log" 1782933140.03898 64437 b3f873dd0c1af492c1b461875b0cc162 "xelatex"
-  "tfg.out" 1782933140.03198 6292 f28afc1162ca606f82706abe3ac5650f "xelatex"
-  "tfg.run.xml" 1782933140.03884 2430 7817c9417fccef414fca3ae73e8d1eff "xelatex"
-  "tfg.tex" 1782841921.83918 8039 9e660f52de63e051f5454c7ea196048b ""
-  "tfg.toc" 1782933140.03884 6734 95621e4cf4ede5fb97f04430cec96e9f "xelatex"
+  "tfg.log" 1783755278.13741 64502 e90f7ca7fb9ff61390ea011f8a0397aa "xelatex"
+  "tfg.out" 1783755278.13237 8992 66b99562ffbda95d281865efc9dd9961 "xelatex"
+  "tfg.run.xml" 1783755278.13741 2430 7817c9417fccef414fca3ae73e8d1eff "xelatex"
+  "tfg.tex" 1783693517.21291 11061 29534e653dbd3836d500f59f8cce933a ""
+  "tfg.toc" 1783755278.13741 8936 3ff40c5295092a99d30d8c127c3afe90 "xelatex"
   "upm-report.cls" 1781470727.99809 22253 1a35383b19da426f2e052486316fcda3 ""
   "upm-report/images/etsisi-isotipo-white.pdf" 1781472364.56432 339616 896dd56b7d4499e9ce28862488274438 ""
   "upm-report/images/upm-logotipo.png" 1781472364.56487 170969 e5b222d40a805affc1c0f315f988a044 ""
@@ -224,5 +232,4 @@
   "tfg.toc"
   "tfg.xdv"
   (rewritten before read)
-  "tfg.glo"
   "tfg.log"
