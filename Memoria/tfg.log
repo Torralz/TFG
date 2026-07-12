@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026/Arch Linux) (preloaded format=xelatex 2026.6.14)  12 JUL 2026 16:23
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026/Arch Linux) (preloaded format=xelatex 2026.6.14)  12 JUL 2026 17:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1913,9 +1913,47 @@ LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
  [52]
 Capítulo 5.
-) [53
 
-] [54
+Underfull \hbox (badness 6691) in paragraph at lines 32--32
+[]|\TU/SourceSerifPro(0)/m/n/12 Conseguido par-
+ []
+
+
+Underfull \hbox (badness 2980) in paragraph at lines 32--32
+\TU/SourceSerifPro(0)/m/n/12 para organizar letras, acciones
+ []
+
+
+Underfull \hbox (badness 1102) in paragraph at lines 32--32
+[]|\TU/SourceSerifPro(0)/m/n/12 Incorporar realimentación vi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[]|\TU/SourceSerifPro(0)/m/n/12 Parcialmente
+ []
+
+[53
+
+]
+LaTeX Info: Redefining \. on input line 36.
+LaTeX Info: Redefining \% on input line 36.
+ [54]
+LaTeX Info: Redefining \. on input line 51.
+LaTeX Info: Redefining \% on input line 51.
+ [55]
+LaTeX Info: Redefining \. on input line 67.
+LaTeX Info: Redefining \% on input line 67.
+ [56]
+LaTeX Info: Redefining \. on input line 81.
+LaTeX Info: Redefining \% on input line 81.
+ [57]
+LaTeX Info: Redefining \. on input line 94.
+LaTeX Info: Redefining \% on input line 94.
+ [58])
+LaTeX Info: Redefining \. on input line 240.
+LaTeX Info: Redefining \% on input line 240.
+ [59] [60
 
 
 ]
@@ -1935,7 +1973,7 @@ Overfull \hbox (7.27571pt too wide) in paragraph at lines 240--240
 
 LaTeX Info: Redefining \. on input line 240.
 LaTeX Info: Redefining \% on input line 240.
-[55]
+[61]
 Overfull \hbox (1.49832pt too wide) in paragraph at lines 240--240
 \TU/SourceSerifPro(0)/m/n/12 jun. de 2026. dirección: [][]$[][][][][] [] [] [] [][][][] [] [][][][][][][][][][][] [] [][][] [] [][][][] [] [][][][][][][] []
  []
@@ -1947,7 +1985,7 @@ Overfull \hbox (0.79572pt too wide) in paragraph at lines 240--240
 
 LaTeX Info: Redefining \. on input line 240.
 LaTeX Info: Redefining \% on input line 240.
-[56]
+[62]
 No file tfg.gls.
 
 Overfull \hbox (8.50163pt too wide) in paragraph at lines 240--240
@@ -1955,7 +1993,7 @@ Overfull \hbox (8.50163pt too wide) in paragraph at lines 240--240
  []
 
 No file tfg.acr.
-[57
+[63
 
 ]
 File: upm-report/images/etsisi-isotipo-white.pdf Graphic file (type pdf)
@@ -1964,7 +2002,7 @@ File: upm-report/images/etsisi-isotipo-white.pdf Graphic file (type pdf)
 File: se-utf32be.def 2019/11/29 v1.12 stringenc: UTF-32BE
 ) (/usr/share/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
-) [58
+) [64
 
 ] (./tfg.aux
 LaTeX Info: Redefining \sptext on input line 20.
@@ -1976,18 +2014,18 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `tfg.out' has not changed.
-(rerunfilecheck)             Checksum: F513BBD52EFD6D452FA477CCEC81D3C8;9138.
+(rerunfilecheck)             Checksum: 4950E41B916979E10D63F38902A8CBF7;9274.
 Package logreq Info: Writing requests to 'tfg.run.xml'.
 \openout1 = `tfg.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54305 strings out of 470137
- 1097447 string characters out of 5478427
- 2168202 words of memory out of 5000000
- 82100 multiletter control sequences out of 15000+600000
+ 54311 strings out of 470137
+ 1097597 string characters out of 5478427
+ 2168668 words of memory out of 5000000
+ 82106 multiletter control sequences out of 15000+600000
  636421 words of font info for 129 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 92i,12n,107p,2533b,32833s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 92i,12n,107p,2533b,32832s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on tfg.xdv (65 pages, 1166704 bytes).
+Output written on tfg.xdv (71 pages, 1309288 bytes).

@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber tfg"] 1783866207.04078 "tfg.bcf" "tfg.bbl" "tfg" 1783866225.10476 0
+["biber tfg"] 1783866207.04078 "tfg.bcf" "tfg.bbl" "tfg" 1783868511.80933 0
   "references.bib" 1783697889.63613 7360 d7be05f249acb326292f4e5cbd9dafef ""
-  "tfg.bcf" 1783866218.15923 110671 65bb5cbd0df66a8817c82996d13d2a32 "xelatex"
+  "tfg.bcf" 1783868505.0098 110671 65bb5cbd0df66a8817c82996d13d2a32 "xelatex"
   (generated)
   "tfg.bbl"
   "tfg.blg"
   (rewritten before read)
-["xdvipdfmx"] 1783866218.28617 "tfg.xdv" "tfg.pdf" "tfg" 1783866225.10809 0
-  "tfg.xdv" 1783866218.16122 1166704 2bc6cabb4c1d16ed5d85b464f1099d6a "xelatex"
+["xdvipdfmx"] 1783868505.13141 "tfg.xdv" "tfg.pdf" "tfg" 1783868511.81325 0
+  "tfg.xdv" 1783868505.01222 1309288 25ad8c0a48f72edadc7a82a74f5d3eb5 "xelatex"
   (generated)
   "tfg.pdf"
   (rewritten before read)
-["xelatex"] 1783866212.98521 "tfg.tex" "tfg.xdv" "tfg" 1783866225.10489 0
+["xelatex"] 1783868499.73417 "tfg.tex" "tfg.xdv" "tfg" 1783868511.80948 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1775415801 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1775415801 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1775415801 1004 54797486969f23fa377b128694d548df ""
@@ -268,7 +268,7 @@
   "capitulos/02_estado_del_arte.tex" 1783755260.89687 38356 b2c1c350c9650b71c762b2f4a33b4197 ""
   "capitulos/03_analisis_diseno_implementacion.tex" 1783847219.90963 38708 4c0786fa930fe2411428ac4d37245309 ""
   "capitulos/06_pruebas_resultados.tex" 1783866200.38239 22833 2d597832e33fd22f2a047ef4973adb19 ""
-  "capitulos/07_conclusiones.tex" 1782841115.96805 193 62ecc12c351b4157b8717941c65c2782 ""
+  "capitulos/07_conclusiones.tex" 1783868493.21407 14753 f6a7debc5ddf05c1a174944423cd1ca5 ""
   "figures/apple-head-pointer.png" 1783754002.92999 28545 e18b3d6502ed5fd0a5f1c6e03974c98e ""
   "figures/google-project-gameface-67366448.png" 1783754272.93667 83349 438c0068a21885c36eb7edf786526f1b ""
   "figures/joystick-hw504.png" 1783782893.33489 173945 ac37a2ee7e7ab9c2856861851dd831fa ""
@@ -281,14 +281,14 @@
   "figures/teclado-hid.png" 1783754574.41626 751468 2e76a7dd572be9363996cf70c83a0851 ""
   "figures/xiao-esp32c3.png" 1783780022.04743 59990 2b88bdc55d9679840531e8176d8694b3 ""
   "tfg.acr" 0 -1 0 ""
-  "tfg.aux" 1783866218.14823 31739 8ab75288d87df4c606deaaffa5e83dab "xelatex"
+  "tfg.aux" 1783868504.9968 32560 9e2b2e0198250e6293d7a9e4a4bcc0c2 "xelatex"
   "tfg.bbl" 1783866207.77122 37276 edd4c38a063bae3b26dad330f92c5a32 "biber tfg"
   "tfg.gls" 0 -1 0 ""
-  "tfg.log" 1783866218.16223 79438 1c6002e3303a46c76ffcfc62e08a5173 "xelatex"
-  "tfg.out" 1783866218.15623 9138 f513bbd52efd6d452fa477ccec81d3c8 "xelatex"
-  "tfg.run.xml" 1783866218.16122 2430 7817c9417fccef414fca3ae73e8d1eff "xelatex"
+  "tfg.log" 1783868505.01222 80485 d2dc7cc8b93ba444fc47d2ea4eb86689 "xelatex"
+  "tfg.out" 1783868505.0068 9274 4950e41b916979e10d63f38902a8cbf7 "xelatex"
+  "tfg.run.xml" 1783868505.01222 2430 7817c9417fccef414fca3ae73e8d1eff "xelatex"
   "tfg.tex" 1783841282.45679 11244 df485fd46638d542fcc51f8b3dc3cd6f ""
-  "tfg.toc" 1783866218.16122 8000 f8c2cae12fc0eb7774cf9d10dfac0cd9 "xelatex"
+  "tfg.toc" 1783868505.01222 8077 d41c6fc6dcdb137a9c61eefea2627f62 "xelatex"
   "upm-report.cls" 1781470727.99809 22253 1a35383b19da426f2e052486316fcda3 ""
   "upm-report/images/etsisi-isotipo-white.pdf" 1781472364.56432 339616 896dd56b7d4499e9ce28862488274438 ""
   "upm-report/images/upm-logotipo.png" 1781472364.56487 170969 e5b222d40a805affc1c0f315f988a044 ""

@@ -1,10 +1,95 @@
-\chapter{Conclusiones y trabajo futuro}
+\chapter{Conclusiones}
 \label{ch:conclusiones}
 
-\section{Conclusiones}
+Este trabajo partía de una idea sencilla de formular, pero difícil de llevar a la práctica: construir una alternativa al teclado convencional que redujera al mínimo el número de controles físicos sin renunciar a la posibilidad de escribir texto real. A lo largo del proyecto se ha desarrollado un prototipo basado en un joystick, dos botones, una matriz RGB y comunicación Bluetooth HID, con el objetivo de comprobar si esta forma de entrada podía funcionar como prueba de concepto.
 
-\section{Cumplimiento de los objetivos}
+El resultado obtenido no debe entenderse como un producto final. Todavía quedan aspectos importantes por mejorar, especialmente en la integración física, la ergonomía y la validación con usuarios. Aun así, el desarrollo realizado permite afirmar que la propuesta es viable desde el punto de vista técnico. El sistema es capaz de leer las entradas del joystick y los botones, seleccionar caracteres mediante capas, mostrar información visual en la matriz RGB y enviar pulsaciones de teclado a un dispositivo receptor.
 
-\section{Limitaciones del prototipo}
+Además del resultado material, el proyecto ha servido para unir varias áreas trabajadas durante la carrera: programación en C, sistemas empotrados, lectura de señales analógicas, interrupciones, comunicación Bluetooth, protocolos HID, diseño de estructuras de datos, representación binaria de caracteres y diseño físico mediante herramientas de modelado 3D. Esta combinación ha sido una de las partes más valiosas del trabajo, porque ha obligado a tomar decisiones de diseño tanto a nivel electrónico como software y mecánico.
 
-\section{Trabajo futuro}
+\section{Grado de consecución de los objetivos}
+\label{sec:consecucion-objetivos}
+
+El objetivo principal del trabajo era plantear y construir un dispositivo de entrada de texto alternativo al teclado convencional. Este objetivo se ha cumplido en buena medida, aunque no todos los apartados han alcanzado el mismo nivel de madurez. La Tabla~\ref{tab:consecucion-objetivos} resume el grado de consecución de los principales objetivos planteados.
+
+\begin{table}[H]
+    \centering
+    \caption{Grado de consecución de los objetivos del proyecto}
+    \label{tab:consecucion-objetivos}
+    \begin{tabularx}{\textwidth}{@{}p{0.36\textwidth}p{0.20\textwidth}X@{}}
+        \toprule
+        \textbf{Objetivo} & \textbf{Estado} & \textbf{Comentario} \\
+        \midrule
+        Plantear una alternativa al teclado convencional & Conseguido & Se ha definido un sistema de escritura basado en joystick, botones y capas, distinto al modelo de teclado tradicional. \\
+        Implementar un prototipo funcional & Conseguido parcialmente & El sistema electrónico y el firmware funcionan, aunque la integración final en una carcasa compacta queda pendiente de completar. \\
+        Reducir el número de controles físicos & Conseguido & La propuesta utiliza dos botones y un joystick como entradas principales, frente a las decenas de teclas de un teclado convencional. \\
+        Permitir la escritura de letras, números y símbolos & Conseguido & Se han definido bancos y capas para organizar letras, acciones básicas, números y caracteres especiales. \\
+        Enviar texto como teclado estándar & Conseguido & El prototipo se comunica mediante Bluetooth HID, por lo que el dispositivo receptor lo interpreta como un teclado. \\
+        Incorporar realimentación visual & Conseguido & La matriz RGB muestra el carácter seleccionado y ayuda a identificar la capa activa. \\
+        Diseñar una carcasa de mano & Parcialmente conseguido & Se ha trabajado en el diseño físico, pero la carcasa todavía requiere iteraciones de diseño, impresión y ajuste. \\
+        Validar el sistema con usuarios reales & Pendiente & No se ha realizado un estudio formal de uso con usuarios, por quedar fuera del alcance de esta primera versión. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+El mayor avance del proyecto está en haber pasado de una idea abstracta a un prototipo operativo. El teclado no se limita a simular una posible solución, sino que implementa el ciclo completo de entrada, procesamiento, visualización y envío de caracteres. Esto permite valorar el sistema con más fundamento que si solo se hubiera trabajado sobre un diseño teórico.
+
+La parte que queda menos cerrada es la integración física. La carcasa es esencial en un dispositivo de este tipo, porque la comodidad depende directamente de la posición del joystick, de los botones, del peso, del tamaño y de la forma en que se sujeta. Por tanto, aunque el prototipo electrónico funcione, todavía no se puede considerar una versión final desde el punto de vista ergonómico.
+
+\section{Limitaciones del trabajo}
+\label{sec:limitaciones-trabajo}
+
+La principal limitación del trabajo es que no se ha realizado una validación formal con usuarios. El proyecto permite comprobar que la idea funciona técnicamente, pero no demuestra todavía que sea cómoda, rápida o útil para distintos perfiles de usuario. Esto es especialmente importante en un proyecto con motivación accesible, ya que no basta con que el dispositivo funcione: debe adaptarse a necesidades reales.
+
+Tampoco se ha comparado la velocidad de escritura frente a un teclado convencional u otros sistemas de entrada. Esta comparación no sería inmediata, porque el uso del prototipo requiere aprendizaje. La mayoría de usuarios ya tienen años de práctica con teclados tradicionales, mientras que este sistema exige memorizar capas, posiciones y combinaciones. Por ese motivo, una evaluación justa tendría que incluir un periodo de adaptación antes de medir velocidad o tasa de error.
+
+Otra limitación importante es la carcasa. El diseño físico todavía puede mejorar mucho. La posición de los controles, el tamaño total, la forma de agarre y el reparto del peso son aspectos que solo pueden evaluarse correctamente cuando el prototipo está montado como una pieza compacta. La falta de experiencia previa en impresión 3D también ha condicionado esta parte del trabajo, aunque al mismo tiempo ha permitido aprender una herramienta y un proceso de fabricación nuevos.
+
+La autonomía tampoco ha quedado completamente caracterizada. El prototipo se ha planteado con batería recargable, pero no se ha realizado una comparativa entre distintas capacidades, tamaños y configuraciones. En una versión futura habría que medir el consumo real del sistema, especialmente por el impacto de la matriz RGB, y estudiar qué batería ofrece el mejor equilibrio entre autonomía, peso y volumen.
+
+Por último, la distribución de caracteres propuesta debe considerarse una primera aproximación. Se ha buscado que las letras más frecuentes sean más accesibles, pero no se ha demostrado todavía que esta distribución sea la más cómoda o eficiente. Esto afecta especialmente a números, signos de puntuación y caracteres especiales, donde la frecuencia de uso depende mucho del idioma, del contexto y del tipo de texto que escriba cada usuario.
+
+\section{Impacto social}
+\label{sec:impacto-social}
+
+El valor social del proyecto no está únicamente en el prototipo construido, sino en explorar otra forma de escribir que no parta del teclado convencional como única referencia. Los teclados actuales están muy normalizados, pero no son igualmente cómodos para todas las personas. Requieren una disposición concreta de las manos, coordinación entre varios dedos y, en muchos casos, una postura de uso relativamente rígida.
+
+La propuesta desarrollada reduce la escritura a un conjunto muy pequeño de entradas físicas. Esto abre la posibilidad de adaptar el sistema a personas que no puedan utilizar cómodamente un teclado completo, o que tengan más facilidad para controlar unos dedos concretos que toda la mano. No se pretende afirmar que esta solución sea válida para todos los casos, pero sí que puede servir como base para estudiar alternativas más flexibles.
+
+También hay un aspecto práctico relevante: el dispositivo es silencioso y portátil. A diferencia del dictado por voz, no requiere hablar en voz alta, por lo que podría utilizarse en entornos como bibliotecas, aulas, oficinas o transporte público. Además, al comportarse como un teclado HID, no depende necesariamente de una aplicación concreta instalada en el dispositivo receptor.
+
+Durante el desarrollo también se ha observado que el sistema puede resultar interesante más allá del ámbito estrictamente accesible. El hecho de usar los dedos más hábiles, reducir el número de movimientos y concentrar la interacción en una mano plantea una forma distinta de escribir, más cercana a un mando que a un teclado tradicional. Esta idea todavía necesita pruebas, pero es una línea de trabajo con potencial.
+
+\section{Impacto medioambiental}
+\label{sec:impacto-medioambiental}
+
+El impacto medioambiental del prototipo debe analizarse con prudencia, porque se trata de una primera versión y no de un producto fabricado a escala. Aun así, hay algunos aspectos que conviene destacar.
+
+En primer lugar, el dispositivo utiliza muchos menos controles físicos que un teclado convencional. Un teclado completo puede tener decenas de teclas, interruptores, estabilizadores, piezas plásticas y elementos mecánicos. En cambio, este prototipo concentra la interacción en dos botones y un joystick. En términos de diseño, esto apunta a una reducción del número de componentes necesarios para realizar una función similar: introducir texto.
+
+El tamaño reducido también puede disminuir la cantidad de material empleado en la carcasa. Si el diseño final se optimiza correctamente, la fabricación de una carcasa pequeña requeriría menos plástico que la de un teclado tradicional. Además, la impresión 3D permite iterar sin necesidad de fabricar moldes, lo que resulta adecuado para fases tempranas de desarrollo. Sin embargo, también puede generar residuos si se realizan muchas pruebas fallidas, por lo que debe utilizarse con criterio.
+
+El uso de una batería recargable evita depender de pilas desechables. No obstante, esto no elimina el impacto ambiental, ya que las baterías tienen una vida útil limitada y deben reciclarse correctamente. Por este motivo, una versión futura debería facilitar la sustitución de la batería y evitar que el dispositivo completo quede inutilizado cuando esta se degrade.
+
+Otro punto importante es el consumo energético. La matriz RGB aporta información visual útil, pero también es uno de los elementos que más puede afectar a la autonomía. Por eso se ha limitado el brillo durante el desarrollo. Esta decisión no solo mejora la comodidad visual, sino que también reduce el consumo y el calentamiento del sistema.
+
+\section{Trabajos futuros}
+\label{sec:trabajos-futuros}
+
+La primera línea de trabajo futuro debería ser la validación con usuarios. Sería necesario probar el dispositivo con personas con distintas capacidades, tamaños de mano y formas de agarre. Esta evaluación permitiría comprobar si la posición de los controles es adecuada, si la distribución de caracteres resulta fácil de aprender y si el sistema puede ser útil en situaciones reales.
+
+También sería importante medir la velocidad de escritura y la tasa de error. Estas métricas deberían tomarse después de un periodo de aprendizaje, no solo en el primer contacto con el dispositivo. De esa forma se podría analizar si el sistema mejora con la práctica y qué combinaciones generan más errores. A partir de esos datos sería posible ajustar la distribución de caracteres y mejorar la lógica de selección.
+
+Otra línea clara es mejorar la carcasa. El objetivo sería reducir el tamaño, mejorar la ergonomía, proteger mejor los componentes y hacer que el montaje sea más robusto. También sería interesante estudiar distintas posiciones para el joystick y los botones, ya que pequeños cambios en la colocación pueden tener un impacto grande en la comodidad.
+
+El sistema también podría ampliarse a más idiomas. Una ventaja de esta propuesta es que las letras no están impresas físicamente en teclas, sino definidas por software. Esto permitiría añadir nuevas distribuciones mediante firmware. En una versión futura se podrían crear mapas específicos para distintos idiomas o incluso estudiar una distribución basada en alfabetos más generales, como el Alfabeto Fonético Internacional, aunque esto requeriría un aprendizaje mayor por parte del usuario.
+
+Otra mejora posible sería permitir configuraciones personalizadas. No todos los usuarios escriben igual ni tienen las mismas prioridades. Algunos podrían preferir que ciertos signos estén más accesibles, otros podrían necesitar atajos frecuentes o macros, y otros podrían adaptar el teclado a una limitación física concreta. Permitir que el usuario modifique capas, caracteres y funciones haría que el dispositivo fuese mucho más flexible.
+
+También se podría estudiar la incorporación de funciones inteligentes de apoyo a la escritura. Un sistema de autocompletado, por ejemplo basado en modelos simples como cadenas de Markov, podría reducir el número de entradas necesarias para escribir palabras frecuentes. Esta función tendría que diseñarse con cuidado para no hacer el sistema más complejo de usar, pero podría mejorar mucho la eficiencia.
+
+Además, sería interesante explorar nuevas formas de entrada complementarias. Un micrófono permitiría combinar escritura manual y dictado cuando el usuario lo desee. Un giroscopio podría abrir la posibilidad de usar el dispositivo también como ratón, detectando movimientos de la mano para controlar el cursor. Estas ampliaciones no forman parte del prototipo actual, pero muestran que la arquitectura puede crecer hacia un dispositivo de entrada más completo.
+
+Por último, una versión más avanzada podría incluir actualización de firmware por OTA. Esto permitiría añadir idiomas, corregir errores o incorporar nuevas funciones sin conectar físicamente el dispositivo por USB. En esta primera versión se ha priorizado mantener el sistema simple, pero en un desarrollo posterior sería una mejora útil para facilitar el mantenimiento.
+
+En conjunto, este trabajo demuestra que es posible construir un teclado distinto al modelo convencional usando componentes accesibles y una arquitectura relativamente compacta. Todavía quedan muchas mejoras por hacer, pero el prototipo deja una base funcional sobre la que seguir trabajando. Personalmente, el desarrollo ha sido una experiencia especialmente motivadora, porque ha permitido transformar una idea poco habitual en un sistema real, conectando conocimientos de electrónica, programación, comunicación inalámbrica, diseño físico y accesibilidad.

@@ -80,11 +80,12 @@
 \contentsline {section}{\numberline {4.11}Resultados obtenidos}{50}{section.4.11}%
 \contentsline {section}{\numberline {4.12}Limitaciones detectadas}{51}{section.4.12}%
 \contentsline {section}{\numberline {4.13}Valoración final del prototipo}{52}{section.4.13}%
-\contentsline {chapter}{\numberline {5}Conclusiones y trabajo futuro}{53}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Conclusiones}{53}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Cumplimiento de los objetivos}{53}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Limitaciones del prototipo}{53}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Trabajo futuro}{53}{section.5.4}%
+\contentsline {chapter}{\numberline {5}Conclusiones}{53}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Grado de consecución de los objetivos}{53}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Limitaciones del trabajo}{55}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Impacto social}{56}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Impacto medioambiental}{57}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Trabajos futuros}{57}{section.5.5}%
 \contentsfinish 
-\contentsline {section}{Glosario}{57}{section*.30}%
-\contentsline {section}{Siglas}{57}{section*.31}%
+\contentsline {section}{Glosario}{63}{section*.31}%
+\contentsline {section}{Siglas}{63}{section*.32}%
