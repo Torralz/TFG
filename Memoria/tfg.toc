@@ -67,19 +67,24 @@
 \contentsline {section}{\numberline {3.7}Diseño físico e integración prevista}{39}{section.3.7}%
 \contentsline {section}{\numberline {3.8}Justificación de decisiones principales}{40}{section.3.8}%
 \contentsline {chapter}{\numberline {4}Pruebas y resultados}{42}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Plan de pruebas}{42}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Pruebas funcionales}{42}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Pruebas de escritura}{42}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Pruebas de conexión Bluetooth}{42}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Pruebas de autonomía}{42}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Pruebas de comodidad y aprendizaje}{42}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Resultados obtenidos}{42}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Limitaciones detectadas}{42}{section.4.8}%
-\contentsline {chapter}{\numberline {5}Conclusiones y trabajo futuro}{43}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Conclusiones}{43}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Cumplimiento de los objetivos}{43}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Limitaciones del prototipo}{43}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Trabajo futuro}{43}{section.5.4}%
+\contentsline {section}{\numberline {4.1}Enfoque de las pruebas}{42}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Validación inicial del microcontrolador}{43}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Pruebas del joystick}{44}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Pruebas de botones y selección de capas}{45}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Distribución de caracteres y comprobación por consola}{46}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Comunicación Bluetooth HID}{46}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Pruebas de la matriz RGB}{47}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Modos de funcionamiento y realimentación visual}{48}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Diseño físico e integración}{48}{section.4.9}%
+\contentsline {section}{\numberline {4.10}Problemas encontrados y soluciones aplicadas}{49}{section.4.10}%
+\contentsline {section}{\numberline {4.11}Resultados obtenidos}{50}{section.4.11}%
+\contentsline {section}{\numberline {4.12}Limitaciones detectadas}{51}{section.4.12}%
+\contentsline {section}{\numberline {4.13}Valoración final del prototipo}{52}{section.4.13}%
+\contentsline {chapter}{\numberline {5}Conclusiones y trabajo futuro}{53}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Conclusiones}{53}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Cumplimiento de los objetivos}{53}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Limitaciones del prototipo}{53}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Trabajo futuro}{53}{section.5.4}%
 \contentsfinish 
-\contentsline {section}{Glosario}{47}{section*.27}%
-\contentsline {section}{Siglas}{47}{section*.28}%
+\contentsline {section}{Glosario}{57}{section*.30}%
+\contentsline {section}{Siglas}{57}{section*.31}%

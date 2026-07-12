@@ -901,6 +901,8 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{espressifADC}
+  \missing{espressifBluetoothApi}
 \endrefsection
 \endinput
 

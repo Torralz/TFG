@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026/Arch Linux) (preloaded format=xelatex 2026.6.14)  12 JUL 2026 11:07
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026/Arch Linux) (preloaded format=xelatex 2026.6.14)  12 JUL 2026 16:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1479,7 +1479,22 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'tfg.bbl' found.
- (./tfg.bbl)
+ (./tfg.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                espressifADC
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                espressifBluetoothApi
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
 Package biblatex Info: Reference section=0 on input line 102.
 Package biblatex Info: Reference segment=0 on input line 102.
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1567,15 +1582,16 @@ LaTeX Info: Redefining \% on input line 1.
  [1
 
 
-])
+]
+LaTeX Info: Redefining \sptext on input line 85.
+LaTeX Info: Redefining \. on input line 85.
+LaTeX Info: Redefining \% on input line 85.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 85.
+ [2])
 \tf@toc=\write9
 \openout9 = `tfg.toc'.
 
-LaTeX Info: Redefining \. on input line 102.
-LaTeX Info: Redefining \% on input line 102.
-Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 102.
- [2]
 LaTeX Info: Redefining \. on input line 102.
 LaTeX Info: Redefining \% on input line 102.
  [3]
@@ -1770,13 +1786,136 @@ LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
  [41]
 Capítulo 4.
-) (./capitulos/07_conclusiones.tex [42
+
+Overfull \hbox (12.8714pt too wide) in paragraph at lines 33--33
+[]|\TU/SourceSerifPro(0)/m/n/12 Microcontrolador| 
+ []
+
+
+Underfull \hbox (badness 1168) in paragraph at lines 33--33
+[]|\TU/SourceSerifPro(0)/m/n/12 Enviar pulsaciones a un
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+[]|\TU/SourceSerifPro(0)/m/n/12 Unir lectura, visualiza-
+ []
+
+[42
 
 ]
-Capítulo 5.
-) [43
+Overfull \hbox (8.56909pt too wide) in paragraph at lines 36--36
+|[]\TU/NimbusSans(0)/m/n/24.88 Validación inicial del microcontrolador| 
+ []
 
-] [44
+LaTeX Info: Redefining \. on input line 42.
+LaTeX Info: Redefining \% on input line 42.
+[43]
+
+LaTeX Warning: Citation 'espressifADC' on page 44 undefined on input line 52.
+
+LaTeX Info: Redefining \. on input line 57.
+LaTeX Info: Redefining \% on input line 57.
+[44]
+LaTeX Info: Redefining \. on input line 84.
+LaTeX Info: Redefining \% on input line 84.
+ [45]
+
+LaTeX Warning: Citation 'espressifBluetoothApi' on page 46 undefined on input line 99.
+
+LaTeX Info: Redefining \. on input line 102.
+LaTeX Info: Redefining \% on input line 102.
+[46]
+LaTeX Info: Redefining \. on input line 117.
+LaTeX Info: Redefining \% on input line 117.
+ [47]
+Overfull \hbox (1.85982pt too wide) in paragraph at lines 120--120
+|[]\TU/NimbusSans(0)/m/n/24.88 Modos de funcionamiento y realimen-
+ []
+
+LaTeX Info: Redefining \. on input line 133.
+LaTeX Info: Redefining \% on input line 133.
+[48]
+Overfull \hbox (14.36615pt too wide) in paragraph at lines 138--138
+|[]\TU/NimbusSans(0)/m/n/24.88 Problemas encontrados y soluciones
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
+[]|\TU/SourceSerifPro(0)/m/n/12 Alimentación inicial
+ []
+
+
+Underfull \hbox (badness 1142) in paragraph at lines 160--160
+[]|\TU/SourceSerifPro(0)/m/n/12 Alimentar el joystick desde
+ []
+
+
+Underfull \hbox (badness 1533) in paragraph at lines 160--160
+[]|\TU/SourceSerifPro(0)/m/n/12 Interpretación de pul-
+ []
+
+
+Underfull \hbox (badness 3525) in paragraph at lines 160--160
+\TU/SourceSerifPro(0)/m/n/12 sadores de cuatro pi-
+ []
+
+
+Underfull \hbox (badness 5274) in paragraph at lines 160--160
+[]|\TU/SourceSerifPro(0)/m/n/12 Conexiones incorrectas du-
+ []
+
+
+Underfull \hbox (badness 3375) in paragraph at lines 160--160
+\TU/SourceSerifPro(0)/m/n/12 por interrupciones GPIO y
+ []
+
+
+Underfull \hbox (badness 5548) in paragraph at lines 160--160
+[]|\TU/SourceSerifPro(0)/m/n/12 Conexión BLE inesta-
+ []
+
+
+Underfull \hbox (badness 2753) in paragraph at lines 160--160
+[]|\TU/SourceSerifPro(0)/m/n/12 Algunas letras enviadas no
+ []
+
+
+Underfull \hbox (badness 1072) in paragraph at lines 160--160
+[]|\TU/SourceSerifPro(0)/m/n/12 Revisar manualmente la ta-
+ []
+
+
+Underfull \hbox (badness 6559) in paragraph at lines 160--160
+[]|\TU/SourceSerifPro(0)/m/n/12 Brillo excesivo de la
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
+[]|\TU/SourceSerifPro(0)/m/n/12 Desajuste entre letra
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 160--160
+[]|\TU/SourceSerifPro(0)/m/n/12 Espacio limitado para com-
+ []
+
+LaTeX Info: Redefining \. on input line 162.
+LaTeX Info: Redefining \% on input line 162.
+[49]
+LaTeX Info: Redefining \. on input line 169.
+LaTeX Info: Redefining \% on input line 169.
+ [50]
+LaTeX Info: Redefining \. on input line 189.
+LaTeX Info: Redefining \% on input line 189.
+ [51]) (./capitulos/07_conclusiones.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [52]
+Capítulo 5.
+) [53
+
+] [54
 
 
 ]
@@ -1796,7 +1935,7 @@ Overfull \hbox (7.27571pt too wide) in paragraph at lines 240--240
 
 LaTeX Info: Redefining \. on input line 240.
 LaTeX Info: Redefining \% on input line 240.
-[45]
+[55]
 Overfull \hbox (1.49832pt too wide) in paragraph at lines 240--240
 \TU/SourceSerifPro(0)/m/n/12 jun. de 2026. dirección: [][]$[][][][][] [] [] [] [][][][] [] [][][][][][][][][][][] [] [][][] [] [][][][] [] [][][][][][][] []
  []
@@ -1808,7 +1947,7 @@ Overfull \hbox (0.79572pt too wide) in paragraph at lines 240--240
 
 LaTeX Info: Redefining \. on input line 240.
 LaTeX Info: Redefining \% on input line 240.
-[46]
+[56]
 No file tfg.gls.
 
 Overfull \hbox (8.50163pt too wide) in paragraph at lines 240--240
@@ -1816,7 +1955,7 @@ Overfull \hbox (8.50163pt too wide) in paragraph at lines 240--240
  []
 
 No file tfg.acr.
-[47
+[57
 
 ]
 File: upm-report/images/etsisi-isotipo-white.pdf Graphic file (type pdf)
@@ -1825,7 +1964,7 @@ File: upm-report/images/etsisi-isotipo-white.pdf Graphic file (type pdf)
 File: se-utf32be.def 2019/11/29 v1.12 stringenc: UTF-32BE
 ) (/usr/share/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
-) [48
+) [58
 
 ] (./tfg.aux
 LaTeX Info: Redefining \sptext on input line 20.
@@ -1837,18 +1976,18 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `tfg.out' has not changed.
-(rerunfilecheck)             Checksum: 642001A65D3618E94449E3911FC5E924;7584.
+(rerunfilecheck)             Checksum: F513BBD52EFD6D452FA477CCEC81D3C8;9138.
 Package logreq Info: Writing requests to 'tfg.run.xml'.
 \openout1 = `tfg.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54288 strings out of 470137
- 1096998 string characters out of 5478427
- 2165485 words of memory out of 5000000
- 82083 multiletter control sequences out of 15000+600000
+ 54305 strings out of 470137
+ 1097447 string characters out of 5478427
+ 2168202 words of memory out of 5000000
+ 82100 multiletter control sequences out of 15000+600000
  636421 words of font info for 129 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  92i,12n,107p,2533b,32833s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on tfg.xdv (55 pages, 945560 bytes).
+Output written on tfg.xdv (65 pages, 1166704 bytes).

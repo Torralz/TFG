@@ -1,18 +1,192 @@
 \chapter{Pruebas y resultados}
 \label{ch:pruebas-resultados}
 
-\section{Plan de pruebas}
+Este capítulo recoge las pruebas realizadas durante el desarrollo del prototipo y los resultados obtenidos en cada fase. No se plantea como una validación clínica ni como una evaluación industrial del dispositivo, sino como una comprobación progresiva de que la idea podía convertirse en un sistema funcional: leer entradas físicas, interpretarlas como caracteres, mostrar información visual y enviar pulsaciones de teclado mediante Bluetooth.
 
-\section{Pruebas funcionales}
+El desarrollo no siguió un camino lineal. Varias partes que sobre el papel parecían sencillas, como alimentar el joystick o leer un pulsador, exigieron pruebas específicas antes de poder integrarse en el conjunto. Por ese motivo, el capítulo se organiza siguiendo el orden real de trabajo: primero se validaron los componentes por separado y después se fueron uniendo hasta obtener una versión integrada del prototipo.
 
-\section{Pruebas de escritura}
+\section{Enfoque de las pruebas}
+\label{sec:enfoque-pruebas}
 
-\section{Pruebas de conexión Bluetooth}
+Las pruebas se realizaron de forma incremental. Antes de unir todos los módulos, se comprobaron por separado el microcontrolador, el joystick, los botones, la comunicación Bluetooth, la matriz RGB y la lógica de selección de caracteres. Esta forma de trabajo permitió aislar mejor los fallos: si una lectura analógica no era correcta, el problema estaba en el joystick o en el ADC; si una letra se mostraba bien en la matriz pero se escribía mal en el teléfono, el fallo estaba en el código HID o en la tabla de correspondencias.
 
-\section{Pruebas de autonomía}
+La comunicación por consola tuvo un papel importante durante las primeras fases. Se utilizaron mensajes por UART para imprimir lecturas, estados de botones, capas activas, caracteres seleccionados y eventos internos. Aunque estas pruebas no forman parte del funcionamiento final del teclado, fueron necesarias para comprobar que cada módulo respondía como se esperaba.
 
-\section{Pruebas de comodidad y aprendizaje}
+La Tabla~\ref{tab:pruebas-realizadas} resume las pruebas principales realizadas durante el desarrollo.
+
+\begin{table}[H]
+    \centering
+    \caption{Resumen de pruebas realizadas durante el desarrollo}
+    \label{tab:pruebas-realizadas}
+    \begin{tabularx}{\textwidth}{@{}p{0.18\textwidth}p{0.30\textwidth}X@{}}
+        \toprule
+        \textbf{Prueba} & \textbf{Objetivo} & \textbf{Resultado} \\
+        \midrule
+        Microcontrolador & Comprobar GPIO, ADC y salida por UART & Se verificó que la placa respondía correctamente y que podía usarse como base del prototipo. \\
+        Joystick & Medir los rangos analógicos de los ejes X/Y & Se definieron zonas de lectura para centro y ocho direcciones tras corregir la alimentación del módulo. \\
+        Botones & Validar pulsadores y combinaciones de capa & Se comprobó el funcionamiento con entradas digitales y resistencias internas de \textit{pull-up}. \\
+        Tabla de caracteres & Asociar capas y direcciones a caracteres & Se ajustó la distribución para priorizar letras frecuentes y reducir pulsaciones en uso normal. \\
+        Bluetooth HID & Enviar pulsaciones a un dispositivo receptor & Se consiguió que el prototipo fuese reconocido como teclado y enviase códigos HID. \\
+        Matriz RGB & Mostrar caracteres y estado de capa & Se validó el encendido de LED, el uso de color, el brillo y la representación de caracteres. \\
+        Integración & Unir lectura, visualización y envío HID & Se obtuvo una versión funcional en la que la selección con joystick y botones produce salida visual y escritura. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\section{Validación inicial del microcontrolador}
+\label{sec:validacion-microcontrolador}
+
+La primera prueba se realizó al recibir la placa Seeed Studio XIAO ESP32C3. Antes de conectar el resto de componentes, se preparó un programa sencillo para comprobar que el microcontrolador funcionaba correctamente. Esta prueba consistió en enviar mensajes por UART a la consola de ESP-IDF y en utilizar varios pines como salidas digitales y entradas analógicas.
+
+El objetivo era evitar construir el resto del prototipo sobre una placa defectuosa o mal configurada. Se comprobaron salidas digitales cambiando el estado de distintos GPIO, y también se validó que los conversores analógico-digitales podían leer valores variables. Esta comprobación fue especialmente importante porque el joystick se iba a leer mediante ADC, y una lectura incorrecta en esta fase habría afectado a todo el sistema de selección.
+
+La XIAO ESP32C3 resulta adecuada para este tipo de prototipo porque integra Bluetooth Low Energy, GPIO y entradas ADC en una placa de tamaño reducido \cite{xiaoESP32C3}. En esta fase no se evaluó todavía el consumo ni la autonomía, sino la capacidad básica de la placa para leer entradas y ejecutar firmware de prueba.
+
+\section{Pruebas del joystick}
+\label{sec:pruebas-joystick}
+
+Después de comprobar la placa, se probó el joystick HW-504. La idea inicial era leer sus dos ejes analógicos y dividir el plano en nueve estados: reposo, cuatro direcciones principales y cuatro diagonales. Para ello se creó un programa que imprimía por consola los valores de los ejes X/Y mientras se movía físicamente el joystick.
+
+El primer problema apareció en esta fase. El módulo del joystick tiene el pin de alimentación marcado como \texttt{+5V}, por lo que inicialmente se alimentó con 5 V. Las lecturas obtenidas no tenían sentido práctico: en buena parte del recorrido aparecían valores saturados o muy cercanos al máximo del ADC, y solo en algunos extremos se observaban valores bajos. El comportamiento no permitía definir rangos estables para las direcciones.
+
+La causa estaba en la tensión de alimentación utilizada. Las salidas analógicas del joystick toman valores dentro del intervalo definido por su propia alimentación. Por tanto, al alimentar el módulo con 5 V, las señales \texttt{VRX} y \texttt{VRY} podían superar el rango adecuado para las entradas analógicas del ESP32C3. La documentación del ADC del ESP32-C3 indica que la conversión trabaja sobre una tensión de entrada limitada y que el rango depende de la atenuación configurada \cite{espressifADC}. En la práctica, para este prototipo era más seguro alimentar el joystick desde la salida de 3,3 V de la placa.
+
+Tras cambiar la alimentación del joystick a 3,3 V, las lecturas pasaron a ser coherentes. A partir de esas medidas se definieron rangos para detectar el centro y las ocho direcciones. También se introdujo una zona muerta alrededor del reposo, porque el joystick no vuelve siempre exactamente al mismo valor central. Sin esa zona muerta, pequeñas variaciones podrían interpretarse como movimientos reales.
+
+El resultado de esta fase fue una función capaz de transformar las lecturas ADC en una dirección discreta. Esta función se convirtió después en una de las piezas principales del firmware, ya que toda la selección de caracteres depende de ella.
+
+\section{Pruebas de botones y selección de capas}
+\label{sec:pruebas-botones-capas}
+
+La siguiente parte fue comprobar los botones externos. Para elegirlos se probaron pulsadores de distintos tamaños y formas, ya que no todos resultaban igual de cómodos para un dispositivo de mano. Durante esta fase apareció otro problema sencillo pero importante: varios pulsadores tenían cuatro pines, y al principio no era evidente qué pares estaban conectados internamente.
+
+La solución fue comprobar el funcionamiento real del pulsador antes de integrarlo en el circuito. Estos botones no tienen cuatro contactos independientes; internamente hay dos pares unidos, y al pulsar se conectan ambos lados. Una vez entendido esto, se conectó cada botón entre un GPIO y tierra, utilizando las resistencias internas de \textit{pull-up} del microcontrolador. De esta forma, cuando el botón no está pulsado la entrada se mantiene en nivel alto, y al pulsarlo pasa a nivel bajo.
+
+Primero se verificó cada botón por separado. Después se probaron las combinaciones de los dos botones, ya que en el diseño final esas combinaciones seleccionan la capa activa. Esta prueba permitió comprobar que los cuatro estados posibles podían distinguirse de forma fiable:
+
+\begin{table}[H]
+    \centering
+    \caption{Combinaciones de botones utilizadas para seleccionar capa}
+    \label{tab:resultado-combinaciones-botones}
+    \begin{tabularx}{0.78\textwidth}{@{}cccX@{}}
+        \toprule
+        \textbf{Botón 1} & \textbf{Botón 2} & \textbf{Capa base} & \textbf{Uso} \\
+        \midrule
+        0 & 0 & 0 & Primera capa del banco activo. \\
+        0 & 1 & 1 & Segunda capa del banco activo. \\
+        1 & 0 & 2 & Tercera capa del banco activo. \\
+        1 & 1 & 3 & Cuarta capa del banco activo. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+En las primeras versiones, el firmware leía los botones de forma continua. Más adelante se cambió este enfoque por un sistema basado en interrupciones GPIO. Con este cambio, el programa no tiene que estar comprobando permanentemente si se ha pulsado un botón; cuando se produce un cambio, se genera una interrupción y se procesa el evento. Esta solución encajaba mejor con un dispositivo alimentado por batería y reducía trabajo innecesario del microcontrolador.
+
+\section{Distribución de caracteres y comprobación por consola}
+\label{sec:distribucion-resultados}
+
+Una vez validados el joystick y los botones, se pasó a construir la lógica del teclado. En esta fase se asignaron caracteres a las distintas combinaciones de dirección y capa. La primera comprobación se hizo por UART: al mover el joystick y pulsar botones, el firmware imprimía en consola la dirección detectada, la capa activa y el carácter asociado.
+
+La distribución no se planteó como una colocación arbitraria. Se buscó que las letras más frecuentes en castellano estuvieran en las posiciones más accesibles del banco principal. El objetivo era reducir el número de acciones necesarias en un uso normal del teclado. Esta decisión no convierte la distribución en definitiva, pero sí da una base razonable para un primer prototipo.
+
+Durante esta fase también se añadieron acciones especiales, como espacio, borrado, salto de línea, mayúsculas y cambio al banco secundario. El banco secundario quedó reservado para números, signos de puntuación y símbolos. La separación en dos bancos permitió mantener el número de controles físicos bajo, sin renunciar a caracteres necesarios para escribir texto normal.
+
+\section{Comunicación Bluetooth HID}
+\label{sec:resultado-bluetooth-hid}
+
+Con la lógica de selección funcionando por consola, el siguiente paso fue enviar las teclas a un dispositivo real. Para ello se implementó la comunicación Bluetooth como teclado HID.
+
+En ESP-IDF existen distintas opciones para trabajar con Bluetooth. Bluedroid es una pila más general, con soporte para Bluetooth Classic y BLE. NimBLE, en cambio, está orientada a Bluetooth Low Energy y se describe en la documentación de ESP-IDF como una pila más ligera, adecuada para aplicaciones con recursos limitados por su menor tamaño de código y uso de memoria \cite{espressifBluetoothApi}. Como el prototipo solo necesitaba BLE HID, se optó por NimBLE.
+
+Esta elección tuvo una dificultad práctica: había menos ejemplos directamente aplicables al caso del teclado. En las primeras pruebas el dispositivo llegaba a aparecer en el teléfono, pero la conexión se cortaba al poco tiempo. La depuración se centró en la inicialización del servicio HID, el anuncio BLE y el formato de los informes enviados. Tras varios ajustes se consiguió una conexión estable y el dispositivo pudo comportarse como teclado ante el receptor.
+
+Después apareció un segundo problema: algunos códigos HID no producían la letra esperada. Parte de la documentación y de los ejemplos consultados no coincidían con el comportamiento observado al escribir en el teléfono. Para resolverlo, se revisaron los códigos uno a uno y se separaron dos problemas distintos: por un lado, la letra que el firmware pretendía enviar; por otro, la letra o símbolo que el sistema operativo finalmente interpretaba.
+
+Esta fase dejó una conclusión importante para el prototipo: no basta con enviar informes HID válidos. También hay que tener en cuenta la distribución de teclado configurada en el dispositivo receptor. Algunas letras y símbolos pueden depender del idioma y del mapa de teclado activo, por lo que la compatibilidad real debe probarse en los sistemas en los que se vaya a utilizar el dispositivo.
+
+\section{Pruebas de la matriz RGB}
+\label{sec:pruebas-matriz-rgb}
+
+La matriz RGB se probó inicialmente de forma independiente. La primera prueba consistió en recorrer todos los LED de la matriz, encendiendo uno cada vez y apagándolo antes de pasar al siguiente. Esta prueba permitió comprobar que la línea de datos, la alimentación y la numeración interna de los LED eran correctas.
+
+Después se probó la capacidad RGB de la matriz. Para ello se creó una secuencia de cambio gradual de color, variando las componentes roja, verde y azul. Esta prueba sirvió para comprobar que no solo se podía encender o apagar cada LED, sino también usar colores distintos para representar información del estado del teclado.
+
+El brillo fue uno de los puntos más relevantes. Con valores altos, la matriz resultaba demasiado intensa para mirarla de cerca. Además, el consumo y el calentamiento aumentaban de forma clara. Por ese motivo se limitó el brillo máximo utilizado por el firmware. Esta limitación no reduce la utilidad de la matriz, porque el objetivo no es iluminar mucho, sino mostrar de forma cómoda el carácter seleccionado y la capa activa.
+
+A partir de ahí se implementó una fuente de caracteres para la matriz. Cada símbolo se representó como una matriz binaria de píxeles, donde cada posición indica si un LED debe encenderse o permanecer apagado. El firmware consulta esa tabla cuando el usuario selecciona una tecla y dibuja el carácter correspondiente en la matriz.
+
+Durante la integración se detectaron errores de correspondencia entre tres elementos: el carácter elegido en la tabla del teclado, el código HID enviado y el símbolo mostrado en la matriz. En algunos casos el teléfono recibía una letra y la matriz mostraba otra; en otros, la matriz era correcta pero el código HID no. La solución fue revisar por separado las tablas de visualización y de envío, hasta que ambas quedaron alineadas.
+
+\section{Modos de funcionamiento y realimentación visual}
+\label{sec:modos-realimentacion}
+
+Una vez que el sistema podía leer entradas, enviar teclas y mostrar caracteres, se añadió un modo de exploración. Este modo permite mover el joystick y ver en la matriz el carácter seleccionado sin enviarlo al dispositivo conectado. La idea surgió durante las pruebas, al comprobar que era útil poder consultar la distribución sin escribir accidentalmente.
+
+Para distinguir visualmente el modo de exploración del modo de escritura, se usó un color diferente en la matriz. También se asignaron colores a las capas. Esta decisión no es solo estética: ayuda a crear una asociación rápida entre color, capa y grupo de caracteres. En un sistema por capas, esa ayuda visual reduce la dependencia de la memoria durante el aprendizaje inicial.
+
+El resultado fue una interfaz más fácil de probar. En lugar de tener que mirar siempre la consola o escribir caracteres en el teléfono para saber qué estaba seleccionando el usuario, la matriz empezó a actuar como confirmación inmediata del estado del teclado.
+
+\section{Diseño físico e integración}
+\label{sec:resultado-integracion-fisica}
+
+La última parte del trabajo fue la integración física. Para diseñar la carcasa se utilizó FreeCAD. Esta fase exigió aprender el manejo básico de la herramienta y realizar varias pruebas de forma y medidas. La carcasa no se planteó como un simple envoltorio, sino como parte del funcionamiento del prototipo: la posición del joystick, los botones y la matriz condiciona directamente la comodidad de uso.
+
+El diseño tuvo que reservar espacio para la placa XIAO ESP32C3, la matriz RGB, el joystick, los botones, el módulo de alimentación, la batería y el cableado interno. Además, las piezas debían poder imprimirse correctamente y permitir el montaje sin que los componentes quedasen forzados.
+
+Durante el montaje se comprobó que la parte electrónica y la parte física no podían tratarse por separado. Una distribución cómoda en el esquema podía dejar de serlo al colocar los componentes dentro de la carcasa. Del mismo modo, una carcasa compacta podía dificultar el cableado o el acceso a los botones. Esta fase permitió ajustar mejor la relación entre forma, electrónica y uso real.
+
+\section{Problemas encontrados y soluciones aplicadas}
+\label{sec:problemas-soluciones}
+
+La Tabla~\ref{tab:problemas-soluciones} recoge los principales problemas encontrados durante el desarrollo y la solución aplicada en cada caso.
+
+\begin{table}[H]
+    \centering
+    \caption{Problemas encontrados y soluciones aplicadas}
+    \label{tab:problemas-soluciones}
+    \begin{tabularx}{\textwidth}{@{}p{0.27\textwidth}p{0.34\textwidth}X@{}}
+        \toprule
+        \textbf{Problema} & \textbf{Efecto observado} & \textbf{Solución aplicada} \\
+        \midrule
+        Alimentación inicial del joystick a 5 V & Lecturas ADC saturadas o poco útiles para distinguir posiciones & Alimentar el joystick desde 3,3 V y redefinir los rangos de lectura. \\
+        Interpretación de pulsadores de cuatro pines & Conexiones incorrectas durante las primeras pruebas & Identificar los pares internos del pulsador y usar GPIO con \textit{pull-up}. \\
+        Lectura continua de botones & Mayor trabajo del firmware y peor organización de eventos & Sustituir la lectura continua por interrupciones GPIO y gestión mediante eventos. \\
+        Conexión BLE inestable & El dispositivo aparecía, pero la conexión no se mantenía & Revisar la configuración del servicio HID, anuncio BLE y orden de inicialización. \\
+        Códigos HID incorrectos & Algunas letras enviadas no coincidían con lo esperado & Revisar manualmente la tabla de códigos y separar envío HID de visualización en matriz. \\
+        Brillo excesivo de la matriz RGB & Molestia visual, mayor consumo y calentamiento & Limitar el brillo máximo utilizado por el firmware. \\
+        Desajuste entre letra mostrada y letra enviada & La matriz y el dispositivo receptor podían no coincidir & Comprobar y corregir por separado la tabla visual y la tabla HID. \\
+        Integración física & Espacio limitado para componentes, batería y cableado & Ajustar el diseño de la carcasa en FreeCAD y revisar la posición de los módulos. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
 
 \section{Resultados obtenidos}
+\label{sec:resultados-obtenidos}
+
+Como resultado del desarrollo se obtuvo un prototipo funcional de teclado unimano basado en joystick, botones, matriz RGB y comunicación Bluetooth HID. El sistema permite seleccionar caracteres mediante la combinación de una dirección del joystick y una capa activa. La capa se selecciona con dos botones, y el banco secundario permite acceder a números y símbolos.
+
+El prototipo también proporciona realimentación visual mediante la matriz RGB. Esta matriz muestra el carácter seleccionado y utiliza colores para diferenciar estados o capas. Además, el modo de exploración permite consultar caracteres sin enviarlos al dispositivo receptor, lo que facilita el aprendizaje de la distribución.
+
+La comunicación HID permitió que el receptor tratase el prototipo como un teclado. Esto cumple uno de los objetivos principales del proyecto: evitar depender de una aplicación específica en el ordenador o en el teléfono. Aun así, las pruebas mostraron que la distribución de teclado del sistema receptor puede afectar a algunos caracteres, especialmente símbolos.
+
+El resultado más importante no es solo que cada módulo funcione por separado, sino que se consiguió integrarlos en un flujo completo: el usuario mueve el joystick, el firmware detecta la dirección, calcula la capa, consulta el carácter, lo muestra en la matriz y, si está en modo escritura, lo envía como pulsación HID.
 
 \section{Limitaciones detectadas}
+\label{sec:limitaciones-detectadas}
+
+El prototipo demuestra la viabilidad técnica de la idea, pero todavía presenta limitaciones. La primera es que no se ha realizado una validación amplia con usuarios. Por tanto, no se puede afirmar que la distribución elegida sea la más rápida ni la más cómoda; solo que funciona como primera aproximación.
+
+La segunda limitación está relacionada con la ergonomía. La carcasa permite integrar los componentes, pero la comodidad real depende de la forma final, del peso, de la posición de los botones y del tiempo de uso. Esta parte requiere más iteraciones físicas y pruebas prolongadas.
+
+La tercera limitación es la autonomía. Durante el desarrollo se identificó que la matriz RGB puede aumentar mucho el consumo si se usa con brillo alto. Aunque el brillo se limitó en el firmware, sería necesario medir consumo y duración de batería con más precisión para evaluar el uso real del dispositivo.
+
+Por último, la escritura de símbolos depende de la distribución de teclado configurada en el dispositivo receptor. Este punto no impide el funcionamiento del prototipo, pero sí obliga a documentar y probar la configuración concreta de teclado que se quiere usar.
+
+\section{Valoración final del prototipo}
+\label{sec:valoracion-prototipo}
+
+Las pruebas realizadas permiten concluir que la arquitectura planteada es viable como prueba de concepto. El joystick puede usarse como entrada direccional, los botones permiten ampliar el número de caracteres mediante capas, la matriz RGB ayuda a entender la selección y Bluetooth HID permite escribir en un dispositivo receptor sin software adicional.
+
+El desarrollo también mostró que los problemas más relevantes no estaban en una única parte del sistema, sino en la integración entre ellas. La alimentación del joystick afectaba a las lecturas ADC; los códigos HID afectaban a lo que se escribía; la matriz podía mostrar una cosa distinta a la enviada; y la carcasa condicionaba la posición real de los componentes. Resolver esos problemas fue lo que convirtió el montaje en un prototipo usable, aunque todavía mejorable.
+
+El resultado final no debe entenderse como un producto cerrado, sino como una base técnica sobre la que seguir iterando. A partir de esta versión ya es posible plantear pruebas de escritura más sistemáticas, comparar distribuciones de caracteres, medir tiempos de aprendizaje y mejorar la ergonomía de la carcasa.

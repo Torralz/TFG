@@ -2409,6 +2409,9 @@
     <bcf:citekey order="38" intorder="1">xiaoESP32C3</bcf:citekey>
     <bcf:citekey order="39" intorder="1">seeedRGBMatrix</bcf:citekey>
     <bcf:citekey order="40" intorder="1">espressifADCOneshot</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">xiaoESP32C3</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">espressifADC</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">espressifBluetoothApi</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
