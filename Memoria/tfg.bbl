@@ -777,37 +777,6 @@
       \verb https://docs.espressif.com/projects/esp-idf/en/stable/esp32c3/api-reference/kconfig-reference.html
       \endverb
     \endentry
-    \entry{espressifADCOneshot}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=66589871a3c3f27bcbf3891133af42b1}{%
-           family={{Espressif Systems}},
-           familyi={E\bibinitperiod}}}%
-      }
-      \strng{namehash}{66589871a3c3f27bcbf3891133af42b1}
-      \strng{fullhash}{66589871a3c3f27bcbf3891133af42b1}
-      \strng{fullhashraw}{66589871a3c3f27bcbf3891133af42b1}
-      \strng{bibnamehash}{66589871a3c3f27bcbf3891133af42b1}
-      \strng{authorbibnamehash}{66589871a3c3f27bcbf3891133af42b1}
-      \strng{authornamehash}{66589871a3c3f27bcbf3891133af42b1}
-      \strng{authorfullhash}{66589871a3c3f27bcbf3891133af42b1}
-      \strng{authorfullhashraw}{66589871a3c3f27bcbf3891133af42b1}
-      \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Analog to Digital Converter (ADC) Oneshot Mode Driver}
-      \field{urlday}{30}
-      \field{urlmonth}{6}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://docs.espressif.com/projects/esp-idf/en/v5.0/esp32c3/api-reference/peripherals/adc_oneshot.html
-      \endverb
-      \verb{url}
-      \verb https://docs.espressif.com/projects/esp-idf/en/v5.0/esp32c3/api-reference/peripherals/adc_oneshot.html
-      \endverb
-    \endentry
     \entry{xiaoESP32C3}{online}{}{}
       \name{author}{1}{}{%
         {{hash=e47a5c22c3c2e012514c9d5a4141b8b9}{%
@@ -823,8 +792,8 @@
       \strng{authorfullhash}{e47a5c22c3c2e012514c9d5a4141b8b9}
       \strng{authorfullhashraw}{e47a5c22c3c2e012514c9d5a4141b8b9}
       \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Getting Started with Seeed Studio XIAO ESP32C3}
@@ -854,8 +823,8 @@
       \strng{authorfullhash}{e47a5c22c3c2e012514c9d5a4141b8b9}
       \strng{authorfullhashraw}{e47a5c22c3c2e012514c9d5a4141b8b9}
       \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Getting Started with 6x10 RGB MATRIX for XIAO}
@@ -884,8 +853,8 @@
       \strng{authornamehash}{b65705aa9f138bcc5db4617809413e90}
       \strng{authorfullhash}{b65705aa9f138bcc5db4617809413e90}
       \strng{authorfullhashraw}{b65705aa9f138bcc5db4617809413e90}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Adafruit PowerBoost 1000C}
@@ -898,6 +867,37 @@
       \endverb
       \verb{url}
       \verb https://learn.adafruit.com/adafruit-powerboost-1000c-load-share-usb-charge-boost/overview
+      \endverb
+    \endentry
+    \entry{espressifADCOneshot}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=66589871a3c3f27bcbf3891133af42b1}{%
+           family={{Espressif Systems}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{fullhash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{fullhashraw}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{bibnamehash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{authorbibnamehash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{authornamehash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{authorfullhash}{66589871a3c3f27bcbf3891133af42b1}
+      \strng{authorfullhashraw}{66589871a3c3f27bcbf3891133af42b1}
+      \field{extraname}{2}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Analog to Digital Converter (ADC) Oneshot Mode Driver}
+      \field{urlday}{30}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.espressif.com/projects/esp-idf/en/v5.0/esp32c3/api-reference/peripherals/adc_oneshot.html
+      \endverb
+      \verb{url}
+      \verb https://docs.espressif.com/projects/esp-idf/en/v5.0/esp32c3/api-reference/peripherals/adc_oneshot.html
       \endverb
     \endentry
   \enddatalist
